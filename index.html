@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>500 Câu hỏi trắc nghiệm Flutter — Học & Luyện</title>
+<style>
+:root{--bg:#05060f;--card:#0f1122;--card2:#141735;--border:#262a55;--txt:#e8eaf6;--muted:#9aa0c3;--accent:#5b6cff;--green:#22c55e;--red:#ef4444;--yellow:#facc15}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px}
+a{color:#8ea2ff}.wrap{max-width:1180px;margin:0 auto;padding:28px 18px 60px}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,#5b6cff,#22d3ee);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff}
+h1{font-size:22px;margin:0}h1 small{display:block;font-size:13px;color:var(--muted);font-weight:400;margin-top:4px}
+.badge{font-size:12px;border:1px solid var(--border);padding:6px 12px;border-radius:999px;color:var(--muted);background:#0c0e20}
+.grid-home{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.ghdr{margin:24px 0 4px;font-size:15px;font-weight:800;color:#c7cbff;display:flex;align-items:center;gap:10px}.ghdr::after{content:'';flex:1;height:1px;background:var(--border)}.ghdr:first-child{margin-top:18px}
+#topicGrid>.grid-home>.card:only-child{grid-column:1/-1}
+.cprog{height:6px;background:#1c1f4a;border-radius:999px;overflow:hidden;margin:2px 0 0}.cprog i{display:block;height:100%;background:linear-gradient(90deg,#5b6cff,#22d3ee);border-radius:999px;transition:width .3s}
+.cprogtxt{font-size:11.5px;color:var(--muted);margin:6px 0 12px;font-variant-numeric:tabular-nums}
+@media(max-width:900px){.grid-home{grid-template-columns:1fr}.layout{grid-template-columns:1fr!important}}
+.card{background:linear-gradient(180deg,#12142b,#0c0e20);border:1px solid var(--border);border-radius:20px;padding:20px;position:relative;overflow:hidden}
+.card h3{margin:0;font-size:17px;flex:1;min-width:0;line-height:1.4;overflow-wrap:break-word}.card .chead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px}.card p{margin:6px 0 14px;color:var(--muted);font-size:13.5px;line-height:1.55;min-height:62px}
+.card .count{position:static;flex-shrink:0;white-space:nowrap;font-size:12px;background:#1a1e40;border:1px solid var(--border);padding:4px 10px;border-radius:999px;color:#c7cbff}
+.btn{background:#e8eaf6;color:#0b0c1a;border:none;border-radius:999px;padding:10px 18px;font-weight:700;cursor:pointer;font-size:14px}
+.btn:hover{filter:brightness(.92)}.btn.primary{background:var(--accent);color:#fff}.btn.ghost{background:transparent;border:1px solid var(--border);color:var(--txt)}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+.note{margin-top:16px;font-size:13px;color:var(--muted);border:1px dashed var(--border);border-radius:14px;padding:12px 14px;line-height:1.6;background:#0a0c1e}
+.layout{display:grid;grid-template-columns:1fr 330px;gap:18px;margin-top:8px;align-items:start}
+.qcard{background:linear-gradient(180deg,#12142b,#0b0d1f);border:1px solid var(--border);border-radius:20px;padding:22px}
+.qtop{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
+.pill{background:#3b4bff;color:#fff;font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px}
+.markbtn{background:#1a1e40;border:1px solid #5a4d15;color:var(--yellow);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer}
+.markbtn.active{background:#3a2f10;border-color:var(--yellow);color:var(--yellow)}
+.qtitle{font-size:18px;line-height:1.6;font-weight:700;margin:6px 0 14px}
+.hintbox{background:#191c46;border:1px solid #2c3170;border-radius:14px;padding:12px 14px;margin-bottom:16px}.hintbox b{font-size:14px}.hintbox span{display:block;color:var(--muted);font-size:13px;margin-top:4px;line-height:1.5}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:#14162e;border:1px solid var(--border);color:var(--txt);border-radius:14px;padding:13px 14px;margin-bottom:12px;font-size:14.5px;cursor:pointer;line-height:1.5}
+.opt:hover{border-color:var(--accent)}.opt .k{width:28px;height:28px;min-width:28px;border-radius:9px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--muted);background:#0e1030}
+.opt.correct{background:rgba(34,197,94,.14);border-color:var(--green)}.opt.correct .k{background:var(--green);color:#04140a;border-color:var(--green)}
+.opt.wrong{background:rgba(239,68,68,.13);border-color:var(--red)}.opt.wrong .k{background:var(--red);color:#fff;border-color:var(--red)}
+.opt.dim{opacity:.75}
+.opt:disabled{cursor:default;color:var(--txt);opacity:1}
+.langbtn{padding:7px 14px;font-size:13px}
+.exp{display:none;margin-top:8px;border-radius:14px;padding:14px;border:1px solid #1f5c38;background:rgba(34,197,94,.08)}.exp.show{display:block}.exp.err{border-color:#7a2b2b;background:rgba(239,68,68,.07)}
+.exp h4{margin:0 0 8px;font-size:14px}.exp p{margin:0;font-size:14px;line-height:1.65;color:#d6d9f0}.exp p a{color:#8ea2ff;word-break:break-all}.exp .src{display:block;margin-top:12px;padding-top:10px;border-top:1px solid #2a2e5e;font-size:12.5px;color:var(--muted);line-height:2}.exp .src a{color:#8ea2ff;word-break:break-all;text-decoration:underline}.exp .src a:hover{color:#c7d2ff}
+.navrow{display:flex;justify-content:space-between;margin-top:16px}
+.side{display:flex;flex-direction:column;gap:16px;min-width:0;max-width:100%}
+.panel{background:linear-gradient(180deg,#12142b,#0b0d1f);border:1px solid var(--border);border-radius:20px;padding:18px;min-width:0;max-width:100%;overflow:hidden}
+.panel .lbl{font-size:12px;letter-spacing:.12em;color:#6f87ff;font-weight:800}
+.panel h2{margin:4px 0 12px;font-size:30px}.panel h2 span{font-size:18px;color:var(--muted);font-weight:400}
+.prow{display:flex;align-items:center;gap:12px;background:#0d0f26;border:1px solid var(--border);border-radius:14px;padding:12px;margin-bottom:12px}
+.ring{width:46px;height:46px;min-width:46px;border-radius:50%;background:conic-gradient(var(--accent) 0%,#22264f 0%);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;position:relative}.ring::after{content:'';position:absolute;inset:5px;background:#0d0f26;border-radius:50%}.ring b{position:relative;z-index:1}
+.stat{display:flex;justify-content:space-between;padding:9px 2px;font-size:14px;border-bottom:1px solid #1b1e42}.stat:last-child{border:none}
+.stat b{font-variant-numeric:tabular-nums}
+.qgrid{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:7px;margin-top:12px;width:100%;max-width:100%}
+.qgrid button{min-width:0;width:100%;aspect-ratio:1/1;padding:0;border-radius:9px;border:1px solid var(--border);background:#171a3a;color:var(--muted);font-size:12px;cursor:pointer;font-weight:700;line-height:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.qgrid button.cur{background:var(--accent);color:#fff;border-color:var(--accent)}
+.qgrid button.ok{background:rgba(34,197,94,.2);border-color:var(--green);color:#7dffa9}
+.qgrid button.bad{background:rgba(239,68,68,.18);border-color:var(--red);color:#ff9a9a}
+.qgrid button.marked{outline:2px solid var(--yellow);outline-offset:1px}
+.pager{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;align-items:center;justify-content:center}
+.pager button{min-width:30px;height:30px;padding:0 8px;border-radius:9px;border:1px solid var(--border);background:#171a3a;color:var(--muted);font-size:12px;cursor:pointer;font-weight:700}
+.pager button.cur{background:var(--accent);color:#fff;border-color:var(--accent)}
+.pager button:disabled{opacity:.35;cursor:not-allowed}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin-top:10px}.dot{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:4px;vertical-align:middle}
+.hidden{display:none!important}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.progress-line{height:8px;background:#1c1f4a;border-radius:999px;overflow:hidden;margin-top:10px}.progress-line i{display:block;height:100%;background:linear-gradient(90deg,#5b6cff,#22d3ee);width:0%}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<div class="brand"><div class="logo">F</div><h1><span data-i18n="h1">500 Câu hỏi trắc nghiệm Flutter</span><small data-i18n="h1sub">Đáp án đã đối chiếu docs.flutter.dev (Flutter 3.47 · 2026) + giải thích chi tiết mỗi câu</small></h1></div>
+<div class="toolbar"><span class="badge" id="totalBadge">500 câu · 19 chủ đề</span><button class="btn primary langbtn" id="langVi">VI</button><button class="btn ghost langbtn" id="langEn">EN</button><button class="btn ghost" id="btnHomeTop" data-i18n="home">Trang chủ</button></div>
+</header>
+
+<!-- HOME -->
+<div id="home">
+<div id="topicGrid"></div>
+<div class="note" data-i18n="howto">✅ <b>Cách học:</b> chọn 1 chủ đề (100 câu) hoặc “Ôn tổng hợp 500 câu”. Vào bài học: bấm đáp án → hệ thống báo <b style="color:#7dffa9">Đúng (xanh)</b> / <b style="color:#ff9a9a">Sai (đỏ)</b> và luôn hiện <b>đáp án đúng + giải thích</b> bên dưới. Dùng <b>Câu trước / Câu tiếp</b> hoặc bấm số ở <b>Điều hướng nhanh</b> bên phải. Tiến độ, đúng/sai, thời gian được lưu tự động (localStorage).<br>📚 Nguồn đối chiếu: https://docs.flutter.dev/learn · /install/quick · /ui · /data-and-backend/state-mgmt · /ui/navigation · /platform-integration · /testing/overview · /tools/sdk · /reference/supported-platforms</div>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz" class="hidden">
+<div class="toolbar" style="margin-bottom:12px">
+<button class="btn ghost" id="btnBack" data-i18n="back">← Chủ đề</button>
+<span class="badge" id="topicBadge"></span>
+<span class="badge" id="scoreBadge"></span>
+<span style="flex:1"></span>
+<button class="btn ghost" id="btnReset" data-i18n="reset">Làm lại từ đầu</button>
+</div>
+<div class="layout">
+<div>
+<div class="qcard">
+<div class="qtop"><div style="display:flex;gap:8px;align-items:center"><span class="pill" id="qNum">Câu 1</span><button class="markbtn" id="btnMark">⚑ Đánh dấu xem lại</button></div><span class="badge" id="qId">MLN131 · Topic</span></div>
+<div class="qtitle" id="qText"></div>
+<div class="hintbox"><b id="hintTitle">Chọn 1 đáp án.</b><span data-i18n="hintSaved">Trạng thái câu hiện tại được lưu tự động khi bạn chọn đáp án hoặc chuyển câu.</span></div>
+<div id="opts"></div>
+<div class="exp" id="expBox"><h4 id="expTitle"></h4><p id="expText"></p><div class="src" id="expSrc"></div></div>
+</div>
+<div class="navrow"><button class="btn ghost" id="btnPrev" data-i18n="prev">‹ Câu trước</button><button class="btn primary" id="btnNext" data-i18n="next">Câu tiếp ›</button></div>
+</div>
+<div class="side">
+<div class="panel"><div class="lbl" data-i18n="session">PHIÊN HỌC</div><h2 id="sessTitle">Câu 1 <span>/ 100</span></h2>
+<div class="prow"><div class="ring" id="ring"><b id="ringTxt">0%</b></div><div><b style="font-size:14px" data-i18n="progress">Tiến độ tổng quan</b><div style="font-size:13px;color:var(--muted)" id="progTxt">Đã hoàn thành 0 câu hỏi</div></div></div>
+<div class="progress-line"><i id="progBar"></i></div>
+<div style="margin-top:10px"><div class="stat"><span data-i18n="correctWrong">Đúng / Sai</span><b><span style="color:var(--green)" id="cOk">0</span> / <span style="color:var(--red)" id="cBad">0</span></b></div>
+<div class="stat"><span data-i18n="timeSpent">Thời gian làm bài</span><b id="cTime">0:00</b></div>
+<div class="stat"><span data-i18n="markedLbl">Số lần xem lại</span><b id="cMark">0</b></div></div>
+</div>
+<div class="panel"><div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:14px">☰ &nbsp;<span data-i18n="quickNav">Điều hướng nhanh</span></b><span style="color:var(--muted)">⌃</span></div><div class="qgrid" id="qgrid"></div><div class="pager" id="pager"></div>
+<div class="legend"><span><i class="dot" style="background:var(--accent)"></i><span data-i18n="lgCur">Hiện tại</span></span><span><i class="dot" style="background:var(--green)"></i><span data-i18n="lgOk">Đúng</span></span><span><i class="dot" style="background:var(--red)"></i><span data-i18n="lgBad">Sai</span></span><span><i class="dot" style="border:2px solid var(--yellow);background:transparent"></i><span data-i18n="lgMark">Đánh dấu</span></span></div>
+<div style="margin-top:12px;display:flex;gap:8px"><button class="btn ghost" id="btnWrong" style="flex:1;display:none">★ Ôn câu sai</button></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="questions.js"></script>
+<script>
+const GROUPS=[
+{id:'A',title:'A · Nền tảng & Công cụ',title_en:'A · Foundation & Tools'},
+{id:'B',title:'B · Giao diện',title_en:'B · User Interface'},
+{id:'C',title:'C · State & Điều hướng',title_en:'C · State & Navigation'},
+{id:'D',title:'D · Dữ liệu & Nền tảng',title_en:'D · Data & Platform'},
+{id:'E',title:'E · Kiểm thử & Phát hành',title_en:'E · Testing & Release'},
+];
+const TOPICS=[
+{id:0,group:'',title:"Ôn tổng hợp — 500 câu",title_en:"Full review — 500 questions",desc:"Luyện toàn bộ 19 chủ đề nhỏ theo docs.flutter.dev.",desc_en:"Practice all 19 sub-topics from docs.flutter.dev."},
+{id:1,group:'A',title:"1 — Giới thiệu Flutter & Dart",title_en:"1 — Intro to Flutter & Dart",desc:"Flutter là gì, ngôn ngữ Dart, hàm main, điểm bắt đầu, learning pathway.",desc_en:"What Flutter is, the Dart language, main(), entry point, learning pathway."},
+{id:2,group:'A',title:"2 — Cài đặt & Môi trường",title_en:"2 — Installation & Environment",desc:"flutter doctor, PATH, terminal, toolchain Android, tài liệu cài đặt theo nền tảng.",desc_en:"flutter doctor, PATH, terminal, Android toolchain, per-platform setup guides."},
+{id:3,group:'A',title:"3 — Flutter CLI & Pub",title_en:"3 — Flutter CLI & Pub",desc:"flutter create/run, pub get, pubspec.yaml, lib/, xem phiên bản SDK.",desc_en:"flutter create/run, pub get, pubspec.yaml, lib/, checking the SDK version."},
+{id:4,group:'A',title:"4 — Công cụ dev & Hot reload",title_en:"4 — Dev Tools & Hot Reload",desc:"DevTools, Widget Inspector, property editor, dart format/analyze, hot reload.",desc_en:"DevTools, Widget Inspector, property editor, dart format/analyze, hot reload."},
+{id:5,group:'B',title:"5 — Widget cơ bản & Key",title_en:"5 — Basic Widgets & Keys",desc:"Stateless/Stateful, build, Text/Icon, MaterialApp, GlobalKey, định danh widget.",desc_en:"Stateless/Stateful, build, Text/Icon, MaterialApp, GlobalKey, widget identity."},
+{id:6,group:'B',title:"6 — Bố cục cơ bản",title_en:"6 — Basic Layout",desc:"Row/Column, Center, Padding, hai nút cạnh nhau, phần tử chiều dọc.",desc_en:"Row/Column, Center, Padding, side-by-side buttons, vertical elements."},
+{id:7,group:'B',title:"7 — Bố cục nâng cao",title_en:"7 — Advanced Layout",desc:"Stack/Positioned, Scaffold, ListView, Expanded/Flexible, constraints, huy hiệu chồng ảnh.",desc_en:"Stack/Positioned, Scaffold, ListView, Expanded/Flexible, constraints, overlay badges."},
+{id:8,group:'B',title:"8 — Theme & Responsive",title_en:"8 — Theme & Responsive",desc:"ThemeData, màu sắc/typography dùng chung, MediaQuery, thích ứng desktop.",desc_en:"ThemeData, shared colors/typography, MediaQuery, desktop adaptation."},
+{id:9,group:'C',title:"9 — State & Lifecycle",title_en:"9 — State & Lifecycle",desc:"Ephemeral/app state, setState, initState/dispose, ChangeNotifier, ListenableBuilder.",desc_en:"Ephemeral/app state, setState, initState/dispose, ChangeNotifier, ListenableBuilder."},
+{id:10,group:'C',title:"10 — Tương tác, Form & Async UI",title_en:"10 — Interaction, Forms & Async UI",desc:"GestureDetector, TextField/controller, Future/StreamBuilder, trạng thái loading/error.",desc_en:"GestureDetector, TextField/controller, Future/StreamBuilder, loading/error states."},
+{id:11,group:'C',title:"11 — Điều hướng & Deep link",title_en:"11 — Navigation & Deep Links",desc:"Navigator push/pop, list→detail, Router, deep link và URL web.",desc_en:"Navigator push/pop, list→detail, Router, deep links and web URLs."},
+{id:12,group:'D',title:"12 — Dữ liệu, Kiến trúc, Plugin & Nền tảng",title_en:"12 — Data, Architecture, Plugins & Platform",desc:"HTTP, caching, MVVM, platform channel, plugin/package, isolate, camera.",desc_en:"HTTP, caching, MVVM, platform channels, plugins/packages, isolates, camera."},
+{id:13,group:'E',title:"13 — Unit test & Mock",title_en:"13 — Unit Tests & Mocks",desc:"Kiểm tra logic thuần, mock dependency, cô lập API ngoài.",desc_en:"Testing pure logic, mocking dependencies, isolating external APIs."},
+{id:14,group:'E',title:"14 — Widget test",title_en:"14 — Widget Tests",desc:"Finder, tester.tap, xác minh nút và tương tác widget.",desc_en:"Finders, tester.tap, verifying buttons and widget interaction."},
+{id:15,group:'E',title:"15 — Integration test & Patrol",title_en:"15 — Integration Tests & Patrol",desc:"Luồng login đa màn hình, dialog quyền native, giới hạn và mở rộng.",desc_en:"Multi-screen login flows, native permission dialogs, limits and extensions."},
+{id:16,group:'E',title:"16 — Coverage & CI",title_en:"16 — Coverage & CI",desc:"Code coverage, 100% có hết bug?, tự động test khi push code.",desc_en:"Code coverage, does 100% mean bug-free?, auto-testing on push."},
+{id:17,group:'E',title:"17 — Hiệu năng",title_en:"17 — Performance",desc:"Đo hiệu năng, profile/release, const, thiết bị thật.",desc_en:"Measuring performance, profile/release, const, real devices."},
+{id:18,group:'E',title:"18 — Build & Phát hành",title_en:"18 — Build & Release",desc:"flutter test/build APK/AppBundle, signing, quy trình store.",desc_en:"flutter test/build APK/AppBundle, signing, store process."},
+{id:19,group:'E',title:"19 — Nền tảng hỗ trợ",title_en:"19 — Supported Platforms",desc:"Ma trận OS/architecture, trang Supported platforms, build web.",desc_en:"OS/architecture matrix, Supported platforms page, web builds."},
+];
+const I18N={
+vi:{docTitle:"500 Câu hỏi trắc nghiệm Flutter — Học & Luyện",h1:"500 Câu hỏi trắc nghiệm Flutter",h1sub:"Đáp án đã đối chiếu docs.flutter.dev (Flutter 3.47 · 2026) + giải thích chi tiết mỗi câu",home:"Trang chủ",back:"← Chủ đề",reset:"Làm lại từ đầu",prev:"‹ Câu trước",next:"Câu tiếp ›",session:"PHIÊN HỌC",progress:"Tiến độ tổng quan",correctWrong:"Đúng / Sai",timeSpent:"Thời gian làm bài",markedLbl:"Số lần xem lại",quickNav:"Điều hướng nhanh",lgCur:"Hiện tại",lgOk:"Đúng",lgBad:"Sai",lgMark:"Đánh dấu",studyNow:"Học ngay →",continue:"Tiếp tục",qCount:"câu",qCount2:"câu hỏi",topics:"chủ đề",done2:"đã làm",hintChoose:"Chọn 1 đáp án.",hintRedo:"Làm lại các câu đã sai. Trả lời đúng để hoàn thành.",hintSaved:"Trạng thái câu hiện tại được lưu tự động khi bạn chọn đáp án hoặc chuyển câu.",mark:"★ Đánh dấu",marked2:"★ Đã đánh dấu",reviewWrong:"★ Ôn câu sai",allQ:"Tất cả các câu",expOk:"Chính xác! Đáp án",isCorrect:"là đúng.",youChose:"Bạn chọn",wrongWord:"sai",correctIs:"Đáp án đúng là",refs:"Nguồn tham khảo",correct:"Đúng",wrongLbl:"Sai",completed:"Đã hoàn thành",page:"Trang",qRange:"câu",gridQ:"Câu",topicLbl:"Chủ đề",confirmReset:"Xóa toàn bộ đáp án của chủ đề này?",howto:"✅ <b>Cách học:</b> chọn 1 chủ đề nhỏ hoặc “Ôn tổng hợp 500 câu”. Vào bài học: bấm đáp án → hệ thống báo <b style=\"color:#7dffa9\">Đúng (xanh)</b> / <b style=\"color:#ff9a9a\">Sai (đỏ)</b> và luôn hiện <b>đáp án đúng + giải thích</b> bên dưới (đáp án đã khóa, không chọn lại). Dùng <b>Câu trước / Câu tiếp</b> hoặc bấm số ở <b>Điều hướng nhanh</b> (50 câu/trang). Tiến độ, đúng/sai, thời gian được lưu tự động (localStorage).<br>📚 Nguồn đối chiếu: https://docs.flutter.dev/learn · /install/quick · /ui · /data-and-backend/state-mgmt · /ui/navigation · /platform-integration · /testing/overview · /tools/sdk · /reference/supported-platforms"},
+en:{docTitle:"500 Flutter Quiz Questions — Learn & Practice",h1:"500 Flutter Quiz Questions",h1sub:"Answers verified against docs.flutter.dev (Flutter 3.47 · 2026) + detailed explanations",home:"Home",back:"← Topics",reset:"Restart",prev:"‹ Previous",next:"Next ›",session:"STUDY SESSION",progress:"Overall progress",correctWrong:"Correct / Wrong",timeSpent:"Time spent",markedLbl:"Marked",quickNav:"Quick navigation",lgCur:"Current",lgOk:"Correct",lgBad:"Wrong",lgMark:"Marked",studyNow:"Study now →",continue:"Continue",qCount:"questions",qCount2:"questions",topics:"topics",done2:"done",hintChoose:"Choose 1 answer.",hintRedo:"Redo the wrong answers. Answer correctly to complete.",hintSaved:"Your progress on this question auto-saves when you answer or navigate.",mark:"★ Mark",marked2:"★ Marked",reviewWrong:"★ Review wrong",allQ:"All questions",expOk:"Correct! Answer",isCorrect:"is right.",youChose:"You chose",wrongWord:"wrong",correctIs:"The correct answer is",refs:"References",correct:"Correct",wrongLbl:"Wrong",completed:"Completed",page:"Page",qRange:"questions",gridQ:"Question",topicLbl:"Topic",confirmReset:"Clear all answers in this topic?",howto:"✅ <b>How to study:</b> pick a sub-topic or “Review all 500”. In a lesson: pick an answer → <b style=\"color:#7dffa9\">Correct (green)</b> / <b style=\"color:#ff9a9a\">Wrong (red)</b>, always with the <b>right answer + explanation</b> below (answers lock after choosing). Use <b>Previous / Next</b> or the <b>Quick navigation</b> numbers (50 per page). Progress, scores and time auto-save (localStorage).<br>📚 Verified against: https://docs.flutter.dev/learn · /install/quick · /ui · /data-and-backend/state-mgmt · /ui/navigation · /platform-integration · /testing/overview · /tools/sdk · /reference/supported-platforms"}
+};
+function t(k){return (I18N[LANG]&&I18N[LANG][k]!==undefined)?I18N[LANG][k]:I18N.vi[k]}
+function langTitle(o){return (LANG==='en'&&o.title_en)?o.title_en:o.title}
+function langDesc(o){return (LANG==='en'&&o.desc_en)?o.desc_en:o.desc}
+const LET=["A","B","C","D"];
+const PER_PAGE=50;
+let LANG='vi';
+try{LANG=localStorage.getItem('fl_lang')||'vi';}catch(e){}
+function qText(q){return (LANG==='en'&&q.q_en)?q.q_en:q.q}
+function qOpts(q){return (LANG==='en'&&q.options_en)?q.options_en:q.options}
+function qExp(q){return (LANG==='en'&&q.exp_en)?q.exp_en:q.exp}
+function lblQ(n){return LANG==='en'?'Q '+n:'Câu '+n}
+let cur={topic:0,list:[],idx:0,page:0,answers:{},marked:{},wrongIds:null,t0:Date.now(),timer:null,filter:null};
+function qs(){return window.QUESTIONS||[]}
+function topicGrid(){
+const g=document.getElementById('topicGrid');g.innerHTML='';
+const all=qs();
+const mkCard=(tp)=>{
+const cnt=tp.id===0?all.length:all.filter(q=>q.sub===tp.id).length;
+const done=JSON.parse(localStorage.getItem('fl_s'+tp.id+'_ans')||'{}');
+const n=Object.keys(done).filter(id=>tp.id===0||all.some(q=>q.sub===tp.id&&String(q.id)===String(id))).length;
+const pct=cnt?Math.round(n/cnt*100):0;
+const el=document.createElement('div');el.className='card';
+el.innerHTML=`<div class="chead"><h3></h3><span class="count">${cnt} ${t('qCount')}${n?` · ${t('done2')} ${n}`:''}</span></div><p></p><div class="cprog"><i style="width:${pct}%"></i></div><div class="cprogtxt">${n}/${cnt} · ${pct}%</div><button class="btn ${tp.id===0?'primary':''}">${t('studyNow')}</button> <button class="btn ghost" data-r="${tp.id}">${t('continue')}</button>`;
+el.querySelector('h3').textContent=langTitle(tp);
+el.querySelector('p').textContent=langDesc(tp);
+el.querySelector('.btn').onclick=()=>startTopic(tp.id,false);
+el.querySelector('[data-r]').onclick=()=>startTopic(tp.id,true);
+return el;
+};
+const wrap=document.createElement('div');wrap.className='grid-home';wrap.appendChild(mkCard(TOPICS[0]));g.appendChild(wrap);
+GROUPS.forEach(gr=>{
+const h=document.createElement('div');h.className='ghdr';h.textContent=langTitle(gr);g.appendChild(h);
+const row=document.createElement('div');row.className='grid-home';
+TOPICS.filter(t=>t.group===gr.id).forEach(t=>row.appendChild(mkCard(t)));
+g.appendChild(row);
+});
+document.getElementById('totalBadge').textContent=`${all.length} ${t('qCount')} · ${TOPICS.length-1} ${t('topics')}`;
+}
+function getList(tid){
+if(tid===0)return qs().slice();
+return qs().filter(q=>q.sub===tid);
+}
+function startTopic(tid,resume){
+cur.topic=tid;cur.filter=null;cur.wrongIds=null;
+cur.list=getList(tid);
+cur.answers=JSON.parse(localStorage.getItem('fl_s'+tid+'_ans')||'{}');
+cur.marked=JSON.parse(localStorage.getItem('fl_s'+tid+'_mark')||'{}');
+cur.t0=parseInt(localStorage.getItem('fl_s'+tid+'_t')||Date.now());
+if(!resume&&tid!==0){/* keep answers but start at 0 */ }
+cur.idx=0;cur.page=0;
+// if resume, jump to first unanswered
+if(resume){
+const i=cur.list.findIndex(q=>!(q.id in cur.answers));
+if(i>=0)cur.idx=i;
+}
+document.getElementById('home').classList.add('hidden');
+document.getElementById('quiz').classList.remove('hidden');
+document.getElementById('topicBadge').textContent=langTitle(TOPICS.find(t=>t.id===tid));
+startTimer();render();window.scrollTo(0,0);
+}
+function save(){
+localStorage.setItem('fl_s'+cur.topic+'_ans',JSON.stringify(cur.answers));
+localStorage.setItem('fl_s'+cur.topic+'_mark',JSON.stringify(cur.marked));
+localStorage.setItem('fl_s'+cur.topic+'_t',String(cur.t0));
+}
+function migrateLegacy(){
+try{
+const subOf={};qs().forEach(q=>{subOf[q.id]=q.sub;});
+for(let oldT=1;oldT<=5;oldT++){
+['ans','mark'].forEach(k=>{
+let raw=null;try{raw=localStorage.getItem('fl_'+oldT+'_'+k);}catch(e){}
+if(!raw)return;
+let data={};try{data=JSON.parse(raw);}catch(e){return;}
+Object.keys(data).forEach(qid=>{const s=subOf[qid]||subOf[+qid];if(!s)return;const nk='fl_s'+s+'_'+k;let cur0={};try{cur0=JSON.parse(localStorage.getItem(nk)||'{}');}catch(e){}if(!(qid in cur0)){cur0[qid]=data[qid];try{localStorage.setItem(nk,JSON.stringify(cur0));}catch(e){}}});
+try{localStorage.removeItem('fl_'+oldT+'_'+k);}catch(e){}
+});
+try{localStorage.removeItem('fl_'+oldT+'_t');}catch(e){}
+}
+}catch(e){}
+}
+function startTimer(){
+clearInterval(cur.timer);
+cur.timer=setInterval(()=>{
+const s=Math.floor((Date.now()-cur.t0)/1000);
+const m=Math.floor(s/60);document.getElementById('cTime').textContent=m+':'+String(s%60).padStart(2,'0');
+},1000);
+}
+function visibleList(){
+if(cur.filter==='wrong'){const set=new Set(cur.wrongIds||[]);return cur.list.filter(q=>set.has(q.id));}
+return cur.list;
+}
+let viewList=[];
+function render(){
+viewList=visibleList();
+if(cur.filter==='wrong'&&!viewList.length){cur.filter=null;cur.wrongIds=null;viewList=visibleList();}
+if(cur.idx>=viewList.length)cur.idx=Math.max(0,viewList.length-1);
+const q=viewList[cur.idx];if(!q)return;
+document.getElementById('qNum').textContent=lblQ(cur.idx+1);
+document.getElementById('qId').textContent='ID '+q.id+' · '+t('topicLbl')+' '+q.sub;
+document.getElementById('qText').textContent=(LANG==='en'?'Q '+q.id+'. ':'Câu '+q.id+'. ')+qText(q);
+document.getElementById('sessTitle').innerHTML=`${lblQ(cur.idx+1)} <span>/ ${viewList.length}</span>`;
+document.getElementById('hintTitle').textContent=cur.filter==='wrong'?t('hintRedo'):t('hintChoose');
+const mb=document.getElementById('btnMark');
+mb.classList.toggle('active',!!cur.marked[q.id]);
+mb.textContent=cur.marked[q.id]?t('marked2'):t('mark');
+// options (khóa sau khi đã chọn đáp án)
+const box=document.getElementById('opts');box.innerHTML='';
+const chosen=cur.answers[q.id];
+const shownOpts=qOpts(q);
+shownOpts.forEach((t,i)=>{
+const b=document.createElement('button');b.className='opt';
+let cls='';
+if(chosen!==undefined){
+if(i===q.answer)cls='correct';
+else if(i===chosen)cls='wrong';
+else cls='dim';
+b.disabled=true;
+}
+b.className='opt '+cls;
+b.innerHTML=`<span class="k">${LET[i]}</span><span></span>`;
+b.lastChild.textContent=t;
+b.onclick=()=>{if(cur.answers[q.id]!==undefined)return;cur.answers[q.id]=i;save();render();};
+box.appendChild(b);
+});
+// explanation
+const exp=document.getElementById('expBox');
+if(chosen!==undefined){
+exp.classList.add('show');
+const ok=chosen===q.answer;
+exp.classList.toggle('err',!ok);
+document.getElementById('expTitle').textContent=ok?`✅ ${t('expOk')} ${LET[q.answer]} ${t('isCorrect')}`:`❌ ${t('youChose')} ${LET[chosen]} — ${t('wrongWord')}. ${t('correctIs')} ${LET[q.answer]}.`;
+const rawExp=qExp(q);
+document.getElementById('expText').innerHTML=linkify(LANG==='en'?rawExp:rawExp.replace(/\s*Tham khảo:\s*https?:\/\/\S+(\s*-\s*https?:\/\/\S+)*\s*$/,''));
+document.getElementById('expSrc').innerHTML='🔗 '+t('refs')+':<br>'+linkifyUrls(q.src);
+}else{exp.classList.remove('show');}
+// stats
+let ok=0,bad=0;cur.list.forEach(x=>{if(cur.answers[x.id]!==undefined){if(cur.answers[x.id]===x.answer)ok++;else bad++;}});
+const bw=document.getElementById('btnWrong');
+bw.style.display=(bad>0||cur.filter==='wrong')?'':'none';
+bw.textContent=cur.filter==='wrong'?t('allQ'):`${t('reviewWrong')} (${bad})`;
+document.getElementById('cOk').textContent=ok;document.getElementById('cBad').textContent=bad;
+document.getElementById('cMark').textContent=Object.keys(cur.marked).length;
+document.getElementById('scoreBadge').textContent=`${t('correct')} ${ok} · ${t('wrongLbl')} ${bad} · ${viewList.length} ${t('qCount')}`;
+const done=Object.keys(cur.answers).length;
+const pct=cur.list.length?Math.round(done/cur.list.length*100):0;
+document.getElementById('ringTxt').textContent=pct+'%';
+document.getElementById('ring').style.background=`conic-gradient(var(--accent) ${pct}%,#22264f ${pct}%)`;
+document.getElementById('progTxt').textContent=`${t('completed')} ${done} ${t('qCount2')}`;
+document.getElementById('progBar').style.width=pct+'%';
+ // grid phân trang (50 câu/trang)
+const pages=Math.max(1,Math.ceil(viewList.length/PER_PAGE));
+if(cur.page<0)cur.page=0;
+if(cur.page>=pages)cur.page=pages-1;
+const start=cur.page*PER_PAGE,end=Math.min(start+PER_PAGE,viewList.length);
+const gr=document.getElementById('qgrid');gr.innerHTML='';
+for(let i=start;i<end;i++){const x=viewList[i];
+const btn=document.createElement('button');btn.textContent=cur.topic!==0?i+1:x.id;
+if(i===cur.idx)btn.classList.add('cur');
+const a=cur.answers[x.id];
+if(a!==undefined)btn.classList.add(a===x.answer?'ok':'bad');
+if(cur.marked[x.id])btn.classList.add('marked');
+btn.title=t('gridQ')+' '+x.id;
+btn.onclick=()=>{cur.idx=i;render();};
+gr.appendChild(btn);
+}
+// thanh phân trang
+const pg=document.getElementById('pager');pg.innerHTML='';
+if(pages>1){
+const mkBtn=(label,pgNum,disabled,isCur)=>{const b=document.createElement('button');b.textContent=label;if(isCur)b.classList.add('cur');b.disabled=!!disabled;b.onclick=()=>{cur.page=pgNum;cur.idx=Math.min(pgNum*PER_PAGE,viewList.length-1);render();};return b;};
+pg.appendChild(mkBtn('‹',cur.page-1,cur.page<=0,false));
+for(let p=0;p<pages;p++)pg.appendChild(mkBtn(String(p+1),p,false,p===cur.page));
+pg.appendChild(mkBtn('›',cur.page+1,cur.page>=pages-1,false));
+const info=document.createElement('span');info.style.cssText='width:100%;text-align:center;font-size:11.5px;color:var(--muted)';info.textContent=`${t('page')} ${cur.page+1}/${pages} · ${t('qRange')} ${start+1}–${end}`;pg.appendChild(info);
+}
+document.getElementById('btnPrev').disabled=cur.idx<=0;
+document.getElementById('btnNext').disabled=cur.idx>=viewList.length-1;
+try{localStorage.setItem('fl_session',JSON.stringify({v:2,sub:cur.topic,idx:cur.idx,page:cur.page,filter:cur.filter,wrongIds:cur.wrongIds}));}catch(e){}
+}
+function escapeHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function linkifyUrls(s){const parts=String(s).split(/\s+-\s+|\s*;\s*|\n+/).map(p=>p.trim()).filter(Boolean);return parts.map(u=>{const m=u.match(/https?:\/\/[^\s)]+/);const url=m?m[0]:u;return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(url)}</a>`}).join('<br>')}
+function linkify(s){return escapeHtml(s).replace(/(https?:\/\/[^\s<)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>')}
+document.getElementById('btnPrev').onclick=()=>{if(cur.idx>0){cur.idx--;cur.page=Math.floor(cur.idx/PER_PAGE);render();}};
+document.getElementById('btnNext').onclick=()=>{if(cur.idx<viewList.length-1){cur.idx++;cur.page=Math.floor(cur.idx/PER_PAGE);render();}};
+document.getElementById('btnMark').onclick=()=>{const q=viewList[cur.idx];if(!q)return;if(cur.marked[q.id])delete cur.marked[q.id];else cur.marked[q.id]=1;save();render();};
+document.getElementById('btnBack').onclick=()=>{clearInterval(cur.timer);save();try{localStorage.removeItem('fl_session');}catch(e){}document.getElementById('quiz').classList.add('hidden');document.getElementById('home').classList.remove('hidden');topicGrid();};
+document.getElementById('btnHomeTop').onclick=()=>{document.getElementById('btnBack').onclick();};
+document.getElementById('btnReset').onclick=()=>{if(confirm(t('confirmReset'))){cur.answers={};cur.marked={};cur.wrongIds=null;cur.t0=Date.now();cur.idx=0;cur.page=0;cur.filter=null;save();render();}};
+document.getElementById('btnWrong').onclick=()=>{if(cur.filter==='wrong'){cur.filter=null;cur.wrongIds=null;cur.idx=0;cur.page=0;}else{const w=cur.list.filter(q=>cur.answers[q.id]!==undefined&&cur.answers[q.id]!==q.answer);cur.wrongIds=w.map(q=>q.id);w.forEach(q=>{delete cur.answers[q.id]});save();cur.filter='wrong';cur.idx=0;cur.page=0;}render();};
+document.addEventListener('keydown',e=>{
+if(document.getElementById('quiz').classList.contains('hidden'))return;
+if(e.key==='ArrowRight')document.getElementById('btnNext').click();
+if(e.key==='ArrowLeft')document.getElementById('btnPrev').click();
+if(['1','2','3','4'].includes(e.key)){const q=viewList[cur.idx];if(q&&cur.answers[q.id]===undefined){cur.answers[q.id]=parseInt(e.key)-1;save();render();}}
+if(e.key.toLowerCase()==='a'||e.key.toLowerCase()==='b'||e.key.toLowerCase()==='c'||e.key.toLowerCase()==='d'){const m={a:0,b:1,c:2,d:3};const q=viewList[cur.idx];if(q&&cur.answers[q.id]===undefined){cur.answers[q.id]=m[e.key.toLowerCase()];save();render();}}
+});
+function paintLang(){const vi=LANG!=='en';document.getElementById('langVi').className='btn langbtn '+(vi?'primary':'ghost');document.getElementById('langEn').className='btn langbtn '+(!vi?'primary':'ghost');}
+function applyLang(){
+document.documentElement.lang=LANG==='en'?'en':'vi';
+document.title=t('docTitle');
+document.querySelectorAll('[data-i18n]').forEach(el=>{const v=t(el.getAttribute('data-i18n'));if(v===undefined)return;if(el.getAttribute('data-i18n')==='howto')el.innerHTML=v;else el.textContent=v;});
+paintLang();topicGrid();
+if(!document.getElementById('quiz').classList.contains('hidden'))render();
+}
+function setLang(l){LANG=l;try{localStorage.setItem('fl_lang',l);}catch(e){}applyLang();}
+document.getElementById('langVi').onclick=()=>setLang('vi');
+document.getElementById('langEn').onclick=()=>setLang('en');
+migrateLegacy();
+applyLang();
+// khôi phục phiên học đang dở khi load lại trang
+try{
+const s=JSON.parse(localStorage.getItem('fl_session')||'null');
+let sid=null;
+if(s){
+if(s.v===2&&TOPICS.some(t=>t.id===s.sub))sid=s.sub;
+else{const lm={1:1,2:5,3:9,4:12,5:13};if(lm[s.topic])sid=lm[s.topic];}
+}
+if(sid){startTopic(sid,false);if(s.filter==='wrong'&&Array.isArray(s.wrongIds)&&s.wrongIds.length){cur.wrongIds=s.wrongIds.filter(id=>cur.list.some(q=>q.id===id));cur.filter=cur.wrongIds.length?'wrong':null;}cur.idx=Math.min(Math.max(0,s.idx|0),cur.list.length-1);cur.page=Math.floor(cur.idx/PER_PAGE);render();}}catch(e){}
+</script>
+</body>
+</html>

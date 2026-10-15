@@ -264,7 +264,7 @@ if(cur.idx>=viewList.length)cur.idx=Math.max(0,viewList.length-1);
 const q=viewList[cur.idx];if(!q)return;
 document.getElementById('qNum').textContent=lblQ(cur.idx+1);
 document.getElementById('qId').textContent='ID '+q.id+' · '+t('topicLbl')+' '+q.sub;
-document.getElementById('qText').textContent=(LANG==='en'?'Q '+q.id+'. ':'Câu '+q.id+'. ')+qText(q);
+document.getElementById('qText').textContent=qText(q);
 document.getElementById('sessTitle').innerHTML=`${lblQ(cur.idx+1)} <span>/ ${viewList.length}</span>`;
 document.getElementById('hintTitle').textContent=cur.filter==='wrong'?t('hintRedo'):t('hintChoose');
 const mb=document.getElementById('btnMark');

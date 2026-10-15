@@ -63,6 +63,8 @@ h1{font-size:22px;margin:0}h1 small{display:block;font-size:13px;color:var(--mut
 .legend{display:flex;gap:10px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin-top:10px}.dot{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:4px;vertical-align:middle}
 .hidden{display:none!important}
 .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.banknav{display:flex;gap:10px;justify-content:center;margin:2px 0 8px;flex-wrap:wrap}
+.banknav .btn{letter-spacing:.04em;font-size:13px;padding:9px 22px}
 .progress-line{height:8px;background:#1c1f4a;border-radius:999px;overflow:hidden;margin-top:10px}.progress-line i{display:block;height:100%;background:linear-gradient(90deg,#5b6cff,#22d3ee);width:0%}
 </style>
 </head>
@@ -72,6 +74,7 @@ h1{font-size:22px;margin:0}h1 small{display:block;font-size:13px;color:var(--mut
 <div class="brand"><div class="logo">F</div><h1><span data-i18n="h1">500 Câu hỏi trắc nghiệm Flutter</span><small data-i18n="h1sub">Đáp án đã đối chiếu docs.flutter.dev (Flutter 3.47 · 2026) + giải thích chi tiết mỗi câu</small></h1></div>
 <div class="toolbar"><span class="badge" id="totalBadge">500 câu · 19 chủ đề</span><button class="btn primary langbtn" id="langVi">VI</button><button class="btn ghost langbtn" id="langEn">EN</button><button class="btn ghost" id="btnHomeTop" data-i18n="home">Trang chủ</button></div>
 </header>
+<nav class="banknav"><button class="btn primary" id="bankAi">AI GENERATE</button><button class="btn ghost" id="bankQz">QUIZLET QUESTION</button></nav>
 
 <!-- HOME -->
 <div id="home">
@@ -115,6 +118,7 @@ h1{font-size:22px;margin:0}h1 small{display:block;font-size:13px;color:var(--mut
 </div>
 </div>
 <script src="questions.js"></script>
+<script src="questions_qz.js"></script>
 <script>
 const GROUPS=[
 {id:'A',title:'A · Nền tảng & Công cụ',title_en:'A · Foundation & Tools'},
@@ -160,14 +164,16 @@ function qText(q){return (LANG==='en'&&q.q_en)?q.q_en:q.q}
 function qOpts(q){return (LANG==='en'&&q.options_en)?q.options_en:q.options}
 function qExp(q){return (LANG==='en'&&q.exp_en)?q.exp_en:q.exp}
 function lblQ(n){return LANG==='en'?'Q '+n:'Câu '+n}
-let cur={topic:0,list:[],idx:0,page:0,answers:{},marked:{},wrongIds:null,t0:Date.now(),timer:null,filter:null};
-function qs(){return window.QUESTIONS||[]}
+let cur={bank:'ai',topic:0,list:[],idx:0,page:0,answers:{},marked:{},wrongIds:null,t0:Date.now(),timer:null,filter:null};
+try{const _b=localStorage.getItem('fl_bank');if(_b==='qz'||_b==='ai')cur.bank=_b;}catch(e){}
+function qs(){return cur.bank==='qz'?(window.QUESTIONS_QZ||[]):(window.QUESTIONS||[])}
+function sk(tid,kind){return 'fl_'+cur.bank+'_s'+tid+'_'+kind}
 function topicGrid(){
 const g=document.getElementById('topicGrid');g.innerHTML='';
 const all=qs();
 const mkCard=(tp)=>{
 const cnt=tp.id===0?all.length:all.filter(q=>q.sub===tp.id).length;
-const done=JSON.parse(localStorage.getItem('fl_s'+tp.id+'_ans')||'{}');
+const done=JSON.parse(localStorage.getItem(sk(tp.id,'ans'))||'{}');
 const n=Object.keys(done).filter(id=>tp.id===0||all.some(q=>q.sub===tp.id&&String(q.id)===String(id))).length;
 const pct=cnt?Math.round(n/cnt*100):0;
 const el=document.createElement('div');el.className='card';
@@ -194,9 +200,9 @@ return qs().filter(q=>q.sub===tid);
 function startTopic(tid,resume){
 cur.topic=tid;cur.filter=null;cur.wrongIds=null;
 cur.list=getList(tid);
-cur.answers=JSON.parse(localStorage.getItem('fl_s'+tid+'_ans')||'{}');
-cur.marked=JSON.parse(localStorage.getItem('fl_s'+tid+'_mark')||'{}');
-cur.t0=parseInt(localStorage.getItem('fl_s'+tid+'_t')||Date.now());
+cur.answers=JSON.parse(localStorage.getItem(sk(tid,'ans'))||'{}');
+cur.marked=JSON.parse(localStorage.getItem(sk(tid,'mark'))||'{}');
+cur.t0=parseInt(localStorage.getItem(sk(tid,'t'))||Date.now());
 if(!resume&&tid!==0){/* keep answers but start at 0 */ }
 cur.idx=0;cur.page=0;
 // if resume, jump to first unanswered
@@ -210,35 +216,39 @@ document.getElementById('topicBadge').textContent=langTitle(TOPICS.find(t=>t.id=
 startTimer();render();window.scrollTo(0,0);
 }
 function save(){
-localStorage.setItem('fl_s'+cur.topic+'_ans',JSON.stringify(cur.answers));
-localStorage.setItem('fl_s'+cur.topic+'_mark',JSON.stringify(cur.marked));
-localStorage.setItem('fl_s'+cur.topic+'_t',String(cur.t0));
+localStorage.setItem(sk(cur.topic,'ans'),JSON.stringify(cur.answers));
+localStorage.setItem(sk(cur.topic,'mark'),JSON.stringify(cur.marked));
+localStorage.setItem(sk(cur.topic,'t'),String(cur.t0));
 }
 function migrateLegacy(){
 try{
-const subOf={};qs().forEach(q=>{subOf[q.id]=q.sub;});
-for(let oldT=1;oldT<=5;oldT++){
-['ans','mark'].forEach(k=>{
-let raw=null;try{raw=localStorage.getItem('fl_'+oldT+'_'+k);}catch(e){}
-if(!raw)return;
-let data={};try{data=JSON.parse(raw);}catch(e){return;}
-Object.keys(data).forEach(qid=>{const s=subOf[qid]||subOf[+qid];if(!s)return;const nk='fl_s'+s+'_'+k;let cur0={};try{cur0=JSON.parse(localStorage.getItem(nk)||'{}');}catch(e){}if(!(qid in cur0)){cur0[qid]=data[qid];try{localStorage.setItem(nk,JSON.stringify(cur0));}catch(e){}}});
-try{localStorage.removeItem('fl_'+oldT+'_'+k);}catch(e){}
-});
-try{localStorage.removeItem('fl_'+oldT+'_t');}catch(e){}
-}
+const subOf={};(window.QUESTIONS||[]).forEach(q=>{subOf[q.id]=q.sub;});
+const mergeInto=(data,nk)=>{let cur0={};try{cur0=JSON.parse(localStorage.getItem(nk)||'{}');}catch(e){}
+Object.keys(data).forEach(qid=>{if(!(qid in cur0))cur0[qid]=data[qid];});
+try{localStorage.setItem(nk,JSON.stringify(cur0));}catch(e){}};
+const take=ok=>{let raw=null;try{raw=localStorage.getItem(ok);}catch(e){return null;}
+if(!raw)return null;let data=null;try{data=JSON.parse(raw);}catch(e){return null;}
+try{localStorage.removeItem(ok);}catch(e){}return data;};
+// very old keys fl_1..5 (5-topic layout) -> re-bucket by question sub
+for(let oldT=1;oldT<=5;oldT++){['ans','mark'].forEach(k=>{const data=take('fl_'+oldT+'_'+k);if(!data)return;
+const bySub={};Object.keys(data).forEach(qid=>{const s=subOf[qid]||subOf[+qid];if(!s)return;(bySub[s]=bySub[s]||{})[qid]=data[qid];});
+Object.keys(bySub).forEach(s=>mergeInto(bySub[s],'fl_ai_s'+s+'_'+k));});
+try{localStorage.removeItem('fl_'+oldT+'_t');}catch(e){}}
+// previous keys fl_s* (no bank) -> fl_ai_s*
+for(let tid=0;tid<=19;tid++){['ans','mark','t'].forEach(k=>{const data=take('fl_s'+tid+'_'+k);if(data!==null&&typeof data==='object'&&k!=='t')mergeInto(data,'fl_ai_s'+tid+'_'+k);
+else if(data!==null&&k==='t'){try{const cur0=localStorage.getItem('fl_ai_s'+tid+'_t');if(!cur0)localStorage.setItem('fl_ai_s'+tid+'_t',String(data));}catch(e){}}});}
 }catch(e){}
 }
 function migrateRotation(){
 try{
 if(localStorage.getItem('fl_rot')==='1')return;
 for(let tid=0;tid<=19;tid++){
-let raw=null;try{raw=localStorage.getItem('fl_s'+tid+'_ans');}catch(e){}
+let raw=null;try{raw=localStorage.getItem('fl_ai_s'+tid+'_ans');}catch(e){}
 if(!raw)continue;
 let data={};try{data=JSON.parse(raw);}catch(e){continue;}
 let changed=false;
 Object.keys(data).forEach(qid=>{const k=(+qid)%4;if(k){const v=+data[qid];if(v===0||v===1||v===2||v===3){data[qid]=(v-k+4)%4;changed=true;}}});
-if(changed){try{localStorage.setItem('fl_s'+tid+'_ans',JSON.stringify(data));}catch(e){}}
+if(changed){try{localStorage.setItem('fl_ai_s'+tid+'_ans',JSON.stringify(data));}catch(e){}}
 }
 try{localStorage.setItem('fl_rot','1');}catch(e){}
 }catch(e){}
@@ -261,7 +271,7 @@ if(cur.filter==='wrong'&&!viewList.length){cur.filter=null;cur.wrongIds=null;vie
 if(cur.idx>=viewList.length)cur.idx=Math.max(0,viewList.length-1);
 const q=viewList[cur.idx];if(!q)return;
 document.getElementById('qNum').textContent=lblQ(cur.idx+1);
-document.getElementById('qId').textContent='ID '+q.id+' · '+t('topicLbl')+' '+q.sub;
+document.getElementById('qId').textContent=(cur.bank==='qz'&&q.code?q.code:'ID '+q.id)+' · '+t('topicLbl')+' '+q.sub;
 document.getElementById('qText').textContent=qText(q);
 document.getElementById('sessTitle').innerHTML=`${lblQ(cur.idx+1)} <span>/ ${viewList.length}</span>`;
 const mb=document.getElementById('btnMark');
@@ -323,7 +333,7 @@ if(i===cur.idx)btn.classList.add('cur');
 const a=cur.answers[x.id];
 if(a!==undefined)btn.classList.add(a===x.answer?'ok':'bad');
 if(cur.marked[x.id])btn.classList.add('marked');
-btn.title=t('gridQ')+' '+x.id;
+btn.title=cur.bank==='qz'&&x.code?x.code:(t('gridQ')+' '+x.id);
 btn.onclick=()=>{cur.idx=i;render();};
 gr.appendChild(btn);
 }
@@ -338,7 +348,7 @@ const info=document.createElement('span');info.style.cssText='width:100%;text-al
 }
 document.getElementById('btnPrev').disabled=cur.idx<=0;
 document.getElementById('btnNext').disabled=cur.idx>=viewList.length-1;
-try{localStorage.setItem('fl_session',JSON.stringify({v:2,sub:cur.topic,idx:cur.idx,page:cur.page,filter:cur.filter,wrongIds:cur.wrongIds}));}catch(e){}
+try{localStorage.setItem('fl_session',JSON.stringify({v:3,bank:cur.bank,sub:cur.topic,idx:cur.idx,page:cur.page,filter:cur.filter,wrongIds:cur.wrongIds}));}catch(e){}
 }
 function escapeHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 function linkifyUrls(s){const parts=String(s).split(/\s+-\s+|\s*;\s*|\n+/).map(p=>p.trim()).filter(Boolean);return parts.map(u=>{const m=u.match(/https?:\/\/[^\s)]+/);const url=m?m[0]:u;return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(url)}</a>`}).join('<br>')}
@@ -368,18 +378,24 @@ if(!document.getElementById('quiz').classList.contains('hidden'))render();
 function setLang(l){LANG=l;try{localStorage.setItem('fl_lang',l);}catch(e){}applyLang();}
 document.getElementById('langVi').onclick=()=>setLang('vi');
 document.getElementById('langEn').onclick=()=>setLang('en');
+function paintBank(){const ai=cur.bank!=='qz';document.getElementById('bankAi').className='btn '+(ai?'primary':'ghost');document.getElementById('bankQz').className='btn '+(!ai?'primary':'ghost');}
+function setBank(b){if(b!==undefined&&b!==cur.bank){save();try{clearInterval(cur.timer);}catch(e){}cur.bank=b;try{localStorage.setItem('fl_bank',b);}catch(e){}document.getElementById('quiz').classList.add('hidden');document.getElementById('home').classList.remove('hidden');}paintBank();applyLang();}
+document.getElementById('bankAi').onclick=()=>setBank('ai');
+document.getElementById('bankQz').onclick=()=>setBank('qz');
 migrateLegacy();
 migrateRotation();
+paintBank();
 applyLang();
 // khôi phục phiên học đang dở khi load lại trang
 try{
 const s=JSON.parse(localStorage.getItem('fl_session')||'null');
-let sid=null;
+let sid=null,sbank='ai';
 if(s){
-if(s.v===2&&TOPICS.some(t=>t.id===s.sub))sid=s.sub;
+if(s.v===3&&TOPICS.some(t=>t.id===s.sub)){sid=s.sub;if(s.bank==='qz')sbank='qz';}
+else if(s.v===2&&TOPICS.some(t=>t.id===s.sub)){sid=s.sub;}
 else{const lm={1:1,2:5,3:9,4:12,5:13};if(lm[s.topic])sid=lm[s.topic];}
 }
-if(sid){startTopic(sid,false);if(s.filter==='wrong'&&Array.isArray(s.wrongIds)&&s.wrongIds.length){cur.wrongIds=s.wrongIds.filter(id=>cur.list.some(q=>q.id===id));cur.filter=cur.wrongIds.length?'wrong':null;}cur.idx=Math.min(Math.max(0,s.idx|0),cur.list.length-1);cur.page=Math.floor(cur.idx/PER_PAGE);render();}}catch(e){}
+if(sid){cur.bank=sbank;try{localStorage.setItem('fl_bank',sbank);}catch(e){}paintBank();startTopic(sid,false);if(s.filter==='wrong'&&Array.isArray(s.wrongIds)&&s.wrongIds.length){cur.wrongIds=s.wrongIds.filter(id=>cur.list.some(q=>q.id===id));cur.filter=cur.wrongIds.length?'wrong':null;}cur.idx=Math.min(Math.max(0,s.idx|0),cur.list.length-1);cur.page=Math.floor(cur.idx/PER_PAGE);render();}}catch(e){}
 </script>
 </body>
 </html>

@@ -32,7 +32,6 @@ h1{font-size:22px;margin:0}h1 small{display:block;font-size:13px;color:var(--mut
 .markbtn{background:#1a1e40;border:1px solid #5a4d15;color:var(--yellow);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer}
 .markbtn.active{background:#3a2f10;border-color:var(--yellow);color:var(--yellow)}
 .qtitle{font-size:18px;line-height:1.6;font-weight:700;margin:6px 0 14px}
-.hintbox{background:#191c46;border:1px solid #2c3170;border-radius:14px;padding:12px 14px;margin-bottom:16px}.hintbox b{font-size:14px}.hintbox span{display:block;color:var(--muted);font-size:13px;margin-top:4px;line-height:1.5}
 .opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:#14162e;border:1px solid var(--border);color:var(--txt);border-radius:14px;padding:13px 14px;margin-bottom:12px;font-size:14.5px;cursor:pointer;line-height:1.5}
 .opt:hover{border-color:var(--accent)}.opt .k{width:28px;height:28px;min-width:28px;border-radius:9px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--muted);background:#0e1030}
 .opt.correct{background:rgba(34,197,94,.14);border-color:var(--green)}.opt.correct .k{background:var(--green);color:#04140a;border-color:var(--green)}
@@ -92,10 +91,11 @@ h1{font-size:22px;margin:0}h1 small{display:block;font-size:13px;color:var(--mut
 <div class="layout">
 <div>
 <div class="qcard">
-<div class="qtop"><div style="display:flex;gap:8px;align-items:center"><span class="pill" id="qNum">Câu 1</span><button class="markbtn" id="btnMark">⚑ Đánh dấu xem lại</button></div><span class="badge" id="qId">MLN131 · Topic</span></div>
+<div class="qtop"><div style="display:flex;gap:8px;align-items:center"><span class="pill" id="qNum">Câu 1</span><button class="markbtn" id="btnMark">★ Đánh dấu</button></div><span class="badge" id="qId">ID · Chủ đề</span></div>
 <div class="qtitle" id="qText"></div>
-<div class="hintbox"><b id="hintTitle">Chọn 1 đáp án.</b><span data-i18n="hintSaved">Trạng thái câu hiện tại được lưu tự động khi bạn chọn đáp án hoặc chuyển câu.</span></div>
 <div id="opts"></div>
+</div>
+<div class="navrow"><button class="btn ghost" id="btnPrev" data-i18n="prev">‹ Câu trước</button><button class="btn primary" id="btnNext" data-i18n="next">Câu tiếp ›</button></div>
 <div class="exp" id="expBox"><h4 id="expTitle"></h4><p id="expText"></p><div class="src" id="expSrc"></div></div>
 </div>
 <div class="navrow"><button class="btn ghost" id="btnPrev" data-i18n="prev">‹ Câu trước</button><button class="btn primary" id="btnNext" data-i18n="next">Câu tiếp ›</button></div>
@@ -266,7 +266,6 @@ document.getElementById('qNum').textContent=lblQ(cur.idx+1);
 document.getElementById('qId').textContent='ID '+q.id+' · '+t('topicLbl')+' '+q.sub;
 document.getElementById('qText').textContent=qText(q);
 document.getElementById('sessTitle').innerHTML=`${lblQ(cur.idx+1)} <span>/ ${viewList.length}</span>`;
-document.getElementById('hintTitle').textContent=cur.filter==='wrong'?t('hintRedo'):t('hintChoose');
 const mb=document.getElementById('btnMark');
 mb.classList.toggle('active',!!cur.marked[q.id]);
 mb.textContent=cur.marked[q.id]?t('marked2'):t('mark');

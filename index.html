@@ -231,6 +231,20 @@ try{localStorage.removeItem('fl_'+oldT+'_t');}catch(e){}
 }
 }catch(e){}
 }
+function migrateRotation(){
+try{
+if(localStorage.getItem('fl_rot')==='1')return;
+for(let tid=0;tid<=19;tid++){
+let raw=null;try{raw=localStorage.getItem('fl_s'+tid+'_ans');}catch(e){}
+if(!raw)continue;
+let data={};try{data=JSON.parse(raw);}catch(e){continue;}
+let changed=false;
+Object.keys(data).forEach(qid=>{const k=(+qid)%4;if(k){const v=+data[qid];if(v===0||v===1||v===2||v===3){data[qid]=(v-k+4)%4;changed=true;}}});
+if(changed){try{localStorage.setItem('fl_s'+tid+'_ans',JSON.stringify(data));}catch(e){}}
+}
+try{localStorage.setItem('fl_rot','1');}catch(e){}
+}catch(e){}
+}
 function startTimer(){
 clearInterval(cur.timer);
 cur.timer=setInterval(()=>{
@@ -358,6 +372,7 @@ function setLang(l){LANG=l;try{localStorage.setItem('fl_lang',l);}catch(e){}appl
 document.getElementById('langVi').onclick=()=>setLang('vi');
 document.getElementById('langEn').onclick=()=>setLang('en');
 migrateLegacy();
+migrateRotation();
 applyLang();
 // khôi phục phiên học đang dở khi load lại trang
 try{

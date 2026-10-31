@@ -150,6 +150,7 @@ h1{font-size:22px;margin:0}h1 small{display:block;font-size:13px;color:var(--mut
 </div>
 </div>
 <script src="questions_qz.js"></script>
+<script src="questions_qz_vi.js"></script>
 <script>
 const GROUPS=[
 {id:'A',title:'A · Nền tảng & Công cụ',title_en:'A · Foundation & Tools'},
@@ -191,9 +192,10 @@ const LET=["A","B","C","D"];
 const PER_PAGE=50;
 let LANG='vi';
 try{LANG=localStorage.getItem('fl_lang')||'vi';}catch(e){}
-function qText(q){return (LANG==='en'&&q.q_en)?q.q_en:q.q}
-function qOpts(q){return (LANG==='en'&&q.options_en)?q.options_en:q.options}
-function qExp(q){return (LANG==='en'&&q.exp_en)?q.exp_en:q.exp}
+function viOf(q){return (window.QUESTIONS_QZ_VI||{})[q.code]||null}
+function qText(q){const v=viOf(q);return (LANG==='en'&&q.q_en)?q.q_en:((v&&v.q)||q.q)}
+function qOpts(q){const v=viOf(q);return (LANG==='en'&&q.options_en)?q.options_en:((v&&v.options)||q.options)}
+function qExp(q){const v=viOf(q);return (LANG==='en'&&q.exp_en)?q.exp_en:((v&&v.exp)||q.exp)}
 function lblQ(n){return LANG==='en'?'Q '+n:'Câu '+n}
 function qzEsc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 function qzHighlight(code,lang){
@@ -279,7 +281,7 @@ if((t.match(/;/g)||[]).length>=2)return true;
 return false;
 }
 const QZ_START=/(^|[:?]\s)((?:import|class|abstract class|mixin|enum|void main|void\s+[A-Za-z_]|final\s|var\s|const\s|dynamic\s|Widget\s+[A-Za-z_]\w*\s*\(|Future\s*(?:<[^(){};]*>)?\s*(?:[A-Za-z_]\w*\s*)?\(|Stream\s*(?:<[^(){};]*>)?\s*(?:[A-Za-z_]\w*\s*)?\(|LayoutBuilder\s*\(|GridView(?:\.\w+)?\s*\(|expect\s*\(|String\??\s+[A-Za-z_]\w*\s*[=;]|int\??\s+[A-Za-z_]|double\s|bool\s|List<|Map<|Set<|if\s*\(|for\s*\(|while\s*\(|try\s*\{|test\s*\(|ElevatedButton\s*\(|@override)[\s\S]+)$/;
-const QZ_TAIL=/\s(?=(?:What|Which|Why|How|When|Where|According|If|In order|But|However|Yet)\b)/;
+const QZ_TAIL=/\s(?=(?:What|Which|Why|How|When|Where|According|If|In order|But|However|Yet|Điều|Cái|Tại|Như|Khi|Ở|Theo|Nếu|Nhưng|Tuy|Vì)\b)/;
 function qzBlockHtml(code){
 const isXml=/^\s*</.test(code);
 code=isXml?qzPrettyXml(code.trim()):qzPretty(code.trim());

@@ -74,7 +74,7 @@ h1{font-size:22px;margin:0}h1 small{display:block;font-size:13px;color:var(--mut
 <div class="brand"><div class="logo">F</div><h1><span data-i18n="h1">500 Câu hỏi trắc nghiệm Flutter</span><small data-i18n="h1sub">Đáp án đã đối chiếu docs.flutter.dev (Flutter 3.47 · 2026) + giải thích chi tiết mỗi câu</small></h1></div>
 <div class="toolbar"><span class="badge" id="totalBadge">500 câu · 19 chủ đề</span><button class="btn primary langbtn" id="langVi">VI</button><button class="btn ghost langbtn" id="langEn">EN</button><button class="btn ghost" id="btnHomeTop" data-i18n="home">Trang chủ</button></div>
 </header>
-<nav class="banknav"><button class="btn primary" id="bankAi">AI GENERATE</button><button class="btn ghost" id="bankQz">QUIZLET QUESTION</button></nav>
+<nav class="banknav"><button class="btn primary" id="bankAi">AI GENERATE</button><button class="btn ghost" id="bankQz">QUIZLET QUESTION</button><button class="btn ghost" id="bankMix">MIX</button></nav>
 
 <!-- HOME -->
 <div id="home">
@@ -119,6 +119,7 @@ h1{font-size:22px;margin:0}h1 small{display:block;font-size:13px;color:var(--mut
 </div>
 <script src="questions.js"></script>
 <script src="questions_qz.js"></script>
+<script src="questions_mix.js"></script>
 <script>
 const GROUPS=[
 {id:'A',title:'A · Nền tảng & Công cụ',title_en:'A · Foundation & Tools'},
@@ -165,8 +166,8 @@ function qOpts(q){return (LANG==='en'&&q.options_en)?q.options_en:q.options}
 function qExp(q){return (LANG==='en'&&q.exp_en)?q.exp_en:q.exp}
 function lblQ(n){return LANG==='en'?'Q '+n:'Câu '+n}
 let cur={bank:'ai',topic:0,list:[],idx:0,page:0,answers:{},marked:{},wrongIds:null,t0:Date.now(),timer:null,filter:null};
-try{const _b=localStorage.getItem('fl_bank');if(_b==='qz'||_b==='ai')cur.bank=_b;}catch(e){}
-function qs(){return cur.bank==='qz'?(window.QUESTIONS_QZ||[]):(window.QUESTIONS||[])}
+try{const _b=localStorage.getItem('fl_bank');if(_b==='qz'||_b==='ai'||_b==='mix')cur.bank=_b;}catch(e){}
+function qs(){return cur.bank==='qz'?(window.QUESTIONS_QZ||[]):cur.bank==='mix'?(window.QUESTIONS_MIX||[]):(window.QUESTIONS||[])}
 function sk(tid,kind){return 'fl_'+cur.bank+'_s'+tid+'_'+kind}
 function topicGrid(){
 const g=document.getElementById('topicGrid');g.innerHTML='';
@@ -271,7 +272,7 @@ if(cur.filter==='wrong'&&!viewList.length){cur.filter=null;cur.wrongIds=null;vie
 if(cur.idx>=viewList.length)cur.idx=Math.max(0,viewList.length-1);
 const q=viewList[cur.idx];if(!q)return;
 document.getElementById('qNum').textContent=lblQ(cur.idx+1);
-document.getElementById('qId').textContent=(cur.bank==='qz'&&q.code?q.code:'ID '+q.id)+' · '+t('topicLbl')+' '+q.sub;
+document.getElementById('qId').textContent=(q.code?q.code:'ID '+q.id)+' · '+t('topicLbl')+' '+q.sub;
 document.getElementById('qText').textContent=qText(q);
 document.getElementById('sessTitle').innerHTML=`${lblQ(cur.idx+1)} <span>/ ${viewList.length}</span>`;
 const mb=document.getElementById('btnMark');
@@ -333,7 +334,7 @@ if(i===cur.idx)btn.classList.add('cur');
 const a=cur.answers[x.id];
 if(a!==undefined)btn.classList.add(a===x.answer?'ok':'bad');
 if(cur.marked[x.id])btn.classList.add('marked');
-btn.title=cur.bank==='qz'&&x.code?x.code:(t('gridQ')+' '+x.id);
+btn.title=x.code?x.code:(t('gridQ')+' '+x.id);
 btn.onclick=()=>{cur.idx=i;render();};
 gr.appendChild(btn);
 }
@@ -378,10 +379,33 @@ if(!document.getElementById('quiz').classList.contains('hidden'))render();
 function setLang(l){LANG=l;try{localStorage.setItem('fl_lang',l);}catch(e){}applyLang();}
 document.getElementById('langVi').onclick=()=>setLang('vi');
 document.getElementById('langEn').onclick=()=>setLang('en');
-function paintBank(){const ai=cur.bank!=='qz';document.getElementById('bankAi').className='btn '+(ai?'primary':'ghost');document.getElementById('bankQz').className='btn '+(!ai?'primary':'ghost');}
+function paintBank(){const b=cur.bank;document.getElementById('bankAi').className='btn '+(b==='ai'?'primary':'ghost');document.getElementById('bankQz').className='btn '+(b==='qz'?'primary':'ghost');document.getElementById('bankMix').className='btn '+(b==='mix'?'primary':'ghost');}
 function setBank(b){if(b!==undefined&&b!==cur.bank){save();try{clearInterval(cur.timer);}catch(e){}cur.bank=b;try{localStorage.setItem('fl_bank',b);}catch(e){}document.getElementById('quiz').classList.add('hidden');document.getElementById('home').classList.remove('hidden');}paintBank();applyLang();}
 document.getElementById('bankAi').onclick=()=>setBank('ai');
 document.getElementById('bankQz').onclick=()=>setBank('qz');
+document.getElementById('bankMix').onclick=()=>setBank('mix');
+// Âm thanh click nhẹ cho mọi nút bấm (tổng hợp bằng Web Audio, không cần file âm thanh)
+let _actx=null;
+function playClick(){
+try{
+_actx=_actx||new (window.AudioContext||window.webkitAudioContext)();
+if(_actx.state==='suspended')_actx.resume();
+const t0=_actx.currentTime;
+const osc=_actx.createOscillator(),gain=_actx.createGain();
+osc.type='triangle';
+osc.frequency.setValueAtTime(760,t0);
+osc.frequency.exponentialRampToValueAtTime(340,t0+.045);
+gain.gain.setValueAtTime(.0001,t0);
+gain.gain.exponentialRampToValueAtTime(.12,t0+.004);
+gain.gain.exponentialRampToValueAtTime(.0001,t0+.06);
+osc.connect(gain);gain.connect(_actx.destination);
+osc.start(t0);osc.stop(t0+.07);
+}catch(e){}
+}
+document.addEventListener('click',e=>{
+const el=e.target.closest('button,.opt,.card');
+if(el&&!el.disabled)playClick();
+},true);
 migrateLegacy();
 migrateRotation();
 paintBank();
@@ -391,7 +415,7 @@ try{
 const s=JSON.parse(localStorage.getItem('fl_session')||'null');
 let sid=null,sbank='ai';
 if(s){
-if(s.v===3&&TOPICS.some(t=>t.id===s.sub)){sid=s.sub;if(s.bank==='qz')sbank='qz';}
+if(s.v===3&&TOPICS.some(t=>t.id===s.sub)){sid=s.sub;if(s.bank==='qz'||s.bank==='mix')sbank=s.bank;}
 else if(s.v===2&&TOPICS.some(t=>t.id===s.sub)){sid=s.sub;}
 else{const lm={1:1,2:5,3:9,4:12,5:13};if(lm[s.topic])sid=lm[s.topic];}
 }

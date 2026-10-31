@@ -69,9 +69,21 @@ h1{font-size:22px;margin:0}h1 small{display:block;font-size:13px;color:var(--mut
 .legend{display:flex;gap:10px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin-top:10px}.dot{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:4px;vertical-align:middle}
 .hidden{display:none!important}
 .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.banknav{display:flex;gap:10px;justify-content:center;margin:2px 0 8px;flex-wrap:wrap}
-.banknav .btn{letter-spacing:.04em;font-size:13px;padding:9px 22px}
 .progress-line{height:8px;background:#1c1f4a;border-radius:999px;overflow:hidden;margin-top:10px}.progress-line i{display:block;height:100%;background:linear-gradient(90deg,#5b6cff,#22d3ee);width:0%}
+.done-overlay{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(2,4,12,.74);backdrop-filter:blur(6px);animation:doneFade .2s ease}
+.done-overlay.hidden{display:none}
+.done-card{width:min(460px,100%);background:linear-gradient(180deg,#171b38,#0b0d1f);border:1px solid #313a68;border-radius:24px;padding:30px 26px 26px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.65);animation:donePop .32s cubic-bezier(.2,1.25,.35,1);position:relative}
+.done-close{position:absolute;top:10px;right:12px;width:34px;height:34px;border-radius:50%;border:1px solid var(--border);background:#141735;color:var(--muted);font-size:20px;line-height:1;cursor:pointer}
+.done-close:hover{color:var(--txt);border-color:var(--accent)}
+.done-emoji{font-size:54px;line-height:1;margin-bottom:10px;filter:drop-shadow(0 6px 18px rgba(91,108,255,.35))}
+.done-card h2{font-size:22px;margin:0 0 8px;line-height:1.35}
+.done-topic{color:#a9b0d6;font-size:14px;margin:0 0 14px;font-weight:600}
+.done-stats{display:inline-flex;gap:10px;flex-wrap:wrap;justify-content:center;font-size:13.5px;color:var(--muted);background:#0d1026;border:1px solid var(--border);border-radius:999px;padding:8px 16px}
+.done-stats b{color:var(--txt)}
+.done-actions{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.done-actions .btn{width:100%;padding:12px 16px}
+@keyframes doneFade{from{opacity:0}to{opacity:1}}
+@keyframes donePop{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -80,7 +92,6 @@ h1{font-size:22px;margin:0}h1 small{display:block;font-size:13px;color:var(--mut
 <div class="brand"><div class="logo">F</div><h1><span data-i18n="h1">500 Câu hỏi trắc nghiệm Flutter</span><small data-i18n="h1sub">Đáp án đã đối chiếu docs.flutter.dev (Flutter 3.47 · 2026) + giải thích chi tiết mỗi câu</small></h1></div>
 <div class="toolbar"><span class="badge" id="totalBadge">500 câu · 19 chủ đề</span><button class="btn primary langbtn" id="langVi">VI</button><button class="btn ghost langbtn" id="langEn">EN</button><button class="btn ghost" id="btnHomeTop" data-i18n="home">Trang chủ</button></div>
 </header>
-<nav class="banknav"><button class="btn primary" id="bankAi">AI GENERATE</button><button class="btn ghost" id="bankQz">QUIZLET QUESTION</button><button class="btn ghost" id="bankMix">MIX</button></nav>
 
 <!-- HOME -->
 <div id="home">
@@ -122,10 +133,23 @@ h1{font-size:22px;margin:0}h1 small{display:block;font-size:13px;color:var(--mut
 </div>
 </div>
 </div>
+
+<!-- POPUP HOÀN THÀNH CHỦ ĐỀ -->
+<div class="done-overlay hidden" id="doneOverlay">
+<div class="done-card" role="dialog" aria-modal="true" aria-labelledby="doneTitle">
+<button class="done-close" id="doneClose" aria-label="Đóng">×</button>
+<div class="done-emoji">🎉</div>
+<h2 id="doneTitle" data-i18n="doneTitle">Chúc mừng hoàn thành chủ đề</h2>
+<p class="done-topic" id="doneTopic"></p>
+<div class="done-stats" id="doneStats"></div>
+<div class="done-actions">
+<button class="btn primary" id="doneNext" data-i18n="doneNext">Học chủ đề tiếp theo →</button>
+<button class="btn ghost" id="doneWrong">Học lại các câu sai</button>
+<button class="btn ghost" id="doneHome" data-i18n="doneHome">Về trang chủ</button>
 </div>
-<script src="questions.js"></script>
+</div>
+</div>
 <script src="questions_qz.js"></script>
-<script src="questions_mix.js"></script>
 <script>
 const GROUPS=[
 {id:'A',title:'A · Nền tảng & Công cụ',title_en:'A · Foundation & Tools'},
@@ -157,8 +181,8 @@ const TOPICS=[
 {id:19,group:'E',title:"19 — Nền tảng hỗ trợ",title_en:"19 — Supported Platforms",desc:"Ma trận OS/architecture, trang Supported platforms, build web.",desc_en:"OS/architecture matrix, Supported platforms page, web builds."},
 ];
 const I18N={
-vi:{docTitle:"500 Câu hỏi trắc nghiệm Flutter — Học & Luyện",h1:"500 Câu hỏi trắc nghiệm Flutter",h1sub:"Đáp án đã đối chiếu docs.flutter.dev (Flutter 3.47 · 2026) + giải thích chi tiết mỗi câu",home:"Trang chủ",back:"← Chủ đề",reset:"Làm lại từ đầu",prev:"‹ Câu trước",next:"Câu tiếp ›",session:"PHIÊN HỌC",progress:"Tiến độ tổng quan",correctWrong:"Đúng / Sai",timeSpent:"Thời gian làm bài",markedLbl:"Số lần xem lại",quickNav:"Điều hướng nhanh",lgCur:"Hiện tại",lgOk:"Đúng",lgBad:"Sai",lgMark:"Đánh dấu",studyNow:"Học ngay →",continue:"Tiếp tục",qCount:"câu",qCount2:"câu hỏi",topics:"chủ đề",done2:"đã làm",hintChoose:"Chọn 1 đáp án.",hintRedo:"Làm lại các câu đã sai. Trả lời đúng để hoàn thành.",hintSaved:"Trạng thái câu hiện tại được lưu tự động khi bạn chọn đáp án hoặc chuyển câu.",mark:"★ Đánh dấu",marked2:"★ Đã đánh dấu",reviewWrong:"★ Ôn câu sai",allQ:"Tất cả các câu",expOk:"Chính xác! Đáp án",isCorrect:"là đúng.",youChose:"Bạn chọn",wrongWord:"sai",correctIs:"Đáp án đúng là",refs:"Nguồn tham khảo",correct:"Đúng",wrongLbl:"Sai",completed:"Đã hoàn thành",page:"Trang",qRange:"câu",gridQ:"Câu",topicLbl:"Chủ đề",confirmReset:"Xóa toàn bộ đáp án của chủ đề này?",howto:"✅ <b>Cách học:</b> chọn 1 chủ đề nhỏ hoặc “Ôn tổng hợp 500 câu”. Vào bài học: bấm đáp án → hệ thống báo <b style=\"color:#7dffa9\">Đúng (xanh)</b> / <b style=\"color:#ff9a9a\">Sai (đỏ)</b> và luôn hiện <b>đáp án đúng + giải thích</b> bên dưới (đáp án đã khóa, không chọn lại). Dùng <b>Câu trước / Câu tiếp</b> hoặc bấm số ở <b>Điều hướng nhanh</b> (50 câu/trang). Tiến độ, đúng/sai, thời gian được lưu tự động (localStorage).<br>📚 Nguồn đối chiếu: https://docs.flutter.dev/learn · /install/quick · /ui · /data-and-backend/state-mgmt · /ui/navigation · /platform-integration · /testing/overview · /tools/sdk · /reference/supported-platforms"},
-en:{docTitle:"500 Flutter Quiz Questions — Learn & Practice",h1:"500 Flutter Quiz Questions",h1sub:"Answers verified against docs.flutter.dev (Flutter 3.47 · 2026) + detailed explanations",home:"Home",back:"← Topics",reset:"Restart",prev:"‹ Previous",next:"Next ›",session:"STUDY SESSION",progress:"Overall progress",correctWrong:"Correct / Wrong",timeSpent:"Time spent",markedLbl:"Marked",quickNav:"Quick navigation",lgCur:"Current",lgOk:"Correct",lgBad:"Wrong",lgMark:"Marked",studyNow:"Study now →",continue:"Continue",qCount:"questions",qCount2:"questions",topics:"topics",done2:"done",hintChoose:"Choose 1 answer.",hintRedo:"Redo the wrong answers. Answer correctly to complete.",hintSaved:"Your progress on this question auto-saves when you answer or navigate.",mark:"★ Mark",marked2:"★ Marked",reviewWrong:"★ Review wrong",allQ:"All questions",expOk:"Correct! Answer",isCorrect:"is right.",youChose:"You chose",wrongWord:"wrong",correctIs:"The correct answer is",refs:"References",correct:"Correct",wrongLbl:"Wrong",completed:"Completed",page:"Page",qRange:"questions",gridQ:"Question",topicLbl:"Topic",confirmReset:"Clear all answers in this topic?",howto:"✅ <b>How to study:</b> pick a sub-topic or “Review all 500”. In a lesson: pick an answer → <b style=\"color:#7dffa9\">Correct (green)</b> / <b style=\"color:#ff9a9a\">Wrong (red)</b>, always with the <b>right answer + explanation</b> below (answers lock after choosing). Use <b>Previous / Next</b> or the <b>Quick navigation</b> numbers (50 per page). Progress, scores and time auto-save (localStorage).<br>📚 Verified against: https://docs.flutter.dev/learn · /install/quick · /ui · /data-and-backend/state-mgmt · /ui/navigation · /platform-integration · /testing/overview · /tools/sdk · /reference/supported-platforms"}
+vi:{docTitle:"500 Câu hỏi trắc nghiệm Flutter — Học & Luyện",h1:"500 Câu hỏi trắc nghiệm Flutter",h1sub:"Đáp án đã đối chiếu docs.flutter.dev (Flutter 3.47 · 2026) + giải thích chi tiết mỗi câu",home:"Trang chủ",back:"← Chủ đề",reset:"Làm lại từ đầu",prev:"‹ Câu trước",next:"Câu tiếp ›",session:"PHIÊN HỌC",progress:"Tiến độ tổng quan",correctWrong:"Đúng / Sai",timeSpent:"Thời gian làm bài",markedLbl:"Số lần xem lại",quickNav:"Điều hướng nhanh",lgCur:"Hiện tại",lgOk:"Đúng",lgBad:"Sai",lgMark:"Đánh dấu",studyNow:"Học ngay →",continue:"Tiếp tục",qCount:"câu",qCount2:"câu hỏi",topics:"chủ đề",done2:"đã làm",hintChoose:"Chọn 1 đáp án.",hintRedo:"Làm lại các câu đã sai. Trả lời đúng để hoàn thành.",hintSaved:"Trạng thái câu hiện tại được lưu tự động khi bạn chọn đáp án hoặc chuyển câu.",mark:"★ Đánh dấu",marked2:"★ Đã đánh dấu",reviewWrong:"★ Ôn câu sai",allQ:"Tất cả các câu",expOk:"Chính xác! Đáp án",isCorrect:"là đúng.",youChose:"Bạn chọn",wrongWord:"sai",correctIs:"Đáp án đúng là",refs:"Nguồn tham khảo",correct:"Đúng",wrongLbl:"Sai",completed:"Đã hoàn thành",page:"Trang",qRange:"câu",gridQ:"Câu",topicLbl:"Chủ đề",confirmReset:"Xóa toàn bộ đáp án của chủ đề này?",doneTitle:"Chúc mừng hoàn thành chủ đề",doneNext:"Học chủ đề tiếp theo →",doneWrong:"Học lại các câu sai",doneHome:"Về trang chủ",doneOk:"đúng",doneBad:"sai",doneQ:"câu",howto:"✅ <b>Cách học:</b> chọn 1 chủ đề nhỏ hoặc “Ôn tổng hợp 500 câu”. Vào bài học: bấm đáp án → hệ thống báo <b style=\"color:#7dffa9\">Đúng (xanh)</b> / <b style=\"color:#ff9a9a\">Sai (đỏ)</b> và luôn hiện <b>đáp án đúng + giải thích</b> bên dưới (đáp án đã khóa, không chọn lại). Dùng <b>Câu trước / Câu tiếp</b> hoặc bấm số ở <b>Điều hướng nhanh</b> (50 câu/trang). Tiến độ, đúng/sai, thời gian được lưu tự động (localStorage).<br>📚 Nguồn đối chiếu: https://docs.flutter.dev/learn · /install/quick · /ui · /data-and-backend/state-mgmt · /ui/navigation · /platform-integration · /testing/overview · /tools/sdk · /reference/supported-platforms"},
+en:{docTitle:"500 Flutter Quiz Questions — Learn & Practice",h1:"500 Flutter Quiz Questions",h1sub:"Answers verified against docs.flutter.dev (Flutter 3.47 · 2026) + detailed explanations",home:"Home",back:"← Topics",reset:"Restart",prev:"‹ Previous",next:"Next ›",session:"STUDY SESSION",progress:"Overall progress",correctWrong:"Correct / Wrong",timeSpent:"Time spent",markedLbl:"Marked",quickNav:"Quick navigation",lgCur:"Current",lgOk:"Correct",lgBad:"Wrong",lgMark:"Marked",studyNow:"Study now →",continue:"Continue",qCount:"questions",qCount2:"questions",topics:"topics",done2:"done",hintChoose:"Choose 1 answer.",hintRedo:"Redo the wrong answers. Answer correctly to complete.",hintSaved:"Your progress on this question auto-saves when you answer or navigate.",mark:"★ Mark",marked2:"★ Marked",reviewWrong:"★ Review wrong",allQ:"All questions",expOk:"Correct! Answer",isCorrect:"is right.",youChose:"You chose",wrongWord:"wrong",correctIs:"The correct answer is",refs:"References",correct:"Correct",wrongLbl:"Wrong",completed:"Completed",page:"Page",qRange:"questions",gridQ:"Question",topicLbl:"Topic",confirmReset:"Clear all answers in this topic?",doneTitle:"Topic completed!",doneNext:"Next topic →",doneWrong:"Review wrong answers",doneHome:"Back to home",doneOk:"correct",doneBad:"wrong",doneQ:"questions",howto:"✅ <b>How to study:</b> pick a sub-topic or “Review all 500”. In a lesson: pick an answer → <b style=\"color:#7dffa9\">Correct (green)</b> / <b style=\"color:#ff9a9a\">Wrong (red)</b>, always with the <b>right answer + explanation</b> below (answers lock after choosing). Use <b>Previous / Next</b> or the <b>Quick navigation</b> numbers (50 per page). Progress, scores and time auto-save (localStorage).<br>📚 Verified against: https://docs.flutter.dev/learn · /install/quick · /ui · /data-and-backend/state-mgmt · /ui/navigation · /platform-integration · /testing/overview · /tools/sdk · /reference/supported-platforms"}
 };
 function t(k){return (I18N[LANG]&&I18N[LANG][k]!==undefined)?I18N[LANG][k]:I18N.vi[k]}
 function langTitle(o){return (LANG==='en'&&o.title_en)?o.title_en:o.title}
@@ -310,10 +334,9 @@ return qzRenderProse(text.slice(0,rawStart))+qzBlockHtml(text.slice(rawStart,raw
 return qzRenderProse(text);
 }
 
-let cur={bank:'ai',topic:0,list:[],idx:0,page:0,answers:{},marked:{},wrongIds:null,t0:Date.now(),timer:null,filter:null};
-try{const _b=localStorage.getItem('fl_bank');if(_b==='qz'||_b==='ai'||_b==='mix')cur.bank=_b;}catch(e){}
-function qs(){return cur.bank==='qz'?(window.QUESTIONS_QZ||[]):cur.bank==='mix'?(window.QUESTIONS_MIX||[]):(window.QUESTIONS||[])}
-function sk(tid,kind){return 'fl_'+cur.bank+'_s'+tid+'_'+kind}
+let cur={bank:'qz',topic:0,list:[],idx:0,page:0,answers:{},marked:{},wrongIds:null,t0:Date.now(),timer:null,filter:null,doneShown:false};
+function qs(){return window.QUESTIONS_QZ||[]}
+function sk(tid,kind){return 'fl_qz_s'+tid+'_'+kind}
 function topicGrid(){
 const g=document.getElementById('topicGrid');g.innerHTML='';
 const all=qs();
@@ -344,7 +367,8 @@ if(tid===0)return qs().slice();
 return qs().filter(q=>q.sub===tid);
 }
 function startTopic(tid,resume){
-cur.topic=tid;cur.filter=null;cur.wrongIds=null;
+cur.topic=tid;cur.filter=null;cur.wrongIds=null;cur.doneShown=false;
+hideDone();
 cur.list=getList(tid);
 cur.answers=JSON.parse(localStorage.getItem(sk(tid,'ans'))||'{}');
 cur.marked=JSON.parse(localStorage.getItem(sk(tid,'mark'))||'{}');
@@ -365,39 +389,6 @@ function save(){
 localStorage.setItem(sk(cur.topic,'ans'),JSON.stringify(cur.answers));
 localStorage.setItem(sk(cur.topic,'mark'),JSON.stringify(cur.marked));
 localStorage.setItem(sk(cur.topic,'t'),String(cur.t0));
-}
-function migrateLegacy(){
-try{
-const subOf={};(window.QUESTIONS||[]).forEach(q=>{subOf[q.id]=q.sub;});
-const mergeInto=(data,nk)=>{let cur0={};try{cur0=JSON.parse(localStorage.getItem(nk)||'{}');}catch(e){}
-Object.keys(data).forEach(qid=>{if(!(qid in cur0))cur0[qid]=data[qid];});
-try{localStorage.setItem(nk,JSON.stringify(cur0));}catch(e){}};
-const take=ok=>{let raw=null;try{raw=localStorage.getItem(ok);}catch(e){return null;}
-if(!raw)return null;let data=null;try{data=JSON.parse(raw);}catch(e){return null;}
-try{localStorage.removeItem(ok);}catch(e){}return data;};
-// very old keys fl_1..5 (5-topic layout) -> re-bucket by question sub
-for(let oldT=1;oldT<=5;oldT++){['ans','mark'].forEach(k=>{const data=take('fl_'+oldT+'_'+k);if(!data)return;
-const bySub={};Object.keys(data).forEach(qid=>{const s=subOf[qid]||subOf[+qid];if(!s)return;(bySub[s]=bySub[s]||{})[qid]=data[qid];});
-Object.keys(bySub).forEach(s=>mergeInto(bySub[s],'fl_ai_s'+s+'_'+k));});
-try{localStorage.removeItem('fl_'+oldT+'_t');}catch(e){}}
-// previous keys fl_s* (no bank) -> fl_ai_s*
-for(let tid=0;tid<=19;tid++){['ans','mark','t'].forEach(k=>{const data=take('fl_s'+tid+'_'+k);if(data!==null&&typeof data==='object'&&k!=='t')mergeInto(data,'fl_ai_s'+tid+'_'+k);
-else if(data!==null&&k==='t'){try{const cur0=localStorage.getItem('fl_ai_s'+tid+'_t');if(!cur0)localStorage.setItem('fl_ai_s'+tid+'_t',String(data));}catch(e){}}});}
-}catch(e){}
-}
-function migrateRotation(){
-try{
-if(localStorage.getItem('fl_rot')==='1')return;
-for(let tid=0;tid<=19;tid++){
-let raw=null;try{raw=localStorage.getItem('fl_ai_s'+tid+'_ans');}catch(e){}
-if(!raw)continue;
-let data={};try{data=JSON.parse(raw);}catch(e){continue;}
-let changed=false;
-Object.keys(data).forEach(qid=>{const k=(+qid)%4;if(k){const v=+data[qid];if(v===0||v===1||v===2||v===3){data[qid]=(v-k+4)%4;changed=true;}}});
-if(changed){try{localStorage.setItem('fl_ai_s'+tid+'_ans',JSON.stringify(data));}catch(e){}}
-}
-try{localStorage.setItem('fl_rot','1');}catch(e){}
-}catch(e){}
 }
 function startTimer(){
 clearInterval(cur.timer);
@@ -439,7 +430,7 @@ b.disabled=true;
 b.className='opt '+cls;
 b.innerHTML=`<span class="k">${LET[i]}</span><span></span>`;
 b.lastChild.textContent=t;
-b.onclick=()=>{if(cur.answers[q.id]!==undefined)return;cur.answers[q.id]=i;save();render();};
+b.onclick=()=>{if(cur.answers[q.id]!==undefined)return;cur.answers[q.id]=i;save();render();maybeShowDone();};
 box.appendChild(b);
 });
 // explanation
@@ -504,14 +495,15 @@ document.getElementById('btnNext').onclick=()=>{if(cur.idx<viewList.length-1){cu
 document.getElementById('btnMark').onclick=()=>{const q=viewList[cur.idx];if(!q)return;if(cur.marked[q.id])delete cur.marked[q.id];else cur.marked[q.id]=1;save();render();};
 document.getElementById('btnBack').onclick=()=>{clearInterval(cur.timer);save();try{localStorage.removeItem('fl_session');}catch(e){}document.getElementById('quiz').classList.add('hidden');document.getElementById('home').classList.remove('hidden');topicGrid();};
 document.getElementById('btnHomeTop').onclick=()=>{document.getElementById('btnBack').onclick();};
-document.getElementById('btnReset').onclick=()=>{if(confirm(t('confirmReset'))){cur.answers={};cur.marked={};cur.wrongIds=null;cur.t0=Date.now();cur.idx=0;cur.page=0;cur.filter=null;save();render();}};
-document.getElementById('btnWrong').onclick=()=>{if(cur.filter==='wrong'){cur.filter=null;cur.wrongIds=null;cur.idx=0;cur.page=0;}else{const w=cur.list.filter(q=>cur.answers[q.id]!==undefined&&cur.answers[q.id]!==q.answer);cur.wrongIds=w.map(q=>q.id);w.forEach(q=>{delete cur.answers[q.id]});save();cur.filter='wrong';cur.idx=0;cur.page=0;}render();};
+document.getElementById('btnReset').onclick=()=>{if(confirm(t('confirmReset'))){cur.answers={};cur.marked={};cur.wrongIds=null;cur.t0=Date.now();cur.idx=0;cur.page=0;cur.filter=null;cur.doneShown=false;hideDone();save();render();}};
+document.getElementById('btnWrong').onclick=()=>{hideDone();cur.doneShown=false;if(cur.filter==='wrong'){cur.filter=null;cur.wrongIds=null;cur.idx=0;cur.page=0;}else{const w=cur.list.filter(q=>cur.answers[q.id]!==undefined&&cur.answers[q.id]!==q.answer);cur.wrongIds=w.map(q=>q.id);w.forEach(q=>{delete cur.answers[q.id]});save();cur.filter='wrong';cur.idx=0;cur.page=0;}render();};
 document.addEventListener('keydown',e=>{
+if(!document.getElementById('doneOverlay').classList.contains('hidden'))return;
 if(document.getElementById('quiz').classList.contains('hidden'))return;
 if(e.key==='ArrowRight')document.getElementById('btnNext').click();
 if(e.key==='ArrowLeft')document.getElementById('btnPrev').click();
-if(['1','2','3','4'].includes(e.key)){const q=viewList[cur.idx];if(q&&cur.answers[q.id]===undefined){cur.answers[q.id]=parseInt(e.key)-1;save();render();}}
-if(e.key.toLowerCase()==='a'||e.key.toLowerCase()==='b'||e.key.toLowerCase()==='c'||e.key.toLowerCase()==='d'){const m={a:0,b:1,c:2,d:3};const q=viewList[cur.idx];if(q&&cur.answers[q.id]===undefined){cur.answers[q.id]=m[e.key.toLowerCase()];save();render();}}
+if(['1','2','3','4'].includes(e.key)){const q=viewList[cur.idx];if(q&&cur.answers[q.id]===undefined){cur.answers[q.id]=parseInt(e.key)-1;save();render();maybeShowDone();}}
+if(e.key.toLowerCase()==='a'||e.key.toLowerCase()==='b'||e.key.toLowerCase()==='c'||e.key.toLowerCase()==='d'){const m={a:0,b:1,c:2,d:3};const q=viewList[cur.idx];if(q&&cur.answers[q.id]===undefined){cur.answers[q.id]=m[e.key.toLowerCase()];save();render();maybeShowDone();}}
 });
 function paintLang(){const vi=LANG!=='en';document.getElementById('langVi').className='btn langbtn '+(vi?'primary':'ghost');document.getElementById('langEn').className='btn langbtn '+(!vi?'primary':'ghost');}
 function applyLang(){
@@ -520,15 +512,83 @@ document.title=t('docTitle');
 document.querySelectorAll('[data-i18n]').forEach(el=>{const v=t(el.getAttribute('data-i18n'));if(v===undefined)return;if(el.getAttribute('data-i18n')==='howto')el.innerHTML=v;else el.textContent=v;});
 paintLang();topicGrid();
 if(!document.getElementById('quiz').classList.contains('hidden'))render();
+if(!document.getElementById('doneOverlay').classList.contains('hidden'))updateDoneWrong();
 }
 function setLang(l){LANG=l;try{localStorage.setItem('fl_lang',l);}catch(e){}applyLang();}
 document.getElementById('langVi').onclick=()=>setLang('vi');
 document.getElementById('langEn').onclick=()=>setLang('en');
-function paintBank(){const b=cur.bank;document.getElementById('bankAi').className='btn '+(b==='ai'?'primary':'ghost');document.getElementById('bankQz').className='btn '+(b==='qz'?'primary':'ghost');document.getElementById('bankMix').className='btn '+(b==='mix'?'primary':'ghost');}
-function setBank(b){if(b!==undefined&&b!==cur.bank){save();try{clearInterval(cur.timer);}catch(e){}cur.bank=b;try{localStorage.setItem('fl_bank',b);}catch(e){}document.getElementById('quiz').classList.add('hidden');document.getElementById('home').classList.remove('hidden');}paintBank();applyLang();}
-document.getElementById('bankAi').onclick=()=>setBank('ai');
-document.getElementById('bankQz').onclick=()=>setBank('qz');
-document.getElementById('bankMix').onclick=()=>setBank('mix');
+// Âm thanh chúc mừng khi hoàn thành chủ đề
+let _successCtx=null;
+function playSuccess(){
+try{
+_successCtx=_successCtx||new (window.AudioContext||window.webkitAudioContext)();
+if(_successCtx.state==='suspended')_successCtx.resume();
+const t0=_successCtx.currentTime;
+[523.25,659.25,783.99,1046.5].forEach((f,i)=>{
+const o=_successCtx.createOscillator(),g=_successCtx.createGain();
+const at=t0+i*0.105;
+o.type='sine';o.frequency.value=f;
+g.gain.setValueAtTime(.0001,at);
+g.gain.exponentialRampToValueAtTime(.16,at+.02);
+g.gain.exponentialRampToValueAtTime(.0001,at+.5);
+o.connect(g);g.connect(_successCtx.destination);
+o.start(at);o.stop(at+.55);
+});
+}catch(e){}
+}
+// Popup hoàn thành chủ đề
+function topicCompletion(){
+if(!cur.topic||cur.topic===0)return null;
+const total=cur.list.length;
+if(!total)return null;
+let answered=0,ok=0,bad=0;
+cur.list.forEach(x=>{const a=cur.answers[x.id];if(a!==undefined){answered++;if(a===x.answer)ok++;else bad++;}});
+return {total,answered,ok,bad,complete:answered>=total};
+}
+function updateDoneWrong(){
+const btn=document.getElementById('doneWrong');
+btn.textContent=t('doneWrong')+(cur.doneBad?' ('+cur.doneBad+')':'');
+btn.classList.toggle('hidden',!cur.doneBad);
+}
+function showDone(st){
+cur.doneBad=st.bad;
+document.getElementById('doneTopic').textContent=langTitle(TOPICS.find(tp=>tp.id===cur.topic)||{});
+document.getElementById('doneStats').innerHTML=`<span><b style="color:var(--green)">${st.ok}</b> ${t('doneOk')}</span><span><b style="color:var(--red)">${st.bad}</b> ${t('doneBad')}</span><span><b>${st.total}</b> ${t('doneQ')}</span>`;
+const nb=document.getElementById('doneNext');
+const next=TOPICS.find(tp=>tp.id>cur.topic&&tp.id>0&&getList(tp.id).length);
+nb.classList.toggle('hidden',!next);
+updateDoneWrong();
+document.getElementById('doneOverlay').classList.remove('hidden');
+document.body.style.overflow='hidden';
+playSuccess();
+}
+function hideDone(){
+document.getElementById('doneOverlay').classList.add('hidden');
+document.body.style.overflow='';
+}
+function maybeShowDone(){
+if(cur.doneShown||!cur.topic)return;
+const st=topicCompletion();
+if(!st||!st.complete)return;
+cur.doneShown=true;
+showDone(st);
+}
+document.getElementById('doneClose').onclick=hideDone;
+document.getElementById('doneOverlay').onclick=e=>{if(e.target.id==='doneOverlay')hideDone();};
+document.getElementById('doneNext').onclick=()=>{
+hideDone();
+const next=TOPICS.find(tp=>tp.id>cur.topic&&tp.id>0&&getList(tp.id).length);
+if(next)startTopic(next.id,false);
+};
+document.getElementById('doneWrong').onclick=()=>{
+hideDone();
+cur.doneShown=false;
+document.getElementById('btnWrong').click();
+};
+document.getElementById('doneHome').onclick=()=>{
+hideDone();
+document.getElementById('btnBack').click();
+};
 // Âm thanh click lấy từ sound effect gốc (youtube.com/watch?v=FJ2k6qJla-4), đã cắt bỏ 0.07 giây đầu
 const _clickPool=[];
 for(let i=0;i<3;i++){const a=new Audio('click.wav');a.preload='auto';a.volume=.55;_clickPool.push(a);}
@@ -545,20 +605,17 @@ document.addEventListener('click',e=>{
 const el=e.target.closest('button,.opt,.card');
 if(el&&!el.disabled)playClick();
 },true);
-migrateLegacy();
-migrateRotation();
-paintBank();
 applyLang();
 // khôi phục phiên học đang dở khi load lại trang
 try{
 const s=JSON.parse(localStorage.getItem('fl_session')||'null');
-let sid=null,sbank='ai';
+let sid=null;
 if(s){
-if(s.v===3&&TOPICS.some(t=>t.id===s.sub)){sid=s.sub;if(s.bank==='qz'||s.bank==='mix')sbank=s.bank;}
+if(s.v===3&&TOPICS.some(t=>t.id===s.sub)){sid=s.sub;}
 else if(s.v===2&&TOPICS.some(t=>t.id===s.sub)){sid=s.sub;}
 else{const lm={1:1,2:5,3:9,4:12,5:13};if(lm[s.topic])sid=lm[s.topic];}
 }
-if(sid){cur.bank=sbank;try{localStorage.setItem('fl_bank',sbank);}catch(e){}paintBank();startTopic(sid,false);if(s.filter==='wrong'&&Array.isArray(s.wrongIds)&&s.wrongIds.length){cur.wrongIds=s.wrongIds.filter(id=>cur.list.some(q=>q.id===id));cur.filter=cur.wrongIds.length?'wrong':null;}cur.idx=Math.min(Math.max(0,s.idx|0),cur.list.length-1);cur.page=Math.floor(cur.idx/PER_PAGE);render();}}catch(e){}
+if(sid){startTopic(sid,false);if(s.filter==='wrong'&&Array.isArray(s.wrongIds)&&s.wrongIds.length){cur.wrongIds=s.wrongIds.filter(id=>cur.list.some(q=>q.id===id));cur.filter=cur.wrongIds.length?'wrong':null;}cur.idx=Math.min(Math.max(0,s.idx|0),cur.list.length-1);cur.page=Math.floor(cur.idx/PER_PAGE);render();}}catch(e){}
 </script>
 </body>
 </html>

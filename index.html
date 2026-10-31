@@ -384,23 +384,16 @@ function setBank(b){if(b!==undefined&&b!==cur.bank){save();try{clearInterval(cur
 document.getElementById('bankAi').onclick=()=>setBank('ai');
 document.getElementById('bankQz').onclick=()=>setBank('qz');
 document.getElementById('bankMix').onclick=()=>setBank('mix');
-// Âm thanh click nhẹ cho mọi nút bấm (tổng hợp bằng Web Audio, không cần file âm thanh)
-let _actx=null;
+// Âm thanh click lấy từ sound effect gốc (youtube.com/watch?v=FJ2k6qJla-4), đã cắt bỏ 0.07 giây đầu
+const _clickPool=[];
+for(let i=0;i<3;i++){const a=new Audio('click.wav');a.preload='auto';a.volume=.55;_clickPool.push(a);}
+let _clickIdx=0;
 function playClick(){
 try{
-_actx=_actx||new (window.AudioContext||window.webkitAudioContext)();
-if(_actx.state==='suspended')_actx.resume();
-const t0=_actx.currentTime;
-const dur=.035;
-const len=Math.max(1,Math.floor(_actx.sampleRate*dur));
-const buf=_actx.createBuffer(1,len,_actx.sampleRate);
-const data=buf.getChannelData(0);
-for(let i=0;i<len;i++){const k=1-i/len;data[i]=(Math.random()*2-1)*k*k*k;}
-const src=_actx.createBufferSource();src.buffer=buf;
-const bp=_actx.createBiquadFilter();bp.type='bandpass';bp.frequency.value=2400+Math.random()*700;bp.Q.value=1.4;
-const g=_actx.createGain();g.gain.setValueAtTime(.4,t0);g.gain.exponentialRampToValueAtTime(.0001,t0+.05);
-src.connect(bp);bp.connect(g);g.connect(_actx.destination);
-src.start(t0);
+const a=_clickPool[_clickIdx++%_clickPool.length];
+a.currentTime=0;
+const p=a.play();
+if(p&&p.catch)p.catch(()=>{});
 }catch(e){}
 }
 document.addEventListener('click',e=>{

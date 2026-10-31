@@ -26,12 +26,18 @@ h1{font-size:22px;margin:0}h1 small{display:block;font-size:13px;color:var(--mut
 .btn:disabled{opacity:.35;cursor:not-allowed}
 .note{margin-top:16px;font-size:13px;color:var(--muted);border:1px dashed var(--border);border-radius:14px;padding:12px 14px;line-height:1.6;background:#0a0c1e}
 .layout{display:grid;grid-template-columns:1fr 330px;gap:18px;margin-top:8px;align-items:start}
-.qcard{background:linear-gradient(180deg,#12142b,#0b0d1f);border:1px solid var(--border);border-radius:20px;padding:22px}
+.layout>div{min-width:0}
+.qcard{background:linear-gradient(180deg,#12142b,#0b0d1f);border:1px solid var(--border);border-radius:20px;padding:22px;min-width:0}
 .qtop{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
 .pill{background:#3b4bff;color:#fff;font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px}
 .markbtn{background:#1a1e40;border:1px solid #5a4d15;color:var(--yellow);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer}
 .markbtn.active{background:#3a2f10;border-color:var(--yellow);color:var(--yellow)}
 .qtitle{font-size:18px;line-height:1.6;font-weight:700;margin:6px 0 14px}
+.qtitle .codeblock{margin:12px 0;background:#080b16;border:1px solid #2b3354;border-radius:12px;padding:14px 16px;overflow:auto;max-width:100%;max-height:520px}
+.qtitle .codeblock pre{margin:0;font-family:'JetBrains Mono','Fira Code',Consolas,'Courier New',monospace;font-size:13.5px;line-height:1.7;white-space:pre;tab-size:2;color:#e6e8f5}
+.qtitle .codeblock code{font:inherit;color:inherit;background:none;border:0;padding:0}
+.qtitle code.ic{font-family:'JetBrains Mono','Fira Code',Consolas,'Courier New',monospace;font-size:.92em;background:#1a2040;border:1px solid #303a66;border-radius:6px;padding:1px 5px;color:#9ad0ff;white-space:pre-wrap;overflow-wrap:anywhere}
+.qtitle .c-com{color:#6b7394;font-style:italic}.qtitle .c-str{color:#e9f59a}.qtitle .c-kw{color:#ff7bd5;font-weight:600}.qtitle .c-type{color:#8be9fd}.qtitle .c-num{color:#bd93f9}.qtitle .c-ann{color:#ffb86c}.qtitle .c-tag{color:#ff79c6}.qtitle .c-attr{color:#8be9fd}
 .opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:#14162e;border:1px solid var(--border);color:var(--txt);border-radius:14px;padding:13px 14px;margin-bottom:12px;font-size:14.5px;cursor:pointer;line-height:1.5}
 .opt:hover{border-color:var(--accent)}.opt .k{width:28px;height:28px;min-width:28px;border-radius:9px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--muted);background:#0e1030}
 .opt.correct{background:rgba(34,197,94,.14);border-color:var(--green)}.opt.correct .k{background:var(--green);color:#04140a;border-color:var(--green)}
@@ -165,6 +171,145 @@ function qText(q){return (LANG==='en'&&q.q_en)?q.q_en:q.q}
 function qOpts(q){return (LANG==='en'&&q.options_en)?q.options_en:q.options}
 function qExp(q){return (LANG==='en'&&q.exp_en)?q.exp_en:q.exp}
 function lblQ(n){return LANG==='en'?'Q '+n:'Câu '+n}
+function qzEsc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function qzHighlight(code,lang){
+lang=lang||(/^\s*</.test(code)?'xml':'dart');
+const kw='abstract|as|assert|async|await|break|case|catch|class|const|continue|covariant|default|deferred|do|dynamic|else|enum|export|extends|extension|external|factory|false|final|finally|for|get|hide|if|implements|import|in|interface|is|late|library|mixin|new|null|on|operator|part|required|rethrow|return|set|show|static|super|switch|sync|this|throw|true|try|typedef|var|void|while|with|yield';
+let re;
+if(lang==='xml'){re=/(<!--[\s\S]*?-->)|(<\/?[\w:.-]+)|("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')|([\w:.-]+)(?=\s*=)|(\/?>)/g;}
+else{re=new RegExp('(\\/\\/[^\\n]*|\\/\\*[\\s\\S]*?\\*\\/)|(\'(?:\\\\.|[^\'\\\\])*\'|"(?:\\\\.|[^"\\\\])*")|(@\\w+)|(\\b\\d+(?:\\.\\d+)?\\b)|(\\b(?:'+kw+')\\b)|(\\b[A-Z][A-Za-z0-9_]*\\b)','g');}
+let out='',last=0,m;
+while((m=re.exec(code))){
+out+=qzEsc(code.slice(last,m.index));
+const v=m[0];let cls='';
+if(lang==='xml'){
+if(m[1])cls='c-com';else if(m[2])cls='c-tag';else if(m[3])cls='c-str';else if(m[4])cls='c-attr';else if(m[5])cls='c-tag';
+}else{
+if(m[1])cls='c-com';else if(m[2])cls='c-str';else if(m[3])cls='c-ann';else if(m[4])cls='c-num';else if(m[5])cls='c-kw';else if(m[6])cls='c-type';
+}
+out+='<span class="'+cls+'">'+qzEsc(v)+'</span>';
+last=m.index+v.length;
+}
+out+=qzEsc(code.slice(last));
+return out;
+}
+function qzPretty(code){
+let out='',indent=0,i=0,str=null,lineCom=false,blockCom=false;
+const braces=[];
+const pad=()=>'  '.repeat(indent);
+const nl=(force)=>{out=out.replace(/[ \t]+$/,'');if(force||!out.endsWith('\n'))out+='\n'+pad()};
+while(i<code.length){
+const c=code[i],n=code[i+1];
+if(str){
+out+=c;
+if(c==='\\'){out+=code[i+1]||'';i+=2;continue;}
+if(c===str)str=null;
+i++;continue;
+}
+if(lineCom){out+=c;if(c==='\n'){lineCom=false;out+=pad();}i++;continue;}
+if(blockCom){out+=c;if(c==='*'&&n==='/'){out+='/';i+=2;blockCom=false;}else i++;continue;}
+if(c==='/'&&n==='/'){out+='//';i+=2;lineCom=true;continue;}
+if(c==='/'&&n==='*'){out+='/*';i+=2;blockCom=true;continue;}
+if(c==='"'||c==="'"){str=c;out+=c;i++;continue;}
+if(c==='{'){
+let k=i-1;while(k>=0&&/\s/.test(code[k]))k--;
+const prev=code[k]||'';
+const literal=['=','(','[',',',':'].includes(prev);
+if(literal){out+='{';braces.push('lit');i++;continue;}
+out+='{';braces.push('body');indent++;nl(true);i++;while(code[i]===' '||code[i]==='\t')i++;continue;
+}
+if(c==='}'){
+const kind=braces.pop();
+if(kind==='lit'){out+='}';i++;continue;}
+out=out.replace(/[ \t]+$/,'');
+if(!out.endsWith('\n'))out+='\n';
+indent=Math.max(0,indent-1);
+out+=pad()+'}';
+i++;
+let j=i;while(code[j]===' ')j++;
+if(!/[;,).]/.test(code[j]||'')&&!/^(else|catch|finally|while)\b/.test(code.slice(j))){nl(true);while(code[i]===' '||code[i]==='\t')i++;}
+continue;
+}
+if(c===';'){out+=';';nl(true);i++;while(code[i]===' '||code[i]==='\t')i++;continue;}
+out+=c;i++;
+}
+return out.split('\n').map(l=>l.replace(/[ \t]+$/,'')).join('\n').replace(/^\n+|\n+$/g,'');
+}
+function qzPrettyXml(code){
+const tokens=code.match(/<[^>]+>|[^<]+/g)||[];
+let out='',indent=0;
+for(let tok of tokens){
+tok=tok.trim();if(!tok)continue;
+if(/^<\//.test(tok)){indent=Math.max(0,indent-1);out+='  '.repeat(indent)+tok+'\n';}
+else if(/^</.test(tok)){out+='  '.repeat(indent)+tok+'\n';if(!/\/>$/.test(tok)&&!/^<[!?]/.test(tok))indent++;}
+else out+='  '.repeat(indent)+tok+'\n';
+}
+return out.trim();
+}
+function qzIsBlock(t){
+if(/^\S+\.(dart|yaml|json|xml|gradle|kt|swift|md)$/.test(t.trim()))return false;
+if(t.length>90)return true;
+if(/[{}]/.test(t)&&/;/.test(t)&&t.length>20)return true;
+if(/[{}]/.test(t)&&t.length>34)return true;
+if((t.match(/;/g)||[]).length>=2)return true;
+return false;
+}
+const QZ_START=/(^|[:?]\s)((?:import|class|abstract class|mixin|enum|void main|void\s+[A-Za-z_]|final\s|var\s|const\s|dynamic\s|Widget\s+[A-Za-z_]\w*\s*\(|Future\s*(?:<[^(){};]*>)?\s*(?:[A-Za-z_]\w*\s*)?\(|Stream\s*(?:<[^(){};]*>)?\s*(?:[A-Za-z_]\w*\s*)?\(|LayoutBuilder\s*\(|GridView(?:\.\w+)?\s*\(|expect\s*\(|String\??\s+[A-Za-z_]\w*\s*[=;]|int\??\s+[A-Za-z_]|double\s|bool\s|List<|Map<|Set<|if\s*\(|for\s*\(|while\s*\(|try\s*\{|test\s*\(|ElevatedButton\s*\(|@override)[\s\S]+)$/;
+const QZ_TAIL=/\s(?=(?:What|Which|Why|How|When|Where|According|If|In order|But|However|Yet)\b)/;
+function qzBlockHtml(code){
+const isXml=/^\s*</.test(code);
+code=isXml?qzPrettyXml(code.trim()):qzPretty(code.trim());
+return '<div class="codeblock"><pre><code>'+qzHighlight(code,isXml?'xml':'dart')+'</code></pre></div>';
+}
+function qzRenderProse(text){
+const parts=[];const tick='`';let i=0;
+while(i<text.length){
+const a=text.indexOf(tick,i);
+if(a<0){parts.push({t:'text',v:text.slice(i)});break;}
+const b=text.indexOf(tick,a+1);
+if(b<0){parts.push({t:'text',v:text.slice(i)});break;}
+if(a>i)parts.push({t:'text',v:text.slice(i,a)});
+parts.push({t:'code',v:text.slice(a+1,b)});
+i=b+1;
+}
+const merged=[];
+for(const p of parts){
+const prev=merged[merged.length-1];
+if(p.t==='code'&&prev&&prev.t==='code'){
+merged.pop();merged.push({t:'code',v:prev.v+' '+p.v,merged:true});
+}else if(p.t==='code'&&prev&&prev.t==='text'&&/^\s*$/.test(prev.v)&&merged.length>=2&&merged[merged.length-2].t==='code'){
+const before=merged[merged.length-2];
+merged.splice(merged.length-2,2,{t:'code',v:before.v+' '+p.v,merged:true});
+}else merged.push(p);
+}
+return merged.map(p=>{
+if(p.t==='code'){
+if((p.merged&&p.v.length>40)||qzIsBlock(p.v))return qzBlockHtml(p.v);
+return '<code class="ic">'+qzEsc(p.v)+'</code>';
+}
+return qzEsc(p.v);
+}).join('');
+}
+function formatQzText(text){
+let plain='',map=[];
+for(let i=0;i<text.length;i++){if(text[i]==='`')continue;plain+=text[i];map.push(i);}
+map.push(text.length);
+const m=QZ_START.exec(plain);
+if(m){
+const start=m.index+m[1].length;
+const codeText=plain.slice(start);
+const tm=QZ_TAIL.exec(codeText);
+const tailAt=tm?tm.index:-1;
+const codePlain=tailAt>=0?codeText.slice(0,tailAt):codeText;
+if(codePlain.replace(/\s/g,'').length>=12&&/[;{}]|=>|\(/.test(codePlain)){
+const rawStart=map[start];
+const rawEnd=tailAt>=0?map[start+tailAt]:text.length;
+return qzRenderProse(text.slice(0,rawStart))+qzBlockHtml(text.slice(rawStart,rawEnd).replace(/`/g,''))+qzRenderProse(text.slice(rawEnd));
+}
+}
+return qzRenderProse(text);
+}
+
 let cur={bank:'ai',topic:0,list:[],idx:0,page:0,answers:{},marked:{},wrongIds:null,t0:Date.now(),timer:null,filter:null};
 try{const _b=localStorage.getItem('fl_bank');if(_b==='qz'||_b==='ai'||_b==='mix')cur.bank=_b;}catch(e){}
 function qs(){return cur.bank==='qz'?(window.QUESTIONS_QZ||[]):cur.bank==='mix'?(window.QUESTIONS_MIX||[]):(window.QUESTIONS||[])}
@@ -273,7 +418,7 @@ if(cur.idx>=viewList.length)cur.idx=Math.max(0,viewList.length-1);
 const q=viewList[cur.idx];if(!q)return;
 document.getElementById('qNum').textContent=lblQ(cur.idx+1);
 document.getElementById('qId').textContent=(q.code?q.code:'ID '+q.id)+' · '+t('topicLbl')+' '+q.sub;
-document.getElementById('qText').textContent=qText(q);
+if(cur.bank==='qz'){document.getElementById('qText').innerHTML=formatQzText(qText(q));}else{document.getElementById('qText').textContent=qText(q);}
 document.getElementById('sessTitle').innerHTML=`${lblQ(cur.idx+1)} <span>/ ${viewList.length}</span>`;
 const mb=document.getElementById('btnMark');
 mb.classList.toggle('active',!!cur.marked[q.id]);

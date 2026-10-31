@@ -391,15 +391,16 @@ try{
 _actx=_actx||new (window.AudioContext||window.webkitAudioContext)();
 if(_actx.state==='suspended')_actx.resume();
 const t0=_actx.currentTime;
-const osc=_actx.createOscillator(),gain=_actx.createGain();
-osc.type='triangle';
-osc.frequency.setValueAtTime(760,t0);
-osc.frequency.exponentialRampToValueAtTime(340,t0+.045);
-gain.gain.setValueAtTime(.0001,t0);
-gain.gain.exponentialRampToValueAtTime(.12,t0+.004);
-gain.gain.exponentialRampToValueAtTime(.0001,t0+.06);
-osc.connect(gain);gain.connect(_actx.destination);
-osc.start(t0);osc.stop(t0+.07);
+const dur=.035;
+const len=Math.max(1,Math.floor(_actx.sampleRate*dur));
+const buf=_actx.createBuffer(1,len,_actx.sampleRate);
+const data=buf.getChannelData(0);
+for(let i=0;i<len;i++){const k=1-i/len;data[i]=(Math.random()*2-1)*k*k*k;}
+const src=_actx.createBufferSource();src.buffer=buf;
+const bp=_actx.createBiquadFilter();bp.type='bandpass';bp.frequency.value=2400+Math.random()*700;bp.Q.value=1.4;
+const g=_actx.createGain();g.gain.setValueAtTime(.4,t0);g.gain.exponentialRampToValueAtTime(.0001,t0+.05);
+src.connect(bp);bp.connect(g);g.connect(_actx.destination);
+src.start(t0);
 }catch(e){}
 }
 document.addEventListener('click',e=>{

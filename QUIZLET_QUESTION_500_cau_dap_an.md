@@ -14,8 +14,6 @@ D. An internal enterprise management dashboard app
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Một trò chơi thời gian thực, sử dụng nhiều đồ họa yêu cầu quyền truy cập phần cứng cấp thấp là ví dụ trong sách giáo khoa về 'Khi thích hợp cho việc phát triển bản địa'. A, B, D đều là những trường hợp trong đó Flutter rất phù hợp.
 
 **Link tham khảo:**
@@ -37,8 +35,6 @@ D. Compile error because Set doesn't allow duplicate elements in a declaration
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Set xóa các bản sao: `{1,2,2,3}` trở thành `{1,2,3}` → length = 3. A đếm sai số trùng lặp; C thiếu một phần tử; D sai vì Set cho phép trùng lặp trong khai báo, nó chỉ tự động xóa chúng khi được lưu trữ.
 
@@ -62,8 +58,6 @@ D. null,null - 0,0
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `Point(3,4)` gán x=3,y=4; `Point.origin()` gán x=0,y=0 thông qua danh sách khởi tạo --- in "3,4 - 0,0". A đảo ngược đầu ra; C sai vì Dart hỗ trợ các hàm tạo được đặt tên; D sai vì các giá trị được gán chính xác chứ không phải rỗng.
 
 **Link tham khảo:**
@@ -85,8 +79,6 @@ D. Lan is null
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `greet(name: "Lan")` chỉ vượt qua name; age sử dụng giá trị mặc định là 18 → "Lan is 18". is sai vì age có giá trị mặc định; C is sai vì name đã được thông qua; D is sai vì age rõ ràng có giá trị mặc định.
 
@@ -110,8 +102,6 @@ D. Woof Some sound" --- both functions are called
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Điều này minh họa Tính đa hình: một biến được nhập dưới dạng Animal gọi phương thức được ghi đè của Dog khi chạy, in "Woof". A dán nhãn sai cho khái niệm; C sai vì việc cập nhật là hợp lệ; D sai vì chỉ có một phương thức được gọi.
 
 **Link tham khảo:**
@@ -133,8 +123,6 @@ D. Error because you cannot index directly into a function result inside string 
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `name.toUpperCase()` = "FPT ĐẠI HỌC", chỉ số [0] = 'F'. A có trường hợp sai; C không phải là một ký tự đơn lẻ; D sai vì Dart cho phép lập chỉ mục kết quả hàm trực tiếp bên trong phép nội suy chuỗi.
 
@@ -158,8 +146,6 @@ D. A function used to define classes
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `main()` là điểm bắt đầu thực thi cho mọi chương trình Dart. A, C, D mô tả sai vai trò của hàm main.
 
 **Link tham khảo:**
@@ -181,8 +167,6 @@ D. No difference at all, it's just a coding habit
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `var` cho phép Dart suy ra type (int) từ các phần tử của List, giữ cho mã ngắn gọn trong khi vẫn được gõ mạnh. A sai vì int có giá trị như nhau; C sai vì var khác với dynamic; D sai vì có sự suy luận kiểu in khác biệt ngay cả khi kết quả thời gian chạy trông giống nhau.
 
@@ -206,8 +190,6 @@ D. Both "Bird flying" and "Eagle gliding" are printed
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Vì `implements` chỉ lấy chữ ký nên Eagle phải xác định lại hoàn toàn fly() → in "Eagle gliding". A sai vì implements không kế thừa phần thân phương thức; C sai vì ở đây không cần hàm tạo nào; D sai vì chỉ có một phương thức được gọi.
 
 **Link tham khảo:**
@@ -229,8 +211,6 @@ D. `extends` here means Box inherits from Animal
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `<T extends Animal>` giới hạn T chung ở Animal hoặc các lớp con của nó, đảm bảo T có phương thức sound(). A sai vì các lớp con vẫn được chấp nhận; C sai vì this là cú pháp hợp lệ; D nhầm lẫn ràng buộc chung `extends` với kế thừa class.
 
@@ -254,8 +234,6 @@ D. Compile error because you cannot mix spread, if, and for in the same List
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 `[...base, if(true) 99, for(x in base) x*10]` = [1,2,3, 99, 10,20,30]. B, C sai thứ tự; D sai vì Dart cho phép trộn lẫn các cú pháp này.
 
 **Link tham khảo:**
@@ -277,8 +255,6 @@ D. This is a syntax error, `extends` must be used
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `implements` có nghĩa là AnimationController chỉ tuân theo hợp đồng và implements hành vi của chính nó mà không kế thừa cách triển khai hiện có từ Listenable. A sai vì implements không sao chép mã; C sai vì có mối quan hệ rõ ràng qua implements; D sai vì đây là cú pháp Dart hợp lệ.
 
@@ -302,8 +278,6 @@ D. No limit on the number
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 BottomNavigationBar phù hợp nhất với 2-5 tab cho mỗi đề xuất chung. A, C, D không khớp với số được đề xuất.
 
 **Link tham khảo:**
@@ -325,8 +299,6 @@ D. Breakpoint is always fixed at 1024px in every case
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Quy tắc điểm dừng được đề xuất: <400px Nhỏ, 400-800px Trung bình, >800px Lớn --- khớp với trang trình bày. B, C, D không trùng với số đã nêu.
 
@@ -350,8 +322,6 @@ D. No mode is recommended, it's arbitrary
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 `onUserInteraction` được khuyên dùng vì nó cân bằng giữa việc không hiển thị lỗi quá early (khó chịu) và không quá late (khó hiểu). A, B, D không phù hợp với chế độ/lý do được đề xuất.
 
 **Link tham khảo:**
@@ -373,8 +343,6 @@ D. Something went wrong somewhere
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Nhập email hợp lệ" là một ví dụ UX tốt: ngắn gọn, rõ ràng, cụ thể. A, C, D tệ examples (mã lỗi kỹ thuật, mơ hồ, không cụ thể).
 
@@ -398,8 +366,6 @@ D. Not compatible with Flutter
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Firebase Auth cung cấp khả năng đăng nhập đa phương thức, an toàn, có thể mở rộng với khả năng duy trì/làm mới phiên tự động, giảm nỗ lực nhận dạng phụ trợ. A, C, D không khớp với lợi ích thực sự của Xác thực Firebase.
 
 **Link tham khảo:**
@@ -421,8 +387,6 @@ D. UI and navigation must be entirely handled on the server side
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Firebase xử lý tất cả xác minh danh tính/OAuth phức tạp, cho phép nhà phát triển Flutter chỉ tập trung vào UI và điều hướng. A, C, D không phù hợp với ý nghĩa của câu này.
 
@@ -446,8 +410,6 @@ D. The user's entire operation history on the device
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Một phiên thông thường bao gồm: mã thông báo truy cập, người dùng profile và dấu thời gian hết hạn mã thông báo. A, C, D chưa đầy đủ/sai về nội dung phần "Tìm hiểu phiên người dùng.
 
 **Link tham khảo:**
@@ -469,8 +431,6 @@ D. Swift
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Dart. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -494,8 +454,6 @@ D. It shortens time to market and maintains one codebase
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Nó rút ngắn thời gian tiếp thị và duy trì một cơ sở mã. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -517,8 +475,6 @@ D. Device firmware
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: UI và logic nghiệp vụ. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -542,8 +498,6 @@ D. C++
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Lựa chọn D đúng: C++. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -565,8 +519,6 @@ D. JVM and CLR
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: JIT và AOT. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -590,8 +542,6 @@ D. main()
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: main(). Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -613,8 +563,6 @@ D. Java's println()
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: print(). Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -638,8 +586,6 @@ D. double
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: int. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -661,8 +607,6 @@ D. double
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: double. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -686,8 +630,6 @@ D. Set
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: List. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -709,8 +651,6 @@ D. ??
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Lựa chọn C đúng: &&. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -734,8 +674,6 @@ D. dynamic cannot be assigned a value
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: dynamic được giải quyết trong thời gian chạy và có thể chứa các giá trị thuộc các loại khác nhau. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -757,8 +695,6 @@ D. When a value is assigned once but may be determined at runtime
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: Khi một giá trị được gán một lần nhưng có thể được xác định khi chạy. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -782,8 +718,6 @@ D. An instance of a class
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Một thể hiện của một lớp. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -805,8 +739,6 @@ D. Comparing two numbers
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Cung cấp giá trị dự phòng khi phía bên trái rỗng. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -830,8 +762,6 @@ D. Inherit all existing behavior without rewriting it
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Có đầy đủ override thành viên giao diện được yêu cầu. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -853,8 +783,6 @@ D. Pixel Fold, API 35
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Bài giảng khuyên dùng Pixel 3a / API 30 cho các máy có cấu hình thấp. A, C, D là cấu hình nặng hơn, không phù hợp với máy yếu.
 
@@ -878,8 +806,6 @@ D. DartPad can only be used for the Kotlin language
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 DartPad là môi trường trực tuyến không cần cài đặt. A sai vì DartPad không cần SDK đầy đủ; C sai vì DartPad hỗ trợ Văn bản, Cột; D sai vì đây là Dart/Flutter, không phải Kotlin.
 
 **Link tham khảo:**
@@ -901,8 +827,6 @@ D. DartPad cannot display TextStyle
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Điểm chung chính: tất cả các công cụ biên dịch theo cùng một thời gian chạy Flutter, cho kết quả giống hệt nhau trên DartPad/VS Code/Android Studio. A, C, D đều sai trong bài giảng.
 
@@ -926,8 +850,6 @@ D. IntelliJ IDEA
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 macOS cần Xcode để xây dựng cho iOS, theo ghi chú 'macOS người dùng cần Xcode cho các bản dựng iOS.' A, C, D không phải là công cụ được nêu cho mục đích này.
 
 **Link tham khảo:**
@@ -949,8 +871,6 @@ D. It's impossible to combine DatePicker and TimePicker on the same screen
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Gọi `pickDate()` và `pickTime()` theo tuần tự, lưu trữ kết quả trong hai biến State riêng biệt, sau đó hiển thị kết hợp --- phù hợp với cách tiếp cận của bản demo Đặt trước. A, C, D không phản ánh việc thực hiện được dạy.
 
@@ -974,8 +894,6 @@ D. MaterialPageRoute is an API that has been removed from Flutter
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 DartPad cần một structure hoàn chỉnh (main, runApp, MaterialApp); thiếu những thứ này hoặc tham chiếu không xác định classes (như SecondPage) gây ra lỗi. A, C, D không phù hợp với lời giải thích của bài giảng.
 
 **Link tham khảo:**
@@ -997,8 +915,6 @@ D. Only affects security, unrelated to code maintenance
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Các URL được mã hóa cứng khiến việc thay đổi URL cơ sở trở nên khó khăn và gây ra sự trùng lặp/lỗi trên cơ sở mã. A, C, D không phù hợp với lý do thực tế đã nêu.
 
@@ -1022,8 +938,6 @@ D. To automatically save data permanently even after the app is closed
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `static` làm cho dữ liệu được lưu trữ được chia sẻ trên tất cả các phiên bản FakePrefs, bắt chước hành vi đơn lẻ của SharedPreferences' thực tế. A, C, D không khớp với vai trò thực tế của static ở đây.
 
 **Link tham khảo:**
@@ -1045,8 +959,6 @@ D. This is a Flutter bug that needs to be patched
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 FakePrefs chỉ lưu trữ dữ liệu trong bộ nhớ cho phiên hiện tại, do đó dữ liệu sẽ bị mất khi khởi động lại/tải lại nóng, không giống như SharedPreferences thực sự bền bỉ. A, C, D không phù hợp với giới hạn đã nêu này.
 
@@ -1070,8 +982,6 @@ D. A list of other apps the user has installed
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Phần phụ trợ trả về token (thường là JWT) để ứng dụng lưu trữ và sử dụng cho các yêu cầu tiếp theo. A, C, D không khớp với quy trình xác thực tiêu chuẩn.
 
 **Link tham khảo:**
@@ -1093,8 +1003,6 @@ D. When the app is uninstalled
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Thông báo cục bộ được kích hoạt ngay sau khi đăng nhập thành công, theo Bản demo 10.5. A, C, D không khớp với luồng thực được mô tả.
 
@@ -1118,8 +1026,6 @@ D. Google's database management system
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Bộ công cụ UI của Google để xây dựng các ứng dụng được biên dịch nguyên bản từ một cơ sở mã duy nhất. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -1141,8 +1047,6 @@ D. Row and Column layout
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Truy cập dữ liệu, API và logic cơ sở dữ liệu. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -1166,8 +1070,6 @@ D. Stores a token on the server
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Thông báo cho khung để xây dựng lại State UI có liên quan. Đây là khái niệm quản lý state: các thay đổi state phải thông báo hoặc kích hoạt phần có liên quan của UI để xây dựng lại.
 
 **Link tham khảo:**
@@ -1189,8 +1091,6 @@ D. DartPad runs only Java
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Môi trường của nó không cung cấp hỗ trợ gốc plugin hoặc lưu trữ liên tục. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -1214,8 +1114,6 @@ D. An in-memory Map that resets on reload
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Map trong bộ nhớ sẽ đặt lại khi tải lại. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -1237,8 +1135,6 @@ D. It is sent with every API request that requires authentication
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: Nó được gửi cùng với mọi yêu cầu API yêu cầu xác thực. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -1262,8 +1158,6 @@ D. Profile mode
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Chế độ hồ sơ. Hiệu suất Flutter phải được đánh giá ở chế độ profile, tốt nhất là trên thiết bị vật lý vì thời gian ở chế độ debug không mang tính đại diện.
 
 **Link tham khảo:**
@@ -1285,8 +1179,6 @@ D. Theme setup
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Danh sách lớn hoặc dynamic. Bố cục Flutter được tạo từ widgets; widget đã chọn cung cấp hành vi sắp xếp, định cỡ, giãn cách hoặc ràng buộc được mô tả.
 
@@ -1310,8 +1202,6 @@ D. flutter config
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: flutter doctor. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -1333,8 +1223,6 @@ D. flutter doctor
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: flutter devices. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -1358,8 +1246,6 @@ D. flutter list
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: flutter emulators. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -1381,8 +1267,6 @@ D. Cloud IDE
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: kho lưu trữ Flutter package. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -1406,8 +1290,6 @@ D. Pub Inspector
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Lựa chọn A đúng: Flutter DevTools. Hiệu suất Flutter phải được đánh giá ở chế độ profile, tốt nhất là trên thiết bị vật lý vì thời gian ở chế độ debug không mang tính đại diện.
 
 **Link tham khảo:**
@@ -1429,8 +1311,6 @@ D. Xcode
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: DartPad. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -1454,8 +1334,6 @@ D. flutter build
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: flutter doctor. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -1477,8 +1355,6 @@ D. Only when the app is running in a DartPad environment.
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Khi dữ liệu lớn hơn các cặp khóa-giá trị đơn giản hoặc cần được xuất/nhập.. Câu trả lời khớp với hành vi loại hệ thống hoặc an toàn rỗng của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -1502,8 +1378,6 @@ D. query()
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: onCreate. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -1525,8 +1399,6 @@ D. web/index.html
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `lib/main.dart` là điểm vào, như đã nêu trong bảng cấu trúc dự án. A là tệp cấu hình phụ thuộc; C, D là các tệp cấu hình nền tảng, không phải điểm vào.
 
@@ -1550,8 +1422,6 @@ D. The Scaffold will no longer be able to have an AppBar later
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `const` giúp Flutter tối ưu hóa việc phân biệt cây; gỡ bỏ nó vẫn chạy chính xác nhưng làm mất đi lợi ích hiệu suất đó. A sai vì nó không gây ra lỗi biên dịch; C sai vì Text vẫn hiển thị bình thường; D không liên quan.
 
 **Link tham khảo:**
@@ -1573,8 +1443,6 @@ D. Used to set the app's color theme
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 ID tổ chức xác định tên/số nhận dạng gói package duy nhất khi đóng gói ứng dụng. A, C, D mô tả sai vai trò kỹ thuật của nó.
 
@@ -1598,8 +1466,6 @@ D. No real benefit, just a coding style
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Việc trích xuất các khối UI lặp lại sẽ hỗ trợ việc tái sử dụng, tổ chức, khả năng đọc, khả năng bảo trì và tính nhất quán về khoảng cách. A, C, D không phù hợp với lợi ích thực tế đã nêu.
 
 **Link tham khảo:**
@@ -1621,8 +1487,6 @@ D. `Image.network` doesn't support BoxFit
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 `Image.network` tải từ một URL, `Image.asset` tải các hình ảnh dự án được nhóm. B, C, D mô tả sai hai chức năng của hình ảnh widgets'.
 
@@ -1646,8 +1510,6 @@ D. In `Info.plist`, only applicable to iOS
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Đoạn mã này thuộc về `AndroidManifest.xml`, khai báo intent-filter để Android định tuyến các liên kết phù hợp tới ứng dụng này. A, C, D là vị trí tệp sai.
 
 **Link tham khảo:**
@@ -1669,8 +1531,6 @@ D. pubspec.yaml
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Cấu hình lược đồ URL tùy chỉnh trên iOS nằm trong Info.plist (Loại URL → Lược đồ URL). A, B, D không phải là vị trí chính xác cho cấu hình này.
 
@@ -1694,8 +1554,6 @@ D. The Service Layer Pattern only applies to the `http` package, not to other pa
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Việc tách biệt logic mạng trong một lớp có nghĩa là việc chuyển đổi thư viện chỉ yêu cầu chỉnh sửa ApiService chứ không phải tiêu tốn hết widget, giảm thiểu rủi ro/công sức. A, C, D không phù hợp với nguyên tắc kiến ​​trúc phần mềm này.
 
 **Link tham khảo:**
@@ -1717,8 +1575,6 @@ D. http
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `path_provider` được sử dụng để xác định thư mục lưu trữ ứng dụng cho các tệp JSON cục bộ. A, C, D không phải là package cho mục đích này.
 
@@ -1742,8 +1598,6 @@ D. Too-new Flutter version
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 DEVELOPER_ERROR" thường do tên package sai không khớp với cấu hình Firebase. A, C, D không khớp với nguyên nhân chung đã nêu.
 
 **Link tham khảo:**
@@ -1765,8 +1619,6 @@ D. Bloc only receives State, not Event
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Luồng chính xác: UI gửi Sự kiện → Bloc quy trình/bản đồ tới State mới → phát ra State → UI lắng nghe và xây dựng lại. A đảo ngược điều này; C, D mô tả sai mối quan hệ giữa Sự kiện/State/Bloc.
 
@@ -1790,8 +1642,6 @@ D. Cubit and Bloc are entirely identical in API, no difference
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Cubit là một Bloc được đơn giản hóa --- không cần lớp Sự kiện riêng biệt, các phương thức trực tiếp phát ra State mới, giảm bớt bản soạn sẵn. A, C, D mô tả sai đặc điểm của Cubit.
 
 **Link tham khảo:**
@@ -1813,8 +1663,6 @@ D. pubspec.yaml
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: pubspec.yaml. pubspec.yaml là tệp kê khai dự án dùng để khai báo các gói và cấu hình nội dung.
 
@@ -1838,8 +1686,6 @@ D. pubspec.lock
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C là chính xác: Bộ lọc ý định trong AndroidManifest. API điều hướng Flutter quản lý quá trình chuyển đổi tuyến đường hoặc ánh xạ thông tin URL/tuyến đường đến tới ứng dụng state, tùy thuộc vào API được sử dụng.
 
 **Link tham khảo:**
@@ -1861,8 +1707,6 @@ D. A missing ListView
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Tên package hoặc cấu hình Firebase không chính xác. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -1886,8 +1730,6 @@ D. Form error text
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Điểm nóng tại thời điểm thực thi. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -1909,8 +1751,6 @@ D. Importing packages
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Lặp lại các bộ sưu tập. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -1934,8 +1774,6 @@ D. An import
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Lựa chọn B đúng: Một công trình hoặc bản thiết kế. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -1957,8 +1795,6 @@ D. Route trees
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Phụ thuộc và tài sản. pubspec.yaml là tệp kê khai dự án dùng để khai báo các gói và cấu hình nội dung.
 
@@ -1982,8 +1818,6 @@ D. androidmanifest.xml
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: pubspec.yaml. pubspec.yaml là tệp kê khai dự án dùng để khai báo các gói và cấu hình nội dung.
 
 **Link tham khảo:**
@@ -2005,8 +1839,6 @@ D. dart fetch
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: flutter pub get. pubspec.yaml is the project manifest used to declare packages and asset configuration.
 
@@ -2030,8 +1862,6 @@ D. flutter init
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: flutter create. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -2053,8 +1883,6 @@ D. dart run ui
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: flutter run. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -2078,8 +1906,6 @@ D. flutter remove
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: flutter clean. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -2101,8 +1927,6 @@ D. dart build ios
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: flutter build ios. Flutter supports multiple deployment targets, mặc dù mỗi mục tiêu có thể có SDK, yêu cầu về công cụ và tích hợp nền tảng riêng.
 
@@ -2126,8 +1950,6 @@ D. Lint
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Provider. Đây là khái niệm quản lý state: các thay đổi state phải thông báo hoặc kích hoạt phần có liên quan của UI để xây dựng lại.
 
 **Link tham khảo:**
@@ -2149,8 +1971,6 @@ D. test
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: http. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -2174,8 +1994,6 @@ D. http.readall
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: http.get. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -2197,8 +2015,6 @@ D. analyzer
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: shared_preferences. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -2222,8 +2038,6 @@ D. test
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: dio. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -2245,8 +2059,6 @@ D. flutter check
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: flutter test. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -2270,8 +2082,6 @@ D. build.gradle
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: analysis_options.yaml. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -2293,8 +2103,6 @@ D. Import package
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Kế thừa từ một lớp. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -2318,8 +2126,6 @@ D. Hide members
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Buộc thực hiện hợp đồng giao diện. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -2341,8 +2147,6 @@ D. android/app/build.gradle
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: pubspec.lock. pubspec.yaml là tệp kê khai dự án dùng để khai báo các gói và cấu hình nội dung.
 
@@ -2366,8 +2170,6 @@ D. Purely interpreted, no compilation
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Dart kết hợp JIT (phát triển nhanh, hot reload) và AOT (biên dịch sản xuất hiệu suất cao). A và B state chỉ là một nửa sự thật; D hoàn toàn sai.
 
 **Link tham khảo:**
@@ -2389,8 +2191,6 @@ D. Near-native performance
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 'Chỉ có thể chạy trên một nền tảng duy nhất' là SAI vì Flutter là chéo-platform (Android, iOS, Web, Máy tính để bàn) --- đây là sức mạnh cốt lõi của Flutter, hoàn toàn trái ngược với tuyên bố 'Tại sao Flutter'. A, B, D đều là những lý do chính đáng được nêu trong bài giảng.
 
@@ -2414,8 +2214,6 @@ D. Custom Exceptions can only be used with external APIs, not internally
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Ngoại lệ tùy chỉnh cung cấp ngữ cảnh lỗi miền cụ thể, hỗ trợ gỡ lỗi và xử lý ở lớp UI/Repository. A, C, D không phù hợp với lợi ích thực tế đã nêu.
 
 **Link tham khảo:**
@@ -2437,8 +2235,6 @@ D. Share the token via social media to sync across multiple devices
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Phương pháp được khuyến nghị là lưu trữ an toàn và luôn sử dụng HTTPS, không bao giờ lưu trữ mã thông báo thô một cách không an toàn. A, C, D là các hành vi SAI, trái với hướng dẫn bảo mật được khuyến nghị.
 
@@ -2462,8 +2258,6 @@ D. Overflow is always automatically fixed by Dart at compile time
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Lỗi tràn thường không làm hỏng ứng dụng, yêu cầu kiểm tra/DevTools để phát hiện thay vì chỉ quan sát rằng ứng dụng "vẫn chạy". A, C, D không phù hợp với đặc tính thực tế của lỗi tràn.
 
 **Link tham khảo:**
@@ -2485,8 +2279,6 @@ D. Setting up Firebase Authentication
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Việc xây dựng lại thường xuyên không cần thiết" liên quan trực tiếp đến Tối ưu hóa Hiệu suất, được tìm hiểu sâu hơn trong Học phần 12. A, C, D không liên quan đến vấn đề xây dựng lại này.
 
@@ -2510,8 +2302,6 @@ D. Use only Widget Inspector
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Viết mã gốc và kết nối nó thông qua Kênh nền tảng. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -2533,8 +2323,6 @@ D. Creating a database index
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Chọn bố cục cho phạm vi kích thước xác định. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -2558,8 +2346,6 @@ D. Named routes
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Dòng thời gian FPS và chi phí kết xuất khung hình. Hiệu suất Flutter phải được đánh giá ở chế độ profile, tốt nhất là trên thiết bị vật lý vì thời gian ở chế độ debug không mang tính đại diện.
 
 **Link tham khảo:**
@@ -2581,8 +2367,6 @@ D. A crash that occurs when a widget overflows its boundaries.
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Một pixel cụ thể width (e.g., 600px) được sử dụng để xác định khi nào logic bố cục sẽ thay đổi.. Câu trả lời khớp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -2606,8 +2390,6 @@ D. `final` is only for numeric types, `const` is only for string types
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 `final` được chỉ định một lần khi chạy; `const` là giá trị được biết trước tại thời điểm biên dịch. B đảo ngược các định nghĩa; D sai vì cả hai đều không bị giới hạn ở một loại dữ liệu cụ thể.
 
 **Link tham khảo:**
@@ -2629,8 +2411,6 @@ D. Set is ordered and allows duplicates, List does not
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 List được sắp xếp; Set là tập hợp các phần tử duy nhất, không có thứ tự; Map lưu trữ các cặp khóa-giá trị --- định nghĩa tiêu chuẩn. A, C, D đều mô tả sai các đặc điểm cơ bản.
 
@@ -2654,8 +2434,6 @@ D. Factory Constructor
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `State<T>` là một lớp trừu tượng, buộc StatefulWidget phải sử dụng các phương thức override để xác định hành vi. A, C, D không mô tả chính xác bản chất của State`<T>`.
 
 **Link tham khảo:**
@@ -2677,8 +2455,6 @@ D. Only applies to Map, not to List
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Bộ sưu tập-if/for cho phép bạn xây dựng các bộ sưu tập một cách linh hoạt với các phần tử chèn có điều kiện hoặc được tạo vòng lặp ngay bên trong phần khai báo. A, C, D mô tả sai phạm vi áp dụng.
 
@@ -2702,8 +2478,6 @@ D. Completely replaces the Text widget
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Biểu tượng Material được sử dụng cho các nút điều hướng, nút hành động và chỉ báo trạng thái. A, C, D mô tả sai mục đích của chúng.
 
 **Link tham khảo:**
@@ -2725,8 +2499,6 @@ D. Set
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Map. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -2750,8 +2522,6 @@ D. A variable that can always change to any type
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: Loại biến được suy ra từ giá trị ban đầu của nó. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -2773,8 +2543,6 @@ D. inherits
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: extends. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -2798,8 +2566,6 @@ D. Scaffold must not be used
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: One. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -2821,8 +2587,6 @@ D. FileBuilder
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Image.asset. pubspec.yaml là tệp kê khai dự án dùng để khai báo các gói và cấu hình nội dung.
 
@@ -2846,8 +2610,6 @@ D. Selecting a continuous value
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Hành động chính như Đăng nhập, Lưu hoặc Gửi. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -2869,8 +2631,6 @@ D. pushNamed()
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: writeAsString(). Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -2894,8 +2654,6 @@ D. A short-lived digital credential generated by the server to prove identity
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Thông tin xác thực kỹ thuật số có thời hạn sử dụng ngắn do máy chủ tạo ra để chứng minh danh tính. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -2917,8 +2675,6 @@ D. Everything is a file
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Mọi thứ đều là widget. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -2942,8 +2698,6 @@ D. auto
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: var. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -2965,8 +2719,6 @@ D. Tuple
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Map. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -2990,8 +2742,6 @@ D. A widget tree
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: Một thể hiện của một lớp. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -3013,8 +2763,6 @@ D. Tile
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Card. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -3038,8 +2786,6 @@ D. String
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Text. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -3061,8 +2807,6 @@ D. Picture.asset
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Image.asset. pubspec.yaml là tệp kê khai dự án dùng để khai báo các gói và cấu hình nội dung.
 
@@ -3086,8 +2830,6 @@ D. TapButton
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: ElevatedButton. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -3109,8 +2851,6 @@ D. PopupMenuButton
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: IconButton. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -3134,8 +2874,6 @@ D. Card
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: FloatingActionButton. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -3157,8 +2895,6 @@ D. ToastView
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: SnackBar. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -3182,8 +2918,6 @@ D. Drawer
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: AlertDialog. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -3205,8 +2939,6 @@ D. Store
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: State. Đây là khái niệm quản lý state: các thay đổi state phải thông báo hoặc kích hoạt phần có liên quan của UI để xây dựng lại.
 
@@ -3230,8 +2962,6 @@ D. mount
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: build. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -3253,8 +2983,6 @@ D. mutable widget
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Lựa chọn A đúng: const widget. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -3278,8 +3006,6 @@ D. Header
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: AppBar. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -3301,8 +3027,6 @@ D. label
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: title. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -3326,8 +3050,6 @@ D. AlphaWidget
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: AnimatedOpacity. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -3349,8 +3071,6 @@ D. start
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: leading. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -3374,8 +3094,6 @@ D. note
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: subtitle. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -3397,8 +3115,6 @@ D. suffix
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: trailing. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -3422,8 +3138,6 @@ D. HiddenTile
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Dismissible. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -3445,8 +3159,6 @@ D. Throws a TypeError exception at runtime
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `dynamic` cho phép kiểu dữ liệu thay đổi trong thời gian chạy, do đó nó in ra "Hello". A sai vì đây là hành vi `dynamic` hợp lệ; C, D sai vì không có lỗi và giá trị final là "Hello".
 
@@ -3470,8 +3182,6 @@ D. Logical XOR operator
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `??` trả về phía bên trái nếu không rỗng, nếu không thì trả về bên phải side (kết hợp null). A, C, D mô tả sai chức năng của toán tử này.
 
 **Link tham khảo:**
@@ -3493,8 +3203,6 @@ D. Returns an empty string
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Truy cập Map bằng khóa không tồn tại sẽ trả về giá trị rỗng trong Dart. A, B, D không khớp với hành vi mặc định của Map trong Dart.
 
@@ -3518,8 +3226,6 @@ D. Only applicable to String-type errors
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `catch (e, s)` bắt cả đối tượng lỗi và dấu vết ngăn xếp. A, C, D mô tả sai chức năng của cú pháp này.
 
 **Link tham khảo:**
@@ -3541,8 +3247,6 @@ D. Dart will automatically make Fish implicitly extend Pet
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Mixin `CanBark on Pet` chỉ bị ràng buộc to các lớp apply to mở rộng Pet; vì Fish không mở rộng Pet nên biên dịch to không thành công. A, C, D không khớp với cách hoạt động của các ràng buộc mixin.
 
@@ -3566,8 +3270,6 @@ D. The program throws a runtime exception but still compiles
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `Box<String>(10)` không biên dịch được vì 10 (int) không khớp với loại String đã khai báo, vi phạm quy trình kiểm tra loại chung nghiêm ngặt. A, C, D không khớp với việc kiểm tra loại chung nghiêm ngặt của Dart.
 
 **Link tham khảo:**
@@ -3589,8 +3291,6 @@ D. Column
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Scaffold là xương sống của màn hình Material, cung cấp AppBar/body/FAB. A, C, D không mô tả chính xác vai trò cấu trúc này.
 
@@ -3614,8 +3314,6 @@ D. The Column is completely hidden from the screen
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Việc đặt ListView trong Column không có Expanded/Flexible sẽ gây ra chiều cao không giới hạn error (tràn). A sai vì đây chính xác là lỗi phổ biến; C, D không khớp với hành vi thực tế của Flutter.
 
 **Link tham khảo:**
@@ -3637,8 +3335,6 @@ D. Converts a String type to int
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `!` là toán tử xác nhận null, xác nhận không null cho trình biên dịch, đưa ra lỗi thời gian chạy nếu sai. A, C, D mô tả sai ý nghĩa của toán tử này ở mức độ an toàn vô giá trị.
 
@@ -3662,8 +3358,6 @@ D. Row auto-wraps but Wrap doesn't
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Wrap tự động xếp các phần tử con vào một dòng mới khi hết không gian theo chiều ngang, tránh tình trạng tràn Row. A, C, D mô tả sai/đảo ngược hai đặc điểm của widgets'.
 
 **Link tham khảo:**
@@ -3685,8 +3379,6 @@ D. No technical reason, it's a random choice
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 ListView cho phép cuộn khi nội dung vượt quá chiều cao màn hình, trong khi Column không cuộn theo mặc định và dễ bị tràn. A, C, D không phù hợp với lý do kỹ thuật thực tế.
 
@@ -3710,8 +3402,6 @@ D. Convert Dart to Kotlin
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Gói bằng Widget" nhanh chóng gói một widget đã chọn bằng Phần đệm/Center/Mở rộng để tái cấu trúc bố cục. A, C, D không phù hợp với chức năng của tính năng này.
 
 **Link tham khảo:**
@@ -3733,8 +3423,6 @@ D. No fixed position, always centered in the AppBar
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 floatingActionButton thường nổi ở phía dưới bên phải, được sử dụng cho hành động chính nổi bật. A, C, D mô tả sai vị trí/vai trò của nó.
 
@@ -3758,8 +3446,6 @@ D. Only applicable to the Text widget
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Sử dụng chúng khi nội dung vượt quá kích thước màn hình có sẵn, để cho phép cuộn hoặc thay đổi kích thước linh hoạt và tránh tràn. A sai vì Flutter không tự động xử lý mọi trường hợp tràn; C, D hạn chế sai phạm vi sử dụng.
 
 **Link tham khảo:**
@@ -3781,8 +3467,6 @@ D. Expanded only works with the Text widget
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Expanded buộc lấp đầy toàn bộ không gian linh hoạt được phân bổ; Flexible cho phép kích thước nhỏ hơn nếu không phải là needed (FlexFit.loose). A, C, D không khớp với hành vi thực tế của chúng.
 
@@ -3806,8 +3490,6 @@ D. `Wrap` should never be prioritized over Row
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Wrap nên được ưu tiên cho danh sách chip dài có thể tràn theo chiều ngang. B, C, D không phù hợp với phương pháp hay nhất đã nêu.
 
 **Link tham khảo:**
@@ -3829,8 +3511,6 @@ D. The app will throw an exception because the email is invalid
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Vì email bắt đầu bằng "taken" nên logic `_email.toLowerCase().startsWith("taken")` hiển thị "Email này đã là taken" sau 2 giây. A, C, D không khớp với logic của mã đã cho.
 
@@ -3854,8 +3534,6 @@ D. SELECT
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `WHERE` lọc các hàng dữ liệu trước khi trả về kết quả. A, C, D phục vụ purposes khác (sắp xếp, giới hạn, chọn cột).
 
 **Link tham khảo:**
@@ -3877,8 +3555,6 @@ D. When you need to rename a column in the query result
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 GROUP BY + HAVING được sử dụng để nhóm các hàng và lọc theo các hàm tổng hợp như SUM/COUNT. A, C, D không phù hợp với mục đích của các điều khoản này.
 
@@ -3902,8 +3578,6 @@ D. CurvedAnimation
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `AnimatedContainer` là Sách giáo khoa Hoạt ảnh tiềm ẩn widget --- nó tự động hoạt hình khi properties (màu sắc, kích thước...) của nó thay đổi. A, C, D là các thành phần thuộc về Hoạt ảnh rõ ràng hoặc các công cụ hỗ trợ, chứ không phải chính Hoạt ảnh ngầm định widget.
 
 **Link tham khảo:**
@@ -3925,8 +3599,6 @@ D. Returns null without calling the function
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Gọi ifAbsent, lưu kết quả vào Map và trả về giá trị mới. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -3950,8 +3622,6 @@ D. Column horizontally and Row vertically
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Lựa chọn A đúng: Cột theo chiều dọc và Hàng theo chiều ngang. Bố cục Flutter được tạo từ widgets; widget đã chọn cung cấp hành vi sắp xếp, định cỡ, giãn cách hoặc ràng buộc được mô tả.
 
 **Link tham khảo:**
@@ -3973,8 +3643,6 @@ D. ListView.builder or ListView.separated
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: ListView.builder hoặc ListView.separated. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -3998,8 +3666,6 @@ D. Wrap the ListView with Expanded
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Gói ListView bằng Mở rộng. Bố cục Flutter được tạo từ widgets; widget đã chọn cung cấp hành vi sắp xếp, định cỡ, giãn cách hoặc ràng buộc được mô tả.
 
 **Link tham khảo:**
@@ -4021,8 +3687,6 @@ D. It cannot be used in a Row or Column
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Phương án A đúng: Nó cho phép trẻ uốn cong mà không buộc trẻ phải lấp đầy khoảng trống còn lại. Bố cục Flutter được tạo từ widgets; widget đã chọn cung cấp hành vi sắp xếp, định cỡ, giãn cách hoặc ràng buộc được mô tả.
 
@@ -4046,8 +3710,6 @@ D. Use only one narrow Column
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Sử dụng thanh bên bộ lọc và danh sách phim hai cột. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -4069,8 +3731,6 @@ D. A widget tree
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: String. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -4094,8 +3754,6 @@ D. ::=
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: `=>` là cú pháp mũi tên của Dart cho hàm bao gồm một biểu thức.
 
 **Link tham khảo:**
@@ -4117,8 +3775,6 @@ D. Increment
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Mặc định nếu rỗng. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -4142,8 +3798,6 @@ D. Stack
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: Padding. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -4165,8 +3819,6 @@ D. Positioned
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Center. Bố cục Flutter được tạo từ widgets; widget đã chọn cung cấp hành vi sắp xếp, định cỡ, giãn cách hoặc ràng buộc được mô tả.
 
@@ -4190,8 +3842,6 @@ D. Wrap
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: Column. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -4213,8 +3863,6 @@ D. Flex
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Row. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -4238,8 +3886,6 @@ D. Expanded
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Stack. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -4261,8 +3907,6 @@ D. Table
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: ListView. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -4286,8 +3930,6 @@ D. Only usable with SliverAppBar
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 CurvedAnimation áp dụng đường cong giảm dần cho Hoạt ảnh tuyến tính, làm cho giá trị của nó thay đổi phi tuyến tính theo thời gian. A, C, D mô tả sai chức năng của nó.
 
 **Link tham khảo:**
@@ -4309,8 +3951,6 @@ D. The two widgets are entirely identical, just different names
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 SliverAppBar hoạt động bên trong CustomScrollView với khả năng mở rộng/thu nhỏ/hiển thị ẩn linh hoạt khi cuộn, không giống như AppBar thông thường có vị trí cố định. A, C, D mô tả sai đặc điểm.
 
@@ -4334,8 +3974,6 @@ D. `flexibleSpace` only works when there's no `CustomScrollView`
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 flexibleSpace xác định nội dung mở rộng-state; expandedHeight đặt chiều cao mở rộng tối đa, thu nhỏ khi cuộn. B, C, D mô tả sai chức năng của hai thuộc tính này.
 
 **Link tham khảo:**
@@ -4357,8 +3995,6 @@ D. SliverGrid doesn't support displaying images
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 SliverList/SliverGrid được thiết kế để kết hợp liền mạch nhiều nội dung có thể cuộn trong một CustomScrollView, không giống như ListView/GridView độc lập. A, C, D không phù hợp với đặc tính kỹ thuật thực tế.
 
@@ -4382,8 +4018,6 @@ D. RoundedBox
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: ClipRRect. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -4405,8 +4039,6 @@ D. CanvasView
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: CustomPaint. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -4430,8 +4062,6 @@ D. ShapeBuilder
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: CustomPainter. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -4453,8 +4083,6 @@ D. SliverBox
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: CustomScrollView. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -4478,8 +4106,6 @@ D. AppHeader
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: SliverAppBar. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -4501,8 +4127,6 @@ D. FractionallySizedBox
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: SafeArea. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -4526,8 +4150,6 @@ D. pixelDensity
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: crossAxisCount. Bố cục Flutter được tạo từ widgets; widget đã chọn cung cấp hành vi sắp xếp, định cỡ, giãn cách hoặc ràng buộc được mô tả.
 
 **Link tham khảo:**
@@ -4549,8 +4171,6 @@ D. Perform JSON parsing from APIs
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Lớp nhúng xử lý việc tích hợp, đầu vào, lifecycle và quản lý cửa sổ dành riêng cho nền tảng. A và D thuộc về các lớp Khung/mạng; B là công việc của trình biên dịch Dart AOT, không phải Trình nhúng.
 
@@ -4574,8 +4194,6 @@ D. Has no effect if darkTheme isn't declared
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 `ThemeMode.system` làm cho ứng dụng tự động tuân theo cài đặt sáng/tối của hệ điều hành của thiết bị. A, B sửa một chế độ, mâu thuẫn với "system"; D sai vì themeMode vẫn có ý nghĩa nhưng hiệu ứng đầy đủ cần được khai báo darkTheme.
 
 **Link tham khảo:**
@@ -4597,8 +4215,6 @@ D. `MaterialApp.theme(context).titleLarge`
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `Theme.of(context).textTheme.titleLarge` is the correct syntax để truy cập the current theme. A, C, D không phải là API Flutter hợp lệ.
 
@@ -4622,8 +4238,6 @@ D. Only used to pass API data
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `BuildContext` đại diện cho vị trí cây của widget, cho phép tra cứu of InheritedWidget gần nhất (như Theme) phía trên nó. A, C, D mô tả sai vai trò của BuildContext.
 
 **Link tham khảo:**
@@ -4645,8 +4259,6 @@ D. Adaptive UI only applies to Web apps
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Đáp ứng UI phản ứng với không gian có sẵn; Thích ứng UI phản ứng với loại thiết bị. A đảo ngược hai định nghĩa; C, D không phù hợp với nội dung bài giảng.
 
@@ -4670,8 +4282,6 @@ D. The number of child widgets in the tree
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `MediaQuery.of(context).size.width` lấy toàn màn hình của thiết bị hiện tại width. A, C, D mô tả sai phạm vi of giá trị được trả về.
 
 **Link tham khảo:**
@@ -4693,8 +4303,6 @@ D. Only the Text is completely hidden until the app restarts
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Flutter tự động tạo lại khi màn hình size changes (e.g. xoay), do đó MediaQuery phản ánh màn hình đó trong thời gian thực. A, C, D không khớp với hành vi thực tế của MediaQuery/Flutter.
 
@@ -4718,8 +4326,6 @@ D. MediaQuery only provides the parent widget's constraints, not the full screen
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 LayoutBuilder đưa ra các ràng buộc của cấp độ gốc trực tiếp; MediaQuery cung cấp thông tin thiết bị toàn màn hình. B, C, D đảo ngược/nhầm lẫn đặc điểm của hai công cụ.
 
 **Link tham khảo:**
@@ -4741,8 +4347,6 @@ D. This will cause an error because LayoutBuilder cannot be placed inside a fixe
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `c.maxWidth` phản ánh constraint của cha mẹ trực tiếp (300px), không phải toàn màn hình, vì vậy NarrowCard() được hiển thị. A bỏ qua vai trò của ràng buộc cục bộ; C, D không khớp với cách LayoutBuilder thực sự hoạt động.
 
@@ -4766,8 +4370,6 @@ D. Fully replaces MediaQuery in every case
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 OrientationBuilder phát hiện thao tác xoay thiết bị và cho phép UI thay đổi tương ứng. B, C, D mô tả sai chức năng của nó.
 
 **Link tham khảo:**
@@ -4789,8 +4391,6 @@ D. FractionallySizedBox
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Expanded cho phép trẻ chiếm khoảng trống còn lại trong Hàng/Cột, tránh tràn. A, C, D phục vụ các mục đích khác, không cụ thể cho mục đích này.
 
@@ -4814,8 +4414,6 @@ D. The app will show a compile error
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Chỉ đọc width trong initState() có nghĩa là crossAxisCount không được cập nhật khi xoay vòng, vì initState chỉ chạy một lần khi tạo widget. A, C, D không phù hợp với hệ quả kỹ thuật thực tế.
 
 **Link tham khảo:**
@@ -4837,8 +4435,6 @@ D. This description is wrong, Wrap always needs accompanying conditional logic
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `Wrap` tự động tính toán và bao bọc các phần tử dựa trên không gian có sẵn mà không cần logic điều kiện thủ công. A, C, D không khớp với ý nghĩa dự định của câu được trích dẫn.
 
@@ -4862,8 +4458,6 @@ D. Expanded causes the image to shrink to match the Text's size
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Expanded cho phép Text chiếm không gian ngang còn lại và tránh tràn ngang cho các tiêu đề dài. A, C, D mô tả sai vai trò kỹ thuật của Expanded ở đây.
 
 **Link tham khảo:**
@@ -4885,8 +4479,6 @@ D. It's impossible to build a distinct tablet layout in Flutter
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Việc sử dụng LayoutBuilder ở cấp cơ sở để phát hiện giới hạn về độ rộng là technique được khuyến nghị (theo ghi chú "sử dụng LayoutBuilder ở cấp cơ sở"). A, C, D không phù hợp với kỹ thuật được đề xuất.
 
@@ -4910,8 +4502,6 @@ D. Fully replaces BoxFit
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 AspectRatio duy trì tỷ lệ khung hình cố định để hình ảnh không bị giãn khi kích thước vùng chứa thay đổi. B, C, D không khớp với phạm vi/chức năng của nó.
 
 **Link tham khảo:**
@@ -4933,8 +4523,6 @@ D. Convert the entire Row into a Stack
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Việc gói phần tử linh hoạt bằng Flexible/Expanded hoặc sử dụng Wrap để tự động gói là giải pháp được đề xuất. A, C, D không phù hợp với nguyên tắc đáp ứng đã dạy.
 
@@ -4958,8 +4546,6 @@ D. MediaQuery only works inside a StatelessWidget
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 MediaQuery trả về toàn màn hình width bất kể ràng buộc cục bộ of; LayoutBuilder phản ánh chính xác không gian cục bộ thực tế --- sử dụng LayoutBuilder để đáp ứng cục bộ. A, C, D không phù hợp với đặc tính kỹ thuật đã phân tích.
 
 **Link tham khảo:**
@@ -4981,8 +4567,6 @@ D. CPU Profiler
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Layout Explorer" trong Flutter Inspector giúp debug bố cục phản hồi theo "Các phương pháp hay nhất" của Mô-đun 6. B, C, D không phải là công cụ được nêu cho mục đích này.
 
@@ -5006,8 +4590,6 @@ D. The app won't compile
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Việc thiếu SafeArea có nguy cơ khiến phần trên cùng của thanh tìm kiếm bị chồng lên bởi thanh trạng thái/vết khía, khiến TextField khó chạm chính xác. A, C, D không phản ánh rủi ro thực tế.
 
 **Link tham khảo:**
@@ -5029,8 +4611,6 @@ D. Has no real function, purely illustrative in the slide
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 FractionallySizedBox kích thước widget theo tỷ lệ phần trăm của cha mẹ thay vì pixel cố định. B, C, D mô tả sai chức năng của nó.
 
@@ -5054,8 +4634,6 @@ D. This is the only recommended way to write this in every case
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Việc sử dụng các ràng buộc MediaQuery width toàn màn hình thay vì of cục bộ LayoutBuilder có thể dẫn đến quyết định phản hồi sai và bố cục tràn/không phù hợp trong các ngữ cảnh lồng nhau. A, C, D không phù hợp với hệ quả thực tế.
 
 **Link tham khảo:**
@@ -5077,8 +4655,6 @@ D. Storing a simple text string that needs no querying
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 SQLite phù hợp nhất với dữ liệu quan hệ có cấu trúc cần truy vấn/bộ lọc/sắp xếp, như ứng dụng Todo. A, C, D phù hợp hơn với SharedPreferences hoặc một tệp đơn giản.
 
@@ -5102,8 +4678,6 @@ D. Onboarding flag ("first-time user?")
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Mã thông báo phiên cuộc gọi video theo thời gian thực KHÔNG được liệt kê dưới dạng ví dụ về Bộ nhớ cục bộ điển hình. A, B, D đều là những ví dụ được đề cập rõ ràng trong bài giảng.
 
 **Link tham khảo:**
@@ -5125,8 +4699,6 @@ D. Storing multi-table relational data
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 SharedPreferences được đề xuất để lưu trữ chủ đề của ứng dụng state (Chế độ tối/sáng) trong Lab 9. A, C, D phù hợp hơn với tệp SQLite/JSON.
 
@@ -5150,8 +4722,6 @@ D. Reading a value from MediaQuery
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 KHÔNG nên thực hiện việc gọi API, phân tích cú pháp JSON, sắp xếp hoặc tính toán phức tạp bên trong build(). A, C, D là các hoạt động bình thường, chi phí thấp và không gây ra vấn đề đáng kể về hiệu suất trong build().
 
 **Link tham khảo:**
@@ -5173,8 +4743,6 @@ D. `key` --- so the animation can be tested
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `vsync` (thường từ TickerProviderStateMixin) đồng bộ hóa hoạt ảnh với khung hiển thị, tránh lãng phí tài nguyên khi không hiển thị. A, C, D không phải là tham số bắt buộc của AnimationController.
 
@@ -5198,8 +4766,6 @@ D. UI widget sets that follow Android and iOS design styles
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: các bộ UI widget tuân theo kiểu thiết kế Android và iOS. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -5221,8 +4787,6 @@ D. They automatically make the UI responsive
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Chúng cung cấp ngữ cảnh lỗi theo miền cụ thể thay vì chuỗi lỗi chung. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -5246,8 +4810,6 @@ D. A layout that changes according to the available space
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Bố cục thay đổi theo không gian có sẵn. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -5269,8 +4831,6 @@ D. A layout or component that changes according to the device or platform type
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: Bố cục hoặc thành phần thay đổi tùy theo loại thiết bị hoặc nền tảng. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -5294,8 +4854,6 @@ D. Using Firebase Authentication
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: Thay đổi lưới từ hai cột thành bốn cột khi màn hình rộng hơn. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -5317,8 +4875,6 @@ D. Replacing bottom navigation with NavigationRail on a tablet
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: Thay thế điều hướng phía dưới bằng NavigationRail trên máy tính bảng. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -5342,8 +4898,6 @@ D. LayoutBuilder.width() without a builder
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: MediaQuery.of(ngữ cảnh).size.width. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -5365,8 +4919,6 @@ D. Whether the device is online or offline
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Hướng dọc hoặc hướng ngang. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -5390,8 +4942,6 @@ D. Arrow functions are not allowed to take parameters
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Hàm mũi tên là cách viết tắt của một biểu thức đơn return; khối chức năng cho phép nhiều câu lệnh. A, C, D không phù hợp với đặc điểm của cú pháp này.
 
 **Link tham khảo:**
@@ -5413,8 +4963,6 @@ D. Start, End (never prints "Data loaded")
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Vì `fetchData()` không được chờ đợi trong `main()` nên nó không chặn mã tiếp theo --- `.then()` là không chặn, vì vậy "Start", "End" print trước tiên và sau 1 giây "Data loaded" sẽ in. A, C xếp sai thứ tự; D sai vì Data loaded cuối cùng cũng được in ra.
 
@@ -5438,8 +4986,6 @@ D. The student list order will be reversed
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Không chờ `Future.delayed` cho phép `main()` tiếp tục thực thi các câu lệnh tiếp theo mà không cần đợi hết giây --- mặc dù `forEach` vẫn thực thi tên theo đúng thứ tự, nó có thể chạy trước "độ trễ" completes (không có tác dụng thực tế ở đây vì không có gì phụ thuộc vào độ trễ). A sai vì đây không phải là lỗi biên dịch; C sai vì nó không bị lỗi; D sai vì thứ tự name được giữ nguyên.
 
 **Link tham khảo:**
@@ -5461,8 +5007,6 @@ D. Not supported by Dart, only exists in Java
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `implements` chỉ lấy signature (giao diện), buộc bạn phải tự viết tất cả hành vi, được sử dụng như một hợp đồng. A mô tả `extends`; C mô tả `mixin`; D sai vì Dart hỗ trợ đầy đủ implements.
 
@@ -5486,8 +5030,6 @@ D. A replacement for SQLite
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Mẫu Repository tách việc tìm nạp dữ liệu khỏi UI, hỗ trợ khả năng kiểm tra/bảo trì và tạo nền tảng cho Bloc/Provider/Riverpod. A, C, D mô tả sai mục đích của nó.
 
 **Link tham khảo:**
@@ -5509,8 +5051,6 @@ D. The app will freeze (block the UI thread) for a full 900ms
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 UI tự động xây dựng lại mỗi khi có giá trị mới, tạo hiệu ứng cập nhật theo thời gian thực. A sai vì StreamBuilder được xây dựng lại cho mỗi sự kiện; C sai vì StreamBuilder hỗ trợ đầy đủ async*; D sai vì độ trễ không chặn toàn bộ luồng UI nhờ cơ chế async.
 
@@ -5534,8 +5074,6 @@ D. The value of quality won't change because setState i
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Không có setState, `quality` vẫn cập nhật trong bộ nhớ nhưng Flutter không biết cách xây dựng lại --- UI không hiển thị thay đổi nào. B sai vì không có lỗi thời gian chạy; C sai vì Flutter không tự động theo dõi mọi biến; D sai vì quality không thay đổi, chỉ có UI là không.
 
 **Link tham khảo:**
@@ -5557,8 +5095,6 @@ D. Because DateTime is never allowed to be null in Flutter
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Việc kiểm tra null là cần thiết vì người dùng có thể hủy hộp thoại, khiến cho Future trả về null và bạn không nên setState với một null không mong muốn. A, C, D không khớp với lý do thực tế.
 
@@ -5582,8 +5118,6 @@ D. There's no difference b
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 StatelessWidget không có setState nên không thể lưu trữ và cập nhật `index` state khi người dùng nhấn vào tab. A, C, D mô tả sai đặc điểm của StatelessWidget.
 
 **Link tham khảo:**
@@ -5605,8 +5139,6 @@ D. Incorrect import syntax
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Quên gọi `setState()` là nguyên nhân phổ biến khiến UI không cập nhật, theo danh sách kiểm tra "Lỗi thường gặp và cách khắc phục". A, C, D không phải là nguyên nhân nêu trong bài giảng.
 
@@ -5630,8 +5162,6 @@ D. StatefulWidget is not allowed to contain child widgets
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 StatelessWidget không có state có thể thay đổi và không tự xây dựng lại; StatefulWidget giữ đối tượng State và xây dựng lại thông qua setState(). A, C, D mô tả sai đặc điểm cơ bản của hai loại widget.
 
 **Link tham khảo:**
@@ -5653,8 +5183,6 @@ D. The count value resets to 0 every time it rebuilds
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Không có setState, count vẫn tăng bộ nhớ, nhưng Flutter không biết cách xây dựng lại --- UI hiển thị count không thay đổi. B sai vì không có lỗi biên dịch; C sai vì Flutter không tự động theo dõi mọi biến; D sai vì count không được đặt lại.
 
@@ -5678,8 +5206,6 @@ D. Only applicable when using Provider
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Việc nâng State lên sẽ di chuyển state được chia sẻ lên một tổ tiên chung để giảm logic trùng lặp và cải thiện luồng dữ liệu. A, C, D mô tả sai khái niệm này.
 
 **Link tham khảo:**
@@ -5701,8 +5227,6 @@ D. Provider only works with the String data type
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Provider được xây dựng trên InheritedWidget nhưng giảm bớt bản soạn sẵn để chia sẻ/nghe state. A, C, D không phù hợp với nền tảng kỹ thuật thực tế của Provider.
 
@@ -5726,8 +5250,6 @@ D. The app automatically calls notifyListeners() silently every second
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Nếu không có notifyListeners(), count vẫn tăng bộ nhớ nhưng Consumer widgets không được thông báo để xây dựng lại --- UI không cập nhật. A, C, D mô tả sai hành vi này.
 
 **Link tham khảo:**
@@ -5749,8 +5271,6 @@ D. No specific reason, just the instructor's personal preference
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Việc tách state cải thiện khả năng kiểm tra và độ rõ ràng của kiến trúc, cho phép UI chỉ lắng nghe thay vì quản lý logic nghiệp vụ. A, C, D không phải là lý do đúng/hợp lệ.
 
@@ -5774,8 +5294,6 @@ D. BLoC → Riverpod → GetX
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Theo Tóm tắt, thứ tự từ cơ bản đến nâng cao là: setState → InheritedWidget → Provider. A đảo ngược thứ tự; C không đầy đủ; D không phải là trọng tâm của Mô-đun 5 (chỉ được đề cập ngắn gọn ở phần chuẩn bị trong Mô-đun 3).
 
 **Link tham khảo:**
@@ -5797,8 +5315,6 @@ D. Placing it in finally causes isLoading to never become false
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 finally đảm bảo isLoading luôn bị tắt bất kể thành công hay thất bại, tránh việc tải state bị kẹt vĩnh viễn. A, C, D không khớp với vai trò/thứ tự thực hiện thực tế của finally.
 
@@ -5822,8 +5338,6 @@ D. Only causes problems with POST, doesn't affect GET
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Gọi một API bên trong build() là một điều khó tránh vì build() có thể chạy lại nhiều lần; thay vào đó hãy gọi initState(). A, C, D không khớp với nội dung cạm bẫy đã nêu của bài giảng.
 
 **Link tham khảo:**
@@ -5845,8 +5359,6 @@ D. Where code is placed doesn't affect performance, only code organization
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Việc phân tích cú pháp trong build() lặp lại công việc nặng nhọc trong mỗi lần xây dựng lại, trong khi phân tích cú pháp một lần từ initState() (kết quả được lưu vào bộ nhớ đệm trong một Future) chỉ xảy ra một lần cho mỗi lần tải. A, C, D không khớp với phân tích hiệu suất thực tế.
 
@@ -5870,8 +5382,6 @@ D. SharedPreferences will automatically call setState implicitly
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Giá trị vẫn được lưu chính xác vào bộ nhớ nhưng UI hiện tại sẽ không phản ánh thay đổi cho đến khi quá trình xây dựng lại khác diễn ra. B, C, D không khớp với hành vi thực tế của SharedPreferences/Flutter.
 
 **Link tham khảo:**
@@ -5893,8 +5403,6 @@ D. main.dart
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 TaskProvider chịu trách nhiệm quản lý toàn bộ ứng dụng state trong kiến trúc của Taskly. A, C, D không phù hợp với trách nhiệm này.
 
@@ -5918,8 +5426,6 @@ D. The only problem is misplacing Expanded
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Việc xem ở cấp cao nhất khiến ngay cả những static widgets không liên quan như InputRow phải xây dựng lại dựa trên bất kỳ thay đổi provider nào, gây lãng phí tài nguyên. A, C, D không phù hợp với vấn đề hiệu suất thực tế.
 
 **Link tham khảo:**
@@ -5941,8 +5447,6 @@ D. Selector causes the entire app to always rebuild regardless of whether anythi
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Bộ chọn cho phép xây dựng lại chi tiết, chỉ xây dựng lại phần thực sự phụ thuộc vào dữ liệu đã thay đổi. B, C, D không phù hợp với hành vi/lợi ích thực sự của Selector.
 
@@ -5966,8 +5470,6 @@ D. The animation automatically stops because Flutter always tracks widget lifecy
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Việc quên dispose() sẽ khiến một AnimationController lặp lại chạy sau khi xóa widget, gây rò rỉ bộ nhớ và lãng phí CPU. A sai vì GC của Dart không thể thu thập đối tượng vẫn được tham chiếu bởi Mã đang hoạt động; C, D không khớp với hành vi thực tế của Flutter.
 
 **Link tham khảo:**
@@ -5989,8 +5491,6 @@ D. There's no core concept, BLoC is just another name for setState
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Khái niệm cốt lõi của BLoC: luồng đầu vào = Sự kiện, luồng đầu ra = Trạng thái, xử lý logic nghiệp vụ ở giữa. A, C, D mô tả sai bản chất cơ bản của BLoC.
 
@@ -6014,8 +5514,6 @@ D. `InheritedWidget` (used directly, without the library)
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `BlocBuilder<CounterCubit, int>` là flutter_bloc API chính xác để nghe Cubit và tự động xây dựng lại trên các thay đổi của state. A, C, D không phải là widget/API thích hợp cho mục đích này.
 
 **Link tham khảo:**
@@ -6037,8 +5535,6 @@ D. No clear reason, it's just a naming convention
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Việc phân tách làm tăng khả năng kiểm tra, cho phép sử dụng lại logic trên các nền tảng/màn hình và giúp widgets tập trung vào hiển thị. A, C, D mô tả sai mục đích của triết lý thiết kế này.
 
@@ -6062,8 +5558,6 @@ D. Provider is required to use Events just
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Provider sử dụng lệnh gọi phương thức trực tiếp + notifyListeners(); BLoC sử dụng các Sự kiện được gửi đi được xử lý thành các Trạng thái được phát ra, tách rời khỏi các cuộc gọi trực tiếp --- đây là điểm khác biệt cốt lõi của luồng. A, C, D không khớp với cách thức hoạt động thực sự của hai kiến ​​trúc.
 
 **Link tham khảo:**
@@ -6085,8 +5579,6 @@ D. BLoC is always faster than setState in absolute render performance in every c
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tính năng phân tách Sự kiện/{0}} rõ ràng của BLoC hỗ trợ khả năng kiểm tra độc lập, theo dõi luồng dữ liệu rõ ràng và mở rộng quy mô tốt hơn cho state phức tạp được chia sẻ trên nhiều màn hình. A, C, D không phù hợp với lý do thực tế khi chọn BLoC.
 
@@ -6110,8 +5602,6 @@ D. A function consisting of a single expression
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Lựa chọn D đúng: Một hàm bao gồm một biểu thức. Bố cục Flutter được tạo từ widgets; widget đã chọn cung cấp hành vi sắp xếp, định cỡ, giãn cách hoặc ràng buộc được mô tả.
 
 **Link tham khảo:**
@@ -6133,8 +5623,6 @@ D. Chaining asynchronous steps without an async/await block
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: Xâu chuỗi các bước không đồng bộ mà không có khối async/await. Dart sử dụng Future cho một kết quả không đồng bộ và Stream cho một chuỗi sự kiện không đồng bộ; async/await làm cho mã dựa trên Future dễ đọc hơn.
 
@@ -6158,8 +5646,6 @@ D. emitWidget
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: yield. Dart sử dụng Future cho một kết quả không đồng bộ và Stream cho một chuỗi sự kiện không đồng bộ; async/await làm cho mã dựa trên Future dễ đọc hơn.
 
 **Link tham khảo:**
@@ -6181,8 +5667,6 @@ D. The basic building block of the user interface
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: Khối xây dựng cơ bản của giao diện người dùng. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -6206,8 +5690,6 @@ D. A mobile operating system by Google
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Flutter là bộ công cụ UI của Google để xây dựng các ứng dụng được biên dịch nguyên bản từ một cơ sở mã. (A sai vì Flutter không phải là ngôn ngữ; C sai vì Flutter là đa nền tảng, không chỉ web; D sai vì Flutter không phải là hệ điều hành.)
 
 **Link tham khảo:**
@@ -6229,8 +5711,6 @@ D. Widget Layer
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Lớp Công cụ được viết bằng C++ và sử dụng Skia để hiển thị/khả năng truy cập/bố cục văn bản. Khung Layer (A) là lớp Dart phía trên nó; Embedder (C) xử lý việc tích hợp nền tảng; 'Widget Layer' (D) không phải là tên chính thức cho lớp kiến ​​trúc này.
 
@@ -6254,8 +5734,6 @@ D. Best done in Kotlin because Flutter is not optimized for commercial apps
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Bài giảng nêu rõ Flutter phù hợp với MVP, công ty khởi nghiệp, giảm chi phí và thời gian tiếp thị --- khớp chính xác với kịch bản này. A, C, D đều mâu thuẫn với nội dung bài giảng.
 
 **Link tham khảo:**
@@ -6277,8 +5755,6 @@ D. Automatic FFI Bridge
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Flutter tích hợp với các tính năng gốc thông qua Kênh nền tảng. A, C, D không phải là cơ chế được đề cập trong bài giảng.
 
@@ -6302,8 +5778,6 @@ D. Only added watchOS support
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Flutter 2.0 (2021) đã thêm Web và hỗ trợ Máy tính để bàn theo dòng thời gian của bài giảng. A, C, D không trùng với các mốc đã nêu.
 
 **Link tham khảo:**
@@ -6325,8 +5799,6 @@ D. When the app only displays a static list of text
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Bản gốc nên được xem xét để truy cập phần cứng ở cấp độ rất thấp hoặc nền tảng cụ thể nghiêm ngặt UI/UX --- khớp với 'Khi thích hợp phát triển bản địa hơn.' B, C, D là những trường hợp Flutter vẫn phù hợp hoặc không liên quan.
 
@@ -6350,8 +5822,6 @@ D. All three produce identical pure native code
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Flutter đạt được hiệu suất gần như gốc thông qua công cụ Skia của chính nó mà không cần cầu nối như React Bản địa; Bản địa đạt được hiệu suất cao nhất nhưng mất cơ sở mã chung --- đây là sự đánh đổi chính xác trên mỗi bảng so sánh. A, B, D sai hoặc đơn giản hóa quá mức.
 
 **Link tham khảo:**
@@ -6373,8 +5843,6 @@ D. [1, 2, 3, 4, 5]
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `[1,2,3,4,5].map(x*2) = [2,4,6,8,10]`, rồi `.where(e>4) = [6,8,10]`. A chỉ hiển thị bước map; C, D không khớp với phép biến đổi.
 
@@ -6398,8 +5866,6 @@ D. The program crashes completely with no output
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Chia số nguyên cho 0 với `~/` ném `IntegerDivisionByZeroException`, bị `catch` bắt, in "Error: ..." rồi "Done" (finally luôn chạy). B, C sai vì xảy ra ngoại lệ; D sai vì catch xử lý lỗi nên chương trình không bị lỗi hoàn toàn.
 
 **Link tham khảo:**
@@ -6421,8 +5887,6 @@ D. The two syntaxes are entirely identical in performance and syntax, with no di
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 `for-in` lặp lại từng phần tử bộ sưu tập; `forEach` là hàm bậc cao hơn lấy kiểu gọi lại in theo kiểu hàm. A sai vì for-in hoạt động với List; B đảo ngược mô tả; D sai vì có sự khác biệt về phong cách.
 
@@ -6446,8 +5910,6 @@ D. micro, A, B, future
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Các tác vụ vi mô có mức độ ưu tiên cao hơn hàng đợi Sự kiện nhưng vẫn chạy sau khi thực thi mã đồng bộ hiện tại: in "A", "B" (đồng bộ hóa trước), sau đó vi tác vụ "micro" chạy trước Future "future". Câu trả lời đúng: A, B, micro, future.
 
 **Link tham khảo:**
@@ -6469,8 +5931,6 @@ D. Error because `async` is not allowed for a function returning a Stream
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Vòng lặp `async`/`yield` tạo thứ tự 1, 2, 3 in, mỗi thứ tự được in trên dòng riêng thông qua `await for`. A chỉ liệt kê một value; C đảo ngược thứ tự; D sai vì Dart hỗ trợ đầy đủ `async`.
 
@@ -6494,8 +5954,6 @@ D. A type used for asynchronous functions
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `Never` được sử dụng cho các hàm không bao giờ trả về normally (luôn ném hoặc lặp vô hạn). A, C, D mô tả sai mục đích của loại Never.
 
 **Link tham khảo:**
@@ -6517,8 +5975,6 @@ D. Dart doesn't support switch-case
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Các trường hợp chuyển đổi không trống trong Dart không bao giờ rơi vào implicitly (chỉ các trường hợp trống mới có chung nội dung); cú pháp bắt buộc phải có dấu kết thúc. B, C, D mô tả sai vai trò của break trong trường hợp chuyển đổi.
 
@@ -6542,8 +5998,6 @@ D. A special kind of variable in Dart
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 mixin chia sẻ hành vi trên nhiều lớp mà không có chuỗi kế thừa truyền thống. A, C, D mô tả sai mục đích của mixin.
 
 **Link tham khảo:**
@@ -6565,8 +6019,6 @@ D. A factory constructor can only be used with an abstract class
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Trình xây dựng gốc kiểm soát việc tạo cá thể --- nó có thể trả về một cá thể hiện có hoặc phân tích dữ liệu, thay vì luôn tạo mới. A sai vì đây chính là sự khác biệt; C, D sai về cú pháp/phạm vi.
 
@@ -6590,8 +6042,6 @@ D. No particular reason, just a coding style choice
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Đặt hàm tạo ở chế độ riêng tư sẽ ngăn các cuộc gọi trực tiếp từ bên ngoài, buộc sử dụng thông qua `fromJson` --- kiểm soát việc tạo đối tượng. A, C, D không phải là lý do đúng/chính xác trong mẫu this factory.
 
 **Link tham khảo:**
@@ -6613,8 +6063,6 @@ D. Only works with primitive types (int, double)
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Generics đảm bảo an toàn cho loại thời gian biên dịch, tránh các lỗi sử dụng sai loại dynamic. A, C, D mô tả sai lợi ích cốt lõi của thuốc generic.
 
@@ -6638,8 +6086,6 @@ D. Priority depends on the declaration order in the code, not fixed
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Hàng đợi Microtask có mức độ ưu tiên cao hơn --- tất cả các microtask chạy trước khi Dart chuyển sang hàng đợi Sự kiện. A đảo ngược điều này; C, D không khớp với cơ chế vòng lặp sự kiện của Dart.
 
 **Link tham khảo:**
@@ -6661,8 +6107,6 @@ D. Nothing is printed because await is missing
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `Future(()=>1).then((v)=>v+1).then((v)=>print(v))` → 1+1 = 2, in ra 2. A, C có giá trị sai; D sai vì mã vẫn thực thi mà không có await rõ ràng ở phần chính.
 
@@ -6686,8 +6130,6 @@ D. `.then()` is always faster than `async/await` in terms of performance
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `.then()` phù hợp với chuỗi đơn giản; `async/await` giúp mã đọc tuyến tính khi các bước phụ thuộc vào nhau. A sai vì chúng có thể được sử dụng cùng nhau; C sai vì async/await vẫn không đồng bộ; D không có cơ sở về hiệu suất tuyệt đối.
 
 **Link tham khảo:**
@@ -6709,8 +6151,6 @@ D. Broadcast only works with String data types
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Broadcast cho phép nhiều người nghe nhận các sự kiện được chia sẻ; đăng ký một lần chỉ cho phép một. A đảo ngược điều này; C, D không khớp với đặc điểm thực tế của hai loại Stream.
 
@@ -6734,8 +6174,6 @@ D. Error because StreamController.broadcast() doesn't support multiple listeners
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Với `c..add(1)..add(2)`, mỗi add sẽ kích hoạt cả người nghe A và B trước add tiếp theo: A:1, B:1, A:2, B:2. A có thứ tự nhóm sai; C sai vì cả hai trình nghe đều hoạt động; D sai vì broadcast hỗ trợ đầy đủ nhiều trình nghe.
 
 **Link tham khảo:**
@@ -6757,8 +6195,6 @@ D. Using Isolates for heavy CPU tasks
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Chạy một vòng lặp nặng trực tiếp trên isolate chính trong khi xây dựng UI là phương pháp KHÔNG nên áp dụng done (ngược lại với phương pháp hay nhất). A, C, D đều là những phương pháp được khuyến nghị.
 
@@ -6782,8 +6218,6 @@ D. Abstract classes are always faster than interfaces at runtime
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tóm tắt class có thể kết hợp các phương thức có nội dung/không có nội dung và không thể được khởi tạo trực tiếp; mọi class thông thường đều tự động có implicit interface người khác có thể triển khai. A sai vì có sự khác biệt rõ ràng; C sai vì Dart có khái niệm này thông qua giao diện implicit; D không có cơ sở về hiệu suất thời gian chạy tuyệt đối.
 
 **Link tham khảo:**
@@ -6805,8 +6239,6 @@ D. Compile error due to missing await
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Không có await, `name` có loại `Future<String>` --- một đối tượng Future đang chờ xử lý, chưa có giá trị String thực tế. A, C, D không khớp với hành vi của Future trong Dart.
 
@@ -6830,8 +6262,6 @@ D. Used to set the background color of RadioListTile
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `groupValue` giữ value hiện được chọn cho cả nhóm, so với `value` của từng mục. A, C, D mô tả sai chức năng của nó.
 
 **Link tham khảo:**
@@ -6853,8 +6283,6 @@ D. No functional difference
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Slider chọn một giá trị liên tục, Switch chỉ chuyển đổi boolean. B, C, D mô tả sai/đảo ngược hai hàm widgets'.
 
@@ -6878,8 +6306,6 @@ D. Determine the date display format (dd/mm/yyyy or mm/dd/yyyy)
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `firstDate`/`lastDate` hạn chế phạm vi ngày có thể chọn hợp lệ trên lịch. A, C, D mô tả sai chức năng của hai tham số này.
 
 **Link tham khảo:**
@@ -6901,8 +6327,6 @@ D. A list where items can be added/removed
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Logo tĩnh/văn bản không thay đổi phù hợp với StatelessWidget vì không cần phải xây dựng lại. A, B, D đều yêu cầu StatefulWidget do thay đổi state.
 
@@ -6926,8 +6350,6 @@ D. No effect at all, SafeArea is purely cosmetic and unnecessary
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Thiếu SafeArea có thể khiến phần trên cùng của thanh tìm kiếm bị che khuất/cắt bớt bởi thanh khía/trạng thái, gây hại cho UX. A, C, D không phản ánh hậu quả thực tế.
 
 **Link tham khảo:**
@@ -6949,8 +6371,6 @@ D. There's no difference between the two widgets
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Sử dụng TextFormField khi dữ liệu đầu vào nằm trong Form và cần xác thực. A, C, D mô tả sai cách dùng.
 
@@ -6974,8 +6394,6 @@ D. Used to encrypt the entered data
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 GlobalKey`<FormState>` cho phép truy cập/điều khiển state của Form từ bên ngoài thông qua validate()/save()/reset(). A, C, D mô tả sai vai trò của nó.
 
 **Link tham khảo:**
@@ -6997,8 +6415,6 @@ D. save() will automatically call validate() implicitly before saving
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Việc gọi save() trước validate() có nguy cơ lưu dữ liệu chưa được xác thực qua onSaved, vì save() không tự kiểm tra tính hợp lệ. A sai vì thứ tự rất quan trọng; C sai vì đây không phải là lỗi biên dịch; D sai vì save() không tự động gọi validate().
 
@@ -7022,8 +6438,6 @@ D. Being unable to create a String-type variable
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Những cạm bẫy phổ biến đã nêu: bỏ qua các cảnh báo an toàn rỗng và trộn mã đồng bộ/{0}} không đúng cách. A, C, D không phải là nội dung được nhấn mạnh trong bài giảng.
 
 **Link tham khảo:**
@@ -7045,8 +6459,6 @@ D. `SnackBar.show(context, title)`
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(title)))` là cách gọi đúng. A, C, D không phải là API Flutter hợp lệ.
 
@@ -7070,8 +6482,6 @@ D. Closes the app
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `Navigator.push()` đẩy tuyến đường mới lên đầu ngăn xếp điều hướng. A, C, D mô tả sai chức năng của phương pháp này.
 
 **Link tham khảo:**
@@ -7093,8 +6503,6 @@ D. Restarts the app from scratch
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `Navigator.pop(context)` xóa màn hình trên cùng khỏi ngăn xếp, hiển thị màn hình bên dưới. A, C, D mô tả sai hành vi này.
 
@@ -7118,8 +6526,6 @@ D. `push()` doesn't allow going back with the back button
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `push()` giữ tuyến đường cũ trong ngăn xếp; `pushReplacement()` xóa tuyến đường cũ khi thêm tuyến đường mới. A sai vì có sự khác biệt rõ ràng; C, D là các đặc tính kỹ thuật không chính xác.
 
 **Link tham khảo:**
@@ -7141,8 +6547,6 @@ D. There's no real difference between the two calls
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `pushReplacementNamed` ngăn việc quay lại Đăng nhập qua Quay lại do tuyến Đăng nhập bị xóa khỏi ngăn xếp. A, C, D không phải là lý do đúng.
 
@@ -7166,8 +6570,6 @@ D. Named Routes only work with Navigator 2.0
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Các tuyến được đặt tên cải thiện khả năng đọc và khả năng mở rộng trong các ứng dụng lớn, đặc biệt là đối với việc truyền tham số và quản lý màn hình tập trung. A, C, D không phù hợp với lợi ích thực tế.
 
 **Link tham khảo:**
@@ -7189,8 +6591,6 @@ D. Navigator 2.0 doesn't support deep linking, only Navigator 1.0 does
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Navigator 1.0 là imperative (đẩy/bật thủ công); Navigator 2.0 là declarative (mô tả ngăn xếp mong muốn, đồng bộ hóa khung). A đảo ngược điều này; C, D không phù hợp với đặc điểm của hai phiên bản.
 
@@ -7214,8 +6614,6 @@ D. Provider, Consumer, ChangeNotifier
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Ba thành phần chính: RouterDelegate, RouteInformationParser, BackButtonDispatcher --- khớp với slide. A, C, D không phải là tên chính xác của các thành phần này.
 
 **Link tham khảo:**
@@ -7237,8 +6635,6 @@ D. A feature that fully replaces SharedPreferences
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Liên kết sâu cho phép người dùng mở một màn hình cụ thể trực tiếp thông qua URL/nguồn bên ngoài. A, C, D mô tả sai mục đích của liên kết sâu.
 
@@ -7262,8 +6658,6 @@ D. Only used for storing offline data
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 InheritedWidget truyền dữ liệu xuống cây widget một cách hiệu quả mà không cần chuyển qua mọi cấp độ hàm tạo theo cách thủ công. A, C, D mô tả sai mục đích của nó.
 
 **Link tham khảo:**
@@ -7285,8 +6679,6 @@ D. Only works when using Navigator 2.0
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Điều này minh họa state việc xác định luồng điều hướng, kết hợp logic state với các quyết định về tuyến đường. A, C, D mô tả sai ý nghĩa/tính hợp lệ của mã này.
 
@@ -7310,8 +6702,6 @@ D. This is just a regular StatelessWidget unrelated to navigation
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Mã này minh họa RouterDelegate --- xây dựng ngăn xếp trang hiện tại và xử lý các sự kiện bật lên. A, C, D gán sai vai trò cho một thành phần Navigator 2.0 khác.
 
 **Link tham khảo:**
@@ -7333,8 +6723,6 @@ D. No difference, the two widgets are entirely equivalent
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Stack cho phép các phần tử con chồng lên nhau, cần thiết để tạo lớp chuyển màu trên hình ảnh áp phích. A, C, D không phù hợp với lý do kỹ thuật của lựa chọn này.
 
@@ -7358,8 +6746,6 @@ D. Only works when the app is offline
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `onGenerateRoute` phân tích tên/tham số tuyến đường từ một liên kết bên ngoài và tự động trả về màn hình tương ứng, thường là cho deep links. A, C, D mô tả sai mục đích của nó.
 
 **Link tham khảo:**
@@ -7381,8 +6767,6 @@ D. A JSON data structure
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `Route` đại diện cho một màn hình/trang trong ứng dụng, thường được triển khai thông qua MaterialPageRoute. A, C, D mô tả sai khái niệm Route.
 
@@ -7406,8 +6790,6 @@ D. The keyboard can only be hidden with the physical Back button
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Gói biểu mẫu bằng cách GestureDetector gọi FocusScope.of(context).unfocus() khi nhấn là cách triển khai phổ biến. A, C, D không phù hợp với cách tiếp cận tiêu chuẩn được dạy.
 
 **Link tham khảo:**
@@ -7429,8 +6811,6 @@ D. Because Dart doesn't support calling an asynchronous function without async
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `http.get()` trả về Future`<Response>`; await tạm dừng thực thi cho đến khi hoàn thành, tránh chặn luồng UI. A, C, D mô tả sai lý do thực sự về mặt kỹ thuật.
 
@@ -7454,8 +6834,6 @@ D. Using a global variable to share the data
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Đối tượng Post được truyền trực tiếp qua hàm tạo của PostDetailScreen trong khi điều hướng qua MaterialPageRoute, theo mã Demo 8.2. A, C, D không khớp với cách triển khai thực tế của bản demo.
 
 **Link tham khảo:**
@@ -7477,8 +6855,6 @@ D. Dart will automatically ignore the error and return an empty list
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 json.decode() ném FormatException vào nội dung không phải JSON, gây lỗi Future, yêu cầu xử lý catch/snapshot.hasError. A, C, D không khớp với hành vi thực tế của json.decode() đối với dữ liệu nhập không hợp lệ.
 
@@ -7502,8 +6878,6 @@ D. There's no real difference between the two methods in this context
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 pushReplacementNamed() ngăn việc quay lại màn hình Splash/Đăng nhập đã hoàn tất thông qua Quay lại, tránh điều hướng phi logic. A, C, D không khớp với lý do thực tế.
 
 **Link tham khảo:**
@@ -7525,8 +6899,6 @@ D. FutureBuilder
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Mixins. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -7550,8 +6922,6 @@ D. Replacing an HTTP client
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: Sử dụng lại hành vi giữa các lớp mà không yêu cầu mối quan hệ kế thừa. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -7573,8 +6943,6 @@ D. A generic type parameter
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: Tham số loại chung. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -7598,8 +6966,6 @@ D. Microtask queue and Event queue
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Hàng đợi microtask và Hàng đợi sự kiện. Dart sử dụng Future cho một kết quả không đồng bộ và Stream cho một chuỗi sự kiện không đồng bộ; async/await làm cho mã dựa trên Future dễ đọc hơn.
 
 **Link tham khảo:**
@@ -7621,8 +6987,6 @@ D. Database migration
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Microtask. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -7646,8 +7010,6 @@ D. Creates a JSON file
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Thêm lệnh gọi lại vào hàng đợi vi nhiệm. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -7669,8 +7031,6 @@ D. initState()
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: initState(). Đây là khái niệm quản lý state: các thay đổi state phải thông báo hoặc kích hoạt phần có liên quan của UI để xây dựng lại.
 
@@ -7694,8 +7054,6 @@ D. Icon.url
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Image.network. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -7717,8 +7075,6 @@ D. How a route is pushed
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Cách thu nhỏ hoặc điều chỉnh hình ảnh trong khu vực hiển thị của nó. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -7742,8 +7098,6 @@ D. A microtask queue
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Một chồng các tuyến đường/trang. API điều hướng Flutter quản lý quá trình chuyển đổi tuyến đường hoặc ánh xạ thông tin URL/tuyến đường đến tới ứng dụng state, tùy thuộc vào API được sử dụng.
 
 **Link tham khảo:**
@@ -7765,8 +7119,6 @@ D. Router
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Router phù hợp với các nhu cầu liên kết sâu và định tuyến phức tạp hơn mà Navigator 1.0 push/pop bắt buộc không thể thể hiện được, bao gồm cả đồng bộ hóa URL web. Các tùy chọn khác là các API widgets hoặc state không liên quan.
 
@@ -7790,8 +7142,6 @@ D. Creates a deep link
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Xóa tuyến đường hiện tại và hiển thị tuyến đường bên dưới nó. API điều hướng Flutter quản lý quá trình chuyển đổi tuyến đường hoặc ánh xạ thông tin URL/tuyến đường đến tới ứng dụng state, tùy thuộc vào API được sử dụng.
 
 **Link tham khảo:**
@@ -7813,8 +7163,6 @@ D. A JWT token
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: widget xác định UI của màn hình tiếp theo. API điều hướng Flutter quản lý quá trình chuyển đổi tuyến đường hoặc ánh xạ thông tin URL/tuyến đường đến tới ứng dụng state, tùy thuộc vào API được sử dụng.
 
@@ -7838,8 +7186,6 @@ D. Framework → Embedder → Engine
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Thứ tự kiến trúc: Framework (Dart) → Engine (C++) → Trình nhúng --- thứ tự tiêu chuẩn được nêu trong trang trình bày 'Flutter Tổng quan về kiến trúc'. Các tùy chọn khác đảo ngược thứ tự không chính xác.
 
 **Link tham khảo:**
@@ -7861,8 +7207,6 @@ D. Widget is an Android-only concept, not used in Flutter
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 'Mọi thứ đều là Widget' --- mọi thứ trên màn hình đều là widget. A giới hạn sai phạm vi; C, D sai về vị trí/cái gì của widget.
 
@@ -7886,8 +7230,6 @@ D. The two are entirely identical in API
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `ListView.separated` cho phép chèn dấu phân cách giữa các mục thông qua `separatorBuilder`. A sai vì nó vẫn có itemBuilder; C sai vì không có giới hạn 10 mục; D sai vì hai API khác nhau.
 
 **Link tham khảo:**
@@ -7909,8 +7251,6 @@ D. Automatically filling in data from an API
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Sự kết hợp này kiểm soát việc chuyển trọng tâm sang trường next khi người dùng nhấn Tiếp theo, cải thiện UX trên thiết bị di động. A, C, D mô tả sai mục đích của nó.
 
@@ -7934,8 +7274,6 @@ D. Long-duration video
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 SharedPreferences phù hợp nhất với dữ liệu khóa-giá trị đơn giản như cờ hoặc cài đặt. A, C, D không phải là trường hợp thích hợp cho SharedPreferences.
 
 **Link tham khảo:**
@@ -7957,8 +7295,6 @@ D. SessionStorage
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Trên Flutter Web, SharedPreferences ánh xạ tới `localStorage` của trình duyệt. A, B, D không khớp với cơ chế nêu trong bảng so sánh.
 
@@ -7982,8 +7318,6 @@ D. SQFlite only works on Web, SQLite only works on mobile
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 SQLite là công cụ lưu trữ thực tế; SQFlite là plugin/trình bao bọc của Flutter kết nối với nó chứ không phải cơ sở dữ liệu độc lập. A, C, D không khớp với lời giải thích đã cho.
 
 **Link tham khảo:**
@@ -8005,8 +7339,6 @@ D. `connectDatabase()` --- only usable with Web
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 `openDatabase()` chỉ nên được gọi là once (singleton/service) để tránh kết nối trùng lặp. B, C, D không phải là tên chức năng/cách sử dụng được khuyến nghị.
 
@@ -8030,8 +7362,6 @@ D. SQLite doesn't support pagination
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `LIMIT` và `OFFSET` là cú pháp SQL tiêu chuẩn để phân trang. A, C, D không phù hợp/đúng cho mục đích này.
 
 **Link tham khảo:**
@@ -8053,8 +7383,6 @@ D. Only applicable to game apps
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Ngoại tuyến-Đầu tiên ưu tiên tải dữ liệu cục bộ trước, đồng bộ hóa với máy chủ khi trực tuyến, giúp ứng dụng có thể sử dụng ngoại tuyến. A, C, D mô tả sai nguyên tắc thiết kế này.
 
@@ -8078,8 +7406,6 @@ D. Because SharedPreferences automatically deletes data after 24 hours
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 SharedPreferences được thiết kế cho dữ liệu khóa-giá trị đơn giản, không phù hợp/không hiệu quả cho dữ liệu phức tạp hoặc lớn. A, C, D không khớp với lý do thực sự.
 
 **Link tham khảo:**
@@ -8101,8 +7427,6 @@ D. Authentication only applies to web, not mobile
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Xác thực xác minh identity ("Bạn là ai?"); Việc ủy ​​quyền xác định permissions ("Bạn có thể làm gì?"). A, C, D mô tả sai/đảo ngược hai khái niệm.
 
@@ -8126,8 +7450,6 @@ D. This is a standard, industry-recommended practice
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 JWT chỉ có signed (không được mã hóa), vì vậy bất kỳ ai có mã thông báo đều có thể đọc được tải trọng của nó --- việc lưu trữ mật khẩu trong đó là một lỗ hổng nghiêm trọng. A, C, D không khớp với thuộc tính bảo mật thực tế của JWT.
 
 **Link tham khảo:**
@@ -8149,8 +7471,6 @@ D. The Refresh Token is sent with every API request, while the Access Token is o
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Mã thông báo truy cập tồn tại trong thời gian ngắn và được gửi theo yêu cầu; Refresh Token có đặc quyền mạnh hơn, dùng để gia hạn Access Token, cần lưu trữ an toàn hơn. A, C, D mô tả sai đặc điểm của hai token.
 
@@ -8174,8 +7494,6 @@ D. AuthService is only used for logout
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Đăng ký sử dụng lại cùng một lớp AuthService, thêm phương thức signup() mới trong khi vẫn giữ cấu trúc/xử lý lỗi hiện có. A, C, D không khớp với nội dung "Đăng ký API Integration (Sử dụng lại AuthService)".
 
 **Link tham khảo:**
@@ -8197,8 +7515,6 @@ D. Fully replacing JWT
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 SharedPreferences duy trì mã thông báo xác thực để đăng nhập tự động, tránh đăng nhập nhiều lần. A, C, D không phù hợp với mục đích của nó trong Demo 10.3.
 
@@ -8222,8 +7538,6 @@ D. The app will always stay on the Splash screen forever
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Nếu không kiểm tra thời hạn sử dụng, ứng dụng có thể điều hướng sai đến Trang chủ, dẫn đến lỗi 401 trong các yêu cầu tiếp theo, cho thấy cần phải kiểm tra thời hạn sử dụng hoặc xử lý 401. A, C, D không phù hợp với hệ quả thực tế.
 
 **Link tham khảo:**
@@ -8245,8 +7559,6 @@ D. The app will crash immediately when the Access Token expires
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Nếu không có cơ chế làm mới, các yêu cầu sau khi hết hạn sẽ gặp lỗi 401, buộc phải đăng nhập lại thủ công --- một hạn chế cần sửa mã thông báo làm mới. A, C, D không phù hợp với hệ quả thực tế.
 
@@ -8270,8 +7582,6 @@ D. The Singleton AuthService is only suitable for apps that don't need login
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Logic xác thực phân tán gây ra sự trùng lặp, khó bảo trì và khả năng sử dụng lại thấp; AuthService tập trung tách biệt UI khỏi logic, hỗ trợ khả năng kiểm tra/mở rộng. A, C, D không khớp với phân tích kiến ​​trúc phần mềm.
 
 **Link tham khảo:**
@@ -8293,8 +7603,6 @@ D. WebKit
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Skia. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -8318,8 +7626,6 @@ D. Framework, Engine, and Embedder
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Framework, Engine và Embedder. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -8341,8 +7647,6 @@ D. When a variable must change continuously
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Khi biết giá trị không đổi tại thời điểm biên dịch. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -8366,8 +7670,6 @@ D. API request speed
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Khoảng cách, khả năng đọc và tính nhất quán về hình ảnh. Bố cục Flutter được tạo từ widgets; widget đã chọn cung cấp hành vi sắp xếp, định cỡ, giãn cách hoặc ràng buộc được mô tả.
 
 **Link tham khảo:**
@@ -8389,8 +7691,6 @@ D. Creating multiple grid columns
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Giữ nguyên tỷ lệ khung hình và ngăn ngừa biến dạng hình ảnh. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -8414,8 +7714,6 @@ D. API timeout
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Nội dung được bao phủ bởi khu vực notch, Dynamic Island hoặc hệ thống UI. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -8437,8 +7735,6 @@ D. Token expiration and refresh
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Phương án A đúng: Khoảng cách ngang và khoảng cách giữa các dòng. Bố cục Flutter được tạo từ widgets; widget đã chọn cung cấp hành vi sắp xếp, định cỡ, giãn cách hoặc ràng buộc được mô tả.
 
@@ -8462,8 +7758,6 @@ D. An image file
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Hợp đồng cho phép khách hàng giao tiếp với máy chủ thông qua các điểm cuối. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -8485,8 +7779,6 @@ D. Only in the source code
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Trực tiếp trên thiết bị của người dùng. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -8510,8 +7802,6 @@ D. It works offline, persists across restarts, and provides fast access
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Nó hoạt động ngoại tuyến, tiếp tục khởi động lại và cung cấp khả năng truy cập nhanh. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -8533,8 +7823,6 @@ D. Large relational datasets
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Dữ liệu khóa-giá trị đơn giản như cài đặt và cờ. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -8558,8 +7846,6 @@ D. An onboarding-completed flag
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Đối tượng phức tạp hoặc dữ liệu lớn. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -8581,8 +7867,6 @@ D. An SQLite file
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Trình duyệt localStorage. Flutter hỗ trợ nhiều mục tiêu triển khai, mặc dù mỗi mục tiêu có thể có SDK, yêu cầu về công cụ và tích hợp nền tảng riêng.
 
@@ -8606,8 +7890,6 @@ D. setBool(key, value)
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: setBool(khóa, giá trị). Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -8629,8 +7911,6 @@ D. update()
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: insert(). Bố cục Flutter được tạo từ widgets; widget đã chọn cung cấp hành vi sắp xếp, định cỡ, giãn cách hoặc ràng buộc được mô tả.
 
@@ -8654,8 +7934,6 @@ D. android/
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 `pubspec.yaml` chứa cấu hình nội dung và phần phụ thuộc. A giữ mã Dart chính; B tổ chức các bài kiểm tra đơn vị; D chứa mã dành riêng cho Android.
 
 **Link tham khảo:**
@@ -8677,8 +7955,6 @@ D. Run unit tests for the whole project
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `flutter doctor` kiểm tra môi trường cài đặt Flutter SDK và các công cụ liên quan. A, C, D mô tả sai chức năng của lệnh này.
 
@@ -8702,8 +7978,6 @@ D. No clear purpose, just to shorten the code
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Điều này minh họa việc chèn phần phụ thuộc --- cho phép một http.Client tùy chỉnh là injected (hữu ích cho việc thử nghiệm mô phỏng), nếu không thì hãy đặt mặc định. A, C, D không phù hợp với mục đích thực sự.
 
 **Link tham khảo:**
@@ -8725,8 +7999,6 @@ D. Firebase, SQLite, GraphQL
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Ba nhóm điển hình: thời gian thực, phương tiện, API mô phỏng --- khớp với câu hỏi "API là gì? HTTP là gì?" cầu trượt. B, C, D không đúng nội dung đã nêu.
 
@@ -8750,8 +8022,6 @@ D. Because DartPad doesn't support any Flutter widgets at all
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 DartPad không có quyền truy cập vào bộ nhớ thiết bị thực, yêu cầu một lớp mô phỏng để mô phỏng bộ nhớ trong bộ nhớ. A, C, D không phù hợp với lý do kỹ thuật thực tế.
 
 **Link tham khảo:**
@@ -8773,8 +8043,6 @@ D. Because Flutter doesn't support making real HTTP requests in mobile apps
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Xác thực mô phỏng đảm bảo các bản demo đáng tin cậy trên các môi trường bất kể sự cố mạng, phù hợp để dạy các khái niệm cơ bản trước khi tích hợp API thực. A, C, D không khớp với lý do thực tế.
 
@@ -8798,8 +8066,6 @@ D. Mock API is never used in real-world projects or in teaching at all
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 API thực có thể bị lỗi do sự cố mạng/máy chủ/TLS/CORS, kém ổn định hơn Mock API không cần Internet. A, C, D không khớp với nội dung thực tế của bảng so sánh.
 
 **Link tham khảo:**
@@ -8821,8 +8087,6 @@ D. Load Test, Stress Test, Security Test
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Ba loại thử nghiệm chính: Thử nghiệm đơn vị, Thử nghiệm Widget, Thử nghiệm tích hợp. B, C, D không phải là các phân loại bài kiểm tra được dạy ở Học phần 11.
 
@@ -8846,8 +8110,6 @@ D. All three types should have equal quantities
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Các bài kiểm thử đơn vị phải có số lượng nhiều nhất theo Kim tự tháp kiểm thử --- nhanh, ổn định, chi phí thấp. A, B không đúng vị trí trong kim tự tháp; D sai vì phân phối không bằng nhau.
 
 **Link tham khảo:**
@@ -8869,8 +8131,6 @@ D. Observer Pattern
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 test này tuân theo mẫu Sắp xếp - Hành động - Khẳng định. A, C, D là các mẫu thiết kế/kiến trúc không liên quan, không phải cấu trúc test.
 
@@ -8894,8 +8154,6 @@ D. Widget Test cannot simulate typing text or tapping
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Kiểm tra Widget kiểm tra việc hiển thị/tương tác UI trên cây widget; Kiểm tra đơn vị kiểm tra logic thuần túy không liên quan đến UI. A, C, D mô tả sai đặc điểm của hai loại bài kiểm tra.
 
 **Link tham khảo:**
@@ -8917,8 +8175,6 @@ D. `pump()` always waits longer than `pumpAndSettle()`
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 pumpAndSettle() liên tục bơm khung hình cho đến khi tất cả hoạt ảnh ổn định, hữu ích cho việc chờ chuyển đổi điều hướng. A, C, D mô tả sai chức năng này.
 
@@ -8942,8 +8198,6 @@ D. Can only be detected via manual testing
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Điều hướng sai" chủ yếu phải được phát hiện bởi Điều hướng Test (Kiểm tra Widget mở rộng), trên mỗi bảng. A, C, D không khớp với nội dung của bảng.
 
 **Link tham khảo:**
@@ -8965,8 +8219,6 @@ D. Move all Repository logic inside the Widget to make testing easier
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Việc mô phỏng Repository khi có thể giúp Widget Kiểm tra nhanh, ổn định và độc lập với dữ liệu bên ngoài state. A, C, D không phù hợp với phương pháp hay nhất được đề xuất.
 
@@ -8990,8 +8242,6 @@ D. Only Integration Test can detect it, Widget Test is entirely unsuitable
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Thử nghiệm Widget là trực tiếp nhất vì nó xác minh UI thực sự hiển thị lại với dữ liệu mới, không giống như Thử nghiệm đơn vị logic thuần túy. A, C, D không phù hợp với phương pháp phát hiện thích hợp.
 
 **Link tham khảo:**
@@ -9013,8 +8263,6 @@ D. Generating random mock data
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 expect() so sánh giá trị thực tế và giá trị mong đợi, không khớp --- bước Khẳng định. A, C, D mô tả sai chức năng của expect().
 
@@ -9038,8 +8286,6 @@ D. No automated testing form can detect a logic bug
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Bài kiểm tra đơn vị chuyên dụng với các bộ dữ liệu trường hợp biên khác nhau sẽ tách biệt và xác minh logic tính toán một cách đáng tin cậy bất kể hiển thị chính xác ngẫu nhiên. A, C, D không phù hợp với phương pháp phát hiện sớm đáng tin cậy nhất.
 
 **Link tham khảo:**
@@ -9061,8 +8307,6 @@ D. Using DevTools to diagnose layout, rebuild, and navigation issues
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Xây dựng và ký release APK để xuất bản trên Google Play là chủ đề của Mô-đun 12, KHÔNG phải là mục tiêu học tập của Mô-đun 11. A, B, D đều là mục tiêu học tập chính xác của Mô-đun 11.
 
@@ -9086,8 +8330,6 @@ D. The distribution of test types has no effect on speed or maintenance cost at 
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Quá nhiều Kiểm thử tích hợp và quá ít Kiểm thử đơn vị sẽ dẫn đến bộ công cụ chậm hơn, tốn kém hơn để bảo trì và khó tách biệt nguyên nhân gốc rễ hơn. A, C, D mâu thuẫn với nguyên tắc Kim tự tháp Kiểm tra.
 
 **Link tham khảo:**
@@ -9109,8 +8351,6 @@ D. Convert the entire app to use Widget Test instead of Unit Test
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Danh sách kiểm tra đề cập đến việc xóa câu lệnh debug, xóa nội dung không sử dụng và đảm bảo versionCode được cập nhật. B, C, D không phải là những mục hợp lý/được nêu trong danh sách kiểm tra thực tế.
 
@@ -9134,8 +8374,6 @@ D. To convert the entire app from Flutter to a native platform
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Mục tiêu cuối cùng là bản dựng Bản phát hành được tối ưu hóa hiệu suất, được xác minh kích thước, sẵn sàng sản xuất, theo Tóm tắt của Mô-đun 12. A, C, D không phù hợp với mục tiêu final đã nêu của mô-đun.
 
 **Link tham khảo:**
@@ -9157,8 +8395,6 @@ D. This is the recommended approach for performance optimization per Module 12
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Đây là ví dụ về Nợ kỹ thuật: bỏ qua thử nghiệm và kiến trúc sạch giúp tiết kiệm thời gian ngắn hạn nhưng làm tăng chi phí bảo trì dài hạn, phù hợp với bản chất "mượn trước, trả sau" của nợ. A, C, D không khớp với khái niệm/mối quan hệ đúng.
 
@@ -9182,8 +8418,6 @@ D. Only has the effect of checking the app's network speed
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Chạy thử nghiệm vàng trong CI/CD sẽ phát hiện sớm các hồi quy trực quan trước khi hợp nhất, đảm bảo tính nhất quán của UI theo thời gian. A, C, D không phù hợp với mục đích thực tế của việc tích hợp CI/CD này.
 
 **Link tham khảo:**
@@ -9205,8 +8439,6 @@ D. Writing unit tests
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Tích hợp nền tảng, đầu vào, lifecycle và quản lý cửa sổ. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -9230,8 +8462,6 @@ D. A database connection only
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: AppBar, nội dung, ngăn kéo, bottomNavigationBar và floatingActionButton. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -9253,8 +8483,6 @@ D. Declaring a custom URL scheme for an iOS application
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: Khai báo lược đồ URL tùy chỉnh cho ứng dụng iOS. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -9278,8 +8506,6 @@ D. The final production implementation
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Phương án C đúng: Minh họa trên lớp và học tập theo một quy trình ổn định mà không phụ thuộc vào mạng. Kiểm tra đơn vị isolate một hàm, phương thức hoặc lớp; mô phỏng giúp kiểm soát và lặp lại các phần phụ thuộc bên ngoài.
 
 **Link tham khảo:**
@@ -9301,8 +8527,6 @@ D. It never fails
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Tùy chọn này có thể không thành công do mạng, máy chủ, TLS hoặc CORS. Kiểm tra đơn vị isolate một hàm, phương thức hoặc lớp; mô phỏng giúp kiểm soát và lặp lại các phần phụ thuộc bên ngoài.
 
@@ -9326,8 +8550,6 @@ D. A complete user flow on a device
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: Logic không yêu cầu UI. Kiểm tra đơn vị isolate một hàm, phương thức hoặc lớp; mô phỏng giúp kiểm soát và lặp lại các phần phụ thuộc bên ngoài.
 
 **Link tham khảo:**
@@ -9349,8 +8571,6 @@ D. Integration tests
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Kiểm tra đơn vị. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -9374,8 +8594,6 @@ D. Application-size test
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Lựa chọn C đúng: Kiểm tra đơn vị. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -9397,8 +8615,6 @@ D. Call task.toggle()
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: Gọi task.toggle(). Kiểm tra đơn vị isolate một hàm, phương thức hoặc lớp; mô phỏng giúp kiểm soát và lặp lại các phần phụ thuộc bên ngoài.
 
@@ -9422,8 +8638,6 @@ D. Use integration tests for every method
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Giữ các bài kiểm tra nhỏ và tập trung, đồng thời mô phỏng các kho lưu trữ khi có thể. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -9445,8 +8659,6 @@ D. sqflite
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: mocktail. Kiểm tra đơn vị isolate một hàm, phương thức hoặc lớp; mô phỏng giúp kiểm soát và lặp lại các phần phụ thuộc bên ngoài.
 
@@ -9470,8 +8682,6 @@ D. Because Integration Test and Widget Test are the same concept, just different
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Nó được phân loại là Kiểm tra tích hợp vì nó xác thực toàn bộ luồng trên UI → Provider → Repository, mô phỏng toàn bộ hành trình của người dùng. A, C, D không phù hợp với lý do phân loại.
 
 **Link tham khảo:**
@@ -9493,8 +8703,6 @@ D. Has no effect, purely illustrative
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 find.byKey() định vị một widget cụ thể một cách đáng tin cậy thông qua Key được chỉ định, đáng tin cậy hơn so với tìm kiếm theo loại/văn bản. A, C, D mô tả sai chức năng của nó.
 
@@ -9518,8 +8726,6 @@ D. A Key only works with StatelessWidget, not with StatefulWidget
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Việc chỉ định Khóa hỗ trợ vị trí widget chính xác trong các thử nghiệm, tránh nhầm lẫn giữa các widgets tương tự. A, C, D không khớp với lý do đằng sau khuyến nghị này.
 
 **Link tham khảo:**
@@ -9541,8 +8747,6 @@ D. The test passes but prints a warning, not treated as a failure
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 find.text() yêu cầu đối sánh chuỗi chính xác an, do đó, "Task Detail" không khớp với "Task Details" sẽ khiến the test không khớp. A, C, D không khớp với hành vi khớp thực tế của find.text().
 
@@ -9566,8 +8770,6 @@ D. Connects to a real server to fetch data
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 pumpWidget() hiển thị cây widget đã cho vào môi trường thử nghiệm, tương đương với việc khởi chạy ứng dụng để bắt đầu thử nghiệm. A, C, D mô tả sai chức năng này.
 
 **Link tham khảo:**
@@ -9589,8 +8791,6 @@ D. Element only exists in Widget Test, not when the app actually runs
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Widget = bản thiết kế bất biến, trình quản lý Element = lifecycle/state, RenderObject = thực hiện bố cục/vẽ/kết hợp. B, C, D mô tả sai vai trò của ba thành phần này.
 
@@ -9614,8 +8814,6 @@ D. Checking the app's security
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Thử nghiệm vàng so sánh UI được kết xuất với hình ảnh tham chiếu vàng đã lưu để phát hiện hồi quy trực quan. A, C, D mô tả sai mục đích của loại bài kiểm tra này.
 
 **Link tham khảo:**
@@ -9637,8 +8835,6 @@ D. `verify()`
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 `matchesGoldenFile()` kết hợp với `expectLater()` là flutter_test API tiêu chuẩn để so sánh với hình ảnh vàng. A, C, D không phải là chức năng chính xác cho mục đích này.
 
@@ -9662,8 +8858,6 @@ D. Because Windows doesn't support running `flutter test`
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Sự khác biệt nhỏ về kết xuất phông chữ/khử răng cưa giữa các nền tảng gây ra pixel không khớp, do đó nên chạy Thử nghiệm vàng trên một environment nhất quán ({1}} cố định). A, C, D không khớp với nguyên nhân kỹ thuật thực tế.
 
 **Link tham khảo:**
@@ -9685,8 +8879,6 @@ D. `BlocBuilder` is only used for Golden Testing
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 BlocBuilder xây dựng lại UI dựa trên state mới; BlocListener thực hiện tác dụng phụ một lần đối với thay đổi state mà không cần xây dựng lại. A, C, D mô tả sai sự khác biệt giữa hai widgets này.
 
@@ -9710,8 +8902,6 @@ D. pumpAndSettle()
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: notifyListeners(). Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -9733,8 +8923,6 @@ D. A type of widget test
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Định dạng văn bản nhẹ để trao đổi dữ liệu mảng và khóa-giá trị. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -9758,8 +8946,6 @@ D. flutter_test
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: http. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -9781,8 +8967,6 @@ D. http
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: path_provider. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -9806,8 +8990,6 @@ D. Only the native database engine
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: hiển thị UI và tương tác widget. Các thử nghiệm Widget xác minh khả năng hiển thị và tương tác của UI trong môi trường thử nghiệm của Flutter; người tìm kiếm và người so khớp xác nhận những gì hiện có và cách nó hoạt động.
 
 **Link tham khảo:**
@@ -9829,8 +9011,6 @@ D. They cannot test UI
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Phương án C đúng: Chúng chậm hơn và đắt hơn, vì vậy chúng nên tập trung vào các luồng quan trọng. Kiểm thử tích hợp thực hiện toàn diện một ứng dụng hoàn chỉnh hoặc một tính năng quan trọng; Patrol thêm hỗ trợ cho các tương tác trên nền tảng gốc.
 
@@ -9854,8 +9034,6 @@ D. Create a release APK
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Sử dụng expect() để xác minh kết quả. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -9877,8 +9055,6 @@ D. Signing test
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: kiểm tra Widget. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -9902,8 +9078,6 @@ D. APK Analyzer
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Kiểm tra điều hướng hoặc widget. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -9925,8 +9099,6 @@ D. setState()
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: expect(). Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -9950,8 +9122,6 @@ D. Opens a database
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Hiển thị cây widget trong môi trường thử nghiệm. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -9973,8 +9143,6 @@ D. Tapping a widget
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: Nhấn vào widget. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -9998,8 +9166,6 @@ D. Testing only a model unit
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Đang chờ hoạt ảnh và điều hướng kết thúc. pumpAndSettle nâng cao các khung cho đến khi các khung đã lên lịch ổn định, điều này rất hữu ích cho hoạt ảnh và chuyển tiếp tuyến đường.
 
 **Link tham khảo:**
@@ -10021,8 +9187,6 @@ D. A database row exists
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Chính xác một widget khớp với công cụ tìm. Các thử nghiệm Widget xác minh khả năng hiển thị và tương tác của UI trong môi trường thử nghiệm của Flutter; người tìm kiếm và người so khớp xác nhận những gì hiện có và cách nó hoạt động.
 
@@ -10046,8 +9210,6 @@ D. It provides a stable way to find the correct widget for interaction
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Nó cung cấp một cách ổn định để tìm widget chính xác cho tương tác. Các thử nghiệm Widget xác minh khả năng hiển thị và tương tác của UI trong môi trường thử nghiệm của Flutter; người tìm kiếm và người so khớp xác nhận những gì hiện có và cách nó hoạt động.
 
 **Link tham khảo:**
@@ -10069,8 +9231,6 @@ D. path
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: freezed. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -10094,8 +9254,6 @@ D. Create plugins
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Lựa chọn A đúng: Kiểm tra UI widgets. Các thử nghiệm Widget xác minh khả năng hiển thị và tương tác của UI trong môi trường thử nghiệm của Flutter; người tìm kiếm và người so khớp xác nhận những gì hiện có và cách nó hoạt động.
 
 **Link tham khảo:**
@@ -10117,8 +9275,6 @@ D. tester.build
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: tester.pump. Các thử nghiệm Widget xác minh khả năng hiển thị và tương tác của UI trong môi trường thử nghiệm của Flutter; người tìm kiếm và người so khớp xác nhận những gì hiện có và cách nó hoạt động.
 
@@ -10142,8 +9298,6 @@ D. flutter_async
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: flutter_test. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -10165,8 +9319,6 @@ D. To check if the app can connect to a remote database.
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Để xác thực việc hiển thị UI và các tương tác widget riêng lẻ.. Các thử nghiệm Widget xác minh việc hiển thị và tương tác UI trong môi trường thử nghiệm của Flutter; người tìm kiếm và người so khớp xác nhận những gì hiện có và cách nó hoạt động.
 
@@ -10190,8 +9342,6 @@ D. tester.pumpWidget()
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: tester.pump(). Các thử nghiệm Widget xác minh khả năng hiển thị và tương tác của UI trong môi trường thử nghiệm của Flutter; người tìm kiếm và người so khớp xác nhận những gì hiện có và cách nó hoạt động.
 
 **Link tham khảo:**
@@ -10213,8 +9363,6 @@ D. To refresh the Provider state management.
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Để đợi tất cả hoạt ảnh và chuyển tiếp hoàn tất.. pumpAndSettle nâng cao khung hình cho đến khi khung được lên lịch ổn định, điều này rất hữu ích cho hoạt ảnh và chuyển tiếp tuyến đường.
 
@@ -10238,8 +9386,6 @@ D. Rely solely on hardcoded text strings
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Sử dụng các thử nghiệm Keys (e.g., find.byKey) duy nhất.. Widget xác minh việc hiển thị và tương tác UI trong môi trường thử nghiệm của Flutter; người tìm kiếm và người so khớp xác nhận những gì hiện có và cách nó hoạt động.
 
 **Link tham khảo:**
@@ -10261,8 +9407,6 @@ D. assert()
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: expect(). Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -10286,8 +9430,6 @@ D. Only used to test CPU performance
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Kiểm thử tích hợp nên được sử dụng một cách tiết kiệm vì chúng chậm/tốn kém --- dành riêng cho các luồng người dùng quan trọng. A, C, D không phù hợp với nguyên tắc của Kim tự tháp Kiểm tra.
 
 **Link tham khảo:**
@@ -10309,8 +9451,6 @@ D. Because colors always change randomly between builds so they can't be tested
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Việc kiểm tra hành vi của khung mặc định thay vì logic ứng dụng tùy chỉnh sẽ lãng phí công sức mà không thêm giá trị đảm bảo chất lượng thực sự. A, C, D không khớp với lý do tránh điều này.
 
@@ -10334,8 +9474,6 @@ D. Storing a session token
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Xác định màu sắc, kiểu chữ và hình dạng chung. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -10357,8 +9495,6 @@ D. A complete user flow from beginning to end
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: Luồng người dùng hoàn chỉnh từ đầu đến cuối. Kiểm thử tích hợp thực hiện toàn diện một ứng dụng hoàn chỉnh hoặc một tính năng quan trọng; Patrol thêm hỗ trợ cho các tương tác trên nền tảng gốc.
 
@@ -10382,8 +9518,6 @@ D. Format code
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Kiểm tra toàn bộ luồng ứng dụng. Kiểm thử tích hợp thực hiện toàn diện một ứng dụng hoàn chỉnh hoặc một tính năng quan trọng; Patrol thêm hỗ trợ cho các tương tác trên nền tảng gốc.
 
 **Link tham khảo:**
@@ -10405,8 +9539,6 @@ D. Because they only work in Debug mode.
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Bởi vì chúng chạy chậm và tốn kém so với các thử nghiệm khác.. Thử nghiệm tích hợp thực hiện một ứng dụng hoàn chỉnh hoặc một tính năng quan trọng từ đầu đến cuối; Patrol thêm hỗ trợ cho các tương tác trên nền tảng gốc.
 
@@ -10430,8 +9562,6 @@ D. Composited Scene → Widget Tree → GPU Rendering → Render Tree
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Quy trình kết xuất: Widget Cây → Cây kết xuất → Cảnh tổng hợp → Kết xuất GPU, khớp chính xác với thứ tự của trang chiếu. Các tùy chọn khác đảo ngược thứ tự không chính xác.
 
 **Link tham khảo:**
@@ -10453,8 +9583,6 @@ D. Mandatory for the JWT to become valid
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Mục đích là kết nối thông báo với quy trình công việc kinh doanh thực tế, tăng cường mức độ tương tác và nhận thức về trạng thái tài khoản. A, C, D không phù hợp với mục đích thực tế đã nêu.
 
@@ -10478,8 +9606,6 @@ D. GPU -> Widget Tree -> Database -> UI
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Widget Cây -> Cây kết xuất -> Cảnh tổng hợp -> Kết xuất GPU. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -10501,8 +9627,6 @@ D. Route -> pop -> push
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Tải phiên bản -> đọc -> cập nhật -> lưu -> làm mới UI. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -10526,8 +9650,6 @@ D. A database row
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Lựa chọn B đúng: Một bản thiết kế không thể thay đổi. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -10549,8 +9671,6 @@ D. Close the database file
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Làm mới UI để phản ánh dữ liệu đã cập nhật. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -10574,8 +9694,6 @@ D. Assemble, Act, Assert
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Phương án B đúng: Sắp xếp, Hành động, Khẳng định. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -10597,8 +9715,6 @@ D. Skia Engine
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Elements. Đây là khái niệm quản lý state: các thay đổi state phải thông báo hoặc kích hoạt phần có liên quan của UI để xây dựng lại.
 
@@ -10622,8 +9738,6 @@ D. Swift and Metal
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Flutter sử dụng Dart với công cụ kết xuất Skia. (A, C, D đều ghép sai ngôn ngữ/động cơ.)
 
 **Link tham khảo:**
@@ -10645,8 +9759,6 @@ D. Flutter cannot build for iOS, only Android
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Bảng so sánh: Flutter (Dart, Gốc UI + Engine) so với React Native (JS, Bridge to Native) so với Native (Kotlin/Swift, Pure Native) --- như được hiển thị trong trang trình bày. B sai vì React Bản địa cần một cầu nối; C và D là những yêu cầu không được hỗ trợ.
 
@@ -10670,8 +9782,6 @@ D. Can be instantiated directly with the `new` keyword
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Một lớp trừu tượng định nghĩa cấu trúc không có hành vi đầy đủ, buộc các lớp con phải triển khai cấu trúc đó. A sai vì các lớp trừu tượng có thể có các phương thức có nội dung; C sai vì nó cũng hoạt động ở dạng Dart thuần túy; D sai vì các lớp trừu tượng không thể được khởi tạo trực tiếp.
 
 **Link tham khảo:**
@@ -10693,8 +9803,6 @@ D. Automatically translates the UI language
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 SafeArea tránh nội dung UI bị che khuất bởi rãnh khía/Đảo động/màn hình cong. A, C, D mô tả sai mục đích của SafeArea.
 
@@ -10718,8 +9826,6 @@ D. 144 FPS
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Flutter nhắm mục tiêu 60 FPS để có trải nghiệm mượt mà trên các thiết bị tiêu chuẩn. A, B, D không trùng với số đã nêu.
 
 **Link tham khảo:**
@@ -10741,8 +9847,6 @@ D. About 1000ms
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Ở tốc độ 60 FPS, Flutter có khoảng 16,6 mili giây trên mỗi khung hình. B, C, D không đúng với con số tính toán trong bài giảng.
 
@@ -10766,8 +9870,6 @@ D. Rust
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Dart. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -10789,8 +9891,6 @@ D. A language used only for databases
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Ngôn ngữ dựa trên lớp, được tối ưu hóa cho khách hàng do Google phát triển. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -10814,8 +9914,6 @@ D. dart:ui only
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: dart:io. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -10837,8 +9935,6 @@ D. 60 ms
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Lựa chọn A đúng: Khoảng 16,6 mili giây. Hiệu suất Flutter phải được đánh giá ở chế độ profile, tốt nhất là trên thiết bị vật lý vì thời gian ở chế độ debug không mang tính đại diện.
 
@@ -10862,8 +9958,6 @@ D. Reducing rebuild work, saving memory, and helping tree diffing
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Giảm công việc xây dựng lại, tiết kiệm bộ nhớ và giúp phân biệt cây. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -10885,8 +9979,6 @@ D. It does not compile
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Nó tạo ra một danh tính mới và có thể buộc widgets phải xây dựng lại nhiều lần. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -10910,8 +10002,6 @@ D. Never use a placeholder
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: Thay đổi kích thước hoặc nén hình ảnh cho kích thước hiển thị thay vì tải hình ảnh 2000 pixel. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -10933,8 +10023,6 @@ D. Metal
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Skia. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -10958,8 +10046,6 @@ D. GridView.simple
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: GridView.builder. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -10981,8 +10067,6 @@ D. Enables navigation
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Tối ưu hóa xây dựng lại tốt hơn. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -11006,8 +10090,6 @@ D. It does not support null safety.
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Tùy chọn A đúng: Nó kết hợp quá trình biên dịch Ahead-of-Time (AOT) và Just-in-Time (JIT).. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -11029,8 +10111,6 @@ D. Timer events
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Hàng đợi microtask. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -11054,8 +10134,6 @@ D. Because Flutter cannot handle multiple simultaneous POST requests.
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: Để ngăn "double-gửi" và hiển thị chỉ báo tải.. Câu trả lời khớp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -11077,8 +10155,6 @@ D. They are automatically fixed by the Flutter framework.
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Chúng xảy ra khi widget vượt quá giới hạn bố cục nhưng không làm hỏng ứng dụng.. Câu trả lời khớp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -11102,8 +10178,6 @@ D. Compile error because `!` cannot be used with a String? variable
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `name` ban đầu có giá trị rỗng nên nó in ra "Guest"; sau khi gán "Minh" (4 ký tự: M-i-n-h), `name!.length` = 4 → kết quả "Guest, 4". A có giá trị đầu tiên sai; C có length sai (phải là 4, không phải 5); D sai vì `!` có giá trị về mặt cú pháp khi biến được đảm bảo không rỗng tại thời điểm đó.
 
 **Link tham khảo:**
@@ -11125,8 +10199,6 @@ D. No specific technical reason
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Các giá trị cố định không thích ứng với các kích thước màn hình đa dạng, dễ gây tràn hoặc lãng phí dung lượng. A, C, D không phù hợp với lý do kỹ thuật thực tế.
 
@@ -11150,8 +10222,6 @@ D. No real reason, it's just an optional suggestion
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Hành vi bố cục có thể khác nhau đáng kể giữa các kích thước màn hình và lỗi thường chỉ xuất hiện ở các kích thước cụ thể, do đó cần phải thử nghiệm nhiều thiết bị khác nhau. A, C, D không phù hợp với lý do kỹ thuật thực tế.
 
 **Link tham khảo:**
@@ -11173,8 +10243,6 @@ D. JSON File, because files automatically sync in real-time with the server
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Cấu trúc hàng/cột rõ ràng của SQLite giúp việc theo dõi changes (id, dấu thời gian) để đồng bộ hóa/giải quyết xung đột dễ dàng hơn nhiều so với tệp hoặc blob JSON. A, C, D không khớp với lý do kỹ thuật để xử lý xung đột/đồng bộ hóa trong tương lai.
 
@@ -11198,8 +10266,6 @@ D. Expired JWT
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 emulator thiếu Dịch vụ Google Play là nguyên nhân phổ biến; sử dụng một cái với Play Store hoặc thiết bị thực. A, C, D không phù hợp với nguyên nhân đã nêu.
 
 **Link tham khảo:**
@@ -11221,8 +10287,6 @@ D. Only used to build the release app
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 DevTools hỗ trợ các vấn đề về bố cục, cập nhật state không thành công, hiệu suất, các lần xây dựng lại không cần thiết và các vấn đề điều hướng theo "Mục tiêu gỡ lỗi trong Flutter". A, C, D không bao gồm toàn bộ phạm vi của nó.
 
@@ -11246,8 +10310,6 @@ D. There's no difference between the two modes when measuring performance
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Chi phí chung của Chế độ gỡ lỗi làm lệch các con số hiệu suất so với hiệu suất release thực; Profile Mode gần với thực tế hơn. A, C, D không khớp với lý do thực tế của đề xuất này.
 
 **Link tham khảo:**
@@ -11269,8 +10331,6 @@ D. No real benefit, just makes the code look tidier formally
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Việc trích xuất widgets thu hẹp phạm vi xây dựng lại chỉ còn mục đã thay đổi, giảm chi phí xây dựng lại tổng thể. A, C, D không phù hợp với lợi ích kỹ thuật thực sự.
 
@@ -11294,8 +10354,6 @@ D. flutter clean
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 `flutter build apk --analyze-size` được sử dụng để phân tích chi tiết ứng dụng-size. A, C, D không phải là lệnh đúng cho mục đích này.
 
 **Link tham khảo:**
@@ -11317,8 +10375,6 @@ D. This technique only applies to images, not icons
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Biểu tượng rung cây sẽ xóa các biểu tượng Material không sử dụng khỏi bản dựng, giảm kích thước ứng dụng. A, C, D không phù hợp với lợi ích thực tế.
 
@@ -11342,8 +10398,6 @@ D. `--debug` always produces a smaller file size than `--release`
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Bản dựng gỡ lỗi mang theo chi phí gỡ lỗi không được tối ưu hóa; Bản dựng release được tối ưu hóa cho hiệu suất và kích thước trong thế giới thực. A, C, D không khớp với sự khác biệt thực sự giữa hai chế độ build.
 
 **Link tham khảo:**
@@ -11365,8 +10419,6 @@ D. Google Play only accepts .apk files, no other format
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Google Play yêu cầu định dạng .aab, được tạo qua `flutter build appbundle --release`. B, C, D không khớp với định dạng/lệnh chính xác cho Android trên Google Play.
 
@@ -11390,8 +10442,6 @@ D. Only applies to apps running on iOS
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 versionCode phải là số nguyên và tăng theo mỗi release mới. A, C, D không khớp với quy tắc lập phiên bản bắt buộc này.
 
 **Link tham khảo:**
@@ -11413,8 +10463,6 @@ D. Profile Mode is only used to check syntax errors, unrelated to performance
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Chế độ hồ sơ loại bỏ hầu hết chi phí gỡ lỗi trong khi hiển thị hiệu suất gần như thực tế, phát hiện sớm các sự cố trước final release build. A, C, D không khớp với lý do thực tế của bước này.
 
@@ -11438,8 +10486,6 @@ D. Running the final automated test before release
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Giai đoạn Phân tích tập trung vào việc thu thập/làm rõ các yêu cầu trước khi bắt đầu thiết kế và mã hóa. A, C, D là các giai đoạn SDLC khác, không phải Phân tích.
 
 **Link tham khảo:**
@@ -11461,8 +10507,6 @@ D. A mandatory fee paid when publishing an app to Google Play/App Store
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Nợ kỹ thuật là chi phí trong tương lai do các quyết định thiết kế/mã hóa vội vã hiện tại, giống như một khoản nợ được trả dần theo thời gian. A, C, D không phù hợp với khái niệm thực tế.
 
@@ -11486,8 +10530,6 @@ D. Testing is only ever done once, after the app has been released
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Việc kiểm tra thường diễn ra after (hoặc liên tục song song với việc triển khai Agile/TDD), xác minh mã đáp ứng các yêu cầu. A, C, D không khớp với vị trí thông thường của Kiểm tra trong SDLC.
 
 **Link tham khảo:**
@@ -11509,8 +10551,6 @@ D. Cold Boot
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Tải lại nóng. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -11534,8 +10574,6 @@ D. 2017
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: 2018. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -11557,8 +10595,6 @@ D. Building a signed AAB file
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Chạy mã Dart hoặc Flutter trực tiếp trong trình duyệt mà không cần cài đặt. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -11582,8 +10618,6 @@ D. dart publish
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: flutter doctor. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -11605,8 +10639,6 @@ D. dispose()
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: dispose(). Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -11630,8 +10662,6 @@ D. Parsing JSON
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Nút điều hướng, nút hành động và chỉ báo trạng thái. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -11653,8 +10683,6 @@ D. pubspec.yaml
 **Correct Answer:** C
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **C**.
 
 Tùy chọn C đúng: Ký kết & Khả năng của mục tiêu Á quân. Flutter hỗ trợ nhiều mục tiêu triển khai, mặc dù mỗi mục tiêu có thể có SDK, yêu cầu về công cụ và tích hợp nền tảng riêng.
 
@@ -11678,8 +10706,6 @@ D. Creating an emulator
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Truyền dữ liệu xuống cây widget một cách hiệu quả. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -11701,8 +10727,6 @@ D. Overflow, misaligned widgets, clipped text, and poor UX
 **Correct Answer:** D
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **D**.
 
 Tùy chọn D đúng: Tràn, widgets bị căn chỉnh sai, văn bản bị cắt bớt và UX kém. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -11726,8 +10750,6 @@ D. Invalid data, poor UX, and data-quality risks
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Dữ liệu không hợp lệ, UX kém và rủi ro về chất lượng dữ liệu. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -11749,8 +10771,6 @@ D. Create a JWT
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Truy cập FormState để xác thực, lưu và đặt lại toàn bộ biểu mẫu. Đây là khái niệm quản lý state: các thay đổi state phải thông báo hoặc kích hoạt phần có liên quan của UI để xây dựng lại.
 
@@ -11774,8 +10794,6 @@ D. Input -> APK signing
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **C**.
-
 Tùy chọn C đúng: Biểu mẫu UI -> xác thực cục bộ -> yêu cầu POST -> máy chủ -> phản hồi -> cập nhật UI. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -11797,8 +10815,6 @@ D. To remove error handling
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Chờ mạng mà không đóng băng UI. Dart sử dụng Future cho một kết quả không đồng bộ và Stream cho một chuỗi sự kiện không đồng bộ; async/await làm cho mã dựa trên Future dễ đọc hơn.
 
@@ -11822,8 +10838,6 @@ D. Connecting a one-time Future to the UI and handling loading, error, and data 
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **D**.
-
 Tùy chọn D đúng: Kết nối Future một lần với UI và xử lý các trạng thái tải, lỗi và dữ liệu. Dart sử dụng Future cho một kết quả không đồng bộ và Stream cho một chuỗi sự kiện không đồng bộ; async/await làm cho mã dựa trên Future dễ đọc hơn.
 
 **Link tham khảo:**
@@ -11845,8 +10859,6 @@ D. JWT signing
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Tùy chọn B đúng: Danh sách, lịch sử hoặc xuất/nhập đơn giản. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -11870,8 +10882,6 @@ D. Rendering a ListView
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: Chạy CREATE TABLE khi cơ sở dữ liệu được tạo lần đầu tiên. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -11893,8 +10903,6 @@ D. Store token -> enter credentials -> build APK
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Nhập thông tin xác thực -> yêu cầu API -> xác minh phụ trợ -> mã thông báo -> mã thông báo lưu trữ -> gửi mã thông báo với các yêu cầu sau. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
@@ -11918,8 +10926,6 @@ D. Local Notification only works on iOS
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **A**.
-
 Thông báo cục bộ được kích hoạt bởi ứng dụng, không cần Internet; Thông báo đẩy được gửi từ máy chủ, cần hỗ trợ Internet và phụ trợ. B, C, D mô tả sai/đảo ngược hai loại thông báo này.
 
 **Link tham khảo:**
@@ -11941,8 +10947,6 @@ D. Implicit Animation only works on iOS, Explicit Animation only works on Androi
 **Correct Answer:** B
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **B**.
 
 Hoạt hình tiềm ẩn tự động nội suy mà không cần bộ điều khiển thủ công; Hoạt ảnh rõ ràng yêu cầu khai báo/kiểm soát AnimationController rõ ràng. A, C, D không phù hợp với đặc tính kỹ thuật thực tế.
 
@@ -11966,8 +10970,6 @@ D. test/main_test.sql
 
 **Giải thích bằng tiếng Việt:**
 
-Đáp án đúng là **B**.
-
 Tùy chọn B đúng: lib/main.dart. Câu trả lời phù hợp với hành vi loại hệ thống hoặc an toàn vô giá trị của Dart; sử dụng các loại nullable và toán tử nhận biết null một cách có chủ ý để tránh lỗi null.
 
 **Link tham khảo:**
@@ -11989,8 +10991,6 @@ D. C#
 **Correct Answer:** A
 
 **Giải thích bằng tiếng Việt:**
-
-Đáp án đúng là **A**.
 
 Tùy chọn A đúng: Dart. Flutter hỗ trợ nhiều mục tiêu triển khai, mặc dù mỗi mục tiêu có thể có SDK, yêu cầu về công cụ và tích hợp nền tảng riêng.
 

@@ -1,6 +1,4 @@
-### Câu 1: Giới thiệu Flutter & Dart
-
-**Question:** Which of the following is the best example of a case where you should NOT choose Flutter and should build natively instead?
+**Question 1:** Which of the following is the best example of a case where you should NOT choose Flutter and should build natively instead?
 
 A. A simple movie ticket booking app
 
@@ -20,9 +18,7 @@ Một trò chơi thời gian thực, sử dụng nhiều đồ họa yêu cầu 
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 2: Giới thiệu Flutter & Dart
-
-**Question:** In Dart, `Set<int> s = {1, 2, 2, 3};` --- after initialization, what is `s.length`?
+**Question 2:** In Dart, `Set<int> s = {1, 2, 2, 3};` --- after initialization, what is `s.length`?
 
 A. 4
 
@@ -42,9 +38,7 @@ Set xóa các bản sao: `{1,2,2,3}` trở thành `{1,2,3}` → length = 3. A đ
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 3: Giới thiệu Flutter & Dart
-
-**Question:** Consider this named constructor code: class Point { int x, y; Point(this.x, this.y); Point.origin() : x = 0, y = 0; } void main() { var p1 = Point(3, 4); var p2 = Point.origin(); print('${p1.x},${p1.y} - ${p2.x},${p2.y}'); } What is printed?
+**Question 3:** Consider this named constructor code: class Point { int x, y; Point(this.x, this.y); Point.origin() : x = 0, y = 0; } void main() { var p1 = Point(3, 4); var p2 = Point.origin(); print('${p1.x},${p1.y} - ${p2.x},${p2.y}'); } What is printed?
 
 A. 0,0 - 3,4
 
@@ -64,9 +58,7 @@ D. null,null - 0,0
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 4: Giới thiệu Flutter & Dart
-
-**Question:** Given this function: void greet({String name = "Guest", int age = 18}) { print("\$name is \$age"); } What does calling `greet(name: "Lan");` print?
+**Question 4:** Given this function: void greet({String name = "Guest", int age = 18}) { print("\$name is \$age"); } What does calling `greet(name: "Lan");` print?
 
 A. Error due to missing age parameter
 
@@ -86,9 +78,7 @@ D. Lan is null
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 5: Giới thiệu Flutter & Dart
-
-**Question:** Consider this OOP code: class Animal { String sound() => "Some sound"; } class Dog extends Animal { @override String sound() => "Woof"; } void main() { Animal a = Dog(); print(a.sound()); } What is printed, and which OOP concept does it illustrate?
+**Question 5:** Consider this OOP code: class Animal { String sound() => "Some sound"; } class Dog extends Animal { @override String sound() => "Woof"; } void main() { Animal a = Dog(); print(a.sound()); } What is printed, and which OOP concept does it illustrate?
 
 A. Some sound" --- illustrates Encapsulation
 
@@ -108,9 +98,7 @@ D. Woof Some sound" --- both functions are called
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 6: Giới thiệu Flutter & Dart
-
-**Question:** Given this string interpolation code: String name = "FPT University"; print("Hello \$name"); print("Length: \${name.length}"); print("Upper: \${name.toUpperCase()[0]}"); What character does the third line print?
+**Question 6:** Given this string interpolation code: String name = "FPT University"; print("Hello \$name"); print("Length: \${name.length}"); print("Upper: \${name.toUpperCase()[0]}"); What character does the third line print?
 
 A. f
 
@@ -130,9 +118,7 @@ D. Error because you cannot index directly into a function result inside string 
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 7: Giới thiệu Flutter & Dart
-
-**Question:** In Dart, what is the role of the `main()` function?
+**Question 7:** In Dart, what is the role of the `main()` function?
 
 A. It's a callback called last when the app closes
 
@@ -152,9 +138,7 @@ D. A function used to define classes
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 8: Giới thiệu Flutter & Dart
-
-**Question:** In `List<int> nums = [1,2,3]; for(var x in nums) print(x);`, what is the main purpose of using `var` instead of `int` for variable `x`?
+**Question 8:** In `List<int> nums = [1,2,3]; for(var x in nums) print(x);`, what is the main purpose of using `var` instead of `int` for variable `x`?
 
 A. `var` must be used because `int` would cause an error
 
@@ -174,9 +158,7 @@ D. No difference at all, it's just a coding habit
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 9: Giới thiệu Flutter & Dart
-
-**Question:** Given this code, predict the result of calling `Eagle().fly()`: class Bird { void fly() => print("Bird flying"); } class Eagle implements Bird { @override void fly() => print("Eagle gliding"); }
+**Question 9:** Given this code, predict the result of calling `Eagle().fly()`: class Bird { void fly() => print("Bird flying"); } class Eagle implements Bird { @override void fly() => print("Eagle gliding"); }
 
 A. Bird flying" because implements also inherits the method body
 
@@ -196,9 +178,7 @@ Vì `implements` chỉ lấy chữ ký nên Eagle phải xác định lại hoà
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 10: Giới thiệu Flutter & Dart
-
-**Question:** Given this generic constraint: abstract class Animal { String sound(); } class Cat extends Animal { sound() => "Meow"; } class Box`<T extends Animal>` { T pet; Box(this.pet); void play() => print(pet.sound()); } What does the `<T extends Animal>` syntax mean?
+**Question 10:** Given this generic constraint: abstract class Animal { String sound(); } class Cat extends Animal { sound() => "Meow"; } class Box`<T extends Animal>` { T pet; Box(this.pet); void play() => print(pet.sound()); } What does the `<T extends Animal>` syntax mean?
 
 A. Box can only hold the exact Animal type, no subclasses accepted
 
@@ -218,9 +198,7 @@ D. `extends` here means Box inherits from Animal
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 11: Giới thiệu Flutter & Dart
-
-**Question:** Given: var base = [1, 2, 3]; var list = [ ...base, if (true) 99, for (var x in base) x * 10 ]; print(list); What is printed?
+**Question 11:** Given: var base = [1, 2, 3]; var list = [ ...base, if (true) 99, for (var x in base) x * 10 ]; print(list); What is printed?
 
 A. [1, 2, 3, 99, 10, 20, 30]
 
@@ -240,9 +218,7 @@ D. Compile error because you cannot mix spread, if, and for in the same List
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 12: Giới thiệu Flutter & Dart
-
-**Question:** In the example `AnimationController implements Listenable` mentioned in the lecture, what does using `implements` instead of `extends` demonstrate?
+**Question 12:** In the example `AnimationController implements Listenable` mentioned in the lecture, what does using `implements` instead of `extends` demonstrate?
 
 A. AnimationController copies all of Listenable's existing code
 
@@ -262,9 +238,7 @@ D. This is a syntax error, `extends` must be used
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 13: Giới thiệu Flutter & Dart
-
-**Question:** According to general recommendations, `BottomNavigationBar` best fits apps with how many main navigation tabs?
+**Question 13:** According to general recommendations, `BottomNavigationBar` best fits apps with how many main navigation tabs?
 
 A. 1 tab
 
@@ -284,9 +258,7 @@ BottomNavigationBar phù hợp nhất với 2-5 tab cho mỗi đề xuất chung
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 14: Giới thiệu Flutter & Dart
-
-**Question:** According to "Using Breakpoints" in the lecture, what layout-splitting rule based on width is proposed?
+**Question 14:** According to "Using Breakpoints" in the lecture, what layout-splitting rule based on width is proposed?
 
 A. < 400px: Small, 400-800px: Medium, > 800px: Large
 
@@ -306,9 +278,7 @@ Quy tắc điểm dừng được đề xuất: <400px Nhỏ, 400-800px Trung b�
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 15: Giới thiệu Flutter & Dart
-
-**Question:** `AutovalidateMode` has three modes: `disabled`, `always`, and `onUserInteraction`. According to the lecture, which mode is recommended and why?
+**Question 15:** `AutovalidateMode` has three modes: `disabled`, `always`, and `onUserInteraction`. According to the lecture, which mode is recommended and why?
 
 A. `always` --- because showing errors right away helps users be more careful
 
@@ -328,9 +298,7 @@ D. No mode is recommended, it's arbitrary
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 16: Giới thiệu Flutter & Dart
-
-**Question:** Per the "Error Messages & UX" section, which of the following error messages is a GOOD UX example?
+**Question 16:** Per the "Error Messages & UX" section, which of the following error messages is a GOOD UX example?
 
 A. ERROR_400_INVALID_FIELD
 
@@ -350,9 +318,7 @@ Nhập email hợp lệ" là một ví dụ UX tốt: ngắn gọn, rõ ràng, c
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 17: Giới thiệu Flutter & Dart
-
-**Question:** What main benefit does Firebase Authentication provide over building your own authentication system from scratch?
+**Question 17:** What main benefit does Firebase Authentication provide over building your own authentication system from scratch?
 
 A. It requires writing a more complex custom backend
 
@@ -372,9 +338,7 @@ Firebase Auth cung cấp khả năng đăng nhập đa phương thức, an toàn
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 18: Giới thiệu Flutter & Dart
-
-**Question:** In the Google Sign-In flow: "User taps Sign in with Google → Google account chooser → Google issues OAuth tokens → Convert to Firebase credential → Firebase signs in the user → App receives Firebase User object." What is the core meaning of the statement "Firebase handles identity → our app only handles UI + navigation"?
+**Question 18:** In the Google Sign-In flow: "User taps Sign in with Google → Google account chooser → Google issues OAuth tokens → Convert to Firebase credential → Firebase signs in the user → App receives Firebase User object." What is the core meaning of the statement "Firebase handles identity → our app only handles UI + navigation"?
 
 A. The Flutter app must write all the OAuth authentication logic itself from scratch
 
@@ -394,9 +358,7 @@ Firebase xử lý tất cả xác minh danh tính/OAuth phức tạp, cho phép 
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 19: Giới thiệu Flutter & Dart
-
-**Question:** Per the "Understanding User Session" section, what components does a typical session usually include?
+**Question 19:** Per the "Understanding User Session" section, what components does a typical session usually include?
 
 A. Only the user's password
 
@@ -416,9 +378,7 @@ Một phiên thông thường bao gồm: mã thông báo truy cập, người d�
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 20: Giới thiệu Flutter & Dart
-
-**Question:** Which language is mainly used to write Flutter applications?
+**Question 20:** Which language is mainly used to write Flutter applications?
 
 A. Dart
 
@@ -438,9 +398,7 @@ Tùy chọn A đúng: Dart. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 21: Giới thiệu Flutter & Dart
-
-**Question:** Why is Flutter especially suitable for MVPs and startups?
+**Question 21:** Why is Flutter especially suitable for MVPs and startups?
 
 A. It runs only on high-end devices
 
@@ -460,9 +418,7 @@ Tùy chọn D đúng: Nó rút ngắn thời gian tiếp thị và duy trì mộ
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 22: Giới thiệu Flutter & Dart
-
-**Question:** In a Flutter-and-native integration model, which parts are usually handled by Flutter?
+**Question 22:** In a Flutter-and-native integration model, which parts are usually handled by Flutter?
 
 A. UI and business logic
 
@@ -482,9 +438,7 @@ Tùy chọn A đúng: UI và logic nghiệp vụ. Câu trả lời phù hợp v�
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 23: Giới thiệu Flutter & Dart
-
-**Question:** Which language is the Flutter Engine layer mainly written in?
+**Question 23:** Which language is the Flutter Engine layer mainly written in?
 
 A. Dart
 
@@ -504,9 +458,7 @@ Lựa chọn D đúng: C++. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 24: Giới thiệu Flutter & Dart
-
-**Question:** Which two compilation approaches does Dart combine?
+**Question 24:** Which two compilation approaches does Dart combine?
 
 A. JIT and AOT
 
@@ -526,9 +478,7 @@ Tùy chọn A đúng: JIT và AOT. Câu trả lời phù hợp với hành vi lo
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 25: Giới thiệu Flutter & Dart
-
-**Question:** From which function does every Dart program begin execution?
+**Question 25:** From which function does every Dart program begin execution?
 
 A. run()
 
@@ -548,9 +498,7 @@ Tùy chọn D đúng: main(). Câu trả lời phù hợp với hành vi loại 
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 26: Giới thiệu Flutter & Dart
-
-**Question:** Which function prints a line to the console in Dart?
+**Question 26:** Which function prints a line to the console in Dart?
 
 A. print()
 
@@ -570,9 +518,7 @@ Tùy chọn A đúng: print(). Câu trả lời phù hợp với hành vi loại
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 27: Giới thiệu Flutter & Dart
-
-**Question:** Which Dart type is used for whole numbers?
+**Question 27:** Which Dart type is used for whole numbers?
 
 A. bool
 
@@ -592,9 +538,7 @@ Tùy chọn C đúng: int. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 28: Giới thiệu Flutter & Dart
-
-**Question:** Which Dart type is used for fractional numbers?
+**Question 28:** Which Dart type is used for fractional numbers?
 
 A. Never
 
@@ -614,9 +558,7 @@ Tùy chọn D đúng: double. Câu trả lời phù hợp với hành vi loại 
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 29: Giới thiệu Flutter & Dart
-
-**Question:** Which data type represents an ordered collection?
+**Question 29:** Which data type represents an ordered collection?
 
 A. List
 
@@ -636,9 +578,7 @@ Tùy chọn A đúng: List. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 30: Giới thiệu Flutter & Dart
-
-**Question:** What is the logical AND operator in Dart?
+**Question 30:** What is the logical AND operator in Dart?
 
 A. !
 
@@ -658,9 +598,7 @@ Lựa chọn C đúng: &&. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 31: Giới thiệu Flutter & Dart
-
-**Question:** According to the slide example, what is the main difference between dynamic and var?
+**Question 31:** According to the slide example, what is the main difference between dynamic and var?
 
 A. dynamic is resolved at runtime and may hold values of different types
 
@@ -680,9 +618,7 @@ Tùy chọn A đúng: dynamic được giải quyết trong thời gian chạy v
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 32: Giới thiệu Flutter & Dart
-
-**Question:** When is final appropriate?
+**Question 32:** When is final appropriate?
 
 A. When a function returns no value
 
@@ -702,9 +638,7 @@ Tùy chọn D đúng: Khi một giá trị được gán một lần nhưng có 
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 33: Giới thiệu Flutter & Dart
-
-**Question:** In object-oriented programming, what is an object?
+**Question 33:** In object-oriented programming, what is an object?
 
 A. An operator
 
@@ -724,9 +658,7 @@ Tùy chọn D đúng: Một thể hiện của một lớp. Câu trả lời ph�
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 34: Giới thiệu Flutter & Dart
-
-**Question:** What is the ?? operator commonly used for in null safety?
+**Question 34:** What is the ?? operator commonly used for in null safety?
 
 A. Providing a fallback value when the left side is null
 
@@ -746,9 +678,7 @@ Tùy chọn A đúng: Cung cấp giá trị dự phòng khi phía bên trái r�
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 35: Giới thiệu Flutter & Dart
-
-**Question:** When a class uses implements, what must it do?
+**Question 35:** When a class uses implements, what must it do?
 
 A. Fully override the required interface members
 
@@ -768,9 +698,7 @@ Tùy chọn A đúng: Có đầy đủ override thành viên giao diện đượ
 
 https://docs.flutter.dev/resources/faq
 
-### Câu 36: Cài đặt & Môi trường
-
-**Question:** A student creates an emulator on a low-spec PC. According to the lecture's recommendation, which emulator configuration is more suitable to reduce the load on the machine?
+**Question 36:** A student creates an emulator on a low-spec PC. According to the lecture's recommendation, which emulator configuration is more suitable to reduce the load on the machine?
 
 A. Pixel 8, API 33+
 
@@ -790,9 +718,7 @@ Bài giảng khuyên dùng Pixel 3a / API 30 cho các máy có cấu hình thấ
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 37: Cài đặt & Môi trường
-
-**Question:** How does DartPad differ from VS Code/Android Studio when developing Flutter?
+**Question 37:** How does DartPad differ from VS Code/Android Studio when developing Flutter?
 
 A. DartPad requires a full SDK installation just like Android Studio
 
@@ -812,9 +738,7 @@ DartPad là môi trường trực tuyến không cần cài đặt. A sai vì Da
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 38: Cài đặt & Môi trường
-
-**Question:** In the 'Hello World' example run across three environments (DartPad, VS Code, Android Studio), what is the most important common point emphasized?
+**Question 38:** In the 'Hello World' example run across three environments (DartPad, VS Code, Android Studio), what is the most important common point emphasized?
 
 A. Each environment uses a different programming language
 
@@ -834,9 +758,7 @@ D. DartPad cannot display TextStyle
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 39: Cài đặt & Môi trường
-
-**Question:** According to the lecture, what tool does macOS need to build a Flutter app for iOS?
+**Question 39:** According to the lecture, what tool does macOS need to build a Flutter app for iOS?
 
 A. Android Studio
 
@@ -856,9 +778,7 @@ macOS cần Xcode để xây dựng cho iOS, theo ghi chú 'macOS người dùng
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 40: Cài đặt & Môi trường
-
-**Question:** Comparing `TimePicker` (`showTimePicker`) and `DatePicker` (`showDatePicker`) in the context of building a booking flow combining both date and time: what is the correct approach per the lecture?
+**Question 40:** Comparing `TimePicker` (`showTimePicker`) and `DatePicker` (`showDatePicker`) in the context of building a booking flow combining both date and time: what is the correct approach per the lecture?
 
 A. Only call one of the two, Flutter will automatically infer the other value
 
@@ -878,9 +798,7 @@ Gọi `pickDate()` và `pickTime()` theo tuần tự, lưu trữ kết quả tro
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 41: Cài đặt & Môi trường
-
-**Question:** Given: ElevatedButton( onPressed: () { Navigator.push( context, MaterialPageRoute(builder: (_) => SecondPage()), ); }, child: Text('Go to Second Page'), ) According to the lecture's explanation of why this original code doesn't run directly on DartPad, what is the main cause?
+**Question 41:** Given: ElevatedButton( onPressed: () { Navigator.push( context, MaterialPageRoute(builder: (_) => SecondPage()), ); }, child: Text('Go to Second Page'), ) According to the lecture's explanation of why this original code doesn't run directly on DartPad, what is the main cause?
 
 A. DartPad doesn't support ElevatedButton
 
@@ -900,9 +818,7 @@ DartPad cần một structure hoàn chỉnh (main, runApp, MaterialApp); thiếu
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 42: Cài đặt & Môi trường
-
-**Question:** What is the main reason "hardcoding URLs everywhere in the code" is listed as a pitfall?
+**Question 42:** What is the main reason "hardcoding URLs everywhere in the code" is listed as a pitfall?
 
 A. Hardcoded URLs make the app run significantly slower
 
@@ -922,9 +838,7 @@ Các URL được mã hóa cứng khiến việc thay đổi URL cơ sở trở 
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 43: Cài đặt & Môi trường
-
-**Question:** Given this FakePrefs code simulating SharedPreferences in DartPad: class FakePrefs { static final Map<String, Object> _store = {}; Future`<void>` setBool(String key, bool value) async { _store[key] = value; } bool getBool(String key) { final value = _store[key]; if (value is bool) return value; return false; } } Why is `_store` declared `static`?
+**Question 43:** Given this FakePrefs code simulating SharedPreferences in DartPad: class FakePrefs { static final Map<String, Object> _store = {}; Future`<void>` setBool(String key, bool value) async { _store[key] = value; } bool getBool(String key) { final value = _store[key]; if (value is bool) return value; return false; } } Why is `_store` declared `static`?
 
 A. To limit the app to only one FakePrefs object existing
 
@@ -944,9 +858,7 @@ D. To automatically save data permanently even after the app is closed
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 44: Cài đặt & Môi trường
-
-**Question:** The slide note "Note: data resets on reload (not persistent)" when using FakePrefs on DartPad hints at what limitation?
+**Question 44:** The slide note "Note: data resets on reload (not persistent)" when using FakePrefs on DartPad hints at what limitation?
 
 A. Data stored in FakePrefs persists forever even after reloading the page
 
@@ -966,9 +878,7 @@ FakePrefs chỉ lưu trữ dữ liệu trong bộ nhớ cho phiên hiện tại,
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 45: Cài đặt & Môi trường
-
-**Question:** In the high-level Authentication Flow, after the backend verifies valid login credentials, what does the system usually return to the app?
+**Question 45:** In the high-level Authentication Flow, after the backend verifies valid login credentials, what does the system usually return to the app?
 
 A. The user's password in encrypted form
 
@@ -988,9 +898,7 @@ Phần phụ trợ trả về token (thường là JWT) để ứng dụng lưu 
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 46: Cài đặt & Môi trường
-
-**Question:** In Demo 10.5, at what point in the app's actual flow is the local notification triggered?
+**Question 46:** In Demo 10.5, at what point in the app's actual flow is the local notification triggered?
 
 A. Right when the app opens, before login
 
@@ -1010,9 +918,7 @@ Thông báo cục bộ được kích hoạt ngay sau khi đăng nhập thành c
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 47: Cài đặt & Môi trường
-
-**Question:** Which description best defines Flutter?
+**Question 47:** Which description best defines Flutter?
 
 A. Google's UI toolkit for building natively compiled applications from a single codebase
 
@@ -1032,9 +938,7 @@ Tùy chọn A đúng: Bộ công cụ UI của Google để xây dựng các ứ
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 48: Cài đặt & Môi trường
-
-**Question:** What does the Repository pattern separate from the UI?
+**Question 48:** What does the Repository pattern separate from the UI?
 
 A. The Android emulator
 
@@ -1054,9 +958,7 @@ Tùy chọn B đúng: Truy cập dữ liệu, API và logic cơ sở dữ liệu
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 49: Cài đặt & Môi trường
-
-**Question:** What does setState() do?
+**Question 49:** What does setState() do?
 
 A. Notifies the framework to rebuild the relevant State UI
 
@@ -1076,9 +978,7 @@ Tùy chọn A đúng: Thông báo cho khung để xây dựng lại State UI có
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 50: Cài đặt & Môi trường
-
-**Question:** Why cannot DartPad use the real SharedPreferences plugin?
+**Question 50:** Why cannot DartPad use the real SharedPreferences plugin?
 
 A. Its environment does not provide native plugin or persistent-storage support
 
@@ -1098,9 +998,7 @@ Tùy chọn A đúng: Môi trường của nó không cung cấp hỗ trợ gố
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 51: Cài đặt & Môi trường
-
-**Question:** Where does FakePrefs in DartPad store data?
+**Question 51:** Where does FakePrefs in DartPad store data?
 
 A. A real database file
 
@@ -1120,9 +1018,7 @@ Tùy chọn D đúng: Map trong bộ nhớ sẽ đặt lại khi tải lại. C�
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 52: Cài đặt & Môi trường
-
-**Question:** How is an access token normally used?
+**Question 52:** How is an access token normally used?
 
 A. To store the password
 
@@ -1142,9 +1038,7 @@ Tùy chọn D đúng: Nó được gửi cùng với mọi yêu cầu API yêu c
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 53: Cài đặt & Môi trường
-
-**Question:** Which mode should be used for more accurate performance measurements?
+**Question 53:** Which mode should be used for more accurate performance measurements?
 
 A. Test mode only
 
@@ -1164,9 +1058,7 @@ Tùy chọn D đúng: Chế độ hồ sơ. Hiệu suất Flutter phải đượ
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 54: Cài đặt & Môi trường
-
-**Question:** ListView.builder is best for?
+**Question 54:** ListView.builder is best for?
 
 A. One small fixed list
 
@@ -1186,9 +1078,7 @@ Tùy chọn B đúng: Danh sách lớn hoặc dynamic. Bố cục Flutter đư�
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 55: Cài đặt & Môi trường
-
-**Question:** Which command checks environment setup?
+**Question 55:** Which command checks environment setup?
 
 A. flutter doctor
 
@@ -1208,9 +1098,7 @@ Tùy chọn A đúng: flutter doctor. Câu trả lời phù hợp với hành vi
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 56: Cài đặt & Môi trường
-
-**Question:** Which command lists connected devices?
+**Question 56:** Which command lists connected devices?
 
 A. flutter devices
 
@@ -1230,9 +1118,7 @@ Tùy chọn A đúng: flutter devices. Câu trả lời phù hợp với hành v
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 57: Cài đặt & Môi trường
-
-**Question:** Which command shows available emulators?
+**Question 57:** Which command shows available emulators?
 
 A. flutter devices
 
@@ -1252,9 +1138,7 @@ Tùy chọn B đúng: flutter emulators. Câu trả lời phù hợp với hành
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 58: Cài đặt & Môi trường
-
-**Question:** What is the purpose of pub.dev?
+**Question 58:** What is the purpose of pub.dev?
 
 A. Flutter package repository
 
@@ -1274,9 +1158,7 @@ Tùy chọn A đúng: kho lưu trữ Flutter package. Câu trả lời phù hợ
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 59: Cài đặt & Môi trường
-
-**Question:** Which tool is used to inspect widget tree and performance?
+**Question 59:** Which tool is used to inspect widget tree and performance?
 
 A. Flutter DevTools
 
@@ -1296,9 +1178,7 @@ Lựa chọn A đúng: Flutter DevTools. Hiệu suất Flutter phải được �
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 60: Cài đặt & Môi trường
-
-**Question:** Which development environment is described as an online editor ideal for quick demos and learning syntax without installation?
+**Question 60:** Which development environment is described as an online editor ideal for quick demos and learning syntax without installation?
 
 A. VS Code
 
@@ -1318,9 +1198,7 @@ Tùy chọn C đúng: DartPad. Câu trả lời phù hợp với hành vi loại
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 61: Cài đặt & Môi trường
-
-**Question:** Which command should a developer use to verify the Flutter installation and see a summary of the environment status?
+**Question 61:** Which command should a developer use to verify the Flutter installation and see a summary of the environment status?
 
 A. flutter run
 
@@ -1340,9 +1218,7 @@ Tùy chọn C đúng: flutter doctor. Câu trả lời phù hợp với hành vi
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 62: Cài đặt & Môi trường
-
-**Question:** When should a developer choose to use local JSON files (dart:io) instead of SharedPreferences?
+**Question 62:** When should a developer choose to use local JSON files (dart:io) instead of SharedPreferences?
 
 A. When storing a single boolean for dark mode.
 
@@ -1362,9 +1238,7 @@ Tùy chọn B đúng: Khi dữ liệu lớn hơn các cặp khóa-giá trị đ�
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 63: Cài đặt & Môi trường
-
-**Question:** During the SQFlite setup process, which method is used to define the initial table structure when the database is first created?
+**Question 63:** During the SQFlite setup process, which method is used to define the initial table structure when the database is first created?
 
 A. openDatabase()
 
@@ -1384,9 +1258,7 @@ Tùy chọn B đúng: onCreate. Câu trả lời phù hợp với hành vi loạ
 
 https://docs.flutter.dev/get-started/install
 
-### Câu 64: Flutter CLI & Pub
-
-**Question:** In a Flutter project, which file is the entry point of the app?
+**Question 64:** In a Flutter project, which file is the entry point of the app?
 
 A. pubspec.yaml
 
@@ -1406,9 +1278,7 @@ D. web/index.html
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 65: Flutter CLI & Pub
-
-**Question:** Consider the following code running in main.dart: import 'package:flutter/material.dart'; void main() => runApp(const MaterialApp( home: Scaffold( body: Center( child: Text('Hello, World', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)), ), ), )); If the `const` keyword before `MaterialApp` is removed, what happens to the app's behavior?
+**Question 65:** Consider the following code running in main.dart: import 'package:flutter/material.dart'; void main() => runApp(const MaterialApp( home: Scaffold( body: Center( child: Text('Hello, World', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)), ), ), )); If the `const` keyword before `MaterialApp` is removed, what happens to the app's behavior?
 
 A. The app will fail to compile immediately
 
@@ -1428,9 +1298,7 @@ D. The Scaffold will no longer be able to have an AppBar later
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 66: Flutter CLI & Pub
-
-**Question:** An instructor creates a new Flutter project with Organization ID `com.fptu.movies` and project name `movies`. What is the main purpose of the Organization ID during project creation?
+**Question 66:** An instructor creates a new Flutter project with Organization ID `com.fptu.movies` and project name `movies`. What is the main purpose of the Organization ID during project creation?
 
 A. Only used to set the display name shown on the device's home screen
 
@@ -1450,9 +1318,7 @@ ID tổ chức xác định tên/số nhận dạng gói package duy nhất khi 
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 67: Flutter CLI & Pub
-
-**Question:** The lecture has this snippet: Widget tile(String t, String s) => Card( margin: const EdgeInsets.symmetric(vertical: 6), child: ListTile(title: Text(t), subtitle: Text(s)), ); What is the main benefit of extracting repeated UI into a separate function/widget like `tile()`, in the spirit of "Everything is a Widget"?
+**Question 67:** The lecture has this snippet: Widget tile(String t, String s) => Card( margin: const EdgeInsets.symmetric(vertical: 6), child: ListTile(title: Text(t), subtitle: Text(s)), ); What is the main benefit of extracting repeated UI into a separate function/widget like `tile()`, in the spirit of "Everything is a Widget"?
 
 A. Makes Flutter run faster in absolute CPU terms
 
@@ -1472,9 +1338,7 @@ Việc trích xuất các khối UI lặp lại sẽ hỗ trợ việc tái sử
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 68: Flutter CLI & Pub
-
-**Question:** What is the difference between `Image.network` and `Image.asset`?
+**Question 68:** What is the difference between `Image.network` and `Image.asset`?
 
 A. `Image.network` loads an image from an internet URL, `Image.asset` loads an image bundled within the project (declared in pubspec.yaml)
 
@@ -1494,9 +1358,7 @@ D. `Image.network` doesn't support BoxFit
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 69: Flutter CLI & Pub
-
-**Question:** In an Android deep link configuration, where does the following XML snippet belong and what does it mean? `<intent-filter>` `<action android:name="android.intent.action.VIEW" />` `<category android:name="android.intent.category.DEFAULT" />` `<category android:name="android.intent.category.BROWSABLE" />` `<data android:scheme="movieapps" android:host="movies" />` `</intent-filter>`
+**Question 69:** In an Android deep link configuration, where does the following XML snippet belong and what does it mean? `<intent-filter>` `<action android:name="android.intent.action.VIEW" />` `<category android:name="android.intent.category.DEFAULT" />` `<category android:name="android.intent.category.BROWSABLE" />` `<data android:scheme="movieapps" android:host="movies" />` `</intent-filter>`
 
 A. In `pubspec.yaml`, used to declare a dependency
 
@@ -1516,9 +1378,7 @@ D. In `Info.plist`, only applicable to iOS
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 70: Flutter CLI & Pub
-
-**Question:** On iOS, to support a custom URL scheme (e.g. `movieapps://`), where does the configuration need to be added?
+**Question 70:** On iOS, to support a custom URL scheme (e.g. `movieapps://`), where does the configuration need to be added?
 
 A. AndroidManifest.xml
 
@@ -1538,9 +1398,7 @@ Cấu hình lược đồ URL tùy chỉnh trên iOS nằm trong Info.plist (Lo�
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 71: Flutter CLI & Pub
-
-**Question:** Comparing using the plain `http` package versus a more advanced HTTP management package (e.g. Dio, not in the slides but askable at an analytical level): in the spirit of Module 8's "Service Layer Pattern," why does wrapping HTTP logic in `ApiService` make switching HTTP libraries later (if needed) easier?
+**Question 71:** Comparing using the plain `http` package versus a more advanced HTTP management package (e.g. Dio, not in the slides but askable at an analytical level): in the spirit of Module 8's "Service Layer Pattern," why does wrapping HTTP logic in `ApiService` make switching HTTP libraries later (if needed) easier?
 
 A. Because every HTTP package has an entirely identical API
 
@@ -1560,9 +1418,7 @@ Việc tách biệt logic mạng trong một lớp có nghĩa là việc chuyể
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 72: Flutter CLI & Pub
-
-**Question:** Which package is mentioned for determining the app's storage directory when working with local JSON files?
+**Question 72:** Which package is mentioned for determining the app's storage directory when working with local JSON files?
 
 A. shared_preferences
 
@@ -1582,9 +1438,7 @@ D. http
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 73: Flutter CLI & Pub
-
-**Question:** Per the Google Sign-In "Common Errors & Fixes" table, the "DEVELOPER_ERROR" is usually caused by what?
+**Question 73:** Per the Google Sign-In "Common Errors & Fixes" table, the "DEVELOPER_ERROR" is usually caused by what?
 
 A. Missing Internet connection
 
@@ -1604,9 +1458,7 @@ DEVELOPER_ERROR" thường do tên package sai không khớp với cấu hình F
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 74: Flutter CLI & Pub
-
-**Question:** In the `flutter_bloc` package, what is the correct data-flow relationship between Event, Bloc, and State?
+**Question 74:** In the `flutter_bloc` package, what is the correct data-flow relationship between Event, Bloc, and State?
 
 A. State → Bloc → Event
 
@@ -1626,9 +1478,7 @@ Luồng chính xác: UI gửi Sự kiện → Bloc quy trình/bản đồ tới 
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 75: Flutter CLI & Pub
-
-**Question:** How does `Cubit` in the `flutter_bloc` package differ from a traditional `Bloc`?
+**Question 75:** How does `Cubit` in the `flutter_bloc` package differ from a traditional `Bloc`?
 
 A. Cubit cannot manage state, only Bloc can
 
@@ -1648,9 +1498,7 @@ Cubit là một Bloc được đơn giản hóa --- không cần lớp Sự ki�
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 76: Flutter CLI & Pub
-
-**Question:** Which file declares a Flutter project's dependencies and assets?
+**Question 76:** Which file declares a Flutter project's dependencies and assets?
 
 A. build.gradle.kts only
 
@@ -1670,9 +1518,7 @@ Tùy chọn D đúng: pubspec.yaml. pubspec.yaml là tệp kê khai dự án dù
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 77: Flutter CLI & Pub
-
-**Question:** On Android, which element is commonly used to configure deep links?
+**Question 77:** On Android, which element is commonly used to configure deep links?
 
 A. ThemeData in main.dart
 
@@ -1692,9 +1538,7 @@ Tùy chọn C là chính xác: Bộ lọc ý định trong AndroidManifest. API 
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 78: Flutter CLI & Pub
-
-**Question:** What is DEVELOPER_ERROR commonly related to?
+**Question 78:** What is DEVELOPER_ERROR commonly related to?
 
 A. An incorrect SQL SELECT statement
 
@@ -1714,9 +1558,7 @@ Tùy chọn B đúng: Tên package hoặc cấu hình Firebase không chính xá
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 79: Flutter CLI & Pub
-
-**Question:** What does CPU Profiler help identify?
+**Question 79:** What does CPU Profiler help identify?
 
 A. A Firebase package name
 
@@ -1736,9 +1578,7 @@ Tùy chọn C đúng: Điểm nóng tại thời điểm thực thi. Câu trả 
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 80: Flutter CLI & Pub
-
-**Question:** for-in loop is mainly used for?
+**Question 80:** for-in loop is mainly used for?
 
 A. Arithmetic
 
@@ -1758,9 +1598,7 @@ Tùy chọn B đúng: Lặp lại các bộ sưu tập. Câu trả lời phù h�
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 81: Flutter CLI & Pub
-
-**Question:** A class defines?
+**Question 81:** A class defines?
 
 A. A loop
 
@@ -1780,9 +1618,7 @@ Lựa chọn B đúng: Một công trình hoặc bản thiết kế. Câu trả 
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 82: Flutter CLI & Pub
-
-**Question:** What is pubspec.yaml used for?
+**Question 82:** What is pubspec.yaml used for?
 
 A. App screenshots
 
@@ -1802,9 +1638,7 @@ Tùy chọn B đúng: Phụ thuộc và tài sản. pubspec.yaml là tệp kê k
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 83: Flutter CLI & Pub
-
-**Question:** Assets must be declared in?
+**Question 83:** Assets must be declared in?
 
 A. main.dart
 
@@ -1824,9 +1658,7 @@ Tùy chọn B đúng: pubspec.yaml. pubspec.yaml là tệp kê khai dự án dù
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 84: Flutter CLI & Pub
-
-**Question:** Which command fetches Flutter dependencies?
+**Question 84:** Which command fetches Flutter dependencies?
 
 A. flutter add
 
@@ -1846,9 +1678,7 @@ Tùy chọn C đúng: flutter pub get. pubspec.yaml is the project manifest used
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 85: Flutter CLI & Pub
-
-**Question:** Which command creates a new Flutter project?
+**Question 85:** Which command creates a new Flutter project?
 
 A. flutter new
 
@@ -1868,9 +1698,7 @@ Tùy chọn B đúng: flutter create. Câu trả lời phù hợp với hành vi
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 86: Flutter CLI & Pub
-
-**Question:** Which command runs a Flutter app?
+**Question 86:** Which command runs a Flutter app?
 
 A. flutter go
 
@@ -1890,9 +1718,7 @@ Tùy chọn C đúng: flutter run. Câu trả lời phù hợp với hành vi lo
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 87: Flutter CLI & Pub
-
-**Question:** Which command cleans the build folder?
+**Question 87:** Which command cleans the build folder?
 
 A. flutter purge
 
@@ -1912,9 +1738,7 @@ Tùy chọn C đúng: flutter clean. Câu trả lời phù hợp với hành vi 
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 88: Flutter CLI & Pub
-
-**Question:** Which command builds an iOS app?
+**Question 88:** Which command builds an iOS app?
 
 A. flutter build ios
 
@@ -1934,9 +1758,7 @@ Tùy chọn A đúng: flutter build ios. Flutter supports multiple deployment ta
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 89: Flutter CLI & Pub
-
-**Question:** Which package is popular for simple state management?
+**Question 89:** Which package is popular for simple state management?
 
 A. Provider
 
@@ -1956,9 +1778,7 @@ Tùy chọn A đúng: Provider. Đây là khái niệm quản lý state: các th
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 90: Flutter CLI & Pub
-
-**Question:** Which package is used for HTTP requests commonly?
+**Question 90:** Which package is used for HTTP requests commonly?
 
 A. path
 
@@ -1978,9 +1798,7 @@ Tùy chọn C đúng: http. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 91: Flutter CLI & Pub
-
-**Question:** Which method sends a GET request with package:http?
+**Question 91:** Which method sends a GET request with package:http?
 
 A. http.load
 
@@ -2000,9 +1818,7 @@ Tùy chọn C đúng: http.get. Câu trả lời phù hợp với hành vi loạ
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 92: Flutter CLI & Pub
-
-**Question:** Which package is widely used for local key-value storage?
+**Question 92:** Which package is widely used for local key-value storage?
 
 A. dio
 
@@ -2022,9 +1838,7 @@ Tùy chọn B đúng: shared_preferences. Câu trả lời phù hợp với hàn
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 93: Flutter CLI & Pub
-
-**Question:** Which package is often used for powerful networking in Flutter?
+**Question 93:** Which package is often used for powerful networking in Flutter?
 
 A. dio
 
@@ -2044,9 +1858,7 @@ Tùy chọn A đúng: dio. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 94: Flutter CLI & Pub
-
-**Question:** Which command runs tests in Flutter?
+**Question 94:** Which command runs tests in Flutter?
 
 A. flutter test
 
@@ -2066,9 +1878,7 @@ Tùy chọn A đúng: flutter test. Câu trả lời phù hợp với hành vi l
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 95: Flutter CLI & Pub
-
-**Question:** Which file often stores lint rules for Dart/Flutter?
+**Question 95:** Which file often stores lint rules for Dart/Flutter?
 
 A. analysis_options.yaml
 
@@ -2088,9 +1898,7 @@ Tùy chọn A đúng: analysis_options.yaml. Câu trả lời phù hợp với h
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 96: Flutter CLI & Pub
-
-**Question:** The extends keyword is used to?
+**Question 96:** The extends keyword is used to?
 
 A. Implement interface only
 
@@ -2110,9 +1918,7 @@ Tùy chọn B đúng: Kế thừa từ một lớp. Câu trả lời phù hợp 
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 97: Flutter CLI & Pub
-
-**Question:** The implements keyword is used to?
+**Question 97:** The implements keyword is used to?
 
 A. Force interface contract implementation
 
@@ -2132,9 +1938,7 @@ Tùy chọn A đúng: Buộc thực hiện hợp đồng giao diện. Câu trả
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 98: Flutter CLI & Pub
-
-**Question:** Which file is generated and should usually not be edited manually for dependencies lock?
+**Question 98:** Which file is generated and should usually not be edited manually for dependencies lock?
 
 A. pubspec.lock
 
@@ -2154,9 +1958,7 @@ Tùy chọn A đúng: pubspec.lock. pubspec.yaml là tệp kê khai dự án dù
 
 https://docs.flutter.dev/tools/pubspec
 
-### Câu 99: Công cụ dev & Hot reload
-
-**Question:** Which combined compilation model does Dart use to support both fast development and optimized production performance?
+**Question 99:** Which combined compilation model does Dart use to support both fast development and optimized production performance?
 
 A. JIT (Just-In-Time) only
 
@@ -2176,9 +1978,7 @@ Dart kết hợp JIT (phát triển nhanh, hot reload) và AOT (biên dịch s�
 
 https://docs.flutter.dev/tools/devtools/overview
 
-### Câu 100: Công cụ dev & Hot reload
-
-**Question:** Which statement is FALSE regarding the reasons to choose Flutter ('Why Flutter')?
+**Question 100:** Which statement is FALSE regarding the reasons to choose Flutter ('Why Flutter')?
 
 A. Hot Reload/Hot Restart enables fast development
 
@@ -2198,9 +1998,7 @@ D. Near-native performance
 
 https://docs.flutter.dev/tools/devtools/overview
 
-### Câu 101: Công cụ dev & Hot reload
-
-**Question:** What benefit does a Custom Exception in Dart (e.g. `class LoginException implements Exception`) offer over throwing an ordinary error string?
+**Question 101:** What benefit does a Custom Exception in Dart (e.g. `class LoginException implements Exception`) offer over throwing an ordinary error string?
 
 A. No benefit, it just adds code complexity
 
@@ -2220,9 +2018,7 @@ Ngoại lệ tùy chỉnh cung cấp ngữ cảnh lỗi miền cụ thể, hỗ 
 
 https://docs.flutter.dev/tools/devtools/overview
 
-### Câu 102: Công cụ dev & Hot reload
-
-**Question:** Per the "Security" section of Best Practices, what practice is recommended regarding token storage?
+**Question 102:** Per the "Security" section of Best Practices, what practice is recommended regarding token storage?
 
 A. Store the token as public plain text in a log file for easy debugging
 
@@ -2242,9 +2038,7 @@ Phương pháp được khuyến nghị là lưu trữ an toàn và luôn sử d
 
 https://docs.flutter.dev/tools/devtools/overview
 
-### Câu 103: Công cụ dev & Hot reload
-
-**Question:** What characteristic of the UI Overflow bug described in Module 11 makes it hard to detect if you only rely on running the app normally?
+**Question 103:** What characteristic of the UI Overflow bug described in Module 11 makes it hard to detect if you only rely on running the app normally?
 
 A. Overflow always makes the app crash instantly, so it's very easy to spot
 
@@ -2264,9 +2058,7 @@ Lỗi tràn thường không làm hỏng ứng dụng, yêu cầu kiểm tra/Dev
 
 https://docs.flutter.dev/tools/devtools/overview
 
-### Câu 104: Công cụ dev & Hot reload
-
-**Question:** In "Debugging Goals in Flutter," the "Frequent unnecessary rebuilds" issue directly relates to which topic that will be explored deeper in Module 12?
+**Question 104:** In "Debugging Goals in Flutter," the "Frequent unnecessary rebuilds" issue directly relates to which topic that will be explored deeper in Module 12?
 
 A. Building local JSON files
 
@@ -2286,9 +2078,7 @@ Việc xây dựng lại thường xuyên không cần thiết" liên quan trự
 
 https://docs.flutter.dev/tools/devtools/overview
 
-### Câu 105: Công cụ dev & Hot reload
-
-**Question:** When Flutter does not directly support a feature such as camera, Bluetooth, or NFC, what integration approach is recommended?
+**Question 105:** When Flutter does not directly support a feature such as camera, Bluetooth, or NFC, what integration approach is recommended?
 
 A. Write native code and connect it through Platform Channels
 
@@ -2308,9 +2098,7 @@ Tùy chọn A đúng: Viết mã gốc và kết nối nó thông qua Kênh nề
 
 https://docs.flutter.dev/tools/devtools/overview
 
-### Câu 106: Công cụ dev & Hot reload
-
-**Question:** What is a breakpoint used for?
+**Question 106:** What is a breakpoint used for?
 
 A. Selecting a layout for a defined range of sizes
 
@@ -2330,9 +2118,7 @@ Tùy chọn A đúng: Chọn bố cục cho phạm vi kích thước xác địn
 
 https://docs.flutter.dev/tools/devtools/overview
 
-### Câu 107: Công cụ dev & Hot reload
-
-**Question:** What does the DevTools Performance view help inspect?
+**Question 107:** What does the DevTools Performance view help inspect?
 
 A. JWT payloads
 
@@ -2352,9 +2138,7 @@ Tùy chọn C đúng: Dòng thời gian FPS và chi phí kết xuất khung hìn
 
 https://docs.flutter.dev/tools/devtools/overview
 
-### Câu 108: Công cụ dev & Hot reload
-
-**Question:** According to the source, what is a "Breakpoint"?
+**Question 108:** According to the source, what is a "Breakpoint"?
 
 A. A point where the application code stops for debugging.
 
@@ -2374,9 +2158,7 @@ Tùy chọn B đúng: Một pixel cụ thể width (e.g., 600px) được sử d
 
 https://docs.flutter.dev/tools/devtools/overview
 
-### Câu 109: Widget cơ bản & Key
-
-**Question:** In Dart, what is the basic difference between `final` and `const`?
+**Question 109:** In Dart, what is the basic difference between `final` and `const`?
 
 A. No difference, the two keywords are interchangeable in every case
 
@@ -2396,9 +2178,7 @@ D. `final` is only for numeric types, `const` is only for string types
 
 https://docs.flutter.dev/ui
 
-### Câu 110: Widget cơ bản & Key
-
-**Question:** Which statement is correct about the differences between `List`, `Set`, and `Map` in Dart?
+**Question 110:** Which statement is correct about the differences between `List`, `Set`, and `Map` in Dart?
 
 A. List is unordered and disallows duplicates, Set is ordered, Map stores key-value pairs
 
@@ -2418,9 +2198,7 @@ List được sắp xếp; Set là tập hợp các phần tử duy nhất, khô
 
 https://docs.flutter.dev/ui
 
-### Câu 111: Widget cơ bản & Key
-
-**Question:** In Flutter, `State<T>` is a textbook example of which concept from Module 3?
+**Question 111:** In Flutter, `State<T>` is a textbook example of which concept from Module 3?
 
 A. Mixin
 
@@ -2440,9 +2218,7 @@ D. Factory Constructor
 
 https://docs.flutter.dev/ui
 
-### Câu 112: Widget cơ bản & Key
-
-**Question:** What does collection-if / collection-for syntax allow in Dart?
+**Question 112:** What does collection-if / collection-for syntax allow in Dart?
 
 A. Only usable in a regular for loop, not in a List declaration
 
@@ -2462,9 +2238,7 @@ Bộ sưu tập-if/for cho phép bạn xây dựng các bộ sưu tập một c�
 
 https://docs.flutter.dev/ui
 
-### Câu 113: Widget cơ bản & Key
-
-**Question:** According to the lecture, what are Material Icons in Flutter commonly used for?
+**Question 113:** According to the lecture, what are Material Icons in Flutter commonly used for?
 
 A. Purely decorative, no function
 
@@ -2484,9 +2258,7 @@ Biểu tượng Material được sử dụng cho các nút điều hướng, n�
 
 https://docs.flutter.dev/ui
 
-### Câu 114: Widget cơ bản & Key
-
-**Question:** Which data type stores values as key-value pairs?
+**Question 114:** Which data type stores values as key-value pairs?
 
 A. Map
 
@@ -2506,9 +2278,7 @@ Tùy chọn A đúng: Map. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/ui
 
-### Câu 115: Widget cơ bản & Key
-
-**Question:** What does the keyword var mean?
+**Question 115:** What does the keyword var mean?
 
 A. A compile-time constant
 
@@ -2528,9 +2298,7 @@ Tùy chọn B đúng: Loại biến được suy ra từ giá trị ban đầu c
 
 https://docs.flutter.dev/ui
 
-### Câu 116: Widget cơ bản & Key
-
-**Question:** Which keyword is used to inherit from a class in Dart?
+**Question 116:** Which keyword is used to inherit from a class in Dart?
 
 A. implements only
 
@@ -2550,9 +2318,7 @@ Tùy chọn C đúng: extends. Câu trả lời phù hợp với hành vi loại
 
 https://docs.flutter.dev/ui
 
-### Câu 117: Widget cơ bản & Key
-
-**Question:** How many main Scaffold widgets should a typical Material page usually contain?
+**Question 117:** How many main Scaffold widgets should a typical Material page usually contain?
 
 A. One
 
@@ -2572,9 +2338,7 @@ Tùy chọn A đúng: One. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/ui
 
-### Câu 118: Widget cơ bản & Key
-
-**Question:** Which method displays an image declared in the project assets?
+**Question 118:** Which method displays an image declared in the project assets?
 
 A. Image.network
 
@@ -2594,9 +2358,7 @@ Tùy chọn C đúng: Image.asset. pubspec.yaml là tệp kê khai dự án dùn
 
 https://docs.flutter.dev/ui
 
-### Câu 119: Widget cơ bản & Key
-
-**Question:** ElevatedButton is normally used for which kind of action?
+**Question 119:** ElevatedButton is normally used for which kind of action?
 
 A. An icon-only action
 
@@ -2616,9 +2378,7 @@ Tùy chọn C đúng: Hành động chính như Đăng nhập, Lưu hoặc Gửi
 
 https://docs.flutter.dev/ui
 
-### Câu 120: Widget cơ bản & Key
-
-**Question:** Which method writes a String to a file?
+**Question 120:** Which method writes a String to a file?
 
 A. A widget's setString()
 
@@ -2638,9 +2398,7 @@ Tùy chọn B đúng: writeAsString(). Câu trả lời phù hợp với hành v
 
 https://docs.flutter.dev/ui
 
-### Câu 121: Widget cơ bản & Key
-
-**Question:** How is a token described?
+**Question 121:** How is a token described?
 
 A. An image file
 
@@ -2660,9 +2418,7 @@ Tùy chọn D đúng: Thông tin xác thực kỹ thuật số có thời hạn 
 
 https://docs.flutter.dev/ui
 
-### Câu 122: Widget cơ bản & Key
-
-**Question:** What is the main concept of Flutter UI?
+**Question 122:** What is the main concept of Flutter UI?
 
 A. Everything is a widget
 
@@ -2682,9 +2438,7 @@ Tùy chọn A đúng: Mọi thứ đều là widget. Câu trả lời phù hợp
 
 https://docs.flutter.dev/ui
 
-### Câu 123: Widget cơ bản & Key
-
-**Question:** Which Dart keyword declares an inferred variable?
+**Question 123:** Which Dart keyword declares an inferred variable?
 
 A. let
 
@@ -2704,9 +2458,7 @@ Tùy chọn C đúng: var. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/ui
 
-### Câu 124: Widget cơ bản & Key
-
-**Question:** Which collection uses key-value pairs?
+**Question 124:** Which collection uses key-value pairs?
 
 A. List
 
@@ -2726,9 +2478,7 @@ Tùy chọn C đúng: Map. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/ui
 
-### Câu 125: Widget cơ bản & Key
-
-**Question:** An object is?
+**Question 125:** An object is?
 
 A. A function
 
@@ -2748,9 +2498,7 @@ Tùy chọn B đúng: Một thể hiện của một lớp. Câu trả lời ph�
 
 https://docs.flutter.dev/ui
 
-### Câu 126: Widget cơ bản & Key
-
-**Question:** Which widget is commonly used for material cards?
+**Question 126:** Which widget is commonly used for material cards?
 
 A. Panel
 
@@ -2770,9 +2518,7 @@ Tùy chọn B đúng: Card. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/ui
 
-### Câu 127: Widget cơ bản & Key
-
-**Question:** Which widget displays a single line of text?
+**Question 127:** Which widget displays a single line of text?
 
 A. Text
 
@@ -2792,9 +2538,7 @@ Tùy chọn A đúng: Text. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/ui
 
-### Câu 128: Widget cơ bản & Key
-
-**Question:** Which widget displays an image from assets?
+**Question 128:** Which widget displays an image from assets?
 
 A. Image.asset
 
@@ -2814,9 +2558,7 @@ Tùy chọn A đúng: Image.asset. pubspec.yaml là tệp kê khai dự án dùn
 
 https://docs.flutter.dev/ui
 
-### Câu 129: Widget cơ bản & Key
-
-**Question:** Which widget creates a Material button?
+**Question 129:** Which widget creates a Material button?
 
 A. ElevatedButton
 
@@ -2836,9 +2578,7 @@ Tùy chọn A đúng: ElevatedButton. Câu trả lời phù hợp với hành vi
 
 https://docs.flutter.dev/ui
 
-### Câu 130: Widget cơ bản & Key
-
-**Question:** Which widget is used for icon-only actions?
+**Question 130:** Which widget is used for icon-only actions?
 
 A. FloatingActionButton
 
@@ -2858,9 +2598,7 @@ Tùy chọn B đúng: IconButton. Câu trả lời phù hợp với hành vi lo�
 
 https://docs.flutter.dev/ui
 
-### Câu 131: Widget cơ bản & Key
-
-**Question:** Which widget commonly shows a circular action button?
+**Question 131:** Which widget commonly shows a circular action button?
 
 A. ElevatedButton
 
@@ -2880,9 +2618,7 @@ Tùy chọn C đúng: FloatingActionButton. Câu trả lời phù hợp với h�
 
 https://docs.flutter.dev/ui
 
-### Câu 132: Widget cơ bản & Key
-
-**Question:** Which widget shows a popup message at the bottom?
+**Question 132:** Which widget shows a popup message at the bottom?
 
 A. AlertDialog
 
@@ -2902,9 +2638,7 @@ Tùy chọn B đúng: SnackBar. Câu trả lời phù hợp với hành vi loạ
 
 https://docs.flutter.dev/ui
 
-### Câu 133: Widget cơ bản & Key
-
-**Question:** Which widget shows a modal dialog?
+**Question 133:** Which widget shows a modal dialog?
 
 A. AlertDialog
 
@@ -2924,9 +2658,7 @@ Tùy chọn A đúng: AlertDialog. Câu trả lời phù hợp với hành vi lo
 
 https://docs.flutter.dev/ui
 
-### Câu 134: Widget cơ bản & Key
-
-**Question:** Which class holds mutable state for StatefulWidget?
+**Question 134:** Which class holds mutable state for StatefulWidget?
 
 A. State
 
@@ -2946,9 +2678,7 @@ Tùy chọn A đúng: State. Đây là khái niệm quản lý state: các thay 
 
 https://docs.flutter.dev/ui
 
-### Câu 135: Widget cơ bản & Key
-
-**Question:** Which method describes the widget UI?
+**Question 135:** Which method describes the widget UI?
 
 A. render
 
@@ -2968,9 +2698,7 @@ Tùy chọn C đúng: build. Câu trả lời phù hợp với hành vi loại h
 
 https://docs.flutter.dev/ui
 
-### Câu 136: Widget cơ bản & Key
-
-**Question:** Which widget should be preferred for static UI parts when possible?
+**Question 136:** Which widget should be preferred for static UI parts when possible?
 
 A. const widget
 
@@ -2990,9 +2718,7 @@ Lựa chọn A đúng: const widget. Câu trả lời phù hợp với hành vi 
 
 https://docs.flutter.dev/ui
 
-### Câu 137: Widget cơ bản & Key
-
-**Question:** Which widget displays app bar title area?
+**Question 137:** Which widget displays app bar title area?
 
 A. AppBar
 
@@ -3012,9 +2738,7 @@ Tùy chọn A đúng: AppBar. Câu trả lời phù hợp với hành vi loại 
 
 https://docs.flutter.dev/ui
 
-### Câu 138: Widget cơ bản & Key
-
-**Question:** Which property of AppBar usually shows the title widget?
+**Question 138:** Which property of AppBar usually shows the title widget?
 
 A. text
 
@@ -3034,9 +2758,7 @@ Tùy chọn C đúng: title. Câu trả lời phù hợp với hành vi loại h
 
 https://docs.flutter.dev/ui
 
-### Câu 139: Widget cơ bản & Key
-
-**Question:** Which widget animates opacity changes?
+**Question 139:** Which widget animates opacity changes?
 
 A. Opacity
 
@@ -3056,9 +2778,7 @@ Tùy chọn B đúng: AnimatedOpacity. Câu trả lời phù hợp với hành v
 
 https://docs.flutter.dev/ui
 
-### Câu 140: Widget cơ bản & Key
-
-**Question:** Which property of ListTile usually displays leading icon/avatar?
+**Question 140:** Which property of ListTile usually displays leading icon/avatar?
 
 A. before
 
@@ -3078,9 +2798,7 @@ Tùy chọn C đúng: leading. Câu trả lời phù hợp với hành vi loại
 
 https://docs.flutter.dev/ui
 
-### Câu 141: Widget cơ bản & Key
-
-**Question:** Which property of ListTile usually displays smaller text below title?
+**Question 141:** Which property of ListTile usually displays smaller text below title?
 
 A. caption
 
@@ -3100,9 +2818,7 @@ Tùy chọn C đúng: subtitle. Câu trả lời phù hợp với hành vi loạ
 
 https://docs.flutter.dev/ui
 
-### Câu 142: Widget cơ bản & Key
-
-**Question:** Which property of ListTile usually displays trailing widget?
+**Question 142:** Which property of ListTile usually displays trailing widget?
 
 A. trailing
 
@@ -3122,9 +2838,7 @@ Tùy chọn A đúng: trailing. Câu trả lời phù hợp với hành vi loạ
 
 https://docs.flutter.dev/ui
 
-### Câu 143: Widget cơ bản & Key
-
-**Question:** Which widget can create dismissible list items?
+**Question 143:** Which widget can create dismissible list items?
 
 A. Dismissible
 
@@ -3144,9 +2858,7 @@ Tùy chọn A đúng: Dismissible. Câu trả lời phù hợp với hành vi lo
 
 https://docs.flutter.dev/ui
 
-### Câu 144: Bố cục cơ bản
-
-**Question:** Consider: dynamic x = 10; x = "Hello"; print(x); What happens when this code runs?
+**Question 144:** Consider: dynamic x = 10; x = "Hello"; print(x); What happens when this code runs?
 
 A. Compile error because a String cannot be assigned to a variable already typed as int
 
@@ -3166,9 +2878,7 @@ D. Throws a TypeError exception at runtime
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 145: Bố cục cơ bản
-
-**Question:** What does the `??` operator do in Dart?
+**Question 145:** What does the `??` operator do in Dart?
 
 A. Type equality comparison
 
@@ -3188,9 +2898,7 @@ D. Logical XOR operator
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 146: Bố cục cơ bản
-
-**Question:** Given `Map<String, int> scores = {"Anna": 95};`, what happens when accessing `scores["Ben"]` (a nonexistent key)?
+**Question 146:** Given `Map<String, int> scores = {"Anna": 95};`, what happens when accessing `scores["Ben"]` (a nonexistent key)?
 
 A. Throws an exception immediately
 
@@ -3210,9 +2918,7 @@ Truy cập Map bằng khóa không tồn tại sẽ trả về giá trị rỗng
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 147: Bố cục cơ bản
-
-**Question:** In Dart's try/catch, what does the `catch (e, s)` syntax allow a developer to do?
+**Question 147:** In Dart's try/catch, what does the `catch (e, s)` syntax allow a developer to do?
 
 A. Catch two different exception types at once
 
@@ -3232,9 +2938,7 @@ D. Only applicable to String-type errors
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 148: Bố cục cơ bản
-
-**Question:** Consider this constrained mixin code: class Pet { String name; Pet(this.name); } mixin CanBark on Pet { void bark() => print("\$name says woof!"); } class Dog extends Pet with CanBark { Dog() : super("Buddy"); } class Fish { // want to apply "with CanBark" here } If class `Fish` (not extending `Pet`) tries to declare `class Fish with CanBark {}`, what happens?
+**Question 148:** Consider this constrained mixin code: class Pet { String name; Pet(this.name); } mixin CanBark on Pet { void bark() => print("\$name says woof!"); } class Dog extends Pet with CanBark { Dog() : super("Buddy"); } class Fish { // want to apply "with CanBark" here } If class `Fish` (not extending `Pet`) tries to declare `class Fish with CanBark {}`, what happens?
 
 A. Compiles successfully, Fish will have a working bark() method
 
@@ -3254,9 +2958,7 @@ Mixin `CanBark on Pet` chỉ bị ràng buộc to các lớp apply to mở rộn
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 149: Bố cục cơ bản
-
-**Question:** Given this generic class code: class Box`<T>` { T value; Box(this.value); void show() => print("Value = \$value"); } void main() => Box`<int>`(10).show(); If `Box<int>(10)` is replaced with `Box<String>(10)`, what happens?
+**Question 149:** Given this generic class code: class Box`<T>` { T value; Box(this.value); void show() => print("Value = \$value"); } void main() => Box`<int>`(10).show(); If `Box<int>(10)` is replaced with `Box<String>(10)`, what happens?
 
 A. Runs normally, prints "Value = 10
 
@@ -3276,9 +2978,7 @@ D. The program throws a runtime exception but still compiles
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 150: Bố cục cơ bản
-
-**Question:** In Flutter, which widget acts as the "backbone" of a Material screen, providing AppBar, body, and FloatingActionButton?
+**Question 150:** In Flutter, which widget acts as the "backbone" of a Material screen, providing AppBar, body, and FloatingActionButton?
 
 A. Container
 
@@ -3298,9 +2998,7 @@ Scaffold là xương sống của màn hình Material, cung cấp AppBar/body/FA
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 151: Bố cục cơ bản
-
-**Question:** A student places a `ListView` directly inside a `Column` without wrapping it in `Expanded` or `Flexible`. What common error occurs?
+**Question 151:** A student places a `ListView` directly inside a `Column` without wrapping it in `Expanded` or `Flexible`. What common error occurs?
 
 A. The app runs completely normally, no issues
 
@@ -3320,9 +3018,7 @@ Việc đặt ListView trong Column không có Expanded/Flexible sẽ gây ra ch
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 152: Bố cục cơ bản
-
-**Question:** In the ListTile + CircleAvatar example: ListTile( leading: CircleAvatar(child: Text(m['title']\![0])), title: Text(m['title']!), subtitle: Text(m['year']!), trailing: const Icon(Icons.chevron_right), onTap: () => debugPrint('Selected \${m['title']}'), ); What does the `!` after `m['title']` mean in the context of Dart's null-safety?
+**Question 152:** In the ListTile + CircleAvatar example: ListTile( leading: CircleAvatar(child: Text(m['title']\![0])), title: Text(m['title']!), subtitle: Text(m['year']!), trailing: const Icon(Icons.chevron_right), onTap: () => debugPrint('Selected \${m['title']}'), ); What does the `!` after `m['title']` mean in the context of Dart's null-safety?
 
 A. Logical negation (NOT) operator
 
@@ -3342,9 +3038,7 @@ D. Converts a String type to int
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 153: Bố cục cơ bản
-
-**Question:** How does the `Wrap` widget differ from `Row`, and why does it suit a genre chip list?
+**Question 153:** How does the `Wrap` widget differ from `Row`, and why does it suit a genre chip list?
 
 A. Wrap is identical to Row, no difference
 
@@ -3364,9 +3058,7 @@ Wrap tự động xếp các phần tử con vào một dòng mới khi hết kh
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 154: Bố cục cơ bản
-
-**Question:** In the Sectioned Home Screen code: body: ListView( padding: const EdgeInsets.all(12), children: [ section('Now Playing'), const Placeholder(fallbackHeight: 120), section('Trending'), const Placeholder(fallbackHeight: 120), ], ), Why use `ListView` (instead of `Column`) as the root widget for an entire screen containing multiple sections?
+**Question 154:** In the Sectioned Home Screen code: body: ListView( padding: const EdgeInsets.all(12), children: [ section('Now Playing'), const Placeholder(fallbackHeight: 120), section('Trending'), const Placeholder(fallbackHeight: 120), ], ), Why use `ListView` (instead of `Column`) as the root widget for an entire screen containing multiple sections?
 
 A. Because ListView is mandatory inside every Scaffold
 
@@ -3386,9 +3078,7 @@ ListView cho phép cuộn khi nội dung vượt quá chiều cao màn hình, tr
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 155: Bố cục cơ bản
-
-**Question:** In VS Code, what does the "Wrap with Widget" feature support for a Flutter developer?
+**Question 155:** In VS Code, what does the "Wrap with Widget" feature support for a Flutter developer?
 
 A. Automatically deploy the app to a store
 
@@ -3408,9 +3098,7 @@ Gói bằng Widget" nhanh chóng gói một widget đã chọn bằng Phần đ�
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 156: Bố cục cơ bản
-
-**Question:** In a basic Scaffold example, where is `floatingActionButton` typically placed and what is it used for?
+**Question 156:** In a basic Scaffold example, where is `floatingActionButton` typically placed and what is it used for?
 
 A. In the middle of the screen, as a background for the whole body
 
@@ -3430,9 +3118,7 @@ floatingActionButton thường nổi ở phía dưới bên phải, được s�
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 157: Bố cục cơ bản
-
-**Question:** According to Module 4, when should `SingleChildScrollView` or `Flexible` be used to fix overflow on small screens?
+**Question 157:** According to Module 4, when should `SingleChildScrollView` or `Flexible` be used to fix overflow on small screens?
 
 A. Never needed, Flutter automatically handles overflow
 
@@ -3452,9 +3138,7 @@ Sử dụng chúng khi nội dung vượt quá kích thước màn hình có s�
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 158: Bố cục cơ bản
-
-**Question:** What is the difference between `Flexible` and `Expanded` in a Row/Column?
+**Question 158:** What is the difference between `Flexible` and `Expanded` in a Row/Column?
 
 A. No difference, the two widgets are entirely equivalent
 
@@ -3474,9 +3158,7 @@ Expanded buộc lấp đầy toàn bộ không gian linh hoạt được phân b
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 159: Bố cục cơ bản
-
-**Question:** Per Module 6's "Best Practices," when should `Wrap` be prioritized over `Row`?
+**Question 159:** Per Module 6's "Best Practices," when should `Wrap` be prioritized over `Row`?
 
 A. When displaying a long chip list that could overflow horizontal space
 
@@ -3496,9 +3178,7 @@ Wrap nên được ưu tiên cho danh sách chip dài có thể tràn theo chi�
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 160: Bố cục cơ bản
-
-**Question:** In the example above, if the user enters the email `"taken123@test.com"`, what message does the app show after 2 seconds?
+**Question 160:** In the example above, if the user enters the email `"taken123@test.com"`, what message does the app show after 2 seconds?
 
 A. Account created for taken123@test.com
 
@@ -3518,9 +3198,7 @@ Vì email bắt đầu bằng "taken" nên logic `_email.toLowerCase().startsWit
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 161: Bố cục cơ bản
-
-**Question:** In the SQL SELECT syntax reviewed in the lecture, which clause is used to FILTER data rows before returning the result?
+**Question 161:** In the SQL SELECT syntax reviewed in the lecture, which clause is used to FILTER data rows before returning the result?
 
 A. ORDER BY
 
@@ -3540,9 +3218,7 @@ D. SELECT
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 162: Bố cục cơ bản
-
-**Question:** When is the `GROUP BY` clause combined with `HAVING` typically used?
+**Question 162:** When is the `GROUP BY` clause combined with `HAVING` typically used?
 
 A. When you need to sort results alphabetically
 
@@ -3562,9 +3238,7 @@ GROUP BY + HAVING được sử dụng để nhóm các hàng và lọc theo cá
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 163: Bố cục cơ bản
-
-**Question:** Which of the following widgets is a textbook example of Implicit Animation?
+**Question 163:** Which of the following widgets is a textbook example of Implicit Animation?
 
 A. AnimationController
 
@@ -3584,9 +3258,7 @@ D. CurvedAnimation
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 164: Bố cục cơ bản
-
-**Question:** What does Map.putIfAbsent(key, ifAbsent) do when the key does not exist?
+**Question 164:** What does Map.putIfAbsent(key, ifAbsent) do when the key does not exist?
 
 A. Deletes the entire Map
 
@@ -3606,9 +3278,7 @@ Tùy chọn C đúng: Gọi ifAbsent, lưu kết quả vào Map và trả về g
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 165: Bố cục cơ bản
-
-**Question:** In which directions do Column and Row arrange their children?
+**Question 165:** In which directions do Column and Row arrange their children?
 
 A. Column vertically and Row horizontally
 
@@ -3628,9 +3298,7 @@ Lựa chọn A đúng: Cột theo chiều dọc và Hàng theo chiều ngang. B�
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 166: Bố cục cơ bản
-
-**Question:** Which widget is appropriate for displaying a long scrollable list?
+**Question 166:** Which widget is appropriate for displaying a long scrollable list?
 
 A. A non-scrollable Stack
 
@@ -3650,9 +3318,7 @@ Tùy chọn D đúng: ListView.builder hoặc ListView.separated. Câu trả l�
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 167: Bố cục cơ bản
-
-**Question:** How is the common error of placing an unconstrained ListView inside a Column usually fixed?
+**Question 167:** How is the common error of placing an unconstrained ListView inside a Column usually fixed?
 
 A. Replace it with Text
 
@@ -3672,9 +3338,7 @@ Tùy chọn D đúng: Gói ListView bằng Mở rộng. Bố cục Flutter đư�
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 168: Bố cục cơ bản
-
-**Question:** How does Flexible differ from Expanded?
+**Question 168:** How does Flexible differ from Expanded?
 
 A. It allows a child to flex without forcing it to fill all remaining space
 
@@ -3694,9 +3358,7 @@ Phương án A đúng: Nó cho phép trẻ uốn cong mà không buộc trẻ ph
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 169: Bố cục cơ bản
-
-**Question:** Which improvement is suggested for screens wider than 800 pixels?
+**Question 169:** Which improvement is suggested for screens wider than 800 pixels?
 
 A. Require a fixed width
 
@@ -3716,9 +3378,7 @@ Tùy chọn C đúng: Sử dụng thanh bên bộ lọc và danh sách phim hai 
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 170: Bố cục cơ bản
-
-**Question:** What type is a network response body before decoding?
+**Question 170:** What type is a network response body before decoding?
 
 A. A ready-made Post object
 
@@ -3738,9 +3398,7 @@ Tùy chọn B đúng: String. Câu trả lời phù hợp với hành vi loại 
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 171: Giới thiệu Flutter & Dart
-
-**Question:** What is the arrow function syntax in Dart?
+**Question 171:** What is the arrow function syntax in Dart?
 
 A. ->
 
@@ -3760,9 +3418,7 @@ Tùy chọn B đúng: `=>` là cú pháp mũi tên của Dart cho hàm bao gồm
 
 https://dart.dev/language/functions
 
-### Câu 172: Bố cục cơ bản
-
-**Question:** What does ?? mean in Dart?
+**Question 172:** What does ?? mean in Dart?
 
 A. Throw exception
 
@@ -3782,9 +3438,7 @@ Tùy chọn B đúng: Mặc định nếu rỗng. Câu trả lời phù hợp v�
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 173: Bố cục cơ bản
-
-**Question:** Which widget adds empty space around its child?
+**Question 173:** Which widget adds empty space around its child?
 
 A. Margin
 
@@ -3804,9 +3458,7 @@ Tùy chọn B đúng: Padding. Câu trả lời phù hợp với hành vi loại
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 174: Bố cục cơ bản
-
-**Question:** Which widget centers its child?
+**Question 174:** Which widget centers its child?
 
 A. Expanded
 
@@ -3826,9 +3478,7 @@ Tùy chọn C đúng: Center. Bố cục Flutter được tạo từ widgets; wi
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 175: Bố cục cơ bản
-
-**Question:** Which widget arranges children vertically?
+**Question 175:** Which widget arranges children vertically?
 
 A. Row
 
@@ -3848,9 +3498,7 @@ Tùy chọn B đúng: Column. Câu trả lời phù hợp với hành vi loại 
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 176: Bố cục cơ bản
-
-**Question:** Which widget arranges children horizontally?
+**Question 176:** Which widget arranges children horizontally?
 
 A. Row
 
@@ -3870,9 +3518,7 @@ Tùy chọn A đúng: Row. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 177: Bố cục cơ bản
-
-**Question:** Which widget overlaps children?
+**Question 177:** Which widget overlaps children?
 
 A. Stack
 
@@ -3892,9 +3538,7 @@ Tùy chọn A đúng: Stack. Câu trả lời phù hợp với hành vi loại h
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 178: Bố cục cơ bản
-
-**Question:** Which widget is used for scrollable lists?
+**Question 178:** Which widget is used for scrollable lists?
 
 A. GridView
 
@@ -3914,9 +3558,7 @@ Tùy chọn B đúng: ListView. Câu trả lời phù hợp với hành vi loạ
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 179: Bố cục nâng cao
-
-**Question:** What is `CurvedAnimation` in Flutter used for?
+**Question 179:** What is `CurvedAnimation` in Flutter used for?
 
 A. Drawing a geometric curve shape on screen
 
@@ -3936,9 +3578,7 @@ CurvedAnimation áp dụng đường cong giảm dần cho Hoạt ảnh tuyến 
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 180: Bố cục nâng cao
-
-**Question:** What is the basic difference between `SliverAppBar` and a regular `AppBar`?
+**Question 180:** What is the basic difference between `SliverAppBar` and a regular `AppBar`?
 
 A. SliverAppBar can only display icons, not text
 
@@ -3958,9 +3598,7 @@ SliverAppBar hoạt động bên trong CustomScrollView với khả năng mở r
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 181: Bố cục nâng cao
-
-**Question:** What are the `flexibleSpace` and `expandedHeight` properties of `SliverAppBar` used for?
+**Question 181:** What are the `flexibleSpace` and `expandedHeight` properties of `SliverAppBar` used for?
 
 A. `flexibleSpace` defines the content shown when the AppBar is in its expanded state (e.g. a large background image); `expandedHeight` sets the maximum height when the AppBar is fully expanded --- as you scroll down, the AppBar gradually shrinks to its standard height
 
@@ -3980,9 +3618,7 @@ flexibleSpace xác định nội dung mở rộng-state; expandedHeight đặt c
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 182: Bố cục nâng cao
-
-**Question:** In the Sliver ecosystem, how do `SliverList` and `SliverGrid` differ from a regular `ListView`/`GridView`?
+**Question 182:** In the Sliver ecosystem, how do `SliverList` and `SliverGrid` differ from a regular `ListView`/`GridView`?
 
 A. No difference at all, the two types are entirely equivalent in every context
 
@@ -4002,9 +3638,7 @@ SliverList/SliverGrid được thiết kế để kết hợp liền mạch nhi�
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 183: Bố cục nâng cao
-
-**Question:** Which widget clips its child to rounded corners easily?
+**Question 183:** Which widget clips its child to rounded corners easily?
 
 A. ClipRRect
 
@@ -4024,9 +3658,7 @@ Tùy chọn A đúng: ClipRRect. Câu trả lời phù hợp với hành vi lo�
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 184: Bố cục nâng cao
-
-**Question:** Which widget is used for custom painting?
+**Question 184:** Which widget is used for custom painting?
 
 A. CustomPaint
 
@@ -4046,9 +3678,7 @@ Tùy chọn A đúng: CustomPaint. Câu trả lời phù hợp với hành vi lo
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 185: Bố cục nâng cao
-
-**Question:** Which class is extended for custom drawing?
+**Question 185:** Which class is extended for custom drawing?
 
 A. CustomPainter
 
@@ -4068,9 +3698,7 @@ Tùy chọn A đúng: CustomPainter. Câu trả lời phù hợp với hành vi 
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 186: Bố cục nâng cao
-
-**Question:** Which widget combines multiple slivers in one scrollable area?
+**Question 186:** Which widget combines multiple slivers in one scrollable area?
 
 A. CustomScrollView
 
@@ -4090,9 +3718,7 @@ Tùy chọn A đúng: CustomScrollView. Câu trả lời phù hợp với hành 
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 187: Bố cục nâng cao
-
-**Question:** Which widget can pin and expand an app bar in a CustomScrollView?
+**Question 187:** Which widget can pin and expand an app bar in a CustomScrollView?
 
 A. SliverAppBar
 
@@ -4112,9 +3738,7 @@ Tùy chọn A đúng: SliverAppBar. Câu trả lời phù hợp với hành vi l
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 188: Bố cục nâng cao
-
-**Question:** Which widget is essential for ensuring that UI elements are not obscured by hardware features like the "Dynamic Island," notches, or curved screen edges?
+**Question 188:** Which widget is essential for ensuring that UI elements are not obscured by hardware features like the "Dynamic Island," notches, or curved screen edges?
 
 A. Expanded
 
@@ -4134,9 +3758,7 @@ Tùy chọn C đúng: SafeArea. Câu trả lời phù hợp với hành vi loạ
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 189: Bố cục nâng cao
-
-**Question:** If you want a GridView to display 2 columns on a mobile device and 4 columns on a tablet, which property should be updated based on screen width?
+**Question 189:** If you want a GridView to display 2 columns on a mobile device and 4 columns on a tablet, which property should be updated based on screen width?
 
 A. mainAxisSpacing
 
@@ -4156,9 +3778,7 @@ Tùy chọn B đúng: crossAxisCount. Bố cục Flutter được tạo từ wid
 
 https://docs.flutter.dev/ui/layout
 
-### Câu 190: Theme & Responsive
-
-**Question:** What is the main role of the Embedder Layer in Flutter's architecture?
+**Question 190:** What is the main role of the Embedder Layer in Flutter's architecture?
 
 A. Provide all Material and Cupertino widgets
 
@@ -4178,9 +3798,7 @@ Lớp nhúng xử lý việc tích hợp, đầu vào, lifecycle và quản lý 
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 191: Theme & Responsive
-
-**Question:** What does `ThemeMode.system` mean in `MaterialApp`?
+**Question 191:** What does `ThemeMode.system` mean in `MaterialApp`?
 
 A. Forces the app to always use the light theme
 
@@ -4200,9 +3818,7 @@ D. Has no effect if darkTheme isn't declared
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 192: Theme & Responsive
-
-**Question:** Given: return MaterialApp( theme: ThemeData.light(useMaterial3: true), darkTheme: ThemeData.dark(useMaterial3: true), themeMode: ThemeMode.dark, home: const DemoTheme(), ); Inside a child widget, what is the correct syntax to access the current theme's style (e.g. `titleLarge`)?
+**Question 192:** Given: return MaterialApp( theme: ThemeData.light(useMaterial3: true), darkTheme: ThemeData.dark(useMaterial3: true), themeMode: ThemeMode.dark, home: const DemoTheme(), ); Inside a child widget, what is the correct syntax to access the current theme's style (e.g. `titleLarge`)?
 
 A. `ThemeData.of(context).textTheme.titleLarge`
 
@@ -4222,9 +3838,7 @@ D. `MaterialApp.theme(context).titleLarge`
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 193: Theme & Responsive
-
-**Question:** A student writes: class DemoTheme extends StatelessWidget { @override Widget build(BuildContext context) { return Scaffold( body: Center(child: Text('Current theme', style: Theme.of(context).textTheme.titleLarge)), ); } } What role does `BuildContext context` in the `build` function play when calling `Theme.of(context)`?
+**Question 193:** A student writes: class DemoTheme extends StatelessWidget { @override Widget build(BuildContext context) { return Scaffold( body: Center(child: Text('Current theme', style: Theme.of(context).textTheme.titleLarge)), ); } } What role does `BuildContext context` in the `build` function play when calling `Theme.of(context)`?
 
 A. A parameter with no real effect, purely formal
 
@@ -4244,9 +3858,7 @@ D. Only used to pass API data
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 194: Theme & Responsive
-
-**Question:** What is the core difference between "Responsive UI" and "Adaptive UI" per the lecture?
+**Question 194:** What is the core difference between "Responsive UI" and "Adaptive UI" per the lecture?
 
 A. Responsive UI changes based on device type, Adaptive UI changes based on available space
 
@@ -4266,9 +3878,7 @@ D. Adaptive UI only applies to Web apps
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 195: Theme & Responsive
-
-**Question:** What information does `MediaQuery.of(context).size.width` retrieve?
+**Question 195:** What information does `MediaQuery.of(context).size.width` retrieve?
 
 A. The width of the current widget itself
 
@@ -4288,9 +3898,7 @@ D. The number of child widgets in the tree
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 196: Theme & Responsive
-
-**Question:** Given: Widget build(BuildContext context) { final w = MediaQuery.of(context).size.width; return Scaffold( body: Center( child: Text(w < 600 ? "Mobile Layout" : "Tablet Layout"), ), ); } When the device is rotated from portrait to landscape, making the width exceed 600px, what happens to the displayed text?
+**Question 196:** Given: Widget build(BuildContext context) { final w = MediaQuery.of(context).size.width; return Scaffold( body: Center( child: Text(w < 600 ? "Mobile Layout" : "Tablet Layout"), ), ); } When the device is rotated from portrait to landscape, making the width exceed 600px, what happens to the displayed text?
 
 A. Nothing changes because MediaQuery only reads the value once at app startup
 
@@ -4310,9 +3918,7 @@ Flutter tự động tạo lại khi màn hình size changes (e.g. xoay), do đ�
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 197: Theme & Responsive
-
-**Question:** What is the core difference between `LayoutBuilder` and `MediaQuery`?
+**Question 197:** What is the core difference between `LayoutBuilder` and `MediaQuery`?
 
 A. LayoutBuilder provides information about the direct parent widget's constraints, while MediaQuery provides the entire device screen's info
 
@@ -4332,9 +3938,7 @@ LayoutBuilder đưa ra các ràng buộc của cấp độ gốc trực tiếp; 
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 198: Theme & Responsive
-
-**Question:** Given: LayoutBuilder( builder: (context, c) { return c.maxWidth > 500 ? WideCard() : NarrowCard(); }, ); If this `LayoutBuilder` is placed inside a `Container` with a fixed width of 300px (while the device screen is 800px wide), which widget is displayed?
+**Question 198:** Given: LayoutBuilder( builder: (context, c) { return c.maxWidth > 500 ? WideCard() : NarrowCard(); }, ); If this `LayoutBuilder` is placed inside a `Container` with a fixed width of 300px (while the device screen is 800px wide), which widget is displayed?
 
 A. WideCard(), because the device screen is wider than 500px
 
@@ -4354,9 +3958,7 @@ D. This will cause an error because LayoutBuilder cannot be placed inside a fixe
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 199: Theme & Responsive
-
-**Question:** What is `OrientationBuilder` used for?
+**Question 199:** What is `OrientationBuilder` used for?
 
 A. Detecting device rotation (portrait/landscape) and changing the UI accordingly
 
@@ -4376,9 +3978,7 @@ OrientationBuilder phát hiện thao tác xoay thiết bị và cho phép UI tha
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 200: Theme & Responsive
-
-**Question:** In the "Responsive Widgets Overview" list, which widget helps avoid overflow by letting a child take up the remaining space in a Row/Column?
+**Question 200:** In the "Responsive Widgets Overview" list, which widget helps avoid overflow by letting a child take up the remaining space in a Row/Column?
 
 A. Wrap
 
@@ -4398,9 +3998,7 @@ Expanded cho phép trẻ chiếm khoảng trống còn lại trong Hàng/Cột, 
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 201: Theme & Responsive
-
-**Question:** Given this GridView code: GridView.count( crossAxisCount: width < 600 ? 2 : 4, ); If the `width` variable is read ONCE in `initState()` instead of in `build()` (from MediaQuery), what problem could arise when the user rotates the screen afterward?
+**Question 201:** Given this GridView code: GridView.count( crossAxisCount: width < 600 ? 2 : 4, ); If the `width` variable is read ONCE in `initState()` instead of in `build()` (from MediaQuery), what problem could arise when the user rotates the screen afterward?
 
 A. No problem at all because Flutter automatically syncs initState with build
 
@@ -4420,9 +4018,7 @@ Chỉ đọc width trong initState() có nghĩa là crossAxisCount không đư�
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 202: Theme & Responsive
-
-**Question:** In the Genre Chips example (Wrap-based chip list), the lecture emphasizes: "This behavior is achieved automatically by using Wrap, without conditional logic." What does this mean technically?
+**Question 202:** In the Genre Chips example (Wrap-based chip list), the lecture emphasizes: "This behavior is achieved automatically by using Wrap, without conditional logic." What does this mean technically?
 
 A. You need many `if` statements to check screen size then decide chips per row
 
@@ -4442,9 +4038,7 @@ D. This description is wrong, Wrap always needs accompanying conditional logic
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 203: Theme & Responsive
-
-**Question:** In the Responsive Movie Card example: LayoutBuilder( builder: (context, c) { final isWide = c.maxWidth > 600; return Row(children: [ Image.network(poster, width: isWide ? 150 : 100), SizedBox(width: 16), Expanded(child: Text(title)) ]); }, ) What is the role of `Expanded` wrapping `Text(title)` in this Row?
+**Question 203:** In the Responsive Movie Card example: LayoutBuilder( builder: (context, c) { final isWide = c.maxWidth > 600; return Row(children: [ Image.network(poster, width: isWide ? 150 : 100), SizedBox(width: 16), Expanded(child: Text(title)) ]); }, ) What is the role of `Expanded` wrapping `Text(title)` in this Row?
 
 A. Makes the Text automatically bold
 
@@ -4464,9 +4058,7 @@ Expanded cho phép Text chiếm không gian ngang còn lại và tránh tràn ng
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 204: Theme & Responsive
-
-**Question:** In Lab 6.3 (Tablet Layout Enhancement), the requirement for screens > 800px is to add a sidebar filter and switch to a 2-column movie list. What technique is recommended to implement this at the screen's root level?
+**Question 204:** In Lab 6.3 (Tablet Layout Enhancement), the requirement for screens > 800px is to add a sidebar filter and switch to a 2-column movie list. What technique is recommended to implement this at the screen's root level?
 
 A. Use `Wrap` alone, no other tool needed
 
@@ -4486,9 +4078,7 @@ Việc sử dụng LayoutBuilder ở cấp cơ sở để phát hiện giới h�
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 205: Theme & Responsive
-
-**Question:** What problem does the `AspectRatio` widget in the "Responsive Widgets Overview" list help solve?
+**Question 205:** What problem does the `AspectRatio` widget in the "Responsive Widgets Overview" list help solve?
 
 A. Helps images avoid being stretched/distorted when the container size changes, by maintaining a fixed aspect ratio
 
@@ -4508,9 +4098,7 @@ AspectRatio duy trì tỷ lệ khung hình cố định để hình ảnh không
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 206: Theme & Responsive
-
-**Question:** Consider: a sort Dropdown is placed inside a `Row` with `mainAxisSize: MainAxisSize.max` alongside other large fixed-size widgets, causing the total width to exceed a small screen. In the spirit of Module 6, what is the most reasonable solution?
+**Question 206:** Consider: a sort Dropdown is placed inside a `Row` with `mainAxisSize: MainAxisSize.max` alongside other large fixed-size widgets, causing the total width to exceed a small screen. In the spirit of Module 6, what is the most reasonable solution?
 
 A. Completely remove the Dropdown from small screens
 
@@ -4530,9 +4118,7 @@ Việc gói phần tử linh hoạt bằng Flexible/Expanded hoặc sử dụng 
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 207: Theme & Responsive
-
-**Question:** Comparing using `MediaQuery.of(context).size.width` at the full-screen level versus `LayoutBuilder` at a deeply nested child widget level (e.g. inside a narrow Card within a 3-column Row). Which statement is most accurate?
+**Question 207:** Comparing using `MediaQuery.of(context).size.width` at the full-screen level versus `LayoutBuilder` at a deeply nested child widget level (e.g. inside a narrow Card within a 3-column Row). Which statement is most accurate?
 
 A. Both approaches always give identical results in every case
 
@@ -4552,9 +4138,7 @@ MediaQuery trả về toàn màn hình width bất kể ràng buộc cục bộ 
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 208: Theme & Responsive
-
-**Question:** According to the lecture, which tool in Flutter Inspector helps debug responsive layout?
+**Question 208:** According to the lecture, which tool in Flutter Inspector helps debug responsive layout?
 
 A. Layout Explorer
 
@@ -4574,9 +4158,7 @@ Layout Explorer" trong Flutter Inspector giúp debug bố cục phản hồi the
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 209: Theme & Responsive
-
-**Question:** In the context of the responsive search bar: Container( padding: EdgeInsets.symmetric(horizontal: 16), child: TextField(...), ) The lecture notes "Students often forget SafeArea here." If this is the first element in the Scaffold's `body` and has no SafeArea, what specific risk is most likely on a device with a notch?
+**Question 209:** In the context of the responsive search bar: Container( padding: EdgeInsets.symmetric(horizontal: 16), child: TextField(...), ) The lecture notes "Students often forget SafeArea here." If this is the first element in the Scaffold's `body` and has no SafeArea, what specific risk is most likely on a device with a notch?
 
 A. The TextField will be automatically disabled
 
@@ -4596,9 +4178,7 @@ Việc thiếu SafeArea có nguy cơ khiến phần trên cùng của thanh tìm
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 210: Theme & Responsive
-
-**Question:** What is `FractionallySizedBox` in the responsive widget list used for?
+**Question 210:** What is `FractionallySizedBox` in the responsive widget list used for?
 
 A. Sizing a widget as a percentage relative to its parent widget, instead of a fixed pixel value
 
@@ -4618,9 +4198,7 @@ FractionallySizedBox kích thước widget theo tỷ lệ phần trăm của cha
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 211: Theme & Responsive
-
-**Question:** Given: if (width < 600) return MobileView(); return TabletView(); If this breakpoint logic is placed in the `build()` function of a deeply nested child widget inside multiple constrained `Padding`/`Container` layers, but `width` is taken from `MediaQuery.of(context).size.width` (full screen width) instead of `LayoutBuilder`, what is the potential consequence?
+**Question 211:** Given: if (width < 600) return MobileView(); return TabletView(); If this breakpoint logic is placed in the `build()` function of a deeply nested child widget inside multiple constrained `Padding`/`Container` layers, but `width` is taken from `MediaQuery.of(context).size.width` (full screen width) instead of `LayoutBuilder`, what is the potential consequence?
 
 A. No consequence at all because Flutter automatically syncs
 
@@ -4640,9 +4218,7 @@ Việc sử dụng các ràng buộc MediaQuery width toàn màn hình thay vì 
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 212: Theme & Responsive
-
-**Question:** According to the "Types of Local Storage in Flutter" table, which case best fits using SQLite (sqflite)?
+**Question 212:** According to the "Types of Local Storage in Flutter" table, which case best fits using SQLite (sqflite)?
 
 A. Storing a boolean flag "has onboarding been completed
 
@@ -4662,9 +4238,7 @@ SQLite phù hợp nhất với dữ liệu quan hệ có cấu trúc cần truy 
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 213: Theme & Responsive
-
-**Question:** Which data type is NOT listed as a typical example suitable for Local Storage in "Why Local Storage?
+**Question 213:** Which data type is NOT listed as a typical example suitable for Local Storage in "Why Local Storage?
 
 A. Dark mode settings
 
@@ -4684,9 +4258,7 @@ Mã thông báo phiên cuộc gọi video theo thời gian thực KHÔNG đượ
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 214: Theme & Responsive
-
-**Question:** In Lab 9 (Offline-First Mini App), what part of the app is SharedPreferences suggested to be used for?
+**Question 214:** In Lab 9 (Offline-First Mini App), what part of the app is SharedPreferences suggested to be used for?
 
 A. Storing the entire relationally-structured Todo list
 
@@ -4706,9 +4278,7 @@ SharedPreferences được đề xuất để lưu trữ chủ đề của ứng
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 215: Theme & Responsive
-
-**Question:** Per "Optimization Technique 3: Avoid Heavy Work in build()," which of the following should NOT be done directly inside the `build()` function?
+**Question 215:** Per "Optimization Technique 3: Avoid Heavy Work in build()," which of the following should NOT be done directly inside the `build()` function?
 
 A. Returning a simple `Text` widget
 
@@ -4728,9 +4298,7 @@ KHÔNG nên thực hiện việc gọi API, phân tích cú pháp JSON, sắp x�
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 216: Theme & Responsive
-
-**Question:** What required parameter does `AnimationController` need to work, illustrating the connection between animation and widget lifecycle?
+**Question 216:** What required parameter does `AnimationController` need to work, illustrating the connection between animation and widget lifecycle?
 
 A. `context` --- because animation must be tied to BuildContext
 
@@ -4750,9 +4318,7 @@ D. `key` --- so the animation can be tested
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 217: Theme & Responsive
-
-**Question:** What do Material and Cupertino mainly provide in Flutter?
+**Question 217:** What do Material and Cupertino mainly provide in Flutter?
 
 A. Two testing tools
 
@@ -4772,9 +4338,7 @@ Tùy chọn D đúng: các bộ UI widget tuân theo kiểu thiết kế Android
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 218: Theme & Responsive
-
-**Question:** Why are custom exceptions useful?
+**Question 218:** Why are custom exceptions useful?
 
 A. They directly increase FPS
 
@@ -4794,9 +4358,7 @@ Tùy chọn C đúng: Chúng cung cấp ngữ cảnh lỗi theo miền cụ th�
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 219: Theme & Responsive
-
-**Question:** What is responsive UI?
+**Question 219:** What is responsive UI?
 
 A. A UI that always uses fixed pixels
 
@@ -4816,9 +4378,7 @@ Tùy chọn D đúng: Bố cục thay đổi theo không gian có sẵn. Câu tr
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 220: Theme & Responsive
-
-**Question:** What is adaptive UI?
+**Question 220:** What is adaptive UI?
 
 A. A layout that changes only according to the parent's width
 
@@ -4838,9 +4398,7 @@ Tùy chọn D đúng: Bố cục hoặc thành phần thay đổi tùy theo lo�
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 221: Theme & Responsive
-
-**Question:** Which example is responsive behavior?
+**Question 221:** Which example is responsive behavior?
 
 A. Replacing BottomNavigationBar with NavigationRail because the device is a tablet
 
@@ -4860,9 +4418,7 @@ Tùy chọn B đúng: Thay đổi lưới từ hai cột thành bốn cột khi 
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 222: Theme & Responsive
-
-**Question:** Which example is adaptive behavior?
+**Question 222:** Which example is adaptive behavior?
 
 A. Increasing padding according to width
 
@@ -4882,9 +4438,7 @@ Tùy chọn D đúng: Thay thế điều hướng phía dưới bằng Navigatio
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 223: Theme & Responsive
-
-**Question:** Which expression gets the screen width through MediaQuery?
+**Question 223:** Which expression gets the screen width through MediaQuery?
 
 A. Screen.getWidth()
 
@@ -4904,9 +4458,7 @@ Tùy chọn B đúng: MediaQuery.of(ngữ cảnh).size.width. Câu trả lời p
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 224: Theme & Responsive
-
-**Question:** What does OrientationBuilder detect?
+**Question 224:** What does OrientationBuilder detect?
 
 A. Light or dark theme
 
@@ -4926,9 +4478,7 @@ Tùy chọn B đúng: Hướng dọc hoặc hướng ngang. Câu trả lời ph�
 
 https://docs.flutter.dev/ui/adaptive-responsive
 
-### Câu 225: State & Lifecycle
-
-**Question:** What is the difference between an arrow function (`=>`) and a function block (`{ return ...; }`) in Dart?
+**Question 225:** What is the difference between an arrow function (`=>`) and a function block (`{ return ...; }`) in Dart?
 
 A. Arrow functions can only be used for async functions
 
@@ -4948,9 +4498,7 @@ Hàm mũi tên là cách viết tắt của một biểu thức đơn return; kh
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 226: State & Lifecycle
-
-**Question:** Consider this code, predict the result: Future`<String>` fetchData() async { await Future.delayed(Duration(seconds: 1)); return "Data loaded"; } void main() { print("Start"); fetchData().then((value) => print(value)); print("End"); } What order is printed to console?
+**Question 226:** Consider this code, predict the result: Future`<String>` fetchData() async { await Future.delayed(Duration(seconds: 1)); return "Data loaded"; } void main() { print("Start"); fetchData().then((value) => print(value)); print("End"); } What order is printed to console?
 
 A. Start, Data loaded, End
 
@@ -4970,9 +4518,7 @@ Vì `fetchData()` không được chờ đợi trong `main()` nên nó không ch
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 227: State & Lifecycle
-
-**Question:** Consider the Student class and mini-lab: class Student { String name; Student(this.name); } void main() async { var list = [Student("An"), Student("Binh")]; await Future.delayed(Duration(seconds: 1)); list.forEach((s) => print(s.name)); } If the `await` keyword before `Future.delayed(...)` is removed, what happens?
+**Question 227:** Consider the Student class and mini-lab: class Student { String name; Student(this.name); } void main() async { var list = [Student("An"), Student("Binh")]; await Future.delayed(Duration(seconds: 1)); list.forEach((s) => print(s.name)); } If the `await` keyword before `Future.delayed(...)` is removed, what happens?
 
 A. The program will show a compile error due to missing await
 
@@ -4992,9 +4538,7 @@ Không chờ `Future.delayed` cho phép `main()` tiếp tục thực thi các c�
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 228: State & Lifecycle
-
-**Question:** Given the comparison table of `extends`, `implements`, `with`, which best describes `implements`?
+**Question 228:** Given the comparison table of `extends`, `implements`, `with`, which best describes `implements`?
 
 A. Inherits all available behavior from the parent class
 
@@ -5014,9 +4558,7 @@ D. Not supported by Dart, only exists in Java
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 229: State & Lifecycle
-
-**Question:** What is the main purpose behind introducing the Repository Pattern in Module 3?
+**Question 229:** What is the main purpose behind introducing the Repository Pattern in Module 3?
 
 A. Fully replaces Widgets in Flutter
 
@@ -5036,9 +4578,7 @@ Mẫu Repository tách việc tìm nạp dữ liệu khỏi UI, hỗ trợ khả
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 230: State & Lifecycle
-
-**Question:** Given this repository code using a Stream: Stream`<int>` counter() async { for (int i = 1; i <= 3; i++) { await Future.delayed(Duration(milliseconds: 300)); yield i; } } When this Stream is bound to `StreamBuilder(stream: repo.counter(), ...)`, how will the UI behave?
+**Question 230:** Given this repository code using a Stream: Stream`<int>` counter() async { for (int i = 1; i <= 3; i++) { await Future.delayed(Duration(milliseconds: 300)); yield i; } } When this Stream is bound to `StreamBuilder(stream: repo.counter(), ...)`, how will the UI behave?
 
 A. The UI only builds once, after the entire loop finishes
 
@@ -5058,9 +4598,7 @@ UI tự động xây dựng lại mỗi khi có giá trị mới, tạo hiệu �
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 231: State & Lifecycle
-
-**Question:** Given: class _RadioScreenState extends State`<RadioScreen>` { String? quality = 'HD'; @override Widget build(BuildContext context) { return Column(children: [ RadioListTile`<String>`( title: const Text('SD'), value: 'SD', groupValue: quality, onChanged: (v) => setState(() => quality = v), ), RadioListTile`<String>`( title: const Text('HD'), value: 'HD', groupValue: quality, onChanged: (v) => setState(() => quality = v), ), ]); } } If `setState()` is removed from `onChanged` (keeping only `quality = v`), what happens when the user taps 'SD'?
+**Question 231:** Given: class _RadioScreenState extends State`<RadioScreen>` { String? quality = 'HD'; @override Widget build(BuildContext context) { return Column(children: [ RadioListTile`<String>`( title: const Text('SD'), value: 'SD', groupValue: quality, onChanged: (v) => setState(() => quality = v), ), RadioListTile`<String>`( title: const Text('HD'), value: 'HD', groupValue: quality, onChanged: (v) => setState(() => quality = v), ), ]); } } If `setState()` is removed from `onChanged` (keeping only `quality = v`), what happens when the user taps 'SD'?
 
 A. Variable `quality` is still updated to 'SD' but the UI doesn't rebuild to reflect the change, the radio still displays as before
 
@@ -5080,9 +4618,7 @@ Không có setState, `quality` vẫn cập nhật trong bộ nhớ nhưng Flutte
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 232: State & Lifecycle
-
-**Question:** This code is used to pick a date: Future`<void>` pickDate() async { final date = await showDatePicker( context: context, initialDate: DateTime.now(), firstDate: DateTime(2000), lastDate: DateTime(2100), ); if (date != null) setState(() => selectedDate = date); } Why is checking `if (date != null)` needed before calling `setState`?
+**Question 232:** This code is used to pick a date: Future`<void>` pickDate() async { final date = await showDatePicker( context: context, initialDate: DateTime.now(), firstDate: DateTime(2000), lastDate: DateTime(2100), ); if (date != null) setState(() => selectedDate = date); } Why is checking `if (date != null)` needed before calling `setState`?
 
 A. Because `showDatePicker` always returns null when working correctly
 
@@ -5102,9 +4638,7 @@ Việc kiểm tra null là cần thiết vì người dùng có thể hủy hộ
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 233: State & Lifecycle
-
-**Question:** In the `HomeTabs` example: class _HomeTabsState extends State`<HomeTabs>` { int index = 0; final screens = const [Center(child: Text('Home')), ...]; @override Widget build(BuildContext context) { return Scaffold( body: screens[index], bottomNavigationBar: BottomNavigationBar( currentIndex: index, onTap: (i) => setState(() => index = i), items: const [...], ), ); } } If the `index` variable were not held inside a `StatefulWidget` (e.g. declared in a StatelessWidget), what would happen when the user taps a tab?
+**Question 233:** In the `HomeTabs` example: class _HomeTabsState extends State`<HomeTabs>` { int index = 0; final screens = const [Center(child: Text('Home')), ...]; @override Widget build(BuildContext context) { return Scaffold( body: screens[index], bottomNavigationBar: BottomNavigationBar( currentIndex: index, onTap: (i) => setState(() => index = i), items: const [...], ), ); } } If the `index` variable were not held inside a `StatefulWidget` (e.g. declared in a StatelessWidget), what would happen when the user taps a tab?
 
 A. The app still works normally because StatelessWidget also supports setState
 
@@ -5124,9 +4658,7 @@ StatelessWidget không có setState nên không thể lưu trữ và cập nhậ
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 234: State & Lifecycle
-
-**Question:** In Module 4's "Common Errors & Fixes" list, what is the common cause of the UI "not updating" after data changes?
+**Question 234:** In Module 4's "Common Errors & Fixes" list, what is the common cause of the UI "not updating" after data changes?
 
 A. Network error
 
@@ -5146,9 +4678,7 @@ Quên gọi `setState()` là nguyên nhân phổ biến khiến UI không cập 
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 235: State & Lifecycle
-
-**Question:** What is the basic difference between `StatelessWidget` and `StatefulWidget`?
+**Question 235:** What is the basic difference between `StatelessWidget` and `StatefulWidget`?
 
 A. StatelessWidget can change its UI more flexibly than StatefulWidget
 
@@ -5168,9 +4698,7 @@ StatelessWidget không có state có thể thay đổi và không tự xây dự
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 236: State & Lifecycle
-
-**Question:** Given this CounterPage code using `setState`: class _CounterPageState extends State`<CounterPage>` { int count = 0; void increment() { setState(() { count++; }); } ... } If replaced with just `count++;` WITHOUT calling `setState()`, what happens?
+**Question 236:** Given this CounterPage code using `setState`: class _CounterPageState extends State`<CounterPage>` { int count = 0; void increment() { setState(() { count++; }); } ... } If replaced with just `count++;` WITHOUT calling `setState()`, what happens?
 
 A. `count`'s value still correctly increases in memory, but Flutter won't know to rebuild the widget, so the UI's displayed count doesn't change
 
@@ -5190,9 +4718,7 @@ Không có setState, count vẫn tăng bộ nhớ, nhưng Flutter không biết 
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 237: State & Lifecycle
-
-**Question:** What does "Lifting State Up" mean in Flutter?
+**Question 237:** What does "Lifting State Up" mean in Flutter?
 
 A. Removing all state from the app
 
@@ -5212,9 +4738,7 @@ Việc nâng State lên sẽ di chuyển state được chia sẻ lên một t�
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 238: State & Lifecycle
-
-**Question:** What foundation does `Provider` (ChangeNotifierProvider + Consumer) build on in Flutter, and what benefit does it bring over plain InheritedWidget?
+**Question 238:** What foundation does `Provider` (ChangeNotifierProvider + Consumer) build on in Flutter, and what benefit does it bring over plain InheritedWidget?
 
 A. Built on SQLite, helps store offline data
 
@@ -5234,9 +4758,7 @@ Provider được xây dựng trên InheritedWidget nhưng giảm bớt bản so
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 239: State & Lifecycle
-
-**Question:** Given this Provider code: class CounterModel with ChangeNotifier { int count = 0; void increment() { count++; notifyListeners(); } } If the `notifyListeners();` line is removed from `increment()`, what happens?
+**Question 239:** Given this Provider code: class CounterModel with ChangeNotifier { int count = 0; void increment() { count++; notifyListeners(); } } If the `notifyListeners();` line is removed from `increment()`, what happens?
 
 A. The program shows a compile error
 
@@ -5256,9 +4778,7 @@ Nếu không có notifyListeners(), count vẫn tăng bộ nhớ nhưng Consumer
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 240: State & Lifecycle
-
-**Question:** In the "Managing App State" section with `ChangeNotifier`: class AppState extends ChangeNotifier { bool loggedIn = false; void login() { loggedIn = true; notifyListeners(); } } Why is separating state (login/logout) into its own class away from the UI considered good practice (per the instructor's note)?
+**Question 240:** In the "Managing App State" section with `ChangeNotifier`: class AppState extends ChangeNotifier { bool loggedIn = false; void login() { loggedIn = true; notifyListeners(); } } Why is separating state (login/logout) into its own class away from the UI considered good practice (per the instructor's note)?
 
 A. Because Flutter requires this to compile
 
@@ -5278,9 +4798,7 @@ Việc tách state cải thiện khả năng kiểm tra và độ rõ ràng củ
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 241: State & Lifecycle
-
-**Question:** According to Module 5's Summary, which state management techniques are covered, in order from basic to more advanced?
+**Question 241:** According to Module 5's Summary, which state management techniques are covered, in order from basic to more advanced?
 
 A. Provider → InheritedWidget → setState
 
@@ -5300,9 +4818,7 @@ Theo Tóm tắt, thứ tự từ cơ bản đến nâng cao là: setState → In
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 242: State & Lifecycle
-
-**Question:** In Demo 8.3, the `try/catch/finally` block is used as follows: try { final response = await http.post(...); if (response.statusCode == 201) { setState(() => result = response.body); } else { throw Exception('Failed with status: \${response.statusCode}'); } } catch (e) { setState(() => errorMessage = e.toString()); } finally { setState(() => isLoading = false); } Why is `setState(() => isLoading = false);` placed in the `finally` block instead of just in the `try` block?
+**Question 242:** In Demo 8.3, the `try/catch/finally` block is used as follows: try { final response = await http.post(...); if (response.statusCode == 201) { setState(() => result = response.body); } else { throw Exception('Failed with status: \${response.statusCode}'); } } catch (e) { setState(() => errorMessage = e.toString()); } finally { setState(() => isLoading = false); } Why is `setState(() => isLoading = false);` placed in the `finally` block instead of just in the `try` block?
 
 A. No difference between placing it in try or finally
 
@@ -5322,9 +4838,7 @@ finally đảm bảo isLoading luôn bị tắt bất kể thành công hay th�
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 243: State & Lifecycle
-
-**Question:** In Module 8's "Common Pitfalls & Best Practices," how is calling an API directly inside `build()` regarded?
+**Question 243:** In Module 8's "Common Pitfalls & Best Practices," how is calling an API directly inside `build()` regarded?
 
 A. A best practice that should be applied
 
@@ -5344,9 +4858,7 @@ Gọi một API bên trong build() là một điều khó tránh vì build() có
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 244: State & Lifecycle
-
-**Question:** Comparing parsing `response.body` (JSON) directly in a widget's `build()` function versus parsing in a separate function (like `fetchPosts()` called from `initState()`). Which statement is most accurate regarding performance?
+**Question 244:** Comparing parsing `response.body` (JSON) directly in a widget's `build()` function versus parsing in a separate function (like `fetchPosts()` called from `initState()`). Which statement is most accurate regarding performance?
 
 A. No performance difference between the two approaches
 
@@ -5366,9 +4878,7 @@ Việc phân tích cú pháp trong build() lặp lại công việc nặng nhọ
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 245: State & Lifecycle
-
-**Question:** In SharedPreferences' standard High-Level Flow: "Load storage instance → Read existing value → Update value based on user action → Save back to storage → Refresh the UI." If the "Refresh the UI" step (e.g. calling `setState()`) is skipped after saving the new value, what happens?
+**Question 245:** In SharedPreferences' standard High-Level Flow: "Load storage instance → Read existing value → Update value based on user action → Save back to storage → Refresh the UI." If the "Refresh the UI" step (e.g. calling `setState()`) is skipped after saving the new value, what happens?
 
 A. The value is still correctly saved to device storage (correct on the next app launch), but the current UI won't reflect the change immediately until another rebuild occurs
 
@@ -5388,9 +4898,7 @@ Giá trị vẫn được lưu chính xác vào bộ nhớ nhưng UI hiện tạ
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 246: State & Lifecycle
-
-**Question:** In the Taskly App's architecture (used as the running example throughout Module 11), which component is responsible for managing app-wide state?
+**Question 246:** In the Taskly App's architecture (used as the running example throughout Module 11), which component is responsible for managing app-wide state?
 
 A. TaskListScreen
 
@@ -5410,9 +4918,7 @@ TaskProvider chịu trách nhiệm quản lý toàn bộ ứng dụng state tron
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 247: State & Lifecycle
-
-**Question:** Given this "before optimization" code from Demo 12.1: Widget build(BuildContext context) { final tasks = context.watch`<TaskProvider>`().tasks; return Column( children: [ InputRow(), // static Expanded( child: ListView.builder( itemCount: tasks.length, itemBuilder: (_, i) => ListTile( title: Text(tasks[i].title), trailing: Checkbox(...), ), ), ), ], ); } Why does using `context.watch<TaskProvider>()` right at the top-level widget (including the static `InputRow`) cause a performance problem?
+**Question 247:** Given this "before optimization" code from Demo 12.1: Widget build(BuildContext context) { final tasks = context.watch`<TaskProvider>`().tasks; return Column( children: [ InputRow(), // static Expanded( child: ListView.builder( itemCount: tasks.length, itemBuilder: (_, i) => ListTile( title: Text(tasks[i].title), trailing: Checkbox(...), ), ), ), ], ); } Why does using `context.watch<TaskProvider>()` right at the top-level widget (including the static `InputRow`) cause a performance problem?
 
 A. No problem at all, this is the recommended way to write it
 
@@ -5432,9 +4938,7 @@ Việc xem ở cấp cao nhất khiến ngay cả những static widgets không 
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 248: State & Lifecycle
-
-**Question:** What benefit does the "Use Selector to rebuild ONLY the list" solution in Demo 12.1 bring over a plain `context.watch<T>()`?
+**Question 248:** What benefit does the "Use Selector to rebuild ONLY the list" solution in Demo 12.1 bring over a plain `context.watch<T>()`?
 
 A. Selector allows fine-grained rebuilding --- only the UI portion actually dependent on the changed data rebuilds, instead of the entire parent widget as with a broad-scope watch
 
@@ -5454,9 +4958,7 @@ Bộ chọn cho phép xây dựng lại chi tiết, chỉ xây dựng lại ph�
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 249: State & Lifecycle
-
-**Question:** Given: class _MyWidgetState extends State`<MyWidget>` with SingleTickerProviderStateMixin { late AnimationController _controller; @override void initState() { super.initState(); _controller = AnimationController( duration: const Duration(seconds: 2), vsync: this, )..repeat(); } @override void dispose() { _controller.dispose(); super.dispose(); } } If a developer forgets to call `_controller.dispose()` in `dispose()`, what is the most likely consequence?
+**Question 249:** Given: class _MyWidgetState extends State`<MyWidget>` with SingleTickerProviderStateMixin { late AnimationController _controller; @override void initState() { super.initState(); _controller = AnimationController( duration: const Duration(seconds: 2), vsync: this, )..repeat(); } @override void dispose() { _controller.dispose(); super.dispose(); } } If a developer forgets to call `_controller.dispose()` in `dispose()`, what is the most likely consequence?
 
 A. No consequence at all because Dart automatically garbage-collects every object
 
@@ -5476,9 +4978,7 @@ Việc quên dispose() sẽ khiến một AnimationController lặp lại chạy
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 250: State & Lifecycle
-
-**Question:** BLoC (Business Logic Component) is a state-management architecture pattern in Flutter, based on which core concept?
+**Question 250:** BLoC (Business Logic Component) is a state-management architecture pattern in Flutter, based on which core concept?
 
 A. A parent widget passes data directly to a child widget via the constructor
 
@@ -5498,9 +4998,7 @@ Khái niệm cốt lõi của BLoC: luồng đầu vào = Sự kiện, luồng �
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 251: State & Lifecycle
-
-**Question:** Given this simple Cubit code: class CounterCubit extends Cubit`<int>` { CounterCubit() : super(0); void increment() => emit(state + 1); } Which widget in `flutter_bloc` best listens to `CounterCubit` and automatically rebuilds the UI whenever the `state` value changes?
+**Question 251:** Given this simple Cubit code: class CounterCubit extends Cubit`<int>` { CounterCubit() : super(0); void increment() => emit(state + 1); } Which widget in `flutter_bloc` best listens to `CounterCubit` and automatically rebuilds the UI whenever the `state` value changes?
 
 A. `FutureBuilder`
 
@@ -5520,9 +5018,7 @@ D. `InheritedWidget` (used directly, without the library)
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 252: State & Lifecycle
-
-**Question:** Per BLoC pattern's design philosophy, why should business logic be entirely separated from the UI widget?
+**Question 252:** Per BLoC pattern's design philosophy, why should business logic be entirely separated from the UI widget?
 
 A. Because Flutter doesn't allow writing logic inside a widget
 
@@ -5542,9 +5038,7 @@ Việc phân tách làm tăng khả năng kiểm tra, cho phép sử dụng lạ
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 253: State & Lifecycle
-
-**Question:** Consider the Taskly app (from Modules 11/12) rewritten with BLoC architecture instead of Provider: `TaskBloc` would receive `AddTaskEvent` and `ToggleTaskEvent`, then emit a new `TaskState`. Compared to using `TaskProvider` (ChangeNotifier) as in the original slides, what is the core difference in the processing flow?
+**Question 253:** Consider the Taskly app (from Modules 11/12) rewritten with BLoC architecture instead of Provider: `TaskBloc` would receive `AddTaskEvent` and `ToggleTaskEvent`, then emit a new `TaskState`. Compared to using `TaskProvider` (ChangeNotifier) as in the original slides, what is the core difference in the processing flow?
 
 A. No difference at all, BLoC and Provider are entirely identical in how they receive changes from the UI
 
@@ -5564,9 +5058,7 @@ Provider sử dụng lệnh gọi phương thức trực tiếp + notifyListener
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 254: State & Lifecycle
-
-**Question:** Why do many real-world Flutter projects choose BLoC instead of just `setState` for large-scale apps with many screens sharing complex state?
+**Question 254:** Why do many real-world Flutter projects choose BLoC instead of just `setState` for large-scale apps with many screens sharing complex state?
 
 A. Because `setState` isn't supported by Flutter in large apps
 
@@ -5586,9 +5078,7 @@ Tính năng phân tách Sự kiện/{0}} rõ ràng của BLoC hỗ trợ khả n
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 255: State & Lifecycle
-
-**Question:** Arrow syntax (=>) is suitable for which type of function?
+**Question 255:** Arrow syntax (=>) is suitable for which type of function?
 
 A. A mandatory factory constructor
 
@@ -5608,9 +5098,7 @@ Lựa chọn D đúng: Một hàm bao gồm một biểu thức. Bố cục Flut
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 256: State & Lifecycle
-
-**Question:** When is Future chaining with then() useful?
+**Question 256:** When is Future chaining with then() useful?
 
 A. Defining an SQLite schema
 
@@ -5630,9 +5118,7 @@ Tùy chọn D đúng: Xâu chuỗi các bước không đồng bộ mà không c
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 257: State & Lifecycle
-
-**Question:** Which keyword emits values from a Stream-producing async* function?
+**Question 257:** Which keyword emits values from a Stream-producing async* function?
 
 A. yield
 
@@ -5652,9 +5138,7 @@ Tùy chọn A đúng: yield. Dart sử dụng Future cho một kết quả khôn
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 258: State & Lifecycle
-
-**Question:** What is a widget in Flutter?
+**Question 258:** What is a widget in Flutter?
 
 A. A SQL table
 
@@ -5674,9 +5158,7 @@ Tùy chọn D đúng: Khối xây dựng cơ bản của giao diện người d�
 
 https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
-### Câu 259: Tương tác, Form & Async UI
-
-**Question:** What is Flutter?
+**Question 259:** What is Flutter?
 
 A. A new programming language developed by Google
 
@@ -5696,9 +5178,7 @@ Flutter là bộ công cụ UI của Google để xây dựng các ứng dụng 
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 260: Tương tác, Form & Async UI
-
-**Question:** Which layer of the Flutter architecture is written in C++ and uses Skia to handle rendering, accessibility, and text layout?
+**Question 260:** Which layer of the Flutter architecture is written in C++ and uses Skia to handle rendering, accessibility, and text layout?
 
 A. Framework Layer
 
@@ -5718,9 +5198,7 @@ Lớp Công cụ được viết bằng C++ và sử dụng Skia để hiển th
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 261: Tương tác, Form & Async UI
-
-**Question:** A startup wants to build an MVP quickly, running on both Android and iOS, with a limited development team and no need for extreme graphics performance. According to the lecture, this situation is:
+**Question 261:** A startup wants to build an MVP quickly, running on both Android and iOS, with a limited development team and no need for extreme graphics performance. According to the lecture, this situation is:
 
 A. Not suitable for Flutter because Flutter only supports Android
 
@@ -5740,9 +5218,7 @@ Bài giảng nêu rõ Flutter phù hợp với MVP, công ty khởi nghiệp, gi
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 262: Tương tác, Form & Async UI
-
-**Question:** Flutter communicates with native features (Camera, Bluetooth, NFC...) that it does not support directly through which mechanism?
+**Question 262:** Flutter communicates with native features (Camera, Bluetooth, NFC...) that it does not support directly through which mechanism?
 
 A. WebSocket
 
@@ -5762,9 +5238,7 @@ Flutter tích hợp với các tính năng gốc thông qua Kênh nền tảng. 
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 263: Tương tác, Form & Async UI
-
-**Question:** According to the development history timeline mentioned in the lecture, what platform support did Flutter 2.0 (2021) add?
+**Question 263:** According to the development history timeline mentioned in the lecture, what platform support did Flutter 2.0 (2021) add?
 
 A. Only added Android Wear support
 
@@ -5784,9 +5258,7 @@ Flutter 2.0 (2021) đã thêm Web và hỗ trợ Máy tính để bàn theo dòn
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 264: Tương tác, Form & Async UI
-
-**Question:** According to the lecture, when should a development team consider using native code (Kotlin/Swift) instead of pure Flutter?
+**Question 264:** According to the lecture, when should a development team consider using native code (Kotlin/Swift) instead of pure Flutter?
 
 A. When the app needs very low-level hardware access or strict platform-specific UI/UX requirements
 
@@ -5806,9 +5278,7 @@ Bản gốc nên được xem xét để truy cập phần cứng ở cấp đ�
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 265: Tương tác, Form & Async UI
-
-**Question:** Given the comparison table: Flutter (Dart, Native UI + Engine), React Native (JS, Bridge to Native), Native (Kotlin/Swift, Pure Native). Which statement best analyzes the trade-off among these three approaches?
+**Question 265:** Given the comparison table: Flutter (Dart, Native UI + Engine), React Native (JS, Bridge to Native), Native (Kotlin/Swift, Pure Native). Which statement best analyzes the trade-off among these three approaches?
 
 A. Native is always slower than Flutter because it has no dedicated engine
 
@@ -5828,9 +5298,7 @@ Flutter đạt được hiệu suất gần như gốc thông qua công cụ Ski
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 266: Tương tác, Form & Async UI
-
-**Question:** Given: List`<int>` nums = [1, 2, 3, 4, 5]; var result = nums.map((e) => e * 2).where((e) => e > 4).toList(); print(result); What is printed?
+**Question 266:** Given: List`<int>` nums = [1, 2, 3, 4, 5]; var result = nums.map((e) => e * 2).where((e) => e > 4).toList(); print(result); What is printed?
 
 A. [2, 4, 6, 8, 10]
 
@@ -5850,9 +5318,7 @@ D. [1, 2, 3, 4, 5]
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 267: Tương tác, Form & Async UI
-
-**Question:** In the following code, what is printed to the console? void main() { try { int result = 10 \~/ 0; print(result); } catch (e) { print("Error: \$e"); } finally { print("Done"); } }
+**Question 267:** In the following code, what is printed to the console? void main() { try { int result = 10 \~/ 0; print(result); } catch (e) { print("Error: \$e"); } finally { print("Done"); } }
 
 A. Error: ... then Done (integer division by zero throws IntegerDivisionByZeroException)
 
@@ -5872,9 +5338,7 @@ Chia số nguyên cho 0 với `~/` ném `IntegerDivisionByZeroException`, bị `
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 268: Tương tác, Form & Async UI
-
-**Question:** What is the difference between `for-in` and `forEach` when iterating a List in Dart?
+**Question 268:** What is the difference between `for-in` and `forEach` when iterating a List in Dart?
 
 A. `for-in` cannot be used with a List
 
@@ -5894,9 +5358,7 @@ D. The two syntaxes are entirely identical in performance and syntax, with no di
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 269: Tương tác, Form & Async UI
-
-**Question:** Consider this code illustrating Dart's Event Loop: import 'dart:async'; void main() { print("A"); scheduleMicrotask(() => print("micro")); Future(() => print("future")); print("B"); } What is the correct output order?
+**Question 269:** Consider this code illustrating Dart's Event Loop: import 'dart:async'; void main() { print("A"); scheduleMicrotask(() => print("micro")); Future(() => print("future")); print("B"); } What is the correct output order?
 
 A. A, B, micro, future
 
@@ -5916,9 +5378,7 @@ Các tác vụ vi mô có mức độ ưu tiên cao hơn hàng đợi Sự kiệ
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 270: Tương tác, Form & Async UI
-
-**Question:** Given this Stream code: Stream`<int>` countUp() async { for (int i = 1; i <= 3; i++) { yield i; } } void main() async { await for (var value in countUp()) { print(value); } } What is printed?
+**Question 270:** Given this Stream code: Stream`<int>` countUp() async { for (int i = 1; i <= 3; i++) { yield i; } } void main() async { await for (var value in countUp()) { print(value); } } What is printed?
 
 A. 1
 
@@ -5938,9 +5398,7 @@ Vòng lặp `async`/`yield` tạo thứ tự 1, 2, 3 in, mỗi thứ tự đư�
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 271: Tương tác, Form & Async UI
-
-**Question:** In Dart, what is the `Never` type used for?
+**Question 271:** In Dart, what is the `Never` type used for?
 
 A. A variable that is never assigned a value
 
@@ -5960,9 +5418,7 @@ D. A type used for asynchronous functions
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 272: Tương tác, Form & Async UI
-
-**Question:** In Dart's switch-case, why is `break` (or `return`) usually needed after each case?
+**Question 272:** In Dart's switch-case, why is `break` (or `return`) usually needed after each case?
 
 A. Because every non-empty case must end with break/return/continue --- Dart forbids implicit fall-through (unlike C), otherwise it is a compile error
 
@@ -5982,9 +5438,7 @@ Các trường hợp chuyển đổi không trống trong Dart không bao giờ 
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 273: Tương tác, Form & Async UI
-
-**Question:** What is a mixin used for in Dart?
+**Question 273:** What is a mixin used for in Dart?
 
 A. Fully replaces constructors
 
@@ -6004,9 +5458,7 @@ mixin chia sẻ hành vi trên nhiều lớp mà không có chuỗi kế thừa 
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 274: Tương tác, Form & Async UI
-
-**Question:** How does a factory constructor differ from a regular constructor in Dart?
+**Question 274:** How does a factory constructor differ from a regular constructor in Dart?
 
 A. A factory constructor always creates a completely new object, with no exceptions
 
@@ -6026,9 +5478,7 @@ Trình xây dựng gốc kiểm soát việc tạo cá thể --- nó có thể t
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 275: Tương tác, Form & Async UI
-
-**Question:** Given: class User { final String name; factory User.fromJson(Map j) => User._(j['name']); User._(this.name); } Why is the `User._` constructor made private (with `_`)?
+**Question 275:** Given: class User { final String name; factory User.fromJson(Map j) => User._(j['name']); User._(this.name); } Why is the `User._` constructor made private (with `_`)?
 
 A. Because Dart requires every factory constructor to have an accompanying private constructor
 
@@ -6048,9 +5498,7 @@ D. No particular reason, just a coding style choice
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 276: Tương tác, Form & Async UI
-
-**Question:** What is the main benefit that generics (`List<T>`, `Future<T>`, `Map<K,V>`) bring in Dart?
+**Question 276:** What is the main benefit that generics (`List<T>`, `Future<T>`, `Map<K,V>`) bring in Dart?
 
 A. Makes the program run faster on the CPU
 
@@ -6070,9 +5518,7 @@ Generics đảm bảo an toàn cho loại thời gian biên dịch, tránh các 
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 277: Tương tác, Form & Async UI
-
-**Question:** In Dart, which queue has HIGHER priority between the Microtask queue and the Event queue?
+**Question 277:** In Dart, which queue has HIGHER priority between the Microtask queue and the Event queue?
 
 A. The Event queue has higher priority, always running before the Microtask queue
 
@@ -6092,9 +5538,7 @@ Hàng đợi Microtask có mức độ ưu tiên cao hơn --- tất cả các mi
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 278: Tương tác, Form & Async UI
-
-**Question:** Given this Future chaining code: Future(() => 1) .then((v) => v + 1) .then((v) => print(v)); What value is printed?
+**Question 278:** Given this Future chaining code: Future(() => 1) .then((v) => v + 1) .then((v) => print(v)); What value is printed?
 
 A. 1
 
@@ -6114,9 +5558,7 @@ D. Nothing is printed because await is missing
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 279: Tương tác, Form & Async UI
-
-**Question:** Comparing Future chaining (`.then()`) with `async/await`, which statement is most accurate?
+**Question 279:** Comparing Future chaining (`.then()`) with `async/await`, which statement is most accurate?
 
 A. `.then()` and `async/await` are entirely incompatible, cannot be used together in a project
 
@@ -6136,9 +5578,7 @@ D. `.then()` is always faster than `async/await` in terms of performance
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 280: Tương tác, Form & Async UI
-
-**Question:** How does `StreamController.broadcast()` differ from the default single-subscription Stream?
+**Question 280:** How does `StreamController.broadcast()` differ from the default single-subscription Stream?
 
 A. Broadcast only allows exactly one listener
 
@@ -6158,9 +5598,7 @@ Broadcast cho phép nhiều người nghe nhận các sự kiện được chia 
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 281: Tương tác, Form & Async UI
-
-**Question:** Given this StreamController.broadcast() code: var c = StreamController`<int>`.broadcast(); c.stream.listen((v) => print("A:$v")); c.stream.listen((v) => print("B:$v")); c..add(1)..add(2); What is printed, in order?
+**Question 281:** Given this StreamController.broadcast() code: var c = StreamController`<int>`.broadcast(); c.stream.listen((v) => print("A:$v")); c.stream.listen((v) => print("B:$v")); c..add(1)..add(2); What is printed, in order?
 
 A. A:1, A:2, B:1, B:2
 
@@ -6180,9 +5618,7 @@ Với `c..add(1)..add(2)`, mỗi add sẽ kích hoạt cả người nghe A và 
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 282: Tương tác, Form & Async UI
-
-**Question:** According to the "Performance Best Practices" section of Module 3, which practice is NOT recommended?
+**Question 282:** According to the "Performance Best Practices" section of Module 3, which practice is NOT recommended?
 
 A. Using const widgets to reduce rebuild cost
 
@@ -6202,9 +5638,7 @@ Chạy một vòng lặp nặng trực tiếp trên isolate chính trong khi xâ
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 283: Tương tác, Form & Async UI
-
-**Question:** In Dart, what is the core difference between an `abstract class` and an `implicit interface` (every class automatically has an interface)?
+**Question 283:** In Dart, what is the core difference between an `abstract class` and an `implicit interface` (every class automatically has an interface)?
 
 A. No difference, the two concepts are the same
 
@@ -6224,9 +5658,7 @@ Tóm tắt class có thể kết hợp các phương thức có nội dung/khôn
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 284: Tương tác, Form & Async UI
-
-**Question:** A student writes this Repository: class Repo { Future`<String>` getUser() async { await Future.delayed(Duration(milliseconds: 300)); return "Anna"; } } and calls `var name = repo.getUser();` (without using `await`). What type and value will variable `name` have at the moment of assignment?
+**Question 284:** A student writes this Repository: class Repo { Future`<String>` getUser() async { await Future.delayed(Duration(milliseconds: 300)); return "Anna"; } } and calls `var name = repo.getUser();` (without using `await`). What type and value will variable `name` have at the moment of assignment?
 
 A. Type String, value "Anna" immediately
 
@@ -6246,9 +5678,7 @@ Không có await, `name` có loại `Future<String>` --- một đối tượng F
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 285: Tương tác, Form & Async UI
-
-**Question:** In RadioListTile, what is the role of the `groupValue` property?
+**Question 285:** In RadioListTile, what is the role of the `groupValue` property?
 
 A. Determines that particular radio button's own value
 
@@ -6268,9 +5698,7 @@ D. Used to set the background color of RadioListTile
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 286: Tương tác, Form & Async UI
-
-**Question:** What is the difference between `Slider` and `Switch` in Flutter?
+**Question 286:** What is the difference between `Slider` and `Switch` in Flutter?
 
 A. Slider selects a continuous value within a range, Switch only toggles a boolean value
 
@@ -6290,9 +5718,7 @@ Slider chọn một giá trị liên tục, Switch chỉ chuyển đổi boolean
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 287: Tương tác, Form & Async UI
-
-**Question:** In the `showDatePicker` example, what are the `firstDate` and `lastDate` parameters used for?
+**Question 287:** In the `showDatePicker` example, what are the `firstDate` and `lastDate` parameters used for?
 
 A. Determine the default current date
 
@@ -6312,9 +5738,7 @@ D. Determine the date display format (dd/mm/yyyy or mm/dd/yyyy)
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 288: Tương tác, Form & Async UI
-
-**Question:** In the Stateless/Stateful comparison table, which usage example fits StatelessWidget?
+**Question 288:** In the Stateless/Stateful comparison table, which usage example fits StatelessWidget?
 
 A. An input form with validation
 
@@ -6334,9 +5758,7 @@ Logo tĩnh/văn bản không thay đổi phù hợp với StatelessWidget vì kh
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 289: Tương tác, Form & Async UI
-
-**Question:** A student forgets to wrap a search bar in `SafeArea` on a device with a notch. What is the most likely real-world consequence?
+**Question 289:** A student forgets to wrap a search bar in `SafeArea` on a device with a notch. What is the most likely real-world consequence?
 
 A. The app automatically crashes right at startup
 
@@ -6356,9 +5778,7 @@ Thiếu SafeArea có thể khiến phần trên cùng của thanh tìm kiếm b�
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 290: Tương tác, Form & Async UI
-
-**Question:** When should you use `TextFormField` instead of a plain `TextField`?
+**Question 290:** When should you use `TextFormField` instead of a plain `TextField`?
 
 A. When you don't need any special functionality
 
@@ -6378,9 +5798,7 @@ Sử dụng TextFormField khi dữ liệu đầu vào nằm trong Form và cần
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 291: Tương tác, Form & Async UI
-
-**Question:** What is `GlobalKey<FormState>` used for in a `Form`?
+**Question 291:** What is `GlobalKey<FormState>` used for in a `Form`?
 
 A. Only used to set the form's color
 
@@ -6400,9 +5818,7 @@ GlobalKey`<FormState>` cho phép truy cập/điều khiển state của Form t�
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 292: Tương tác, Form & Async UI
-
-**Question:** Given: void _submit() { final isValid = _formKey.currentState!.validate(); if (!isValid) return; _formKey.currentState!.save(); ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text('Signed up as $_name ($_email)')), ); } If the order is swapped, calling `_formKey.currentState!.save();` BEFORE calling `validate()`, what could happen?
+**Question 292:** Given: void _submit() { final isValid = _formKey.currentState!.validate(); if (!isValid) return; _formKey.currentState!.save(); ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text('Signed up as $_name ($_email)')), ); } If the order is swapped, calling `_formKey.currentState!.save();` BEFORE calling `validate()`, what could happen?
 
 A. No difference, the call order doesn't matter
 
@@ -6422,9 +5838,7 @@ Việc gọi save() trước validate() có nguy cơ lưu dữ liệu chưa đư
 
 https://docs.flutter.dev/cookbook/forms
 
-### Câu 293: Điều hướng & Deep link
-
-**Question:** According to the lecture, what common pitfall is emphasized for students new to Dart?
+**Question 293:** According to the lecture, what common pitfall is emphasized for students new to Dart?
 
 A. Forgetting to close a class's curly braces
 
@@ -6444,9 +5858,7 @@ Những cạm bẫy phổ biến đã nêu: bỏ qua các cảnh báo an toàn r
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 294: Điều hướng & Deep link
-
-**Question:** Consider Module 4's "Practice Task": build a movie list using `ListView.builder` + `ListTile`, where `onTap` needs to show `SnackBar(title)`. What is the correct way to call a SnackBar in Flutter?
+**Question 294:** Consider Module 4's "Practice Task": build a movie list using `ListView.builder` + `ListTile`, where `onTap` needs to show `SnackBar(title)`. What is the correct way to call a SnackBar in Flutter?
 
 A. `Text(title).showSnackBar()`
 
@@ -6466,9 +5878,7 @@ D. `SnackBar.show(context, title)`
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 295: Điều hướng & Deep link
-
-**Question:** In Flutter, what does `Navigator.push()` do?
+**Question 295:** In Flutter, what does `Navigator.push()` do?
 
 A. Clears the entire navigation stack
 
@@ -6488,9 +5898,7 @@ D. Closes the app
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 296: Điều hướng & Deep link
-
-**Question:** What does the `Navigator.pop(context)` method do?
+**Question 296:** What does the `Navigator.pop(context)` method do?
 
 A. Pushes another new screen onto the stack
 
@@ -6510,9 +5918,7 @@ D. Restarts the app from scratch
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 297: Điều hướng & Deep link
-
-**Question:** What is the difference between `Navigator.push()` and `Navigator.pushReplacement()`?
+**Question 297:** What is the difference between `Navigator.push()` and `Navigator.pushReplacement()`?
 
 A. No difference
 
@@ -6532,9 +5938,7 @@ D. `push()` doesn't allow going back with the back button
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 298: Điều hướng & Deep link
-
-**Question:** In a login flow, a developer uses `Navigator.pushReplacementNamed(context, '/home')` instead of `Navigator.pushNamed(context, '/home')` after a successful login. What is the most reasonable reason for this choice?
+**Question 298:** In a login flow, a developer uses `Navigator.pushReplacementNamed(context, '/home')` instead of `Navigator.pushNamed(context, '/home')` after a successful login. What is the most reasonable reason for this choice?
 
 A. `pushReplacementNamed` runs faster in terms of performance
 
@@ -6554,9 +5958,7 @@ D. There's no real difference between the two calls
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 299: Điều hướng & Deep link
-
-**Question:** What benefit do Named Routes in Flutter bring over calling `MaterialPageRoute` directly everywhere?
+**Question 299:** What benefit do Named Routes in Flutter bring over calling `MaterialPageRoute` directly everywhere?
 
 A. Named Routes run faster at runtime
 
@@ -6576,9 +5978,7 @@ Các tuyến được đặt tên cải thiện khả năng đọc và khả nă
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 300: Điều hướng & Deep link
-
-**Question:** What is the core difference between Navigator 1.0 and Navigator 2.0?
+**Question 300:** What is the core difference between Navigator 1.0 and Navigator 2.0?
 
 A. Navigator 1.0 uses a declarative model, Navigator 2.0 uses an imperative model
 
@@ -6598,9 +5998,7 @@ Navigator 1.0 là imperative (đẩy/bật thủ công); Navigator 2.0 là decla
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 301: Điều hướng & Deep link
-
-**Question:** What are the three main components in Navigator 2.0's architecture, as mentioned in the lecture?
+**Question 301:** What are the three main components in Navigator 2.0's architecture, as mentioned in the lecture?
 
 A. Router, Controller, View
 
@@ -6620,9 +6018,7 @@ Ba thành phần chính: RouterDelegate, RouteInformationParser, BackButtonDispa
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 302: Điều hướng & Deep link
-
-**Question:** What does deep linking in Flutter allow?
+**Question 302:** What does deep linking in Flutter allow?
 
 A. Increases app build speed
 
@@ -6642,9 +6038,7 @@ Liên kết sâu cho phép người dùng mở một màn hình cụ thể trự
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 303: Điều hướng & Deep link
-
-**Question:** Given this `InheritedWidget` code: class AppData extends InheritedWidget { final String theme; const AppData({required this.theme, required Widget child, Key? key}) : super(key: key, child: child); static AppData of(BuildContext context) => context.dependOnInheritedWidgetOfExactType`<AppData>`()!; } What is the main purpose of `InheritedWidget` in this example?
+**Question 303:** Given this `InheritedWidget` code: class AppData extends InheritedWidget { final String theme; const AppData({required this.theme, required Widget child, Key? key}) : super(key: key, child: child); static AppData of(BuildContext context) => context.dependOnInheritedWidgetOfExactType`<AppData>`()!; } What is the main purpose of `InheritedWidget` in this example?
 
 A. Only used to define navigation routes
 
@@ -6664,9 +6058,7 @@ InheritedWidget truyền dữ liệu xuống cây widget một cách hiệu qu�
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 304: Điều hướng & Deep link
-
-**Question:** In this code combining Navigation and State: if (appState.loggedIn) Navigator.pushNamed(context, '/dashboard'); else Navigator.pushNamed(context, '/login'); What principle does this code illustrate?
+**Question 304:** In this code combining Navigation and State: if (appState.loggedIn) Navigator.pushNamed(context, '/dashboard'); else Navigator.pushNamed(context, '/login'); What principle does this code illustrate?
 
 A. State is completely separate and unrelated to navigation
 
@@ -6686,9 +6078,7 @@ D. Only works when using Navigator 2.0
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 305: Điều hướng & Deep link
-
-**Question:** In Navigator 2.0, which component's role does the following code illustrate? class AppRouterDelegate extends RouterDelegate`<AppRoute>` with ChangeNotifier, PopNavigatorRouterDelegateMixin`<AppRoute>` { @override Widget build(BuildContext context) { return Navigator( pages: [MaterialPage(child: HomePage())], onPopPage: (route, result) => route.didPop(result), ); } }
+**Question 305:** In Navigator 2.0, which component's role does the following code illustrate? class AppRouterDelegate extends RouterDelegate`<AppRoute>` with ChangeNotifier, PopNavigatorRouterDelegateMixin`<AppRoute>` { @override Widget build(BuildContext context) { return Navigator( pages: [MaterialPage(child: HomePage())], onPopPage: (route, result) => route.didPop(result), ); } }
 
 A. RouteInformationParser --- responsible for parsing the URL
 
@@ -6708,9 +6098,7 @@ Mã này minh họa RouterDelegate --- xây dựng ngăn xếp trang hiện tạ
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 306: Điều hướng & Deep link
-
-**Question:** In the MovieDetailPage Hero Banner example: Stack( children: [ Image.network(movie.posterUrl, fit: BoxFit.cover), Positioned(bottom: 0, child: Container(height: 80, decoration: gradient)), ], ) Why is `Stack` used instead of `Column` here?
+**Question 306:** In the MovieDetailPage Hero Banner example: Stack( children: [ Image.network(movie.posterUrl, fit: BoxFit.cover), Positioned(bottom: 0, child: Container(height: 80, decoration: gradient)), ], ) Why is `Stack` used instead of `Column` here?
 
 A. Because Stack runs faster than Column
 
@@ -6730,9 +6118,7 @@ Stack cho phép các phần tử con chồng lên nhau, cần thiết để tạ
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 307: Điều hướng & Deep link
-
-**Question:** In the deep link handling flow via `onGenerateRoute`, what is the main purpose of this callback in `MaterialApp`?
+**Question 307:** In the deep link handling flow via `onGenerateRoute`, what is the main purpose of this callback in `MaterialApp`?
 
 A. Only handles network errors
 
@@ -6752,9 +6138,7 @@ D. Only works when the app is offline
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 308: Điều hướng & Deep link
-
-**Question:** What does the `Route` class in Flutter represent?
+**Question 308:** What does the `Route` class in Flutter represent?
 
 A. An API endpoint from a server
 
@@ -6774,9 +6158,7 @@ D. A JSON data structure
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 309: Điều hướng & Deep link
-
-**Question:** Consider the requirement: "Tap outside the form → keyboard hides." What is the common implementation approach mentioned in the lecture?
+**Question 309:** Consider the requirement: "Tap outside the form → keyboard hides." What is the common implementation approach mentioned in the lecture?
 
 A. Call `Navigator.pop(context)` when the user taps outside
 
@@ -6796,9 +6178,7 @@ Gói biểu mẫu bằng cách GestureDetector gọi FocusScope.of(context).unfo
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 310: Điều hướng & Deep link
-
-**Question:** Given: Future`<void>` fetchPosts() async { final url = Uri.parse('https://jsonplaceholder.typicode.com/posts'); final response = await http.get(url); if (response.statusCode == 200) { print('Response body: \${response.body}'); } else { print('Request failed: \${response.statusCode}'); } } Why does this function need to be declared `async` and use `await` before `http.get(url)`?
+**Question 310:** Given: Future`<void>` fetchPosts() async { final url = Uri.parse('https://jsonplaceholder.typicode.com/posts'); final response = await http.get(url); if (response.statusCode == 200) { print('Response body: \${response.body}'); } else { print('Request failed: \${response.statusCode}'); } } Why does this function need to be declared `async` and use `await` before `http.get(url)`?
 
 A. Because `http.get()` always runs synchronously so async is mandatory
 
@@ -6818,9 +6198,7 @@ D. Because Dart doesn't support calling an asynchronous function without async
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 311: Điều hướng & Deep link
-
-**Question:** In Demo 8.2, when the user taps an item in the post list to open the detail screen, how is the post data (`Post`) passed to `PostDetailScreen`?
+**Question 311:** In Demo 8.2, when the user taps an item in the post list to open the detail screen, how is the post data (`Post`) passed to `PostDetailScreen`?
 
 A. Calling the API again to separately load the detail data
 
@@ -6840,9 +6218,7 @@ D. Using a global variable to share the data
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 312: Điều hướng & Deep link
-
-**Question:** Suppose a student writes: Future<List`<Post>`> fetchPosts() async { final response = await http.get(url); final List`<dynamic>` jsonList = json.decode(response.body); return jsonList.map((e) => Post.fromJson(e)).toList(); } but does NOT check `response.statusCode` before decoding. If the server returns a 500 error with non-valid-JSON content (e.g. an HTML error page), what is most likely to happen?
+**Question 312:** Suppose a student writes: Future<List`<Post>`> fetchPosts() async { final response = await http.get(url); final List`<dynamic>` jsonList = json.decode(response.body); return jsonList.map((e) => Post.fromJson(e)).toList(); } but does NOT check `response.statusCode` before decoding. If the server returns a 500 error with non-valid-JSON content (e.g. an HTML error page), what is most likely to happen?
 
 A. The app still displays the post list normally
 
@@ -6862,9 +6238,7 @@ json.decode() ném FormatException vào nội dung không phải JSON, gây lỗ
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 313: Điều hướng & Deep link
-
-**Question:** Per "Best Practices & Patterns for Authentication," why is `pushReplacementNamed()` recommended over `pushNamed()` when moving from the Splash/Login screen to Home after successful authentication?
+**Question 313:** Per "Best Practices & Patterns for Authentication," why is `pushReplacementNamed()` recommended over `pushNamed()` when moving from the Splash/Login screen to Home after successful authentication?
 
 A. Because `pushReplacementNamed()` runs faster in CPU speed
 
@@ -6884,9 +6258,7 @@ pushReplacementNamed() ngăn việc quay lại màn hình Splash/Đăng nhập �
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 314: Điều hướng & Deep link
-
-**Question:** The keyword with is normally used with what?
+**Question 314:** The keyword with is normally used with what?
 
 A. Factory constructors
 
@@ -6906,9 +6278,7 @@ Tùy chọn C đúng: Mixins. Câu trả lời phù hợp với hành vi loại 
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 315: Điều hướng & Deep link
-
-**Question:** What need does a mixin address?
+**Question 315:** What need does a mixin address?
 
 A. Creating declarative routes
 
@@ -6928,9 +6298,7 @@ Tùy chọn B đúng: Sử dụng lại hành vi giữa các lớp mà không y�
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 316: Điều hướng & Deep link
-
-**Question:** In Box`<T>`, what does T represent?
+**Question 316:** In Box`<T>`, what does T represent?
 
 A. A fixed Future
 
@@ -6950,9 +6318,7 @@ Tùy chọn D đúng: Tham số loại chung. Câu trả lời phù hợp với 
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 317: Điều hướng & Deep link
-
-**Question:** Which two main queues are described in Dart's asynchronous engine?
+**Question 317:** Which two main queues are described in Dart's asynchronous engine?
 
 A. Render queue and Route queue
 
@@ -6972,9 +6338,7 @@ Tùy chọn D đúng: Hàng đợi microtask và Hàng đợi sự kiện. Dart 
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 318: Điều hướng & Deep link
-
-**Question:** Which type of task is processed before tasks in the event queue?
+**Question 318:** Which type of task is processed before tasks in the event queue?
 
 A. Image frame
 
@@ -6994,9 +6358,7 @@ Tùy chọn B đúng: Microtask. Câu trả lời phù hợp với hành vi lo�
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 319: Điều hướng & Deep link
-
-**Question:** What does scheduleMicrotask() do?
+**Question 319:** What does scheduleMicrotask() do?
 
 A. Adds a callback to the microtask queue
 
@@ -7016,9 +6378,7 @@ Tùy chọn A đúng: Thêm lệnh gọi lại vào hàng đợi vi nhiệm. Câ
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 320: Điều hướng & Deep link
-
-**Question:** Which lifecycle method is used for one-time initialization logic in a State object?
+**Question 320:** Which lifecycle method is used for one-time initialization logic in a State object?
 
 A. onGenerateRoute()
 
@@ -7038,9 +6398,7 @@ Tùy chọn D đúng: initState(). Đây là khái niệm quản lý state: các
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 321: Điều hướng & Deep link
-
-**Question:** Which method displays an image from a URL?
+**Question 321:** Which method displays an image from a URL?
 
 A. Image.asset only
 
@@ -7060,9 +6418,7 @@ Tùy chọn C đúng: Image.network. Câu trả lời phù hợp với hành vi 
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 322: Điều hướng & Deep link
-
-**Question:** What does BoxFit control?
+**Question 322:** What does BoxFit control?
 
 A. How a token expires
 
@@ -7082,9 +6438,7 @@ Tùy chọn B đúng: Cách thu nhỏ hoặc điều chỉnh hình ảnh trong k
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 323: Điều hướng & Deep link
-
-**Question:** Which structure does Navigator 1.0 use to manage screens?
+**Question 323:** Which structure does Navigator 1.0 use to manage screens?
 
 A. A stack of routes/pages
 
@@ -7104,9 +6458,7 @@ Tùy chọn A đúng: Một chồng các tuyến đường/trang. API điều h�
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 324: Điều hướng & Deep link
-
-**Question:** When an app needs complex deep links and web URL synchronization, what do the docs recommend considering?
+**Question 324:** When an app needs complex deep links and web URL synchronization, what do the docs recommend considering?
 
 A. Only use setState
 
@@ -7126,9 +6478,7 @@ Router phù hợp với các nhu cầu liên kết sâu và định tuyến ph�
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 325: Điều hướng & Deep link
-
-**Question:** What does Navigator.pop() do?
+**Question 325:** What does Navigator.pop() do?
 
 A. Removes the current route and reveals the route below it
 
@@ -7148,9 +6498,7 @@ Tùy chọn A đúng: Xóa tuyến đường hiện tại và hiển thị tuy�
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 326: Điều hướng & Deep link
-
-**Question:** What does a MaterialPageRoute builder return?
+**Question 326:** What does a MaterialPageRoute builder return?
 
 A. A JSON Map
 
@@ -7170,9 +6518,7 @@ Tùy chọn C đúng: widget xác định UI của màn hình tiếp theo. API �
 
 https://docs.flutter.dev/ui/navigation
 
-### Câu 327: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** Flutter's architecture has three main layers. What is the correct top-to-bottom order (closest to the developer to closest to the hardware)?
+**Question 327:** Flutter's architecture has three main layers. What is the correct top-to-bottom order (closest to the developer to closest to the hardware)?
 
 A. Engine → Framework → Embedder
 
@@ -7192,9 +6538,7 @@ Thứ tự kiến trúc: Framework (Dart) → Engine (C++) → Trình nhúng ---
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 328: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** According to Flutter's architecture, which statement best describes the concept of a 'Widget'?
+**Question 328:** According to Flutter's architecture, which statement best describes the concept of a 'Widget'?
 
 A. Widgets are only components that display images
 
@@ -7214,9 +6558,7 @@ D. Widget is an Android-only concept, not used in Flutter
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 329: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** How does `ListView.separated` differ from `ListView.builder`?
+**Question 329:** How does `ListView.separated` differ from `ListView.builder`?
 
 A. `ListView.separated` doesn't support itemBuilder
 
@@ -7236,9 +6578,7 @@ D. The two are entirely identical in API
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 330: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** What is `FocusNode` combined with `textInputAction: TextInputAction.next` and `onFieldSubmitted` used for?
+**Question 330:** What is `FocusNode` combined with `textInputAction: TextInputAction.next` and `onFieldSubmitted` used for?
 
 A. Encrypting data entered into the field
 
@@ -7258,9 +6598,7 @@ Sự kết hợp này kiểm soát việc chuyển trọng tâm sang trường n
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 331: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** What kind of data does `SharedPreferences` best suit?
+**Question 331:** What kind of data does `SharedPreferences` best suit?
 
 A. Complex relational data with many linked tables
 
@@ -7280,9 +6618,7 @@ SharedPreferences phù hợp nhất với dữ liệu khóa-giá trị đơn gi�
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 332: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** On Flutter Web, `SharedPreferences` operates based on which browser storage mechanism?
+**Question 332:** On Flutter Web, `SharedPreferences` operates based on which browser storage mechanism?
 
 A. IndexedDB
 
@@ -7302,9 +6638,7 @@ Trên Flutter Web, SharedPreferences ánh xạ tới `localStorage` của trình
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 333: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** How does SQFlite differ from SQLite, per the "Why not name it SQLite?" explanation?
+**Question 333:** How does SQFlite differ from SQLite, per the "Why not name it SQLite?" explanation?
 
 A. SQFlite and SQLite are two different names for the exact same concept, no technical difference
 
@@ -7324,9 +6658,7 @@ SQLite là công cụ lưu trữ thực tế; SQFlite là plugin/trình bao bọ
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 334: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** In SQFlite, which function is called to open or create a database, and how often should it be called?
+**Question 334:** In SQFlite, which function is called to open or create a database, and how often should it be called?
 
 A. `openDatabase()` --- should only be called once (singleton/service) to avoid opening multiple duplicate connections
 
@@ -7346,9 +6678,7 @@ D. `connectDatabase()` --- only usable with Web
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 335: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** Given: a Todo app needs to display the task list paginated to avoid loading all data at once on mobile. Which SQL clause is most suitable for implementing pagination?
+**Question 335:** Given: a Todo app needs to display the task list paginated to avoid loading all data at once on mobile. Which SQL clause is most suitable for implementing pagination?
 
 A. GROUP BY and HAVING
 
@@ -7368,9 +6698,7 @@ D. SQLite doesn't support pagination
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 336: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** Offline-First" is an app design strategy based on what principle?
+**Question 336:** Offline-First" is an app design strategy based on what principle?
 
 A. The app only works with a stable Internet connection
 
@@ -7390,9 +6718,7 @@ Ngoại tuyến-Đầu tiên ưu tiên tải dữ liệu cục bộ trước, đ
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 337: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** Why is SharedPreferences described as "NOT for complex objects or large data"?
+**Question 337:** Why is SharedPreferences described as "NOT for complex objects or large data"?
 
 A. Because SharedPreferences only supports storing integers
 
@@ -7412,9 +6738,7 @@ SharedPreferences được thiết kế cho dữ liệu khóa-giá trị đơn g
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 338: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** What is the difference between Authentication and Authorization?
+**Question 338:** What is the difference between Authentication and Authorization?
 
 A. The two concepts are entirely identical
 
@@ -7434,9 +6758,7 @@ Xác thực xác minh identity ("Bạn là ai?"); Việc ủy ​​quyền xác
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 339: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** Per the instructor's note "JWTs must not store passwords. Only identity claims," what is WRONG if a system stores a user's password directly in the JWT payload?
+**Question 339:** Per the instructor's note "JWTs must not store passwords. Only identity claims," what is WRONG if a system stores a user's password directly in the JWT payload?
 
 A. No problem at all since JWT is signed, making it always absolutely secure
 
@@ -7456,9 +6778,7 @@ JWT chỉ có signed (không được mã hóa), vì vậy bất kỳ ai có mã
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 340: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** What is the difference between an Access Token and a Refresh Token, per the lecture?
+**Question 340:** What is the difference between an Access Token and a Refresh Token, per the lecture?
 
 A. The Access Token has a longer lifetime than the Refresh Token
 
@@ -7478,9 +6798,7 @@ Mã thông báo truy cập tồn tại trong thời gian ngắn và được g�
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 341: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** In the Signup Flow process, which statement is correct about the relationship between AuthService used for Login (Demo 10.1) and Signup (Demo 10.2)?
+**Question 341:** In the Signup Flow process, which statement is correct about the relationship between AuthService used for Login (Demo 10.1) and Signup (Demo 10.2)?
 
 A. Signup must create an entirely new service, completely separate from Login's AuthService
 
@@ -7500,9 +6818,7 @@ D. AuthService is only used for logout
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 342: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** What is `SharedPreferences` used for in Demo 10.3, mainly?
+**Question 342:** What is `SharedPreferences` used for in Demo 10.3, mainly?
 
 A. Storing the user's entire web browsing history
 
@@ -7522,9 +6838,7 @@ SharedPreferences duy trì mã thông báo xác thực để đăng nhập tự 
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 343: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** In the Auto Login Flow: "Splash → (has token?) → Home / Login." If the token has expired but still exists in SharedPreferences (the app only checks "does a token exist" WITHOUT checking its expiry), what could happen?
+**Question 343:** In the Auto Login Flow: "Splash → (has token?) → Home / Login." If the token has expired but still exists in SharedPreferences (the app only checks "does a token exist" WITHOUT checking its expiry), what could happen?
 
 A. The app will always accurately detect an expired token because SharedPreferences auto-validates it
 
@@ -7544,9 +6858,7 @@ Nếu không kiểm tra thời hạn sử dụng, ứng dụng có thể điều
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 344: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** An app does the following: (1) The user logs in and receives an Access Token that expires in 15 minutes; (2) The Access Token is stored in SharedPreferences; (3) No Refresh Token mechanism is implemented. What is the most likely real-world consequence after 15 minutes of continuous app use?
+**Question 344:** An app does the following: (1) The user logs in and receives an Access Token that expires in 15 minutes; (2) The Access Token is stored in SharedPreferences; (3) No Refresh Token mechanism is implemented. What is the most likely real-world consequence after 15 minutes of continuous app use?
 
 A. The app will automatically extend the token forever with no action needed
 
@@ -7566,9 +6878,7 @@ Nếu không có cơ chế làm mới, các yêu cầu sau khi hết hạn sẽ 
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 345: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** Compare the AuthService (Singleton pattern) mentioned in "Architecture Patterns" with scattering authentication logic directly across individual screen widgets (LoginScreen, SignupScreen, HomeScreen each writing their own API-calling logic). In the spirit of the lecture, what is the main drawback of the scattered approach?
+**Question 345:** Compare the AuthService (Singleton pattern) mentioned in "Architecture Patterns" with scattering authentication logic directly across individual screen widgets (LoginScreen, SignupScreen, HomeScreen each writing their own API-calling logic). In the spirit of the lecture, what is the main drawback of the scattered approach?
 
 A. No drawback at all, both approaches are equivalent in quality
 
@@ -7588,9 +6898,7 @@ Logic xác thực phân tán gây ra sự trùng lặp, khó bảo trì và kh�
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 346: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** Which rendering engine is mentioned in Flutter's architecture?
+**Question 346:** Which rendering engine is mentioned in Flutter's architecture?
 
 A. Gecko
 
@@ -7610,9 +6918,7 @@ Tùy chọn C đúng: Skia. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 347: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** What are the three main layers of Flutter architecture?
+**Question 347:** What are the three main layers of Flutter architecture?
 
 A. HTML, CSS, and JavaScript
 
@@ -7632,9 +6938,7 @@ Tùy chọn D đúng: Framework, Engine và Embedder. Câu trả lời phù hợ
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 348: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** When is const appropriate?
+**Question 348:** When is const appropriate?
 
 A. When a constant value is known at compile time
 
@@ -7654,9 +6958,7 @@ Tùy chọn A đúng: Khi biết giá trị không đổi tại thời điểm b
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 349: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** What do Padding and SizedBox mainly improve?
+**Question 349:** What do Padding and SizedBox mainly improve?
 
 A. Database table creation
 
@@ -7676,9 +6978,7 @@ Tùy chọn C đúng: Khoảng cách, khả năng đọc và tính nhất quán 
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 350: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** What does AspectRatio help achieve?
+**Question 350:** What does AspectRatio help achieve?
 
 A. Preserving the aspect ratio and preventing image distortion
 
@@ -7698,9 +6998,7 @@ Tùy chọn A đúng: Giữ nguyên tỷ lệ khung hình và ngăn ngừa biế
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 351: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** What does SafeArea prevent?
+**Question 351:** What does SafeArea prevent?
 
 A. SQL injection
 
@@ -7720,9 +7018,7 @@ Tùy chọn C đúng: Nội dung được bao phủ bởi khu vực notch, Dynam
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 352: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** What do spacing and runSpacing control in Wrap?
+**Question 352:** What do spacing and runSpacing control in Wrap?
 
 A. Horizontal spacing and spacing between lines
 
@@ -7742,9 +7038,7 @@ Phương án A đúng: Khoảng cách ngang và khoảng cách giữa các dòng
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 353: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** How is an API described?
+**Question 353:** How is an API described?
 
 A. A required local database
 
@@ -7764,9 +7058,7 @@ Tùy chọn C đúng: Hợp đồng cho phép khách hàng giao tiếp với má
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 354: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** Where is local-storage data saved?
+**Question 354:** Where is local-storage data saved?
 
 A. Directly on the user's device
 
@@ -7786,9 +7078,7 @@ Tùy chọn A đúng: Trực tiếp trên thiết bị của người dùng. Câ
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 355: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** Which local-storage benefits are mentioned?
+**Question 355:** Which local-storage benefits are mentioned?
 
 A. It always requires an internet connection
 
@@ -7808,9 +7098,7 @@ Tùy chọn D đúng: Nó hoạt động ngoại tuyến, tiếp tục khởi đ
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 356: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** What is SharedPreferences best suited for?
+**Question 356:** What is SharedPreferences best suited for?
 
 A. Large video files
 
@@ -7830,9 +7118,7 @@ Tùy chọn B đúng: Dữ liệu khóa-giá trị đơn giản như cài đặt
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 357: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** Which case should not use SharedPreferences?
+**Question 357:** Which case should not use SharedPreferences?
 
 A. Default sort mode
 
@@ -7852,9 +7138,7 @@ Tùy chọn C đúng: Đối tượng phức tạp hoặc dữ liệu lớn. Câ
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 358: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** On Flutter Web, SharedPreferences normally maps to what?
+**Question 358:** On Flutter Web, SharedPreferences normally maps to what?
 
 A. Firebase Authentication
 
@@ -7874,9 +7158,7 @@ Tùy chọn B đúng: Trình duyệt localStorage. Flutter hỗ trợ nhiều m�
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 359: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** Which method stores a boolean in SharedPreferences?
+**Question 359:** Which method stores a boolean in SharedPreferences?
 
 A. insertRow()
 
@@ -7896,9 +7178,7 @@ Tùy chọn D đúng: setBool(khóa, giá trị). Câu trả lời phù hợp v�
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 360: Dữ liệu, Kiến trúc, Plugin & Nền tảng
-
-**Question:** Which sqflite method adds a row?
+**Question 360:** Which sqflite method adds a row?
 
 A. insert()
 
@@ -7918,9 +7198,7 @@ Tùy chọn A đúng: insert(). Bố cục Flutter được tạo từ widgets; 
 
 https://docs.flutter.dev/platform-integration
 
-### Câu 361: Unit test & Mock
-
-**Question:** Which folder in the Flutter project structure holds dependency and asset configuration?
+**Question 361:** Which folder in the Flutter project structure holds dependency and asset configuration?
 
 A. lib/
 
@@ -7940,9 +7218,7 @@ D. android/
 
 https://docs.flutter.dev/testing
 
-### Câu 362: Unit test & Mock
-
-**Question:** What is the `flutter doctor` command used for?
+**Question 362:** What is the `flutter doctor` command used for?
 
 A. Automatically fix errors in Dart source code
 
@@ -7962,9 +7238,7 @@ D. Run unit tests for the whole project
 
 https://docs.flutter.dev/testing
 
-### Câu 363: Unit test & Mock
-
-**Question:** In `ApiService`, what technique does the constructor parameter `ApiService({http.Client? client}) : client = client ?? http.Client();` illustrate?
+**Question 363:** In `ApiService`, what technique does the constructor parameter `ApiService({http.Client? client}) : client = client ?? http.Client();` illustrate?
 
 A. Forces always using the same single global HTTP Client instance
 
@@ -7984,9 +7258,7 @@ D. No clear purpose, just to shorten the code
 
 https://docs.flutter.dev/testing
 
-### Câu 364: Unit test & Mock
-
-**Question:** According to the lecture, what are the three typical API data groups students can choose from for their project?
+**Question 364:** According to the lecture, what are the three typical API data groups students can choose from for their project?
 
 A. realtime, media, mock APIs
 
@@ -8006,9 +7278,7 @@ Ba nhóm điển hình: thời gian thực, phương tiện, API mô phỏng ---
 
 https://docs.flutter.dev/testing
 
-### Câu 365: Unit test & Mock
-
-**Question:** In the "SharedPreferences Support Across Environments" table, why doesn't DartPad (Flutter Mode) actually support SharedPreferences?
+**Question 365:** In the "SharedPreferences Support Across Environments" table, why doesn't DartPad (Flutter Mode) actually support SharedPreferences?
 
 A. Because DartPad only supports the JavaScript language
 
@@ -8028,9 +7298,7 @@ DartPad không có quyền truy cập vào bộ nhớ thiết bị thực, yêu 
 
 https://docs.flutter.dev/testing
 
-### Câu 366: Unit test & Mock
-
-**Question:** In Demo 10.1, why does the lecture choose "Mock Authentication" (simulated auth inside AuthService) instead of calling a real API from the start?
+**Question 366:** In Demo 10.1, why does the lecture choose "Mock Authentication" (simulated auth inside AuthService) instead of calling a real API from the start?
 
 A. Because Mock Authentication is theoretically faster in computation
 
@@ -8050,9 +7318,7 @@ Xác thực mô phỏng đảm bảo các bản demo đáng tin cậy trên các
 
 https://docs.flutter.dev/testing
 
-### Câu 367: Unit test & Mock
-
-**Question:** Per the Mock API vs Real API comparison table, what is a disadvantage of Real API compared to Mock API in the teaching context?
+**Question 367:** Per the Mock API vs Real API comparison table, what is a disadvantage of Real API compared to Mock API in the teaching context?
 
 A. Real API is always faster and more stable than Mock API
 
@@ -8072,9 +7338,7 @@ API thực có thể bị lỗi do sự cố mạng/máy chủ/TLS/CORS, kém �
 
 https://docs.flutter.dev/testing
 
-### Câu 368: Unit test & Mock
-
-**Question:** What are the three main testing types in Flutter mentioned in the lecture?
+**Question 368:** What are the three main testing types in Flutter mentioned in the lecture?
 
 A. Unit Test, Widget Test, Integration Test
 
@@ -8094,9 +7358,7 @@ Ba loại thử nghiệm chính: Thử nghiệm đơn vị, Thử nghiệm Widge
 
 https://docs.flutter.dev/testing
 
-### Câu 369: Unit test & Mock
-
-**Question:** Per the "Flutter Testing Pyramid," which test type should have the LARGEST quantity in a project, since it's fast, stable, and low cost?
+**Question 369:** Per the "Flutter Testing Pyramid," which test type should have the LARGEST quantity in a project, since it's fast, stable, and low cost?
 
 A. Integration Test
 
@@ -8116,9 +7378,7 @@ Các bài kiểm thử đơn vị phải có số lượng nhiều nhất theo K
 
 https://docs.flutter.dev/testing
 
-### Câu 370: Unit test & Mock
-
-**Question:** Given this Unit Test: test('toggle() should switch completed state', () { final task = Task(id: '1', title: 'Demo task'); expect(task.completed, false); task.toggle(); expect(task.completed, true); task.toggle(); expect(task.completed, false); }); What common test structuring pattern does this test apply (even though not explicitly labeled with comments)?
+**Question 370:** Given this Unit Test: test('toggle() should switch completed state', () { final task = Task(id: '1', title: 'Demo task'); expect(task.completed, false); task.toggle(); expect(task.completed, true); task.toggle(); expect(task.completed, false); }); What common test structuring pattern does this test apply (even though not explicitly labeled with comments)?
 
 A. Model-View-Controller (MVC)
 
@@ -8138,9 +7398,7 @@ test này tuân theo mẫu Sắp xếp - Hành động - Khẳng định. A, C, 
 
 https://docs.flutter.dev/testing
 
-### Câu 371: Unit test & Mock
-
-**Question:** How does a Widget Test in Flutter differ from a Unit Test?
+**Question 371:** How does a Widget Test in Flutter differ from a Unit Test?
 
 A. Widget Test only checks pure logic unrelated to UI, exactly like a Unit Test
 
@@ -8160,9 +7418,7 @@ Kiểm tra Widget kiểm tra việc hiển thị/tương tác UI trên cây widg
 
 https://docs.flutter.dev/testing
 
-### Câu 372: Unit test & Mock
-
-**Question:** In a Navigation Test, how does `pumpAndSettle()` differ from a plain `pump()`?
+**Question 372:** In a Navigation Test, how does `pumpAndSettle()` differ from a plain `pump()`?
 
 A. No difference at all, the two functions are entirely equivalent
 
@@ -8182,9 +7438,7 @@ pumpAndSettle() liên tục bơm khung hình cho đến khi tất cả hoạt �
 
 https://docs.flutter.dev/testing
 
-### Câu 373: Unit test & Mock
-
-**Question:** Per the "How Tests Map to Real Flutter Problems" table, the "Wrong navigation" issue should mainly be detected by which test type?
+**Question 373:** Per the "How Tests Map to Real Flutter Problems" table, the "Wrong navigation" issue should mainly be detected by which test type?
 
 A. Unit Test
 
@@ -8204,9 +7458,7 @@ D. Can only be detected via manual testing
 
 https://docs.flutter.dev/testing
 
-### Câu 374: Unit test & Mock
-
-**Question:** In Taskly App, `TaskRepository` handles CRUD logic for tasks, while `TaskProvider` manages state. If a Widget Test wants to check UI behavior WITHOUT depending on the Repository's real database/API connection, what reasonable approach is recommended in Module 11's "Best Practices"?
+**Question 374:** In Taskly App, `TaskRepository` handles CRUD logic for tasks, while `TaskProvider` manages state. If a Widget Test wants to check UI behavior WITHOUT depending on the Repository's real database/API connection, what reasonable approach is recommended in Module 11's "Best Practices"?
 
 A. Always connect directly to real data to ensure absolute test accuracy
 
@@ -8226,9 +7478,7 @@ Việc mô phỏng Repository khi có thể giúp Widget Kiểm tra nhanh, ổn 
 
 https://docs.flutter.dev/testing
 
-### Câu 375: Unit test & Mock
-
-**Question:** In the issue-to-test-type mapping table: \| Flutter Issue \| Recommended Test \| \|---\|---\| \| Logic failure \| Unit test \| \| UI not updating \| Widget test \| \| Wrong navigation \| Navigation test \| \| Entire feature broken \| Integration test \| If a bug occurs because a Provider doesn't call `notifyListeners()` after updating data (causing the UI to not update even though the data changed in memory), which test type can most directly detect this issue?
+**Question 375:** In the issue-to-test-type mapping table: \| Flutter Issue \| Recommended Test \| \|---\|---\| \| Logic failure \| Unit test \| \| UI not updating \| Widget test \| \| Wrong navigation \| Navigation test \| \| Entire feature broken \| Integration test \| If a bug occurs because a Provider doesn't call `notifyListeners()` after updating data (causing the UI to not update even though the data changed in memory), which test type can most directly detect this issue?
 
 A. A Unit Test checking just the data-update function alone, since it's unrelated to UI
 
@@ -8248,9 +7498,7 @@ Thử nghiệm Widget là trực tiếp nhất vì nó xác minh UI thực sự 
 
 https://docs.flutter.dev/testing
 
-### Câu 376: Unit test & Mock
-
-**Question:** What is `expect()` in flutter_test used for?
+**Question 376:** What is `expect()` in flutter_test used for?
 
 A. Initializing the widget tree for the test
 
@@ -8270,9 +7518,7 @@ expect() so sánh giá trị thực tế và giá trị mong đợi, không kh�
 
 https://docs.flutter.dev/testing
 
-### Câu 377: Unit test & Mock
-
-**Question:** Consider the lecture's explanation: "Most UI issues start from logic → unit tests catch problems early." Applying this practically: if the function counting incomplete tasks (`getIncompleteCount()`) in TaskProvider has a logic bug (calculates wrong), but the UI still shows the correct number by coincidence with small test data, which testing approach best and most reliably catches this bug early, regardless of data size?
+**Question 377:** Consider the lecture's explanation: "Most UI issues start from logic → unit tests catch problems early." Applying this practically: if the function counting incomplete tasks (`getIncompleteCount()`) in TaskProvider has a logic bug (calculates wrong), but the UI still shows the correct number by coincidence with small test data, which testing approach best and most reliably catches this bug early, regardless of data size?
 
 A. Relying solely on manual UI observation with random datasets
 
@@ -8292,9 +7538,7 @@ Bài kiểm tra đơn vị chuyên dụng với các bộ dữ liệu trường 
 
 https://docs.flutter.dev/testing
 
-### Câu 378: Unit test & Mock
-
-**Question:** Per Module 11's Summary, which skill is NOT listed as a learning objective of this module?
+**Question 378:** Per Module 11's Summary, which skill is NOT listed as a learning objective of this module?
 
 A. Writing Unit Tests to check model logic and behavior
 
@@ -8314,9 +7558,7 @@ Xây dựng và ký release APK để xuất bản trên Google Play là chủ �
 
 https://docs.flutter.dev/testing
 
-### Câu 379: Unit test & Mock
-
-**Question:** Consider: a student group writes VERY MANY Integration Tests (the vast majority of all tests) but almost no Unit Tests. Per the "Testing Pyramid" principle learned, what realistic consequence is likely?
+**Question 379:** Consider: a student group writes VERY MANY Integration Tests (the vast majority of all tests) but almost no Unit Tests. Per the "Testing Pyramid" principle learned, what realistic consequence is likely?
 
 A. No negative consequence at all, more Integration Tests is always better in every case
 
@@ -8336,9 +7578,7 @@ Quá nhiều Kiểm thử tích hợp và quá ít Kiểm thử đơn vị sẽ 
 
 https://docs.flutter.dev/testing
 
-### Câu 380: Unit test & Mock
-
-**Question:** In the "Deployment Checklist" after completing Demo 12.4, which of the following items is mentioned?
+**Question 380:** In the "Deployment Checklist" after completing Demo 12.4, which of the following items is mentioned?
 
 A. Remove debug statements, clean up unused assets, ensure versionCode has been updated
 
@@ -8358,9 +7598,7 @@ Danh sách kiểm tra đề cập đến việc xóa câu lệnh debug, xóa n�
 
 https://docs.flutter.dev/testing
 
-### Câu 381: Unit test & Mock
-
-**Question:** Per Module 12's summary, what is the ultimate goal of the entire process of optimizing and packaging the Taskly app?
+**Question 381:** Per Module 12's summary, what is the ultimate goal of the entire process of optimizing and packaging the Taskly app?
 
 A. Simply to reduce the project's number of lines of code
 
@@ -8380,9 +7618,7 @@ Mục tiêu cuối cùng là bản dựng Bản phát hành được tối ưu h
 
 https://docs.flutter.dev/testing
 
-### Câu 382: Unit test & Mock
-
-**Question:** A group of students intentionally skips writing Unit Tests and separating clear architecture (State/Repository) to "finish the project quickly," resulting in it later being very hard to fix bugs or add new features without breaking working parts. What concept from the lecture does this illustrate, and how does it relate to the architectural principles (Repository Pattern, Testing Pyramid) taught in Module 3 and Module 11?
+**Question 382:** A group of students intentionally skips writing Unit Tests and separating clear architecture (State/Repository) to "finish the project quickly," resulting in it later being very hard to fix bugs or add new features without breaking working parts. What concept from the lecture does this illustrate, and how does it relate to the architectural principles (Repository Pattern, Testing Pyramid) taught in Module 3 and Module 11?
 
 A. This is unrelated to any concept taught in previous modules
 
@@ -8402,9 +7638,7 @@ D. This is the recommended approach for performance optimization per Module 12
 
 https://docs.flutter.dev/testing
 
-### Câu 383: Unit test & Mock
-
-**Question:** If a Golden Test is set up to run automatically in a CI/CD pipeline before merging code, what is the main purpose of doing this?
+**Question 383:** If a Golden Test is set up to run automatically in a CI/CD pipeline before merging code, what is the main purpose of doing this?
 
 A. Increases the speed of building the release app
 
@@ -8424,9 +7658,7 @@ Chạy thử nghiệm vàng trong CI/CD sẽ phát hiện sớm các hồi quy t
 
 https://docs.flutter.dev/testing
 
-### Câu 384: Unit test & Mock
-
-**Question:** What does the Embedder layer mainly handle?
+**Question 384:** What does the Embedder layer mainly handle?
 
 A. Storing data with SQLite
 
@@ -8446,9 +7678,7 @@ Tùy chọn B đúng: Tích hợp nền tảng, đầu vào, lifecycle và quả
 
 https://docs.flutter.dev/testing
 
-### Câu 385: Unit test & Mock
-
-**Question:** Which standard screen elements can Scaffold provide?
+**Question 385:** Which standard screen elements can Scaffold provide?
 
 A. AppBar, body, drawer, bottomNavigationBar, and floatingActionButton
 
@@ -8468,9 +7698,7 @@ Tùy chọn A đúng: AppBar, nội dung, ngăn kéo, bottomNavigationBar và fl
 
 https://docs.flutter.dev/testing
 
-### Câu 386: Unit test & Mock
-
-**Question:** What is Info.plist URL Types used for?
+**Question 386:** What is Info.plist URL Types used for?
 
 A. Storing an access token
 
@@ -8490,9 +7718,7 @@ Tùy chọn D đúng: Khai báo lược đồ URL tùy chỉnh cho ứng dụng 
 
 https://docs.flutter.dev/testing
 
-### Câu 387: Unit test & Mock
-
-**Question:** What is mock authentication best suited for?
+**Question 387:** What is mock authentication best suited for?
 
 A. Google Play signing
 
@@ -8512,9 +7738,7 @@ Phương án C đúng: Minh họa trên lớp và học tập theo một quy tr�
 
 https://docs.flutter.dev/testing
 
-### Câu 388: Unit test & Mock
-
-**Question:** What risks does real-API authentication have compared with mock authentication?
+**Question 388:** What risks does real-API authentication have compared with mock authentication?
 
 A. It does not need async code
 
@@ -8534,9 +7758,7 @@ Tùy chọn B đúng: Tùy chọn này có thể không thành công do mạng, 
 
 https://docs.flutter.dev/testing
 
-### Câu 389: Unit test & Mock
-
-**Question:** What does a unit test validate?
+**Question 389:** What does a unit test validate?
 
 A. APK size
 
@@ -8556,9 +7778,7 @@ Tùy chọn B đúng: Logic không yêu cầu UI. Kiểm tra đơn vị isolate 
 
 https://docs.flutter.dev/testing
 
-### Câu 390: Unit test & Mock
-
-**Question:** According to the testing pyramid, which type of test should be most numerous?
+**Question 390:** According to the testing pyramid, which type of test should be most numerous?
 
 A. Unit tests
 
@@ -8578,9 +7798,7 @@ Tùy chọn A đúng: Kiểm tra đơn vị. Câu trả lời phù hợp với h
 
 https://docs.flutter.dev/testing
 
-### Câu 391: Unit test & Mock
-
-**Question:** Which test type should be prioritized for a logic failure?
+**Question 391:** Which test type should be prioritized for a logic failure?
 
 A. Integration test only
 
@@ -8600,9 +7818,7 @@ Lựa chọn C đúng: Kiểm tra đơn vị. Câu trả lời phù hợp với 
 
 https://docs.flutter.dev/testing
 
-### Câu 392: Unit test & Mock
-
-**Question:** What is the Act step in a unit test of toggle()?
+**Question 392:** What is the Act step in a unit test of toggle()?
 
 A. Run flutter build
 
@@ -8622,9 +7838,7 @@ Tùy chọn D đúng: Gọi task.toggle(). Kiểm tra đơn vị isolate một h
 
 https://docs.flutter.dev/testing
 
-### Câu 393: Unit test & Mock
-
-**Question:** Which testing best practice is correct?
+**Question 393:** Which testing best practice is correct?
 
 A. Retest Flutter framework behavior
 
@@ -8644,9 +7858,7 @@ Tùy chọn C đúng: Giữ các bài kiểm tra nhỏ và tập trung, đồng 
 
 https://docs.flutter.dev/testing
 
-### Câu 394: Unit test & Mock
-
-**Question:** Which package is used for mocking in Dart tests often?
+**Question 394:** Which package is used for mocking in Dart tests often?
 
 A. provider
 
@@ -8666,9 +7878,7 @@ Tùy chọn B đúng: mocktail. Kiểm tra đơn vị isolate một hàm, phươ
 
 https://docs.flutter.dev/testing
 
-### Câu 395: Widget test
-
-**Question:** In Demo 11.4 (Integration Test: Full CRUD Flow), the test sequentially: adds a task → opens detail → edits the title → saves → checks the updated list. Why is this test type classified as "Integration Test" rather than a plain "Widget Test"?
+**Question 395:** In Demo 11.4 (Integration Test: Full CRUD Flow), the test sequentially: adds a task → opens detail → edits the title → saves → checks the updated list. Why is this test type classified as "Integration Test" rather than a plain "Widget Test"?
 
 A. Because it uses more lines of code than a typical Widget Test
 
@@ -8688,9 +7898,7 @@ Nó được phân loại là Kiểm tra tích hợp vì nó xác thực toàn b
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 396: Widget test
-
-**Question:** What is `find.byKey(const Key('taskTextField'))` used for in a test?
+**Question 396:** What is `find.byKey(const Key('taskTextField'))` used for in a test?
 
 A. Searching for displayed text on screen by string content
 
@@ -8710,9 +7918,7 @@ find.byKey() định vị một widget cụ thể một cách đáng tin cậy t
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 397: Widget test
-
-**Question:** Why does the lecture recommend "Use keys for widget tests"?
+**Question 397:** Why does the lecture recommend "Use keys for widget tests"?
 
 A. Because a Key is syntactically mandatory for every Flutter widget
 
@@ -8732,9 +7938,7 @@ Việc chỉ định Khóa hỗ trợ vị trí widget chính xác trong các th
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 398: Widget test
-
-**Question:** In the test file `test/widget/demo_11_3_navigation_to_detail_test.dart`, suppose the final assertion is: expect(find.text('Task Detail'), findsOneWidget); but the detail screen actually displays the title as "Task Details" (with an extra "s"). What is the test's result?
+**Question 398:** In the test file `test/widget/demo_11_3_navigation_to_detail_test.dart`, suppose the final assertion is: expect(find.text('Task Detail'), findsOneWidget); but the detail screen actually displays the title as "Task Details" (with an extra "s"). What is the test's result?
 
 A. The test still passes because Flutter automatically does fuzzy text matching
 
@@ -8754,9 +7958,7 @@ find.text() yêu cầu đối sánh chuỗi chính xác an, do đó, "Task Detai
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 399: Widget test
-
-**Question:** What does `tester.pumpWidget(createTaskListTestApp())` do as the first step of a Widget Test?
+**Question 399:** What does `tester.pumpWidget(createTaskListTestApp())` do as the first step of a Widget Test?
 
 A. Clears all previous test data
 
@@ -8776,9 +7978,7 @@ pumpWidget() hiển thị cây widget đã cho vào môi trường thử nghiệ
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 400: Widget test
-
-**Question:** Per "How Flutter Builds the UI (Render Pipeline)," what are the respective roles of the three core concepts Widget, Element, RenderObject?
+**Question 400:** Per "How Flutter Builds the UI (Render Pipeline)," what are the respective roles of the three core concepts Widget, Element, RenderObject?
 
 A. Widget is an immutable blueprint describing configuration, Element manages lifecycle & state, RenderObject performs the actual layout/painting/compositing
 
@@ -8798,9 +7998,7 @@ Widget = bản thiết kế bất biến, trình quản lý Element = lifecycle/
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 401: Widget test
-
-**Question:** What does Golden Testing in Flutter check?
+**Question 401:** What does Golden Testing in Flutter check?
 
 A. Asynchronous data-processing logic (Future/Stream)
 
@@ -8820,9 +8018,7 @@ Thử nghiệm vàng so sánh UI được kết xuất với hình ảnh tham ch
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 402: Widget test
-
-**Question:** In `flutter_test`, which function is used to compare the current widget against a saved golden image?
+**Question 402:** In `flutter_test`, which function is used to compare the current widget against a saved golden image?
 
 A. `expect(find.text(...), findsOneWidget)`
 
@@ -8842,9 +8038,7 @@ D. `verify()`
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 403: Widget test
-
-**Question:** A student group runs a Golden Test on Windows, but the original golden image was created on macOS, causing the test to fail repeatedly even though the UI looks "identical" to the naked eye. What is the most common cause of this issue?
+**Question 403:** A student group runs a Golden Test on Windows, but the original golden image was created on macOS, causing the test to fail repeatedly even though the UI looks "identical" to the naked eye. What is the most common cause of this issue?
 
 A. Golden Tests never work reliably on any operating system
 
@@ -8864,9 +8058,7 @@ Sự khác biệt nhỏ về kết xuất phông chữ/khử răng cưa giữa c
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 404: Widget test
-
-**Question:** In `flutter_bloc`, how does the `BlocListener` widget differ from `BlocBuilder`?
+**Question 404:** In `flutter_bloc`, how does the `BlocListener` widget differ from `BlocBuilder`?
 
 A. The two widgets are entirely identical, interchangeable in every case
 
@@ -8886,9 +8078,7 @@ BlocBuilder xây dựng lại UI dựa trên state mới; BlocListener thực hi
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 405: Widget test
-
-**Question:** Which method does ChangeNotifier use to inform its listeners?
+**Question 405:** Which method does ChangeNotifier use to inform its listeners?
 
 A. json.decode()
 
@@ -8908,9 +8098,7 @@ Tùy chọn C đúng: notifyListeners(). Câu trả lời phù hợp với hành
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 406: Widget test
-
-**Question:** What is JSON?
+**Question 406:** What is JSON?
 
 A. A rendering engine
 
@@ -8930,9 +8118,7 @@ Tùy chọn C đúng: Định dạng văn bản nhẹ để trao đổi dữ li�
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 407: Widget test
-
-**Question:** Which package is used in the slides for HTTP requests?
+**Question 407:** Which package is used in the slides for HTTP requests?
 
 A. http
 
@@ -8952,9 +8138,7 @@ Tùy chọn A đúng: http. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 408: Widget test
-
-**Question:** Which package helps locate the application's documents directory?
+**Question 408:** Which package helps locate the application's documents directory?
 
 A. provider
 
@@ -8974,9 +8158,7 @@ Tùy chọn C đúng: path_provider. Câu trả lời phù hợp với hành vi 
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 409: Widget test
-
-**Question:** What does a widget test validate?
+**Question 409:** What does a widget test validate?
 
 A. Google Play upload
 
@@ -8996,9 +8178,7 @@ Tùy chọn C đúng: hiển thị UI và tương tác widget. Các thử nghi�
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 410: Widget test
-
-**Question:** Why should there be fewer integration tests?
+**Question 410:** Why should there be fewer integration tests?
 
 A. Flutter cannot run them
 
@@ -9018,9 +8198,7 @@ Phương án C đúng: Chúng chậm hơn và đắt hơn, vì vậy chúng nên
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 411: Widget test
-
-**Question:** What is normally the final step of a testing workflow?
+**Question 411:** What is normally the final step of a testing workflow?
 
 A. Use expect() to verify the result
 
@@ -9040,9 +8218,7 @@ Tùy chọn A đúng: Sử dụng expect() để xác minh kết quả. Câu tr�
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 412: Widget test
-
-**Question:** Which test type should be prioritized when the UI does not update?
+**Question 412:** Which test type should be prioritized when the UI does not update?
 
 A. Network ping
 
@@ -9062,9 +8238,7 @@ Tùy chọn B đúng: kiểm tra Widget. Câu trả lời phù hợp với hành
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 413: Widget test
-
-**Question:** Which test should be used to check incorrect navigation?
+**Question 413:** Which test should be used to check incorrect navigation?
 
 A. A navigation or widget test
 
@@ -9084,9 +8258,7 @@ Tùy chọn A đúng: Kiểm tra điều hướng hoặc widget. Câu trả lờ
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 414: Widget test
-
-**Question:** Which method is used for the Assert step?
+**Question 414:** Which method is used for the Assert step?
 
 A. expect()
 
@@ -9106,9 +8278,7 @@ Tùy chọn A đúng: expect(). Câu trả lời phù hợp với hành vi loạ
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 415: Widget test
-
-**Question:** What does tester.pumpWidget() do?
+**Question 415:** What does tester.pumpWidget() do?
 
 A. Renders a widget tree in the test environment
 
@@ -9128,9 +8298,7 @@ Tùy chọn A đúng: Hiển thị cây widget trong môi trường thử nghi�
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 416: Widget test
-
-**Question:** Which user action does tester.tap() simulate?
+**Question 416:** Which user action does tester.tap() simulate?
 
 A. Entering text
 
@@ -9150,9 +8318,7 @@ Tùy chọn D đúng: Nhấn vào widget. Câu trả lời phù hợp với hàn
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 417: Widget test
-
-**Question:** When is pumpAndSettle() useful?
+**Question 417:** When is pumpAndSettle() useful?
 
 A. Waiting for animations and navigation to finish
 
@@ -9172,9 +8338,7 @@ Tùy chọn A đúng: Đang chờ hoạt ảnh và điều hướng kết thúc.
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 418: Widget test
-
-**Question:** What does findsOneWidget verify?
+**Question 418:** What does findsOneWidget verify?
 
 A. At least ten widgets exist
 
@@ -9194,9 +8358,7 @@ Tùy chọn C đúng: Chính xác một widget khớp với công cụ tìm. Cá
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 419: Widget test
-
-**Question:** How does a Key help in a widget test?
+**Question 419:** How does a Key help in a widget test?
 
 A. It directly increases FPS
 
@@ -9216,9 +8378,7 @@ Tùy chọn D đúng: Nó cung cấp một cách ổn định để tìm widget 
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 420: Widget test
-
-**Question:** Which package helps generate immutable models and JSON code?
+**Question 420:** Which package helps generate immutable models and JSON code?
 
 A. freezed
 
@@ -9238,9 +8398,7 @@ Tùy chọn A đúng: freezed. Câu trả lời phù hợp với hành vi loại
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 421: Widget test
-
-**Question:** Widget tests are used to?
+**Question 421:** Widget tests are used to?
 
 A. Test UI widgets
 
@@ -9260,9 +8418,7 @@ Lựa chọn A đúng: Kiểm tra UI widgets. Các thử nghiệm Widget xác mi
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 422: Widget test
-
-**Question:** Which widget test utility pumps frames/widgets?
+**Question 422:** Which widget test utility pumps frames/widgets?
 
 A. tester.pump
 
@@ -9282,9 +8438,7 @@ Tùy chọn A đúng: tester.pump. Các thử nghiệm Widget xác minh khả n�
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 423: Widget test
-
-**Question:** Which package provides core Flutter testing APIs?
+**Question 423:** Which package provides core Flutter testing APIs?
 
 A. flutter_test
 
@@ -9304,9 +8458,7 @@ Tùy chọn A đúng: flutter_test. Câu trả lời phù hợp với hành vi l
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 424: Widget test
-
-**Question:** What is the primary purpose of a Widget Test in Flutter?
+**Question 424:** What is the primary purpose of a Widget Test in Flutter?
 
 A. To validate complete user flows from start to finish.
 
@@ -9326,9 +8478,7 @@ Tùy chọn C đúng: Để xác thực việc hiển thị UI và các tương 
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 425: Widget test
-
-**Question:** In a widget test, which method is specifically used to trigger a UI rebuild after an interaction (like a button tap)?
+**Question 425:** In a widget test, which method is specifically used to trigger a UI rebuild after an interaction (like a button tap)?
 
 A. tester.tap()
 
@@ -9348,9 +8498,7 @@ Tùy chọn C đúng: tester.pump(). Các thử nghiệm Widget xác minh khả 
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 426: Widget test
-
-**Question:** When testing navigation between screens, why is tester.pumpAndSettle() used instead of a standard tester.pump()?
+**Question 426:** When testing navigation between screens, why is tester.pumpAndSettle() used instead of a standard tester.pump()?
 
 A. To clear the local cache before moving to a new screen.
 
@@ -9370,9 +8518,7 @@ Tùy chọn B đúng: Để đợi tất cả hoạt ảnh và chuyển tiếp h
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 427: Widget test
-
-**Question:** What is a recommended best practice for identifying widgets within a widget test to ensure they are easily found?
+**Question 427:** What is a recommended best practice for identifying widgets within a widget test to ensure they are easily found?
 
 A. Always search by the widget's color.
 
@@ -9392,9 +8538,7 @@ Tùy chọn C đúng: Sử dụng các thử nghiệm Keys (e.g., find.byKey) du
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 428: Widget test
-
-**Question:** According to the "Testing Workflow," which function is used to verify that the actual result of a test matches the expected behavior?
+**Question 428:** According to the "Testing Workflow," which function is used to verify that the actual result of a test matches the expected behavior?
 
 A. verify()
 
@@ -9414,9 +8558,7 @@ Tùy chọn C đúng: expect(). Câu trả lời phù hợp với hành vi loạ
 
 https://docs.flutter.dev/cookbook/testing/widget
 
-### Câu 429: Integration test & Patrol
-
-**Question:** In the testing pyramid, how many Integration Tests are recommended and for what purpose?
+**Question 429:** In the testing pyramid, how many Integration Tests are recommended and for what purpose?
 
 A. Use the most since it's the most comprehensive test type
 
@@ -9436,9 +8578,7 @@ Kiểm thử tích hợp nên được sử dụng một cách tiết kiệm vì
 
 https://docs.flutter.dev/testing/integration-tests
 
-### Câu 430: Integration test & Patrol
-
-**Question:** A student writes an Integration Test but insists on also testing whether "the AppBar's background color is exactly Colors.blue per Material Design's default" (a default framework behavior, not custom app logic). Per the "Best Practices" learned, why should this approach be avoided?
+**Question 430:** A student writes an Integration Test but insists on also testing whether "the AppBar's background color is exactly Colors.blue per Material Design's default" (a default framework behavior, not custom app logic). Per the "Best Practices" learned, why should this approach be avoided?
 
 A. Because Integration Test is not allowed to check colors in any form
 
@@ -9458,9 +8598,7 @@ Việc kiểm tra hành vi của khung mặc định thay vì logic ứng dụng
 
 https://docs.flutter.dev/testing/integration-tests
 
-### Câu 431: Integration test & Patrol
-
-**Question:** What is the purpose of ThemeData?
+**Question 431:** What is the purpose of ThemeData?
 
 A. Running integration tests
 
@@ -9480,9 +8618,7 @@ Tùy chọn C đúng: Xác định màu sắc, kiểu chữ và hình dạng chu
 
 https://docs.flutter.dev/testing/integration-tests
 
-### Câu 432: Integration test & Patrol
-
-**Question:** What does an integration test validate?
+**Question 432:** What does an integration test validate?
 
 A. One validator only
 
@@ -9502,9 +8638,7 @@ Tùy chọn D đúng: Luồng người dùng hoàn chỉnh từ đầu đến cu
 
 https://docs.flutter.dev/testing/integration-tests
 
-### Câu 433: Integration test & Patrol
-
-**Question:** Integration tests are used to?
+**Question 433:** Integration tests are used to?
 
 A. Test entire app flows
 
@@ -9524,9 +8658,7 @@ Tùy chọn A đúng: Kiểm tra toàn bộ luồng ứng dụng. Kiểm thử t
 
 https://docs.flutter.dev/testing/integration-tests
 
-### Câu 434: Integration test & Patrol
-
-**Question:** Why should integration tests be used sparingly (the "few" at the top of the pyramid)?
+**Question 434:** Why should integration tests be used sparingly (the "few" at the top of the pyramid)?
 
 A. Because they are the least reliable at catching bugs.
 
@@ -9546,9 +8678,7 @@ Tùy chọn C đúng: Bởi vì chúng chạy chậm và tốn kém so với cá
 
 https://docs.flutter.dev/testing/integration-tests
 
-### Câu 435: Coverage & CI
-
-**Question:** What order does Flutter's rendering workflow follow?
+**Question 435:** What order does Flutter's rendering workflow follow?
 
 A. GPU Rendering → Widget Tree → Render Tree → Composited Scene
 
@@ -9568,9 +8698,7 @@ Quy trình kết xuất: Widget Cây → Cây kết xuất → Cảnh tổng h�
 
 https://docs.flutter.dev/testing
 
-### Câu 436: Coverage & CI
-
-**Question:** Per "Why Notifications After Authentication?", what is the main purpose of sending a notification right after a successful login (e.g. "Login successful. Welcome back!")?
+**Question 436:** Per "Why Notifications After Authentication?", what is the main purpose of sending a notification right after a successful login (e.g. "Login successful. Welcome back!")?
 
 A. Fully replaces showing a SnackBar
 
@@ -9590,9 +8718,7 @@ Mục đích là kết nối thông báo với quy trình công việc kinh doan
 
 https://docs.flutter.dev/testing
 
-### Câu 437: Coverage & CI
-
-**Question:** What is the rendering pipeline sequence presented in the slides?
+**Question 437:** What is the rendering pipeline sequence presented in the slides?
 
 A. Source Code -> SQL -> Render Tree -> API
 
@@ -9612,9 +8738,7 @@ Tùy chọn C đúng: Widget Cây -> Cây kết xuất -> Cảnh tổng hợp ->
 
 https://docs.flutter.dev/testing
 
-### Câu 438: Coverage & CI
-
-**Question:** Which sequence is the correct SharedPreferences workflow?
+**Question 438:** Which sequence is the correct SharedPreferences workflow?
 
 A. Load instance -> read -> update -> save -> refresh UI
 
@@ -9634,9 +8758,7 @@ Tùy chọn A đúng: Tải phiên bản -> đọc -> cập nhật -> lưu -> l�
 
 https://docs.flutter.dev/testing
 
-### Câu 439: Coverage & CI
-
-**Question:** How is a Widget described in Flutter's render pipeline?
+**Question 439:** How is a Widget described in Flutter's render pipeline?
 
 A. The only object that paints directly
 
@@ -9656,9 +8778,7 @@ Lựa chọn B đúng: Một bản thiết kế không thể thay đổi. Câu t
 
 https://docs.flutter.dev/testing
 
-### Câu 440: Coverage & CI
-
-**Question:** In the SharedPreferences workflow, what is the final step after a value has been saved to the storage?
+**Question 440:** In the SharedPreferences workflow, what is the final step after a value has been saved to the storage?
 
 A. Load the instance again
 
@@ -9678,9 +8798,7 @@ Tùy chọn C đúng: Làm mới UI để phản ánh dữ liệu đã cập nh�
 
 https://docs.flutter.dev/testing
 
-### Câu 441: Coverage & CI
-
-**Question:** In the standard Flutter testing workflow, what are the three steps (the "3 As") used to structure a test?
+**Question 441:** In the standard Flutter testing workflow, what are the three steps (the "3 As") used to structure a test?
 
 A. Apply, Act, Assert
 
@@ -9700,9 +8818,7 @@ Phương án B đúng: Sắp xếp, Hành động, Khẳng định. Câu trả l
 
 https://docs.flutter.dev/testing
 
-### Câu 442: Coverage & CI
-
-**Question:** In the Flutter render pipeline, which specific component is responsible for handling the lifecycle and state of widgets?
+**Question 442:** In the Flutter render pipeline, which specific component is responsible for handling the lifecycle and state of widgets?
 
 A. Widgets
 
@@ -9722,9 +8838,7 @@ Tùy chọn B đúng: Elements. Đây là khái niệm quản lý state: các th
 
 https://docs.flutter.dev/testing
 
-### Câu 443: Hiệu năng
-
-**Question:** Which programming language and rendering engine does Flutter use?
+**Question 443:** Which programming language and rendering engine does Flutter use?
 
 A. Kotlin and Skia
 
@@ -9744,9 +8858,7 @@ Flutter sử dụng Dart với công cụ kết xuất Skia. (A, C, D đều gh�
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 444: Hiệu năng
-
-**Question:** In the framework comparison table from Module 1, what is the core difference between Flutter and React Native?
+**Question 444:** In the framework comparison table from Module 1, what is the core difference between Flutter and React Native?
 
 A. Flutter uses Dart and compiles to native UI with its own engine, while React Native uses JavaScript and bridges to native components
 
@@ -9766,9 +8878,7 @@ Bảng so sánh: Flutter (Dart, Gốc UI + Engine) so với React Native (JS, Br
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 445: Hiệu năng
-
-**Question:** What characterizes an abstract class in Dart?
+**Question 445:** What characterizes an abstract class in Dart?
 
 A. It cannot have any methods with a body
 
@@ -9788,9 +8898,7 @@ Một lớp trừu tượng định nghĩa cấu trúc không có hành vi đầ
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 446: Hiệu năng
-
-**Question:** What problem does `SafeArea` in Flutter solve on modern devices?
+**Question 446:** What problem does `SafeArea` in Flutter solve on modern devices?
 
 A. Increases the app's rendering speed
 
@@ -9810,9 +8918,7 @@ SafeArea tránh nội dung UI bị che khuất bởi rãnh khía/Đảo động/
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 447: Hiệu năng
-
-**Question:** What frame-rate target (FPS) does Flutter aim for to ensure a smooth experience on standard devices?
+**Question 447:** What frame-rate target (FPS) does Flutter aim for to ensure a smooth experience on standard devices?
 
 A. 24 FPS
 
@@ -9832,9 +8938,7 @@ Flutter nhắm mục tiêu 60 FPS để có trải nghiệm mượt mà trên c�
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 448: Hiệu năng
-
-**Question:** If a device runs at 60 FPS, roughly how many milliseconds does Flutter have to complete build, layout, and paint for EACH frame before a dropped frame (jank) occurs?
+**Question 448:** If a device runs at 60 FPS, roughly how many milliseconds does Flutter have to complete build, layout, and paint for EACH frame before a dropped frame (jank) occurs?
 
 A. About 16.6ms
 
@@ -9854,9 +8958,7 @@ D. About 1000ms
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 449: Hiệu năng
-
-**Question:** Which language is the Flutter Framework layer mainly written in?
+**Question 449:** Which language is the Flutter Framework layer mainly written in?
 
 A. Dart
 
@@ -9876,9 +8978,7 @@ Tùy chọn A đúng: Dart. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 450: Hiệu năng
-
-**Question:** How is Dart described in the slides?
+**Question 450:** How is Dart described in the slides?
 
 A. An assembly language for Android
 
@@ -9898,9 +8998,7 @@ Tùy chọn C đúng: Ngôn ngữ dựa trên lớp, được tối ưu hóa cho
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 451: Hiệu năng
-
-**Question:** Which library is used to read and write File objects in Dart?
+**Question 451:** Which library is used to read and write File objects in Dart?
 
 A. dart:html is always required
 
@@ -9920,9 +9018,7 @@ Tùy chọn B đúng: dart:io. Câu trả lời phù hợp với hành vi loại
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 452: Hiệu năng
-
-**Question:** At 60 FPS, how much time is available for each frame?
+**Question 452:** At 60 FPS, how much time is available for each frame?
 
 A. About 16.6 ms
 
@@ -9942,9 +9038,7 @@ Lựa chọn A đúng: Khoảng 16,6 mili giây. Hiệu suất Flutter phải đ
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 453: Hiệu năng
-
-**Question:** What is a benefit of a const constructor?
+**Question 453:** What is a benefit of a const constructor?
 
 A. Creating database tables
 
@@ -9964,9 +9058,7 @@ Tùy chọn D đúng: Giảm công việc xây dựng lại, tiết kiệm bộ 
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 454: Hiệu năng
-
-**Question:** Why can UniqueKey() be harmful when misused?
+**Question 454:** Why can UniqueKey() be harmful when misused?
 
 A. It creates a new identity and may force widgets to rebuild repeatedly
 
@@ -9986,9 +9078,7 @@ Tùy chọn A đúng: Nó tạo ra một danh tính mới và có thể buộc w
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 455: Hiệu năng
-
-**Question:** Which technique correctly optimizes thumbnail images?
+**Question 455:** Which technique correctly optimizes thumbnail images?
 
 A. Always load the largest image
 
@@ -10008,9 +9098,7 @@ Tùy chọn B đúng: Thay đổi kích thước hoặc nén hình ảnh cho kí
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 456: Hiệu năng
-
-**Question:** Flutter uses which rendering engine?
+**Question 456:** Flutter uses which rendering engine?
 
 A. WebKit
 
@@ -10030,9 +9118,7 @@ Tùy chọn B đúng: Skia. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 457: Hiệu năng
-
-**Question:** Which constructor is optimized for large grids?
+**Question 457:** Which constructor is optimized for large grids?
 
 A. GridView.count
 
@@ -10052,9 +9138,7 @@ Tùy chọn B đúng: GridView.builder. Câu trả lời phù hợp với hành 
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 458: Hiệu năng
-
-**Question:** Why use const widgets?
+**Question 458:** Why use const widgets?
 
 A. More network access
 
@@ -10074,9 +9158,7 @@ Tùy chọn B đúng: Tối ưu hóa xây dựng lại tốt hơn. Câu trả l�
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 459: Hiệu năng
-
-**Question:** What are the key compilation features of Dart, Flutter's programming language?
+**Question 459:** What are the key compilation features of Dart, Flutter's programming language?
 
 A. It combines Ahead-of-Time (AOT) and Just-in-Time (JIT) compilation.
 
@@ -10096,9 +9178,7 @@ Tùy chọn A đúng: Nó kết hợp quá trình biên dịch Ahead-of-Time (AO
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 460: Hiệu năng
-
-**Question:** When the Dart execution engine runs, which of the following has the highest priority?
+**Question 460:** When the Dart execution engine runs, which of the following has the highest priority?
 
 A. Microtask queue
 
@@ -10118,9 +9198,7 @@ Tùy chọn A đúng: Hàng đợi microtask. Câu trả lời phù hợp với 
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 461: Hiệu năng
-
-**Question:** Why is it considered a UX best practice to disable the submit button while a network request is in progress?
+**Question 461:** Why is it considered a UX best practice to disable the submit button while a network request is in progress?
 
 A. To save battery life on the device.
 
@@ -10140,9 +9218,7 @@ Tùy chọn B đúng: Để ngăn "double-gửi" và hiển thị chỉ báo t�
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 462: Hiệu năng
-
-**Question:** Which of the following is true regarding UI Overflow Errors in Flutter?
+**Question 462:** Which of the following is true regarding UI Overflow Errors in Flutter?
 
 A. They cause the application to crash immediately.
 
@@ -10162,9 +9238,7 @@ Tùy chọn B đúng: Chúng xảy ra khi widget vượt quá giới hạn bố 
 
 https://docs.flutter.dev/perf/ui-performance
 
-### Câu 463: Build & Phát hành
-
-**Question:** Given: String? name; print(name ?? "Guest"); name = "Minh"; print(name!.length); What is printed, in order?
+**Question 463:** Given: String? name; print(name ?? "Guest"); name = "Minh"; print(name!.length); What is printed, in order?
 
 A. null, 4
 
@@ -10184,9 +9258,7 @@ D. Compile error because `!` cannot be used with a String? variable
 
 https://docs.flutter.dev/deployment
 
-### Câu 464: Build & Phát hành
-
-**Question:** For an app running on small phones, large phones, tablets, and desktop, why does the lecture recommend "Avoid fixed values"?
+**Question 464:** For an app running on small phones, large phones, tablets, and desktop, why does the lecture recommend "Avoid fixed values"?
 
 A. Because Flutter doesn't support fixed numbers in code
 
@@ -10206,9 +9278,7 @@ Các giá trị cố định không thích ứng với các kích thước màn 
 
 https://docs.flutter.dev/deployment
 
-### Câu 465: Build & Phát hành
-
-**Question:** Why does the lecture encourage testing responsive UI across multiple device sizes (e.g. Pixel 2 → Pixel 7 → iPad) instead of just one single emulator?
+**Question 465:** Why does the lecture encourage testing responsive UI across multiple device sizes (e.g. Pixel 2 → Pixel 7 → iPad) instead of just one single emulator?
 
 A. Because Flutter requires testing on at least 3 devices to submit an assignment
 
@@ -10228,9 +9298,7 @@ Hành vi bố cục có thể khác nhau đáng kể giữa các kích thước 
 
 https://docs.flutter.dev/deployment
 
-### Câu 466: Build & Phát hành
-
-**Question:** Comparing the three storage types learned (SharedPreferences, JSON File, SQLite) against the offline-first principle "Store offline → Use offline → Sync online." When designing a notes app that will later sync to a server, which initial local storage choice makes future "Sync online" and "Resolve conflicts" easiest to implement, and why?
+**Question 466:** Comparing the three storage types learned (SharedPreferences, JSON File, SQLite) against the offline-first principle "Store offline → Use offline → Sync online." When designing a notes app that will later sync to a server, which initial local storage choice makes future "Sync online" and "Resolve conflicts" easiest to implement, and why?
 
 A. SharedPreferences, because it's the simplest to start coding with
 
@@ -10250,9 +9318,7 @@ Cấu trúc hàng/cột rõ ràng của SQLite giúp việc theo dõi changes (i
 
 https://docs.flutter.dev/deployment
 
-### Câu 467: Build & Phát hành
-
-**Question:** In the common errors table, if Google Sign-In returns null when tested on an emulator, what is the most common cause stated?
+**Question 467:** In the common errors table, if Google Sign-In returns null when tested on an emulator, what is the most common cause stated?
 
 A. Missing camera permission
 
@@ -10272,9 +9338,7 @@ emulator thiếu Dịch vụ Google Play là nguyên nhân phổ biến; sử d�
 
 https://docs.flutter.dev/deployment
 
-### Câu 468: Build & Phát hành
-
-**Question:** What debugging aspects does DevTools in Flutter support, per Module 11?
+**Question 468:** What debugging aspects does DevTools in Flutter support, per Module 11?
 
 A. Only supports syntax debugging
 
@@ -10294,9 +9358,7 @@ DevTools hỗ trợ các vấn đề về bố cục, cập nhật state không 
 
 https://docs.flutter.dev/deployment
 
-### Câu 469: Build & Phát hành
-
-**Question:** Why does the lecture recommend running Flutter DevTools in "Profile Mode" instead of "Debug Mode" when measuring performance?
+**Question 469:** Why does the lecture recommend running Flutter DevTools in "Profile Mode" instead of "Debug Mode" when measuring performance?
 
 A. Because DevTools cannot be opened in Debug Mode
 
@@ -10316,9 +9378,7 @@ Chi phí chung của Chế độ gỡ lỗi làm lệch các con số hiệu su�
 
 https://docs.flutter.dev/deployment
 
-### Câu 470: Build & Phát hành
-
-**Question:** Per "Optimization Technique 2: Extract Widgets" (e.g. extracting `TaskTile` as its own widget), what is the main benefit of breaking a large widget into smaller pieces?
+**Question 470:** Per "Optimization Technique 2: Extract Widgets" (e.g. extracting `TaskTile` as its own widget), what is the main benefit of breaking a large widget into smaller pieces?
 
 A. Significantly shrinks the APK file size
 
@@ -10338,9 +9398,7 @@ Việc trích xuất widgets thu hẹp phạm vi xây dựng lại chỉ còn m�
 
 https://docs.flutter.dev/deployment
 
-### Câu 471: Build & Phát hành
-
-**Question:** Which command is used to analyze a detailed app-size breakdown by source code, assets, and packages?
+**Question 471:** Which command is used to analyze a detailed app-size breakdown by source code, assets, and packages?
 
 A. flutter doctor
 
@@ -10360,9 +9418,7 @@ D. flutter clean
 
 https://docs.flutter.dev/deployment
 
-### Câu 472: Build & Phát hành
-
-**Question:** Per "Common Size Optimization Tips," what benefit does "Enable tree-shaking icons" (removing unused Material icons) bring to the released app?
+**Question 472:** Per "Common Size Optimization Tips," what benefit does "Enable tree-shaking icons" (removing unused Material icons) bring to the released app?
 
 A. Makes icons look visually nicer
 
@@ -10382,9 +9438,7 @@ Biểu tượng rung cây sẽ xóa các biểu tượng Material không sử d�
 
 https://docs.flutter.dev/deployment
 
-### Câu 473: Build & Phát hành
-
-**Question:** What is the difference between `flutter build apk --debug` and `flutter build apk --release`?
+**Question 473:** What is the difference between `flutter build apk --debug` and `flutter build apk --release`?
 
 A. No difference at all in performance or size
 
@@ -10404,9 +9458,7 @@ Bản dựng gỡ lỗi mang theo chi phí gỡ lỗi không được tối ưu 
 
 https://docs.flutter.dev/deployment
 
-### Câu 474: Build & Phát hành
-
-**Question:** What file format does Google Play require (instead of a traditional APK) when publishing an app to the store, and what is the corresponding build command?
+**Question 474:** What file format does Google Play require (instead of a traditional APK) when publishing an app to the store, and what is the corresponding build command?
 
 A. A .aab file (Android App Bundle), built with the command `flutter build appbundle --release`
 
@@ -10426,9 +9478,7 @@ Google Play yêu cầu định dạng .aab, được tạo qua `flutter build ap
 
 https://docs.flutter.dev/deployment
 
-### Câu 475: Build & Phát hành
-
-**Question:** What important rule governs `versionCode` in `android/app/build.gradle` when publishing consecutive updates?
+**Question 475:** What important rule governs `versionCode` in `android/app/build.gradle` when publishing consecutive updates?
 
 A. It must always keep the same value across every release
 
@@ -10448,9 +9498,7 @@ versionCode phải là số nguyên và tăng theo mỗi release mới. A, C, D 
 
 https://docs.flutter.dev/deployment
 
-### Câu 476: Build & Phát hành
-
-**Question:** Before running `flutter build apk --release` for the official release, the lecture recommends first trying the app in "Profile Mode" (`flutter run --profile`). What is the most reasonable reason for this intermediate step?
+**Question 476:** Before running `flutter build apk --release` for the official release, the lecture recommends first trying the app in "Profile Mode" (`flutter run --profile`). What is the most reasonable reason for this intermediate step?
 
 A. Because Profile Mode is the only mandatory step to successfully build the release file
 
@@ -10470,9 +9518,7 @@ Chế độ hồ sơ loại bỏ hầu hết chi phí gỡ lỗi trong khi hiể
 
 https://docs.flutter.dev/deployment
 
-### Câu 477: Build & Phát hành
-
-**Question:** In the general Software Development Life Cycle (SDLC), what is the main role of the "Analysis" phase?
+**Question 477:** In the general Software Development Life Cycle (SDLC), what is the main role of the "Analysis" phase?
 
 A. Writing detailed source code for each feature
 
@@ -10492,9 +9538,7 @@ Giai đoạn Phân tích tập trung vào việc thu thập/làm rõ các yêu c
 
 https://docs.flutter.dev/deployment
 
-### Câu 478: Build & Phát hành
-
-**Question:** What does "Technical Debt" refer to in software development?
+**Question 478:** What does "Technical Debt" refer to in software development?
 
 A. A direct financial cost paid to a cloud service provider
 
@@ -10514,9 +9558,7 @@ Nợ kỹ thuật là chi phí trong tương lai do các quyết định thiết
 
 https://docs.flutter.dev/deployment
 
-### Câu 479: Build & Phát hành
-
-**Question:** In the software development lifecycle, where is the "Testing" phase usually placed relative to "Implementation" (coding)?
+**Question 479:** In the software development lifecycle, where is the "Testing" phase usually placed relative to "Implementation" (coding)?
 
 A. Testing always happens before Implementation in every development model
 
@@ -10536,9 +9578,7 @@ Việc kiểm tra thường diễn ra after (hoặc liên tục song song với 
 
 https://docs.flutter.dev/deployment
 
-### Câu 480: Build & Phát hành
-
-**Question:** Which feature lets developers see code changes quickly without restarting the entire application?
+**Question 480:** Which feature lets developers see code changes quickly without restarting the entire application?
 
 A. Code Signing
 
@@ -10558,9 +9598,7 @@ Tùy chọn B đúng: Tải lại nóng. Câu trả lời phù hợp với hành
 
 https://docs.flutter.dev/deployment
 
-### Câu 481: Build & Phát hành
-
-**Question:** In which year was Flutter 1.0 released according to the slides?
+**Question 481:** In which year was Flutter 1.0 released according to the slides?
 
 A. 2021
 
@@ -10580,9 +9618,7 @@ Tùy chọn B đúng: 2018. Câu trả lời phù hợp với hành vi loại h�
 
 https://docs.flutter.dev/deployment
 
-### Câu 482: Build & Phát hành
-
-**Question:** What is DartPad best suited for?
+**Question 482:** What is DartPad best suited for?
 
 A. Creating a native Android emulator
 
@@ -10602,9 +9638,7 @@ Tùy chọn B đúng: Chạy mã Dart hoặc Flutter trực tiếp trong trình 
 
 https://docs.flutter.dev/deployment
 
-### Câu 483: Build & Phát hành
-
-**Question:** Which command is commonly used to check the Flutter environment after installing the SDK?
+**Question 483:** Which command is commonly used to check the Flutter environment after installing the SDK?
 
 A. android verify
 
@@ -10624,9 +9658,7 @@ Tùy chọn B đúng: flutter doctor. Câu trả lời phù hợp với hành vi
 
 https://docs.flutter.dev/deployment
 
-### Câu 484: Build & Phát hành
-
-**Question:** Which lifecycle method is used to release controllers or other resources?
+**Question 484:** Which lifecycle method is used to release controllers or other resources?
 
 A. runApp()
 
@@ -10646,9 +9678,7 @@ Tùy chọn D đúng: dispose(). Câu trả lời phù hợp với hành vi lo�
 
 https://docs.flutter.dev/deployment
 
-### Câu 485: Build & Phát hành
-
-**Question:** When are Material Icons commonly used?
+**Question 485:** When are Material Icons commonly used?
 
 A. Storing relational data
 
@@ -10668,9 +9698,7 @@ Tùy chọn C đúng: Nút điều hướng, nút hành động và chỉ báo t
 
 https://docs.flutter.dev/deployment
 
-### Câu 486: Build & Phát hành
-
-**Question:** Where are Associated Domains added for iOS?
+**Question 486:** Where are Associated Domains added for iOS?
 
 A. DartPad settings
 
@@ -10690,9 +9718,7 @@ Tùy chọn C đúng: Ký kết & Khả năng của mục tiêu Á quân. Flutte
 
 https://docs.flutter.dev/deployment
 
-### Câu 487: Build & Phát hành
-
-**Question:** What does InheritedWidget help accomplish?
+**Question 487:** What does InheritedWidget help accomplish?
 
 A. Sending a POST request
 
@@ -10712,9 +9738,7 @@ Tùy chọn C đúng: Truyền dữ liệu xuống cây widget một cách hiệ
 
 https://docs.flutter.dev/deployment
 
-### Câu 488: Build & Phát hành
-
-**Question:** Which problems can occur without responsive design?
+**Question 488:** Which problems can occur without responsive design?
 
 A. Incorrect SQL syntax
 
@@ -10734,9 +9758,7 @@ Tùy chọn D đúng: Tràn, widgets bị căn chỉnh sai, văn bản bị cắ
 
 https://docs.flutter.dev/deployment
 
-### Câu 489: Build & Phát hành
-
-**Question:** Which problems can a well-designed form reduce?
+**Question 489:** Which problems can a well-designed form reduce?
 
 A. Low FPS caused only by large images
 
@@ -10756,9 +9778,7 @@ Tùy chọn D đúng: Dữ liệu không hợp lệ, UX kém và rủi ro về c
 
 https://docs.flutter.dev/deployment
 
-### Câu 490: Build & Phát hành
-
-**Question:** What does GlobalKey`<FormState>` allow you to do?
+**Question 490:** What does GlobalKey`<FormState>` allow you to do?
 
 A. Access FormState to validate, save, and reset the whole form
 
@@ -10778,9 +9798,7 @@ Tùy chọn A đúng: Truy cập FormState để xác thực, lưu và đặt l�
 
 https://docs.flutter.dev/deployment
 
-### Câu 491: Build & Phát hành
-
-**Question:** Which sequence describes the flow from a form to a backend?
+**Question 491:** Which sequence describes the flow from a form to a backend?
 
 A. UI -> SQLite -> GPU -> Widget
 
@@ -10800,9 +9818,7 @@ Tùy chọn C đúng: Biểu mẫu UI -> xác thực cục bộ -> yêu cầu PO
 
 https://docs.flutter.dev/deployment
 
-### Câu 492: Build & Phát hành
-
-**Question:** Why do API calls use async/await?
+**Question 492:** Why do API calls use async/await?
 
 A. To wait for the network without freezing the UI
 
@@ -10822,9 +9838,7 @@ Tùy chọn A đúng: Chờ mạng mà không đóng băng UI. Dart sử dụng 
 
 https://docs.flutter.dev/deployment
 
-### Câu 493: Build & Phát hành
-
-**Question:** When is FutureBuilder appropriate?
+**Question 493:** When is FutureBuilder appropriate?
 
 A. Creating a custom URL scheme
 
@@ -10844,9 +9858,7 @@ Tùy chọn D đúng: Kết nối Future một lần với UI và xử lý các 
 
 https://docs.flutter.dev/deployment
 
-### Câu 494: Build & Phát hành
-
-**Question:** What is a local JSON file suitable for?
+**Question 494:** What is a local JSON file suitable for?
 
 A. UI navigation
 
@@ -10866,9 +9878,7 @@ Tùy chọn B đúng: Danh sách, lịch sử hoặc xuất/nhập đơn giản.
 
 https://docs.flutter.dev/deployment
 
-### Câu 495: Build & Phát hành
-
-**Question:** What is onCreate in openDatabase() normally used for?
+**Question 495:** What is onCreate in openDatabase() normally used for?
 
 A. Signing in with Google
 
@@ -10888,9 +9898,7 @@ Tùy chọn B đúng: Chạy CREATE TABLE khi cơ sở dữ liệu được tạ
 
 https://docs.flutter.dev/deployment
 
-### Câu 496: Build & Phát hành
-
-**Question:** Which sequence correctly describes the high-level authentication flow?
+**Question 496:** Which sequence correctly describes the high-level authentication flow?
 
 A. Enter credentials -> API request -> backend verification -> token -> store token -> send token with later requests
 
@@ -10910,9 +9918,7 @@ Tùy chọn A đúng: Nhập thông tin xác thực -> yêu cầu API -> xác mi
 
 https://docs.flutter.dev/deployment
 
-### Câu 497: Nền tảng hỗ trợ
-
-**Question:** What is the difference between Local Notification and Push Notification?
+**Question 497:** What is the difference between Local Notification and Push Notification?
 
 A. Local Notification is triggered by the app itself and needs no Internet; Push Notification is sent from a server and needs Internet plus backend support
 
@@ -10932,9 +9938,7 @@ Thông báo cục bộ được kích hoạt bởi ứng dụng, không cần In
 
 https://docs.flutter.dev/reference/supported-platforms
 
-### Câu 498: Nền tảng hỗ trợ
-
-**Question:** What is the basic difference between Implicit Animation and Explicit Animation in Flutter?
+**Question 498:** What is the basic difference between Implicit Animation and Explicit Animation in Flutter?
 
 A. Implicit Animation needs a manual AnimationController, Explicit Animation doesn't
 
@@ -10954,9 +9958,7 @@ Hoạt hình tiềm ẩn tự động nội suy mà không cần bộ điều kh
 
 https://docs.flutter.dev/reference/supported-platforms
 
-### Câu 499: Nền tảng hỗ trợ
-
-**Question:** Which file is the main entry point of a Flutter application?
+**Question 499:** Which file is the main entry point of a Flutter application?
 
 A. web/index.css
 
@@ -10976,9 +9978,7 @@ Tùy chọn B đúng: lib/main.dart. Câu trả lời phù hợp với hành vi 
 
 https://docs.flutter.dev/reference/supported-platforms
 
-### Câu 500: Nền tảng hỗ trợ
-
-**Question:** Which language is used for Flutter web logic?
+**Question 500:** Which language is used for Flutter web logic?
 
 A. Dart
 

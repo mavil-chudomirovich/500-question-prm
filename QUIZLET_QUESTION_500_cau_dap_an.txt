@@ -1,12 +1,4 @@
-﻿QUIZLET QUESTION — 500 CÂU HỎI KÈM ĐÁP ÁN
-Nguồn: Quizlet bank · 19 chủ đề · không kèm giải thích
-======================================================================
-
-----------------------------------------------------------------------
-CHỦ ĐỀ 1 — Giới thiệu Flutter & Dart (36 câu)
-----------------------------------------------------------------------
-
-1.
+﻿1.
 Q: Which of the following is the best example of a case where you should NOT choose Flutter and should build natively instead?
    A. A simple movie ticket booking app
    B. An e-commerce app with a standard UI
@@ -287,18 +279,6 @@ Q: When a class uses implements, what must it do?
 ĐÁP ÁN: A
 
 36.
-Q: What is the arrow function syntax in Dart?
-   A. ->
-   B. =>
-   C. ==>
-   D. ::=
-ĐÁP ÁN: B
-
-----------------------------------------------------------------------
-CHỦ ĐỀ 2 — Cài đặt & Môi trường (28 câu)
-----------------------------------------------------------------------
-
-37.
 Q: A student creates an emulator on a low-spec PC. According to the lecture's recommendation, which emulator configuration is more suitable to reduce the load on the machine?
    A. Pixel 8, API 33+
    B. Pixel 3a, API 30
@@ -306,7 +286,7 @@ Q: A student creates an emulator on a low-spec PC. According to the lecture's re
    D. Pixel Fold, API 35
 ĐÁP ÁN: B
 
-38.
+37.
 Q: How does DartPad differ from VS Code/Android Studio when developing Flutter?
    A. DartPad requires a full SDK installation just like Android Studio
    B. DartPad is an online environment, requires no installation, and runs directly in the browser
@@ -314,7 +294,7 @@ Q: How does DartPad differ from VS Code/Android Studio when developing Flutter?
    D. DartPad can only be used for the Kotlin language
 ĐÁP ÁN: B
 
-39.
+38.
 Q: In the 'Hello World' example run across three environments (DartPad, VS Code, Android Studio), what is the most important common point emphasized?
    A. Each environment uses a different programming language
    B. All tools compile down to the same Flutter runtime, producing identical results
@@ -322,7 +302,7 @@ Q: In the 'Hello World' example run across three environments (DartPad, VS Code,
    D. DartPad cannot display TextStyle
 ĐÁP ÁN: B
 
-40.
+39.
 Q: According to the lecture, what tool does macOS need to build a Flutter app for iOS?
    A. Android Studio
    B. Xcode
@@ -330,7 +310,7 @@ Q: According to the lecture, what tool does macOS need to build a Flutter app fo
    D. IntelliJ IDEA
 ĐÁP ÁN: B
 
-41.
+40.
 Q: Comparing `TimePicker` (`showTimePicker`) and `DatePicker` (`showDatePicker`) in the context of building a booking flow combining both date and time: what is the correct approach per the lecture?
    A. Only call one of the two, Flutter will automatically infer the other value
    B. Call two separate async functions sequentially (`pickDate()` and `pickTime()`), store the results in two separate State variables (`DateTime? d`, `TimeOfDay? t`), then display them combined in the UI
@@ -338,7 +318,7 @@ Q: Comparing `TimePicker` (`showTimePicker`) and `DatePicker` (`showDatePicker`)
    D. It's impossible to combine DatePicker and TimePicker on the same screen
 ĐÁP ÁN: B
 
-42.
+41.
 Q: Given: ElevatedButton( onPressed: () { Navigator.push( context, MaterialPageRoute(builder: (_) => SecondPage()), ); }, child: Text('Go to Second Page'), ) According to the lecture's explanation of why this original code doesn't run directly on DartPad, what is the main cause?
    A. DartPad doesn't support ElevatedButton
    B. Missing a complete program structure: DartPad requires `main()`, `runApp()`, and a root `MaterialApp`; providing only a lone widget like this without a valid Navigator context (e.g. SecondPage undefined, or missing the surrounding MaterialApp) causes an error
@@ -346,7 +326,7 @@ Q: Given: ElevatedButton( onPressed: () { Navigator.push( context, MaterialPageR
    D. MaterialPageRoute is an API that has been removed from Flutter
 ĐÁP ÁN: B
 
-43.
+42.
 Q: What is the main reason "hardcoding URLs everywhere in the code" is listed as a pitfall?
    A. Hardcoded URLs make the app run significantly slower
    B. It makes it difficult to change the base URL (e.g. switching dev/production environments), easily leading to mistakes and duplicated code when it must be edited in multiple places
@@ -354,7 +334,7 @@ Q: What is the main reason "hardcoding URLs everywhere in the code" is listed as
    D. Only affects security, unrelated to code maintenance
 ĐÁP ÁN: B
 
-44.
+43.
 Q: Given this FakePrefs code simulating SharedPreferences in DartPad: class FakePrefs { static final Map<String, Object> _store = {}; Future`<void>` setBool(String key, bool value) async { _store[key] = value; } bool getBool(String key) { final value = _store[key]; if (value is bool) return value; return false; } } Why is `_store` declared `static`?
    A. To limit the app to only one FakePrefs object existing
    B. So the stored data is shared across all instances of FakePrefs (mimicking the singleton-ish behavior of real SharedPreferences), instead of each instance having its own separate data copy
@@ -362,7 +342,7 @@ Q: Given this FakePrefs code simulating SharedPreferences in DartPad: class Fake
    D. To automatically save data permanently even after the app is closed
 ĐÁP ÁN: B
 
-45.
+44.
 Q: The slide note "Note: data resets on reload (not persistent)" when using FakePrefs on DartPad hints at what limitation?
    A. Data stored in FakePrefs persists forever even after reloading the page
    B. Since FakePrefs only stores data in the RAM of the current session, the data is lost on hot-restart or page reload --- unlike real SharedPreferences, which persists durably on the device
@@ -370,7 +350,7 @@ Q: The slide note "Note: data resets on reload (not persistent)" when using Fake
    D. This is a Flutter bug that needs to be patched
 ĐÁP ÁN: B
 
-46.
+45.
 Q: In the high-level Authentication Flow, after the backend verifies valid login credentials, what does the system usually return to the app?
    A. The user's password in encrypted form
    B. A token (usually a JWT) for the app to store and use for subsequent requests
@@ -378,7 +358,7 @@ Q: In the high-level Authentication Flow, after the backend verifies valid login
    D. A list of other apps the user has installed
 ĐÁP ÁN: B
 
-47.
+46.
 Q: In Demo 10.5, at what point in the app's actual flow is the local notification triggered?
    A. Right when the app opens, before login
    B. Right after a successful login
@@ -386,7 +366,7 @@ Q: In Demo 10.5, at what point in the app's actual flow is the local notificatio
    D. When the app is uninstalled
 ĐÁP ÁN: B
 
-48.
+47.
 Q: Which description best defines Flutter?
    A. Google's UI toolkit for building natively compiled applications from a single codebase
    B. A programming language that completely replaces Dart
@@ -394,7 +374,7 @@ Q: Which description best defines Flutter?
    D. Google's database management system
 ĐÁP ÁN: A
 
-49.
+48.
 Q: What does the Repository pattern separate from the UI?
    A. The Android emulator
    B. Data-access, API, and database logic
@@ -402,7 +382,7 @@ Q: What does the Repository pattern separate from the UI?
    D. Row and Column layout
 ĐÁP ÁN: B
 
-50.
+49.
 Q: What does setState() do?
    A. Notifies the framework to rebuild the relevant State UI
    B. Runs flutter doctor
@@ -410,7 +390,7 @@ Q: What does setState() do?
    D. Stores a token on the server
 ĐÁP ÁN: A
 
-51.
+50.
 Q: Why cannot DartPad use the real SharedPreferences plugin?
    A. Its environment does not provide native plugin or persistent-storage support
    B. It requires JWT
@@ -418,7 +398,7 @@ Q: Why cannot DartPad use the real SharedPreferences plugin?
    D. DartPad runs only Java
 ĐÁP ÁN: A
 
-52.
+51.
 Q: Where does FakePrefs in DartPad store data?
    A. A real database file
    B. Secure Storage
@@ -426,7 +406,7 @@ Q: Where does FakePrefs in DartPad store data?
    D. An in-memory Map that resets on reload
 ĐÁP ÁN: D
 
-53.
+52.
 Q: How is an access token normally used?
    A. To store the password
    B. To create a UI theme
@@ -434,7 +414,7 @@ Q: How is an access token normally used?
    D. It is sent with every API request that requires authentication
 ĐÁP ÁN: D
 
-54.
+53.
 Q: Which mode should be used for more accurate performance measurements?
    A. Test mode only
    B. Debug mode
@@ -442,7 +422,7 @@ Q: Which mode should be used for more accurate performance measurements?
    D. Profile mode
 ĐÁP ÁN: D
 
-55.
+54.
 Q: ListView.builder is best for?
    A. One small fixed list
    B. Large or dynamic lists
@@ -450,7 +430,7 @@ Q: ListView.builder is best for?
    D. Theme setup
 ĐÁP ÁN: B
 
-56.
+55.
 Q: Which command checks environment setup?
    A. flutter doctor
    B. flutter inspect
@@ -458,7 +438,7 @@ Q: Which command checks environment setup?
    D. flutter config
 ĐÁP ÁN: A
 
-57.
+56.
 Q: Which command lists connected devices?
    A. flutter devices
    B. flutter emulators
@@ -466,7 +446,7 @@ Q: Which command lists connected devices?
    D. flutter doctor
 ĐÁP ÁN: A
 
-58.
+57.
 Q: Which command shows available emulators?
    A. flutter devices
    B. flutter emulators
@@ -474,7 +454,7 @@ Q: Which command shows available emulators?
    D. flutter list
 ĐÁP ÁN: B
 
-59.
+58.
 Q: What is the purpose of pub.dev?
    A. Flutter package repository
    B. Device emulator
@@ -482,7 +462,7 @@ Q: What is the purpose of pub.dev?
    D. Cloud IDE
 ĐÁP ÁN: A
 
-60.
+59.
 Q: Which tool is used to inspect widget tree and performance?
    A. Flutter DevTools
    B. Android Paint
@@ -490,7 +470,7 @@ Q: Which tool is used to inspect widget tree and performance?
    D. Pub Inspector
 ĐÁP ÁN: A
 
-61.
+60.
 Q: Which development environment is described as an online editor ideal for quick demos and learning syntax without installation?
    A. VS Code
    B. Android Studio
@@ -498,7 +478,7 @@ Q: Which development environment is described as an online editor ideal for quic
    D. Xcode
 ĐÁP ÁN: C
 
-62.
+61.
 Q: Which command should a developer use to verify the Flutter installation and see a summary of the environment status?
    A. flutter run
    B. flutter create
@@ -506,7 +486,7 @@ Q: Which command should a developer use to verify the Flutter installation and s
    D. flutter build
 ĐÁP ÁN: C
 
-63.
+62.
 Q: When should a developer choose to use local JSON files (dart:io) instead of SharedPreferences?
    A. When storing a single boolean for dark mode.
    B. When the data is larger than simple key-value pairs or needs to be exported/imported.
@@ -514,7 +494,7 @@ Q: When should a developer choose to use local JSON files (dart:io) instead of S
    D. Only when the app is running in a DartPad environment.
 ĐÁP ÁN: B
 
-64.
+63.
 Q: During the SQFlite setup process, which method is used to define the initial table structure when the database is first created?
    A. openDatabase()
    B. onCreate
@@ -522,11 +502,7 @@ Q: During the SQFlite setup process, which method is used to define the initial 
    D. query()
 ĐÁP ÁN: B
 
-----------------------------------------------------------------------
-CHỦ ĐỀ 3 — Flutter CLI & Pub (35 câu)
-----------------------------------------------------------------------
-
-65.
+64.
 Q: In a Flutter project, which file is the entry point of the app?
    A. pubspec.yaml
    B. lib/main.dart
@@ -534,7 +510,7 @@ Q: In a Flutter project, which file is the entry point of the app?
    D. web/index.html
 ĐÁP ÁN: B
 
-66.
+65.
 Q: Consider the following code running in main.dart: import 'package:flutter/material.dart'; void main() => runApp(const MaterialApp( home: Scaffold( body: Center( child: Text('Hello, World', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)), ), ), )); If the `const` keyword before `MaterialApp` is removed, what happens to the app's behavior?
    A. The app will fail to compile immediately
    B. The app still runs correctly, only losing the performance optimization benefit since Flutter can no longer reuse the same immutable widget instance
@@ -542,7 +518,7 @@ Q: Consider the following code running in main.dart: import 'package:flutter/mat
    D. The Scaffold will no longer be able to have an AppBar later
 ĐÁP ÁN: B
 
-67.
+66.
 Q: An instructor creates a new Flutter project with Organization ID `com.fptu.movies` and project name `movies`. What is the main purpose of the Organization ID during project creation?
    A. Only used to set the display name shown on the device's home screen
    B. Determines the unique package name/bundle identifier for the app when packaged for Android/iOS
@@ -550,7 +526,7 @@ Q: An instructor creates a new Flutter project with Organization ID `com.fptu.mo
    D. Used to set the app's color theme
 ĐÁP ÁN: B
 
-68.
+67.
 Q: The lecture has this snippet: Widget tile(String t, String s) => Card( margin: const EdgeInsets.symmetric(vertical: 6), child: ListTile(title: Text(t), subtitle: Text(s)), ); What is the main benefit of extracting repeated UI into a separate function/widget like `tile()`, in the spirit of "Everything is a Widget"?
    A. Makes Flutter run faster in absolute CPU terms
    B. Reuse and organize UI into blocks (LEGO blocks), making code more readable, maintainable, and consistent in spacing
@@ -558,7 +534,7 @@ Q: The lecture has this snippet: Widget tile(String t, String s) => Card( margin
    D. No real benefit, just a coding style
 ĐÁP ÁN: B
 
-69.
+68.
 Q: What is the difference between `Image.network` and `Image.asset`?
    A. `Image.network` loads an image from an internet URL, `Image.asset` loads an image bundled within the project (declared in pubspec.yaml)
    B. Both only load images from local storage
@@ -566,7 +542,7 @@ Q: What is the difference between `Image.network` and `Image.asset`?
    D. `Image.network` doesn't support BoxFit
 ĐÁP ÁN: A
 
-70.
+69.
 Q: In an Android deep link configuration, where does the following XML snippet belong and what does it mean? `<intent-filter>` `<action android:name="android.intent.action.VIEW" />` `<category android:name="android.intent.category.DEFAULT" />` `<category android:name="android.intent.category.BROWSABLE" />` `<data android:scheme="movieapps" android:host="movies" />` `</intent-filter>`
    A. In `pubspec.yaml`, used to declare a dependency
    B. In `AndroidManifest.xml`, declaring an intent-filter so the Android OS recognizes and routes links like `movieapps://movies` to the correct app
@@ -574,7 +550,7 @@ Q: In an Android deep link configuration, where does the following XML snippet b
    D. In `Info.plist`, only applicable to iOS
 ĐÁP ÁN: B
 
-71.
+70.
 Q: On iOS, to support a custom URL scheme (e.g. `movieapps://`), where does the configuration need to be added?
    A. AndroidManifest.xml
    B. build.gradle
@@ -582,7 +558,7 @@ Q: On iOS, to support a custom URL scheme (e.g. `movieapps://`), where does the 
    D. pubspec.yaml
 ĐÁP ÁN: C
 
-72.
+71.
 Q: Comparing using the plain `http` package versus a more advanced HTTP management package (e.g. Dio, not in the slides but askable at an analytical level): in the spirit of Module 8's "Service Layer Pattern," why does wrapping HTTP logic in `ApiService` make switching HTTP libraries later (if needed) easier?
    A. Because every HTTP package has an entirely identical API
    B. Because all networking logic is isolated in a single class; if the library needs to change, you only edit inside `ApiService` without touching every widget that consumes the data, minimizing risk and effort
@@ -590,7 +566,7 @@ Q: Comparing using the plain `http` package versus a more advanced HTTP manageme
    D. The Service Layer Pattern only applies to the `http` package, not to other packages
 ĐÁP ÁN: B
 
-73.
+72.
 Q: Which package is mentioned for determining the app's storage directory when working with local JSON files?
    A. shared_preferences
    B. path_provider
@@ -598,7 +574,7 @@ Q: Which package is mentioned for determining the app's storage directory when w
    D. http
 ĐÁP ÁN: B
 
-74.
+73.
 Q: Per the Google Sign-In "Common Errors & Fixes" table, the "DEVELOPER_ERROR" is usually caused by what?
    A. Missing Internet connection
    B. Wrong package name not matching the Firebase configuration
@@ -606,7 +582,7 @@ Q: Per the Google Sign-In "Common Errors & Fixes" table, the "DEVELOPER_ERROR" i
    D. Too-new Flutter version
 ĐÁP ÁN: B
 
-75.
+74.
 Q: In the `flutter_bloc` package, what is the correct data-flow relationship between Event, Bloc, and State?
    A. State → Bloc → Event
    B. UI sends an Event into the Bloc → Bloc processes and maps the Event into a new State → Bloc emits the State → UI listens to the State to rebuild
@@ -614,7 +590,7 @@ Q: In the `flutter_bloc` package, what is the correct data-flow relationship bet
    D. Bloc only receives State, not Event
 ĐÁP ÁN: B
 
-76.
+75.
 Q: How does `Cubit` in the `flutter_bloc` package differ from a traditional `Bloc`?
    A. Cubit cannot manage state, only Bloc can
    B. Cubit is a simplified version of Bloc --- it doesn't need a separate Event class defined, instead directly calling methods to emit new States, reducing boilerplate compared to a full Bloc
@@ -622,7 +598,7 @@ Q: How does `Cubit` in the `flutter_bloc` package differ from a traditional `Blo
    D. Cubit and Bloc are entirely identical in API, no difference
 ĐÁP ÁN: B
 
-77.
+76.
 Q: Which file declares a Flutter project's dependencies and assets?
    A. build.gradle.kts only
    B. package.json
@@ -630,7 +606,7 @@ Q: Which file declares a Flutter project's dependencies and assets?
    D. pubspec.yaml
 ĐÁP ÁN: D
 
-78.
+77.
 Q: On Android, which element is commonly used to configure deep links?
    A. ThemeData in main.dart
    B. An SQLite trigger
@@ -638,7 +614,7 @@ Q: On Android, which element is commonly used to configure deep links?
    D. pubspec.lock
 ĐÁP ÁN: C
 
-79.
+78.
 Q: What is DEVELOPER_ERROR commonly related to?
    A. An incorrect SQL SELECT statement
    B. An incorrect package name or Firebase configuration
@@ -646,7 +622,7 @@ Q: What is DEVELOPER_ERROR commonly related to?
    D. A missing ListView
 ĐÁP ÁN: B
 
-80.
+79.
 Q: What does CPU Profiler help identify?
    A. A Firebase package name
    B. A screen notch
@@ -654,7 +630,7 @@ Q: What does CPU Profiler help identify?
    D. Form error text
 ĐÁP ÁN: C
 
-81.
+80.
 Q: for-in loop is mainly used for?
    A. Arithmetic
    B. Iterating collections
@@ -662,7 +638,7 @@ Q: for-in loop is mainly used for?
    D. Importing packages
 ĐÁP ÁN: B
 
-82.
+81.
 Q: A class defines?
    A. A loop
    B. A structure or blueprint
@@ -670,7 +646,7 @@ Q: A class defines?
    D. An import
 ĐÁP ÁN: B
 
-83.
+82.
 Q: What is pubspec.yaml used for?
    A. App screenshots
    B. Dependencies and assets
@@ -678,7 +654,7 @@ Q: What is pubspec.yaml used for?
    D. Route trees
 ĐÁP ÁN: B
 
-84.
+83.
 Q: Assets must be declared in?
    A. main.dart
    B. pubspec.yaml
@@ -686,7 +662,7 @@ Q: Assets must be declared in?
    D. androidmanifest.xml
 ĐÁP ÁN: B
 
-85.
+84.
 Q: Which command fetches Flutter dependencies?
    A. flutter add
    B. flutter get
@@ -694,7 +670,7 @@ Q: Which command fetches Flutter dependencies?
    D. dart fetch
 ĐÁP ÁN: C
 
-86.
+85.
 Q: Which command creates a new Flutter project?
    A. flutter new
    B. flutter create
@@ -702,7 +678,7 @@ Q: Which command creates a new Flutter project?
    D. flutter init
 ĐÁP ÁN: B
 
-87.
+86.
 Q: Which command runs a Flutter app?
    A. flutter go
    B. flutter start
@@ -710,7 +686,7 @@ Q: Which command runs a Flutter app?
    D. dart run ui
 ĐÁP ÁN: C
 
-88.
+87.
 Q: Which command cleans the build folder?
    A. flutter purge
    B. flutter clear
@@ -718,7 +694,7 @@ Q: Which command cleans the build folder?
    D. flutter remove
 ĐÁP ÁN: C
 
-89.
+88.
 Q: Which command builds an iOS app?
    A. flutter build ios
    B. flutter ios build
@@ -726,7 +702,7 @@ Q: Which command builds an iOS app?
    D. dart build ios
 ĐÁP ÁN: A
 
-90.
+89.
 Q: Which package is popular for simple state management?
    A. Provider
    B. SQL
@@ -734,7 +710,7 @@ Q: Which package is popular for simple state management?
    D. Lint
 ĐÁP ÁN: A
 
-91.
+90.
 Q: Which package is used for HTTP requests commonly?
    A. path
    B. async
@@ -742,7 +718,7 @@ Q: Which package is used for HTTP requests commonly?
    D. test
 ĐÁP ÁN: C
 
-92.
+91.
 Q: Which method sends a GET request with package:http?
    A. http.load
    B. http.fetch
@@ -750,7 +726,7 @@ Q: Which method sends a GET request with package:http?
    D. http.readall
 ĐÁP ÁN: C
 
-93.
+92.
 Q: Which package is widely used for local key-value storage?
    A. dio
    B. shared_preferences
@@ -758,7 +734,7 @@ Q: Which package is widely used for local key-value storage?
    D. analyzer
 ĐÁP ÁN: B
 
-94.
+93.
 Q: Which package is often used for powerful networking in Flutter?
    A. dio
    B. lint
@@ -766,7 +742,7 @@ Q: Which package is often used for powerful networking in Flutter?
    D. test
 ĐÁP ÁN: A
 
-95.
+94.
 Q: Which command runs tests in Flutter?
    A. flutter test
    B. flutter run test
@@ -774,7 +750,7 @@ Q: Which command runs tests in Flutter?
    D. flutter check
 ĐÁP ÁN: A
 
-96.
+95.
 Q: Which file often stores lint rules for Dart/Flutter?
    A. analysis_options.yaml
    B. pubspec.lock
@@ -782,7 +758,7 @@ Q: Which file often stores lint rules for Dart/Flutter?
    D. build.gradle
 ĐÁP ÁN: A
 
-97.
+96.
 Q: The extends keyword is used to?
    A. Implement interface only
    B. Inherit from a class
@@ -790,7 +766,7 @@ Q: The extends keyword is used to?
    D. Import package
 ĐÁP ÁN: B
 
-98.
+97.
 Q: The implements keyword is used to?
    A. Force interface contract implementation
    B. Extend build time
@@ -798,7 +774,7 @@ Q: The implements keyword is used to?
    D. Hide members
 ĐÁP ÁN: A
 
-99.
+98.
 Q: Which file is generated and should usually not be edited manually for dependencies lock?
    A. pubspec.lock
    B. main.dart
@@ -806,11 +782,7 @@ Q: Which file is generated and should usually not be edited manually for depende
    D. android/app/build.gradle
 ĐÁP ÁN: A
 
-----------------------------------------------------------------------
-CHỦ ĐỀ 4 — Công cụ dev & Hot reload (10 câu)
-----------------------------------------------------------------------
-
-100.
+99.
 Q: Which combined compilation model does Dart use to support both fast development and optimized production performance?
    A. JIT (Just-In-Time) only
    B. AOT (Ahead-Of-Time) only
@@ -818,7 +790,7 @@ Q: Which combined compilation model does Dart use to support both fast developme
    D. Purely interpreted, no compilation
 ĐÁP ÁN: C
 
-101.
+100.
 Q: Which statement is FALSE regarding the reasons to choose Flutter ('Why Flutter')?
    A. Hot Reload/Hot Restart enables fast development
    B. Provides Material & Cupertino widgets for a beautiful UI
@@ -826,7 +798,7 @@ Q: Which statement is FALSE regarding the reasons to choose Flutter ('Why Flutte
    D. Near-native performance
 ĐÁP ÁN: C
 
-102.
+101.
 Q: What benefit does a Custom Exception in Dart (e.g. `class LoginException implements Exception`) offer over throwing an ordinary error string?
    A. No benefit, it just adds code complexity
    B. Provides specific business-domain error context, making it easier to debug and handle logic at the UI/Repository layer
@@ -834,7 +806,7 @@ Q: What benefit does a Custom Exception in Dart (e.g. `class LoginException impl
    D. Custom Exceptions can only be used with external APIs, not internally
 ĐÁP ÁN: B
 
-103.
+102.
 Q: Per the "Security" section of Best Practices, what practice is recommended regarding token storage?
    A. Store the token as public plain text in a log file for easy debugging
    B. Don't store raw tokens insecurely --- use a secure storage mechanism and always use HTTPS
@@ -842,7 +814,7 @@ Q: Per the "Security" section of Best Practices, what practice is recommended re
    D. Share the token via social media to sync across multiple devices
 ĐÁP ÁN: B
 
-104.
+103.
 Q: What characteristic of the UI Overflow bug described in Module 11 makes it hard to detect if you only rely on running the app normally?
    A. Overflow always makes the app crash instantly, so it's very easy to spot
    B. Overflow bugs typically don't crash the app (no exception stopping the program), so tools like tests or DevTools are needed to detect them, rather than just relying on the app "still running
@@ -850,7 +822,7 @@ Q: What characteristic of the UI Overflow bug described in Module 11 makes it ha
    D. Overflow is always automatically fixed by Dart at compile time
 ĐÁP ÁN: B
 
-105.
+104.
 Q: In "Debugging Goals in Flutter," the "Frequent unnecessary rebuilds" issue directly relates to which topic that will be explored deeper in Module 12?
    A. Building local JSON files
    B. Performance Optimization
@@ -858,7 +830,7 @@ Q: In "Debugging Goals in Flutter," the "Frequent unnecessary rebuilds" issue di
    D. Setting up Firebase Authentication
 ĐÁP ÁN: B
 
-106.
+105.
 Q: When Flutter does not directly support a feature such as camera, Bluetooth, or NFC, what integration approach is recommended?
    A. Write native code and connect it through Platform Channels
    B. Convert the entire application to HTML
@@ -866,7 +838,7 @@ Q: When Flutter does not directly support a feature such as camera, Bluetooth, o
    D. Use only Widget Inspector
 ĐÁP ÁN: A
 
-107.
+106.
 Q: What is a breakpoint used for?
    A. Selecting a layout for a defined range of sizes
    B. Encrypting a token
@@ -874,7 +846,7 @@ Q: What is a breakpoint used for?
    D. Creating a database index
 ĐÁP ÁN: A
 
-108.
+107.
 Q: What does the DevTools Performance view help inspect?
    A. JWT payloads
    B. SQL schemas
@@ -882,7 +854,7 @@ Q: What does the DevTools Performance view help inspect?
    D. Named routes
 ĐÁP ÁN: C
 
-109.
+108.
 Q: According to the source, what is a "Breakpoint"?
    A. A point where the application code stops for debugging.
    B. A specific pixel width (e.g., 600px) used to define when layout logic should change.
@@ -890,11 +862,7 @@ Q: According to the source, what is a "Breakpoint"?
    D. A crash that occurs when a widget overflows its boundaries.
 ĐÁP ÁN: B
 
-----------------------------------------------------------------------
-CHỦ ĐỀ 5 — Widget cơ bản & Key (35 câu)
-----------------------------------------------------------------------
-
-110.
+109.
 Q: In Dart, what is the basic difference between `final` and `const`?
    A. No difference, the two keywords are interchangeable in every case
    B. `final` is a compile-time constant, `const` is a runtime constant
@@ -902,7 +870,7 @@ Q: In Dart, what is the basic difference between `final` and `const`?
    D. `final` is only for numeric types, `const` is only for string types
 ĐÁP ÁN: C
 
-111.
+110.
 Q: Which statement is correct about the differences between `List`, `Set`, and `Map` in Dart?
    A. List is unordered and disallows duplicates, Set is ordered, Map stores key-value pairs
    B. List is an ordered collection, Set is a collection of unique (unordered) elements, Map stores key-value pairs
@@ -910,7 +878,7 @@ Q: Which statement is correct about the differences between `List`, `Set`, and `
    D. Set is ordered and allows duplicates, List does not
 ĐÁP ÁN: B
 
-112.
+111.
 Q: In Flutter, `State<T>` is a textbook example of which concept from Module 3?
    A. Mixin
    B. Abstract class --- forcing StatefulWidgets to override methods to define behavior
@@ -918,7 +886,7 @@ Q: In Flutter, `State<T>` is a textbook example of which concept from Module 3?
    D. Factory Constructor
 ĐÁP ÁN: B
 
-113.
+112.
 Q: What does collection-if / collection-for syntax allow in Dart?
    A. Only usable in a regular for loop, not in a List declaration
    B. Flexibly building a List/Set/Map by inserting conditional elements (`if`) or generating elements from a loop (`for`) directly inside the collection declaration
@@ -926,7 +894,7 @@ Q: What does collection-if / collection-for syntax allow in Dart?
    D. Only applies to Map, not to List
 ĐÁP ÁN: B
 
-114.
+113.
 Q: According to the lecture, what are Material Icons in Flutter commonly used for?
    A. Purely decorative, no function
    B. Navigation buttons, action buttons (add, delete), and status indicators
@@ -934,7 +902,7 @@ Q: According to the lecture, what are Material Icons in Flutter commonly used fo
    D. Completely replaces the Text widget
 ĐÁP ÁN: B
 
-115.
+114.
 Q: Which data type stores values as key-value pairs?
    A. Map
    B. List
@@ -942,7 +910,7 @@ Q: Which data type stores values as key-value pairs?
    D. Set
 ĐÁP ÁN: A
 
-116.
+115.
 Q: What does the keyword var mean?
    A. A compile-time constant
    B. The variable type is inferred from its initial value
@@ -950,7 +918,7 @@ Q: What does the keyword var mean?
    D. A variable that can always change to any type
 ĐÁP ÁN: B
 
-117.
+116.
 Q: Which keyword is used to inherit from a class in Dart?
    A. implements only
    B. with only
@@ -958,7 +926,7 @@ Q: Which keyword is used to inherit from a class in Dart?
    D. inherits
 ĐÁP ÁN: C
 
-118.
+117.
 Q: How many main Scaffold widgets should a typical Material page usually contain?
    A. One
    B. Exactly two
@@ -966,7 +934,7 @@ Q: How many main Scaffold widgets should a typical Material page usually contain
    D. Scaffold must not be used
 ĐÁP ÁN: A
 
-119.
+118.
 Q: Which method displays an image declared in the project assets?
    A. Image.network
    B. AssetText
@@ -974,7 +942,7 @@ Q: Which method displays an image declared in the project assets?
    D. FileBuilder
 ĐÁP ÁN: C
 
-120.
+119.
 Q: ElevatedButton is normally used for which kind of action?
    A. An icon-only action
    B. A secondary text link only
@@ -982,7 +950,7 @@ Q: ElevatedButton is normally used for which kind of action?
    D. Selecting a continuous value
 ĐÁP ÁN: C
 
-121.
+120.
 Q: Which method writes a String to a file?
    A. A widget's setString()
    B. writeAsString()
@@ -990,7 +958,7 @@ Q: Which method writes a String to a file?
    D. pushNamed()
 ĐÁP ÁN: B
 
-122.
+121.
 Q: How is a token described?
    A. An image file
    B. A widget
@@ -998,7 +966,7 @@ Q: How is a token described?
    D. A short-lived digital credential generated by the server to prove identity
 ĐÁP ÁN: D
 
-123.
+122.
 Q: What is the main concept of Flutter UI?
    A. Everything is a widget
    B. Everything is a class
@@ -1006,7 +974,7 @@ Q: What is the main concept of Flutter UI?
    D. Everything is a file
 ĐÁP ÁN: A
 
-124.
+123.
 Q: Which Dart keyword declares an inferred variable?
    A. let
    B. dynamic
@@ -1014,7 +982,7 @@ Q: Which Dart keyword declares an inferred variable?
    D. auto
 ĐÁP ÁN: C
 
-125.
+124.
 Q: Which collection uses key-value pairs?
    A. List
    B. Set
@@ -1022,7 +990,7 @@ Q: Which collection uses key-value pairs?
    D. Tuple
 ĐÁP ÁN: C
 
-126.
+125.
 Q: An object is?
    A. A function
    B. An instance of a class
@@ -1030,7 +998,7 @@ Q: An object is?
    D. A widget tree
 ĐÁP ÁN: B
 
-127.
+126.
 Q: Which widget is commonly used for material cards?
    A. Panel
    B. Card
@@ -1038,7 +1006,7 @@ Q: Which widget is commonly used for material cards?
    D. Tile
 ĐÁP ÁN: B
 
-128.
+127.
 Q: Which widget displays a single line of text?
    A. Text
    B. RichText only
@@ -1046,7 +1014,7 @@ Q: Which widget displays a single line of text?
    D. String
 ĐÁP ÁN: A
 
-129.
+128.
 Q: Which widget displays an image from assets?
    A. Image.asset
    B. Asset.image
@@ -1054,7 +1022,7 @@ Q: Which widget displays an image from assets?
    D. Picture.asset
 ĐÁP ÁN: A
 
-130.
+129.
 Q: Which widget creates a Material button?
    A. ElevatedButton
    B. ButtonWidget
@@ -1062,7 +1030,7 @@ Q: Which widget creates a Material button?
    D. TapButton
 ĐÁP ÁN: A
 
-131.
+130.
 Q: Which widget is used for icon-only actions?
    A. FloatingActionButton
    B. IconButton
@@ -1070,7 +1038,7 @@ Q: Which widget is used for icon-only actions?
    D. PopupMenuButton
 ĐÁP ÁN: B
 
-132.
+131.
 Q: Which widget commonly shows a circular action button?
    A. ElevatedButton
    B. Icon
@@ -1078,7 +1046,7 @@ Q: Which widget commonly shows a circular action button?
    D. Card
 ĐÁP ÁN: C
 
-133.
+132.
 Q: Which widget shows a popup message at the bottom?
    A. AlertDialog
    B. SnackBar
@@ -1086,7 +1054,7 @@ Q: Which widget shows a popup message at the bottom?
    D. ToastView
 ĐÁP ÁN: B
 
-134.
+133.
 Q: Which widget shows a modal dialog?
    A. AlertDialog
    B. Card
@@ -1094,7 +1062,7 @@ Q: Which widget shows a modal dialog?
    D. Drawer
 ĐÁP ÁN: A
 
-135.
+134.
 Q: Which class holds mutable state for StatefulWidget?
    A. State
    B. WidgetStateHolder
@@ -1102,7 +1070,7 @@ Q: Which class holds mutable state for StatefulWidget?
    D. Store
 ĐÁP ÁN: A
 
-136.
+135.
 Q: Which method describes the widget UI?
    A. render
    B. create
@@ -1110,7 +1078,7 @@ Q: Which method describes the widget UI?
    D. mount
 ĐÁP ÁN: C
 
-137.
+136.
 Q: Which widget should be preferred for static UI parts when possible?
    A. const widget
    B. dynamic widget
@@ -1118,7 +1086,7 @@ Q: Which widget should be preferred for static UI parts when possible?
    D. mutable widget
 ĐÁP ÁN: A
 
-138.
+137.
 Q: Which widget displays app bar title area?
    A. AppBar
    B. TopBar
@@ -1126,7 +1094,7 @@ Q: Which widget displays app bar title area?
    D. Header
 ĐÁP ÁN: A
 
-139.
+138.
 Q: Which property of AppBar usually shows the title widget?
    A. text
    B. header
@@ -1134,7 +1102,7 @@ Q: Which property of AppBar usually shows the title widget?
    D. label
 ĐÁP ÁN: C
 
-140.
+139.
 Q: Which widget animates opacity changes?
    A. Opacity
    B. AnimatedOpacity
@@ -1142,7 +1110,7 @@ Q: Which widget animates opacity changes?
    D. AlphaWidget
 ĐÁP ÁN: B
 
-141.
+140.
 Q: Which property of ListTile usually displays leading icon/avatar?
    A. before
    B. lead
@@ -1150,7 +1118,7 @@ Q: Which property of ListTile usually displays leading icon/avatar?
    D. start
 ĐÁP ÁN: C
 
-142.
+141.
 Q: Which property of ListTile usually displays smaller text below title?
    A. caption
    B. body
@@ -1158,7 +1126,7 @@ Q: Which property of ListTile usually displays smaller text below title?
    D. note
 ĐÁP ÁN: C
 
-143.
+142.
 Q: Which property of ListTile usually displays trailing widget?
    A. trailing
    B. end
@@ -1166,7 +1134,7 @@ Q: Which property of ListTile usually displays trailing widget?
    D. suffix
 ĐÁP ÁN: A
 
-144.
+143.
 Q: Which widget can create dismissible list items?
    A. Dismissible
    B. Removable
@@ -1174,11 +1142,7 @@ Q: Which widget can create dismissible list items?
    D. HiddenTile
 ĐÁP ÁN: A
 
-----------------------------------------------------------------------
-CHỦ ĐỀ 6 — Bố cục cơ bản (34 câu)
-----------------------------------------------------------------------
-
-145.
+144.
 Q: Consider: dynamic x = 10; x = "Hello"; print(x); What happens when this code runs?
    A. Compile error because a String cannot be assigned to a variable already typed as int
    B. Prints "Hello" because `dynamic` allows the data type to change at runtime
@@ -1186,7 +1150,7 @@ Q: Consider: dynamic x = 10; x = "Hello"; print(x); What happens when this code 
    D. Throws a TypeError exception at runtime
 ĐÁP ÁN: B
 
-146.
+145.
 Q: What does the `??` operator do in Dart?
    A. Type equality comparison
    B. Returns the left-hand value if it's not null, otherwise returns the right-hand value
@@ -1194,7 +1158,7 @@ Q: What does the `??` operator do in Dart?
    D. Logical XOR operator
 ĐÁP ÁN: B
 
-147.
+146.
 Q: Given `Map<String, int> scores = {"Anna": 95};`, what happens when accessing `scores["Ben"]` (a nonexistent key)?
    A. Throws an exception immediately
    B. Returns 0
@@ -1202,7 +1166,7 @@ Q: Given `Map<String, int> scores = {"Anna": 95};`, what happens when accessing 
    D. Returns an empty string
 ĐÁP ÁN: C
 
-148.
+147.
 Q: In Dart's try/catch, what does the `catch (e, s)` syntax allow a developer to do?
    A. Catch two different exception types at once
    B. Catch the error object and its corresponding stack trace
@@ -1210,7 +1174,7 @@ Q: In Dart's try/catch, what does the `catch (e, s)` syntax allow a developer to
    D. Only applicable to String-type errors
 ĐÁP ÁN: B
 
-149.
+148.
 Q: Consider this constrained mixin code: class Pet { String name; Pet(this.name); } mixin CanBark on Pet { void bark() => print("\$name says woof!"); } class Dog extends Pet with CanBark { Dog() : super("Buddy"); } class Fish { // want to apply "with CanBark" here } If class `Fish` (not extending `Pet`) tries to declare `class Fish with CanBark {}`, what happens?
    A. Compiles successfully, Fish will have a working bark() method
    B. Compile error, because mixin `CanBark` is constrained `on Pet`, only classes extending Pet can apply this mixin
@@ -1218,7 +1182,7 @@ Q: Consider this constrained mixin code: class Pet { String name; Pet(this.name)
    D. Dart will automatically make Fish implicitly extend Pet
 ĐÁP ÁN: B
 
-150.
+149.
 Q: Given this generic class code: class Box`<T>` { T value; Box(this.value); void show() => print("Value = \$value"); } void main() => Box`<int>`(10).show(); If `Box<int>(10)` is replaced with `Box<String>(10)`, what happens?
    A. Runs normally, prints "Value = 10
    B. Compile error because 10 is not a String, violating the generic type constraint
@@ -1226,7 +1190,7 @@ Q: Given this generic class code: class Box`<T>` { T value; Box(this.value); voi
    D. The program throws a runtime exception but still compiles
 ĐÁP ÁN: B
 
-151.
+150.
 Q: In Flutter, which widget acts as the "backbone" of a Material screen, providing AppBar, body, and FloatingActionButton?
    A. Container
    B. Scaffold
@@ -1234,7 +1198,7 @@ Q: In Flutter, which widget acts as the "backbone" of a Material screen, providi
    D. Column
 ĐÁP ÁN: B
 
-152.
+151.
 Q: A student places a `ListView` directly inside a `Column` without wrapping it in `Expanded` or `Flexible`. What common error occurs?
    A. The app runs completely normally, no issues
    B. A "RenderFlex overflow" error or unbounded height constraint error, because both Column and ListView try to claim unlimited space along the main axis
@@ -1242,7 +1206,7 @@ Q: A student places a `ListView` directly inside a `Column` without wrapping it 
    D. The Column is completely hidden from the screen
 ĐÁP ÁN: B
 
-153.
+152.
 Q: In the ListTile + CircleAvatar example: ListTile( leading: CircleAvatar(child: Text(m['title']\![0])), title: Text(m['title']!), subtitle: Text(m['year']!), trailing: const Icon(Icons.chevron_right), onTap: () => debugPrint('Selected \${m['title']}'), ); What does the `!` after `m['title']` mean in the context of Dart's null-safety?
    A. Logical negation (NOT) operator
    B. The "null assertion" operator --- asserting to the compiler that the value is definitely non-null; if wrong, it throws a runtime error
@@ -1250,7 +1214,7 @@ Q: In the ListTile + CircleAvatar example: ListTile( leading: CircleAvatar(child
    D. Converts a String type to int
 ĐÁP ÁN: B
 
-154.
+153.
 Q: How does the `Wrap` widget differ from `Row`, and why does it suit a genre chip list?
    A. Wrap is identical to Row, no difference
    B. Wrap automatically wraps child elements to a new line when there isn't enough horizontal space, avoiding the overflow error Row would encounter with too many elements
@@ -1258,7 +1222,7 @@ Q: How does the `Wrap` widget differ from `Row`, and why does it suit a genre ch
    D. Row auto-wraps but Wrap doesn't
 ĐÁP ÁN: B
 
-155.
+154.
 Q: In the Sectioned Home Screen code: body: ListView( padding: const EdgeInsets.all(12), children: [ section('Now Playing'), const Placeholder(fallbackHeight: 120), section('Trending'), const Placeholder(fallbackHeight: 120), ], ), Why use `ListView` (instead of `Column`) as the root widget for an entire screen containing multiple sections?
    A. Because ListView is mandatory inside every Scaffold
    B. Because ListView automatically allows scrolling when content exceeds screen height, while Column by default cannot scroll and easily causes overflow
@@ -1266,7 +1230,7 @@ Q: In the Sectioned Home Screen code: body: ListView( padding: const EdgeInsets.
    D. No technical reason, it's a random choice
 ĐÁP ÁN: B
 
-156.
+155.
 Q: In VS Code, what does the "Wrap with Widget" feature support for a Flutter developer?
    A. Automatically deploy the app to a store
    B. Quickly wrap a selected widget with another widget like Padding, Center, Expanded to refactor layout
@@ -1274,7 +1238,7 @@ Q: In VS Code, what does the "Wrap with Widget" feature support for a Flutter de
    D. Convert Dart to Kotlin
 ĐÁP ÁN: B
 
-157.
+156.
 Q: In a basic Scaffold example, where is `floatingActionButton` typically placed and what is it used for?
    A. In the middle of the screen, as a background for the whole body
    B. Usually floats in the bottom-right corner of the screen, used for a prominent primary action (e.g. add new)
@@ -1282,7 +1246,7 @@ Q: In a basic Scaffold example, where is `floatingActionButton` typically placed
    D. No fixed position, always centered in the AppBar
 ĐÁP ÁN: B
 
-158.
+157.
 Q: According to Module 4, when should `SingleChildScrollView` or `Flexible` be used to fix overflow on small screens?
    A. Never needed, Flutter automatically handles overflow
    B. When UI content exceeds the available screen size (especially on small screens), you need scrolling or flexible resizing to avoid layout overflow
@@ -1290,7 +1254,7 @@ Q: According to Module 4, when should `SingleChildScrollView` or `Flexible` be u
    D. Only applicable to the Text widget
 ĐÁP ÁN: B
 
-159.
+158.
 Q: What is the difference between `Flexible` and `Expanded` in a Row/Column?
    A. No difference, the two widgets are entirely equivalent
    B. `Expanded` forces a child to occupy the entire allocated space by flex ratio, while `Flexible` allows a child to be smaller than the allocated space if it doesn't need it all (depending on `fit: FlexFit.loose`)
@@ -1298,7 +1262,7 @@ Q: What is the difference between `Flexible` and `Expanded` in a Row/Column?
    D. Expanded only works with the Text widget
 ĐÁP ÁN: B
 
-160.
+159.
 Q: Per Module 6's "Best Practices," when should `Wrap` be prioritized over `Row`?
    A. When displaying a long chip list that could overflow horizontal space
    B. When there's only exactly 1 child element
@@ -1306,7 +1270,7 @@ Q: Per Module 6's "Best Practices," when should `Wrap` be prioritized over `Row`
    D. `Wrap` should never be prioritized over Row
 ĐÁP ÁN: A
 
-161.
+160.
 Q: In the example above, if the user enters the email `"taken123@test.com"`, what message does the app show after 2 seconds?
    A. Account created for taken123@test.com
    B. This email is already taken
@@ -1314,7 +1278,7 @@ Q: In the example above, if the user enters the email `"taken123@test.com"`, wha
    D. The app will throw an exception because the email is invalid
 ĐÁP ÁN: B
 
-162.
+161.
 Q: In the SQL SELECT syntax reviewed in the lecture, which clause is used to FILTER data rows before returning the result?
    A. ORDER BY
    B. WHERE
@@ -1322,7 +1286,7 @@ Q: In the SQL SELECT syntax reviewed in the lecture, which clause is used to FIL
    D. SELECT
 ĐÁP ÁN: B
 
-163.
+162.
 Q: When is the `GROUP BY` clause combined with `HAVING` typically used?
    A. When you need to sort results alphabetically
    B. When you need to group rows by a criterion and apply a filter condition on aggregate functions like SUM, COUNT
@@ -1330,7 +1294,7 @@ Q: When is the `GROUP BY` clause combined with `HAVING` typically used?
    D. When you need to rename a column in the query result
 ĐÁP ÁN: B
 
-164.
+163.
 Q: Which of the following widgets is a textbook example of Implicit Animation?
    A. AnimationController
    B. AnimatedContainer
@@ -1338,7 +1302,7 @@ Q: Which of the following widgets is a textbook example of Implicit Animation?
    D. CurvedAnimation
 ĐÁP ÁN: B
 
-165.
+164.
 Q: What does Map.putIfAbsent(key, ifAbsent) do when the key does not exist?
    A. Deletes the entire Map
    B. Immediately throws an error
@@ -1346,7 +1310,7 @@ Q: What does Map.putIfAbsent(key, ifAbsent) do when the key does not exist?
    D. Returns null without calling the function
 ĐÁP ÁN: C
 
-166.
+165.
 Q: In which directions do Column and Row arrange their children?
    A. Column vertically and Row horizontally
    B. Both as grids
@@ -1354,7 +1318,7 @@ Q: In which directions do Column and Row arrange their children?
    D. Column horizontally and Row vertically
 ĐÁP ÁN: A
 
-167.
+166.
 Q: Which widget is appropriate for displaying a long scrollable list?
    A. A non-scrollable Stack
    B. IconButton
@@ -1362,7 +1326,7 @@ Q: Which widget is appropriate for displaying a long scrollable list?
    D. ListView.builder or ListView.separated
 ĐÁP ÁN: D
 
-168.
+167.
 Q: How is the common error of placing an unconstrained ListView inside a Column usually fixed?
    A. Replace it with Text
    B. Add a GlobalKey everywhere
@@ -1370,7 +1334,7 @@ Q: How is the common error of placing an unconstrained ListView inside a Column 
    D. Wrap the ListView with Expanded
 ĐÁP ÁN: D
 
-169.
+168.
 Q: How does Flexible differ from Expanded?
    A. It allows a child to flex without forcing it to fill all remaining space
    B. It is used only for databases
@@ -1378,7 +1342,7 @@ Q: How does Flexible differ from Expanded?
    D. It cannot be used in a Row or Column
 ĐÁP ÁN: A
 
-170.
+169.
 Q: Which improvement is suggested for screens wider than 800 pixels?
    A. Require a fixed width
    B. Hide all filters
@@ -1386,12 +1350,20 @@ Q: Which improvement is suggested for screens wider than 800 pixels?
    D. Use only one narrow Column
 ĐÁP ÁN: C
 
-171.
+170.
 Q: What type is a network response body before decoding?
    A. A ready-made Post object
    B. String
    C. A database row
    D. A widget tree
+ĐÁP ÁN: B
+
+171.
+Q: What is the arrow function syntax in Dart?
+   A. ->
+   B. =>
+   C. ==>
+   D. ::=
 ĐÁP ÁN: B
 
 172.
@@ -1449,10 +1421,6 @@ Q: Which widget is used for scrollable lists?
    C. Row
    D. Table
 ĐÁP ÁN: B
-
-----------------------------------------------------------------------
-CHỦ ĐỀ 7 — Bố cục nâng cao (11 câu)
-----------------------------------------------------------------------
 
 179.
 Q: What is `CurvedAnimation` in Flutter used for?
@@ -1541,10 +1509,6 @@ Q: If you want a GridView to display 2 columns on a mobile device and 4 columns 
    C. aspectRatio
    D. pixelDensity
 ĐÁP ÁN: B
-
-----------------------------------------------------------------------
-CHỦ ĐỀ 8 — Theme & Responsive (35 câu)
-----------------------------------------------------------------------
 
 190.
 Q: What is the main role of the Embedder Layer in Flutter's architecture?
@@ -1826,10 +1790,6 @@ Q: What does OrientationBuilder detect?
    D. Whether the device is online or offline
 ĐÁP ÁN: B
 
-----------------------------------------------------------------------
-CHỦ ĐỀ 9 — State & Lifecycle (34 câu)
-----------------------------------------------------------------------
-
 225.
 Q: What is the difference between an arrow function (`=>`) and a function block (`{ return ...; }`) in Dart?
    A. Arrow functions can only be used for async functions
@@ -2101,10 +2061,6 @@ Q: What is a widget in Flutter?
    C. A type of token
    D. The basic building block of the user interface
 ĐÁP ÁN: D
-
-----------------------------------------------------------------------
-CHỦ ĐỀ 10 — Tương tác, Form & Async UI (34 câu)
-----------------------------------------------------------------------
 
 259.
 Q: What is Flutter?
@@ -2378,10 +2334,6 @@ Q: Given: void _submit() { final isValid = _formKey.currentState!.validate(); if
    D. save() will automatically call validate() implicitly before saving
 ĐÁP ÁN: B
 
-----------------------------------------------------------------------
-CHỦ ĐỀ 11 — Điều hướng & Deep link (34 câu)
-----------------------------------------------------------------------
-
 293.
 Q: According to the lecture, what common pitfall is emphasized for students new to Dart?
    A. Forgetting to close a class's curly braces
@@ -2653,10 +2605,6 @@ Q: What does a MaterialPageRoute builder return?
    C. The widget that defines the next screen's UI
    D. A JWT token
 ĐÁP ÁN: C
-
-----------------------------------------------------------------------
-CHỦ ĐỀ 12 — Dữ liệu, Kiến trúc, Plugin & Nền tảng (34 câu)
-----------------------------------------------------------------------
 
 327.
 Q: Flutter's architecture has three main layers. What is the correct top-to-bottom order (closest to the developer to closest to the hardware)?
@@ -2930,10 +2878,6 @@ Q: Which sqflite method adds a row?
    D. update()
 ĐÁP ÁN: A
 
-----------------------------------------------------------------------
-CHỦ ĐỀ 13 — Unit test & Mock (34 câu)
-----------------------------------------------------------------------
-
 361.
 Q: Which folder in the Flutter project structure holds dependency and asset configuration?
    A. lib/
@@ -3205,10 +3149,6 @@ Q: Which package is used for mocking in Dart tests often?
    C. skia
    D. sqflite
 ĐÁP ÁN: B
-
-----------------------------------------------------------------------
-CHỦ ĐỀ 14 — Widget test (34 câu)
-----------------------------------------------------------------------
 
 395.
 Q: In Demo 11.4 (Integration Test: Full CRUD Flow), the test sequentially: adds a task → opens detail → edits the title → saves → checks the updated list. Why is this test type classified as "Integration Test" rather than a plain "Widget Test"?
@@ -3482,10 +3422,6 @@ Q: According to the "Testing Workflow," which function is used to verify that th
    D. assert()
 ĐÁP ÁN: C
 
-----------------------------------------------------------------------
-CHỦ ĐỀ 15 — Integration test & Patrol (6 câu)
-----------------------------------------------------------------------
-
 429.
 Q: In the testing pyramid, how many Integration Tests are recommended and for what purpose?
    A. Use the most since it's the most comprehensive test type
@@ -3533,10 +3469,6 @@ Q: Why should integration tests be used sparingly (the "few" at the top of the p
    C. Because they are slow and expensive to run compared to other tests.
    D. Because they only work in Debug mode.
 ĐÁP ÁN: C
-
-----------------------------------------------------------------------
-CHỦ ĐỀ 16 — Coverage & CI (8 câu)
-----------------------------------------------------------------------
 
 435.
 Q: What order does Flutter's rendering workflow follow?
@@ -3601,10 +3533,6 @@ Q: In the Flutter render pipeline, which specific component is responsible for h
    C. RenderObjects
    D. Skia Engine
 ĐÁP ÁN: B
-
-----------------------------------------------------------------------
-CHỦ ĐỀ 17 — Hiệu năng (20 câu)
-----------------------------------------------------------------------
 
 443.
 Q: Which programming language and rendering engine does Flutter use?
@@ -3765,10 +3693,6 @@ Q: Which of the following is true regarding UI Overflow Errors in Flutter?
    C. They can only be detected by a physical device.
    D. They are automatically fixed by the Flutter framework.
 ĐÁP ÁN: B
-
-----------------------------------------------------------------------
-CHỦ ĐỀ 18 — Build & Phát hành (34 câu)
-----------------------------------------------------------------------
 
 463.
 Q: Given: String? name; print(name ?? "Guest"); name = "Minh"; print(name!.length); What is printed, in order?
@@ -4042,10 +3966,6 @@ Q: Which sequence correctly describes the high-level authentication flow?
    D. Store token -> enter credentials -> build APK
 ĐÁP ÁN: A
 
-----------------------------------------------------------------------
-CHỦ ĐỀ 19 — Nền tảng hỗ trợ (4 câu)
-----------------------------------------------------------------------
-
 497.
 Q: What is the difference between Local Notification and Push Notification?
    A. Local Notification is triggered by the app itself and needs no Internet; Push Notification is sent from a server and needs Internet plus backend support
@@ -4077,6 +3997,3 @@ Q: Which language is used for Flutter web logic?
    C. Ruby
    D. C#
 ĐÁP ÁN: A
-
-======================================================================
-TỔNG: 500 câu hỏi · 19 chủ đề
